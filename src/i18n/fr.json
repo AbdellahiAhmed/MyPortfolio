@@ -1,0 +1,21 @@
+{
+  "hero.title": "Je suis Abdellahi",
+  "hero.subtitle": "Passionné par les Réseaux, l'Automatisation et le Développement Full-Stack.",
+  "about.title": "À propos de moi",
+  "about.description": "Étudiant en 3iéme année Réseaux Informatiques et Télécommunications à l'ISCAE. Passionné par les applications full-stack et l’automatisation des infrastructures réseau.",
+  "experience.title": "Expérience",
+  "skills.title": "Compétences",
+  "projects.title": "Projets",
+  "education.title": "Éducation",
+  "resume.title": "CV",
+  "resume.download": "Télécharger mon CV",
+  "resume.update": "Mis à jour en Juin 2025",
+  "contact.title": "Contactez-moi",
+  "contact.subtitle": "Une question ou une collaboration ? N'hésitez pas à me contacter !",
+  "contact.send": "Envoyer le message",
+  "form.name": "Nom",
+  "form.email": "Email",
+  "form.subject": "Sujet",
+  "form.message": "Message",
+  "footer.rights": "Tous droits réservés."
+}

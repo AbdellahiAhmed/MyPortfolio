@@ -1,0 +1,21 @@
+{
+  "hero.title": "I'm Abdellahi",
+  "hero.subtitle": "Passionate about Networks, Automation, and Full-Stack Development.",
+  "about.title": "About Me",
+  "about.description": "I'm a 3rd year Computer Networks and Telecommunications student at ISCAE. I'm passionate about building full-stack applications and automating network infrastructures.",
+  "experience.title": "Experience",
+  "skills.title": "Skills",
+  "projects.title": "Projects",
+  "education.title": "Education",
+  "resume.title": "Resume",
+  "resume.download": "Download My Resume",
+  "resume.update": "Up-to-date as of June 2025",
+  "contact.title": "Get in Touch",
+  "contact.subtitle": "Have a question or want to work together? Feel free to reach out!",
+  "contact.send": "Send Message",
+  "form.name": "Name",
+  "form.email": "Email",
+  "form.subject": "Subject",
+  "form.message": "Message",
+  "footer.rights": "All rights reserved."
+}
