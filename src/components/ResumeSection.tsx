@@ -27,10 +27,12 @@ const ResumeSection = () => {
                 <p className="text-slate-700 dark:text-slate-400">Up-to-date as of June 2025</p>
               </div>
             </div>
-            <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl font-semibold transition-all duration-300 hover:scale-105 flex items-center space-x-2">
-              <span>PDF</span>
-              <Download className="h-4 w-4" />
-            </button>
+            <a href="/public/resume.pdf">
+              <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl font-semibold transition-all duration-300 hover:scale-105 flex items-center space-x-2">
+                <span>PDF</span>
+                <Download className="h-4 w-4" />
+              </button>
+            </a>
           </div>
         </div>
       </div>
