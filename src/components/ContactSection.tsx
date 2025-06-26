@@ -1,6 +1,16 @@
 import { Github, Linkedin, Phone, Mail } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 const ContactSection = () => {
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  useEffect(() => {
+    if (window.location.href.includes('#contact')) {
+      setShowSuccess(true);
+      setTimeout(() => setShowSuccess(false), 5000);
+    }
+  }, []);
+
   return (
     <section id="contact" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -17,6 +27,13 @@ const ContactSection = () => {
             Have a question or want to work together? Feel free to reach out!
           </p>
         </div>
+
+        {/* ✅ Message de confirmation */}
+        {showSuccess && (
+          <div className="mb-6 p-4 text-green-700 bg-green-100 border border-green-300 rounded-lg shadow-sm text-center font-medium">
+            ✅ Thank you! Your message has been successfully sent.
+          </div>
+        )}
 
         {/* Contact Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -83,6 +100,7 @@ const ContactSection = () => {
                   type="text" 
                   id="name"
                   name="name"
+                  required
                   className="w-full bg-white dark:bg-slate-900/50 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-2.5 text-black dark:text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
                   placeholder="Abdellahi Ahmed"
                 />
@@ -93,6 +111,7 @@ const ContactSection = () => {
                   type="email" 
                   id="email"
                   name="email"
+                  required
                   className="w-full bg-white dark:bg-slate-900/50 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-2.5 text-black dark:text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
                   placeholder="AbdellahiAhmedAhmedBaba@gmail.com"
                 />
@@ -104,6 +123,7 @@ const ContactSection = () => {
                 type="text" 
                 id="subject"
                 name="subject"
+                required
                 className="w-full bg-white dark:bg-slate-900/50 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-2.5 text-black dark:text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
                 placeholder="Project Inquiry"
               />
@@ -114,6 +134,7 @@ const ContactSection = () => {
                 id="message"
                 name="message"
                 rows={6}
+                required
                 className="w-full bg-white dark:bg-slate-900/50 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-2.5 text-black dark:text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all resize-none"
                 placeholder="Your message here..."
               ></textarea>
