@@ -141,6 +141,19 @@ const Portfolio = () => {
                   <span>{label}</span>
                 </button>
               ))}
+              <div className="flex justify-center py-3">
+                <button
+                  onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                  className="p-2 rounded-lg border border-slate-700 bg-slate-800/70 hover:bg-slate-700 transition-colors"
+                  aria-label="Toggle Dark/Light Mode"
+                >
+                  {theme === 'dark' ? (
+                    <Sun className="h-5 w-5 text-yellow-400" />
+                  ) : (
+                    <Moon className="h-5 w-5 text-slate-300" />
+                  )}
+                </button>
+              </div>
             </div>
           </div>
         )}
