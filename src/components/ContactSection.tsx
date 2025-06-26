@@ -68,7 +68,14 @@ const ContactSection = () => {
 
         {/* Contact Form */}
         <div className="max-w-2xl mx-auto">
-          <form className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-slate-700/50 space-y-6">
+          <form 
+            action="https://formsubmit.co/AbdellahiAhmedAhmedBaba@gmail.com" 
+            method="POST" 
+            className="space-y-6 bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-slate-700/50"
+          >
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://abdellahiahmed.vercel.app/#contact" />
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-medium text-black dark:text-slate-300 mb-2" htmlFor="name">Name</label>
