@@ -1,18 +1,157 @@
 {
-  "hero.title": "Je suis Abdellahi",
-  "hero.subtitle": "Passionné par les Réseaux, l'Automatisation et le Développement Full-Stack.",
-  "about.title": "À propos de moi",
-  "about.description": "Étudiant en 3iéme année Réseaux Informatiques et Télécommunications à l'ISCAE. Passionné par les applications full-stack et l’automatisation des infrastructures réseau.",
-  "experience.title": "Expérience",
-  "skills.title": "Compétences",
-  "projects.title": "Projets",
-  "education.title": "Éducation",
-  "resume.title": "CV",
-  "resume.download": "Télécharger mon CV",
-  "resume.update": "Mis à jour en Juin 2025",
-  "contact.title": "Contactez-moi",
-  "contact.subtitle": "Une question ou une collaboration ? N'hésitez pas à me contacter !",
-  "contact.send": "Envoyer le message",
+  "hero.intro": "Salut, je suis",
+"hero.title1": "Architecte Réseau",
+"hero.title2": "Développeur Full-Stack",
+"hero.description1": "Je ne me contente pas d’apprendre la tech – je construis des outils concrets pour transformer le monde. Guidé par la discipline, le but et la vision. Je me spécialise en",
+"hero.network": "Ingénierie Réseau",
+"hero.linux": "Linux",
+"hero.backend": "Développement Backend",
+"hero.description2": " Je crois en l'apprentissage profond, l'impact réel et la persévérance.",
+"hero.viewWork": "Voir mes Projets",
+"hero.contact": "Me Contacter",
+
+  "about.section": "À propos de moi",
+  "about.title": "Mon Parcours",
+  "about.subtitle": "D’un passionné de réseaux à développeur full-stack en devenir",
+  "about.storyTitle": "Mon Histoire",
+  "about.story1": "En tant qu’étudiant passionné de réseaux, je me suis plongé dans l’univers de l’infrastructure réseau, de l’automatisation et de l’administration système. Ma passion pour la technologie me pousse à apprendre constamment et à créer des outils utiles.",
+  "about.story2": "Actuellement en route pour devenir administrateur réseau et développeur full-stack, je travaille sur des projets combinant automatisation réseau et technologies web modernes. Mon expérience avec les systèmes Linux, la programmation Python et les simulateurs comme GNS3 et EVE-NG me donne une perspective unique.",
+  "about.story3": "Je crois au pouvoir de l’automatisation et du code propre pour transformer la gestion des infrastructures. Chaque projet est une opportunité d’apprendre, d’évoluer et de contribuer à la communauté tech.",
+  "about.card1.title": "Administrateur Réseau",
+  "about.card1.desc": "Spécialisé en automatisation et gestion des infrastructures réseau",
+  "about.card2.title": "Développeur Full-Stack",
+  "about.card2.desc": "Développement d'applications web avec Python Flask et des frameworks modernes",
+  "about.card3.title": "Passionné de Linux",
+  "about.card3.desc": "Expertise poussée des systèmes Linux et automatisation en ligne de commande",
+  "about.card4.title": "Apprenant Continu",
+  "about.card4.desc": "Toujours curieux de nouvelles technologies et partage de connaissances",
+
+
+  "skills.section": "Compétences Techniques",
+  "skills.title": "Mon Expertise",
+
+  "skills.networking.title": "Réseaux & Infrastructure",
+  "skills.networking.ccna": "Certification CCNA",
+  "skills.networking.gns3": "GNS3 & EVE-NG",
+  "skills.networking.automation": "Automatisation Réseau",
+  "skills.networking.linux": "Systèmes Linux",
+
+  "skills.programming.title": "Programmation & Développement",
+  "skills.programming.python": "Python",
+  "skills.programming.phpmysql": "PHP & MySQL",
+  "skills.programming.java": "Java",
+  "skills.programming.frontend": "HTML, CSS, JavaScript/React",
+
+  "skills.tools.title": "Outils & Technologies",
+  "skills.tools.git": "Git & GitHub",
+  "skills.tools.linux": "Linux",
+  "skills.tools.db": "Gestion de Base de Données",
+  "skills.tools.web": "Développement Web",
+
+  "experience.section": "Expériences",
+  "experience.title": "Parcours Professionnel",
+  "experience.jobs": [
+    {
+      "company": "Stage Découverte chez Mauritel",
+      "role": "Stagiaire en Réseaux Informatiques & Administration Systèmes",
+      "period": "2025/06 - Présent",
+      "type": "Temps plein",
+      "logo": "Network",
+      "description": "Gestion de l’infrastructure réseau, mise en œuvre de scripts d’automatisation et administration de serveurs Linux pour des clients d’entreprise.",
+      "achievements": [
+        "Découverte des équipements réseau professionnels (switches, routeurs, serveurs, etc.)",
+        "Compréhension des politiques de gestion de réseau en environnement réel",
+        "Échanges techniques avec les ingénieurs et techniciens terrain",
+        "Développement d’un projet personnel avancé : AutoNetConfig"
+      ]
+    },
+    {
+      "company": "III-Networking",
+      "role": "Stagiaire autonome en ingénierie réseau",
+      "period": "2025/02 - Présent",
+      "type": "Effort personnel",
+      "logo": "Server",
+      "description": "Développement d’applications web avec Flask, React, PostgreSQL dans le cadre de projets de startup.",
+      "achievements": [
+        "Simulation de réseaux avec Cisco Packet Tracer & GNS3",
+        "Compétences de niveau CCNA en routage et switching",
+        "Certification CCNA via III-Networking",
+        "Réalisation de plus de 40 laboratoires CCNA pratiques"
+      ]
+    },
+    {
+      "company": "Google DSC ISCAE",
+      "role": "Étudiant Assistant",
+      "period": "2023/01 - 2023/07",
+      "type": "Temps partiel",
+      "logo": "Code",
+      "description": "Soutien à l’apprentissage entre étudiants et participation active à des projets collaboratifs de programmation et résolution de problèmes.",
+      "achievements": [
+        "Apprentissage de la planification et de la résolution créative de problèmes",
+        "Renforcement des compétences de communication et de travail en équipe",
+        "Amélioration technique par des projets pratiques"
+      ]
+    }
+  ],
+
+  "education.section": "Éducation",
+  "education.title": "Parcours Académique",
+  "education.schools": [
+    {
+      "institution": "Institut Supérieur de Comptabilité et d'Administration des Entreprises de Mauritanie",
+      "degree": "Licence en Réseaux Informatiques et Télécommunications",
+      "period": "2023 - Présent",
+      "description": "Mon objectif est de devenir un Administrateur Réseau et un Développeur Full Stack, capable d’intégrer des systèmes complexes, de gérer des infrastructures réseau sécurisées, et de développer des solutions logicielles modernes.",
+      "logo": "GraduationCap"
+    },
+    {
+      "institution": "Lycée d’Aïoun, Mauritanie",
+      "degree": "Baccalauréat – Bac C",
+      "period": "2021 - 2023",
+      "description": "Ce baccalauréat m’a permis d’acquérir une base solide en raisonnement logique, en résolution de problèmes complexes et en pensée analytique.",
+      "logo": "Award"
+    }
+  ],
+
+  "resume.section": "CV",
+  "resume.title": "Envie d’en savoir plus ?",
+  "resume.description": "Téléchargez mon CV pour découvrir mon parcours professionnel, mes compétences et mes réalisations en détail.",
+  "resume.cardTitle": "Mon CV",
+  "resume.lastUpdate": "Mis à jour en juin 2025",
+  "resume.button": "Voir le CV",
+
+
+  "contact.section": "Contact",
+  "contact.title": "Me contacter",
+  "contact.description": "Une question ou une collaboration ? N'hésitez pas à me contacter !",
+  "contact.success": "Merci ! Votre message a été envoyé avec succès.",
+  "contact.cards.github": "Voir mes projets",
+  "contact.cards.linkedin": "Profil professionnel",
+  "contact.cards.whatsapp": "Discuter rapidement",
+  "contact.cards.email": "Envoyer un e-mail",
+  "contact.cards.write": "M'écrire",
+  "contact.form.name": "Nom",
+  "contact.form.email": "E-mail",
+  "contact.form.subject": "Sujet",
+  "contact.form.message": "Message",
+  "contact.form.placeholder": "Votre message ici...",
+  "contact.form.button": "Envoyer le message",
+
+
+  
+  "projects.section": "Projets en vedette",
+  "projects.title": "Mes Réalisations",
+  "projects.code": "Code",
+  "projects.documentation": "Documentation",
+  "projects.live_demo": "Démo en ligne",
+  "projects.coming_soon": "Bientôt disponible !",
+  "projects.all_projects": "Voir tous les projets sur GitHub",
+  "projects.items.autonet.description": "Outil d'automatisation réseau avancé pour la configuration et la gestion d’équipements à grande échelle. Intègre sauvegarde automatique, déploiement de configuration et supervision en temps réel.",
+  "projects.items.lmd.description": "Système de gestion des étudiants et des cours pour université. Basé sur HTML, CSS, JavaScript et PHP, avec validation de formulaires et gestion des rôles.",
+  "projects.items.bank.description": "Application bancaire complète avec authentification sécurisée, gestion des transactions et reporting détaillé. Conçue avec les meilleures pratiques de sécurité.",
+
+
+
   "form.name": "Nom",
   "form.email": "Email",
   "form.subject": "Sujet",

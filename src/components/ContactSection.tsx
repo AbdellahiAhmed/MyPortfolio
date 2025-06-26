@@ -1,8 +1,10 @@
 import { Github, Linkedin, Phone, Mail } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const ContactSection = () => {
   const [showSuccess, setShowSuccess] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (window.location.href.includes('#contact')) {
@@ -11,62 +13,64 @@ const ContactSection = () => {
     }
   }, []);
 
+  const contacts = [
+    {
+      icon: Github,
+      title: "GitHub",
+      subtitle: t("contact.cards.github"),
+      link: "https://github.com/AbdellahiAhmed",
+      color: "from-purple-500 to-purple-600"
+    },
+    {
+      icon: Linkedin,
+      title: "LinkedIn",
+      subtitle: t("contact.cards.linkedin"),
+      link: "https://www.linkedin.com/in/abdellahiahmedahmedbaba/",
+      color: "from-blue-500 to-blue-600"
+    },
+    {
+      icon: Phone,
+      title: "WhatsApp",
+      subtitle: t("contact.cards.whatsapp"),
+      link: "https://wa.me/+22243638670",
+      color: "from-green-500 to-green-600"
+    },
+    {
+      icon: Mail,
+      title: t("contact.cards.email"),
+      subtitle: t("contact.cards.write"),
+      link: "mailto:AbdellahiAhmedAhmedBaba@gmail.com",
+      color: "from-cyan-500 to-cyan-600"
+    }
+  ];
+
   return (
     <section id="contact" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <span className="px-4 py-2 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-medium border border-cyan-500/30">
-            Contact
+            {t("contact.section")}
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mt-6 mb-6">
             <span className="text-black dark:bg-gradient-to-r dark:from-purple-400 dark:to-cyan-400 dark:bg-clip-text dark:text-transparent">
-              Get in Touch
+              {t("contact.title")}
             </span>
           </h2>
           <p className="text-xl text-black dark:text-slate-300 max-w-3xl mx-auto">
-            Have a question or want to work together? Feel free to reach out!
+            {t("contact.description")}
           </p>
         </div>
 
         {/* ✅ Message de confirmation */}
         {showSuccess && (
           <div className="mb-6 p-4 text-green-700 bg-green-100 border border-green-300 rounded-lg shadow-sm text-center font-medium">
-            ✅ Thank you! Your message has been successfully sent.
+            ✅ {t("contact.success")}
           </div>
         )}
 
         {/* Contact Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {[
-            {
-              icon: Github,
-              title: "GitHub",
-              subtitle: "View my code",
-              link: "https://github.com/AbdellahiAhmed",
-              color: "from-purple-500 to-purple-600"
-            },
-            {
-              icon: Linkedin,
-              title: "LinkedIn",
-              subtitle: "Professional profile",
-              link: "https://www.linkedin.com/in/abdellahiahmedahmedbaba/",
-              color: "from-blue-500 to-blue-600"
-            },
-            {
-              icon: Phone,
-              title: "WhatsApp",
-              subtitle: "Quick chat",
-              link: "https://wa.me/+22243638670",
-              color: "from-green-500 to-green-600"
-            },
-            {
-              icon: Mail,
-              title: "Send Email",
-              subtitle: "Write to me",
-              link: "mailto:AbdellahiAhmedAhmedBaba@gmail.com",
-              color: "from-cyan-500 to-cyan-600"
-            }
-          ].map((contact, index) => (
+          {contacts.map((contact, index) => (
             <a
               key={index}
               href={contact.link}
@@ -95,55 +99,55 @@ const ContactSection = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-medium text-black dark:text-slate-300 mb-2" htmlFor="name">Name</label>
+                <label className="block text-sm font-medium text-black dark:text-slate-300 mb-2" htmlFor="name">{t("contact.form.name")}</label>
                 <input 
                   type="text" 
                   id="name"
                   name="name"
                   required
-                  className="w-full bg-white dark:bg-slate-900/50 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-2.5 text-black dark:text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
                   placeholder="Abdellahi Ahmed"
+                  className="w-full bg-white dark:bg-slate-900/50 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-2.5 text-black dark:text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-black dark:text-slate-300 mb-2" htmlFor="email">Email</label>
+                <label className="block text-sm font-medium text-black dark:text-slate-300 mb-2" htmlFor="email">{t("contact.form.email")}</label>
                 <input 
                   type="email" 
                   id="email"
                   name="email"
                   required
+                  placeholder="email@example.com"
                   className="w-full bg-white dark:bg-slate-900/50 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-2.5 text-black dark:text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
-                  placeholder="AbdellahiAhmedAhmedBaba@gmail.com"
                 />
               </div>
             </div>
             <div>
-              <label className="block text-sm font-medium text-black dark:text-slate-300 mb-2" htmlFor="subject">Subject</label>
+              <label className="block text-sm font-medium text-black dark:text-slate-300 mb-2" htmlFor="subject">{t("contact.form.subject")}</label>
               <input 
                 type="text" 
                 id="subject"
                 name="subject"
                 required
-                className="w-full bg-white dark:bg-slate-900/50 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-2.5 text-black dark:text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
                 placeholder="Project Inquiry"
+                className="w-full bg-white dark:bg-slate-900/50 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-2.5 text-black dark:text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-black dark:text-slate-300 mb-2" htmlFor="message">Message</label>
+              <label className="block text-sm font-medium text-black dark:text-slate-300 mb-2" htmlFor="message">{t("contact.form.message")}</label>
               <textarea 
                 id="message"
                 name="message"
                 rows={6}
                 required
+                placeholder={t("contact.form.placeholder")}
                 className="w-full bg-white dark:bg-slate-900/50 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-2.5 text-black dark:text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all resize-none"
-                placeholder="Your message here..."
               ></textarea>
             </div>
             <button 
               type="submit"
               className="w-full bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold py-3 rounded-xl transition-all duration-300 hover:scale-[1.02] focus:scale-[0.98]"
             >
-              Send Message
+              {t("contact.form.button")}
             </button>
           </form>
         </div>

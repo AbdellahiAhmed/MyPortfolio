@@ -1,18 +1,154 @@
 {
-  "hero.title": "I'm Abdellahi",
-  "hero.subtitle": "Passionate about Networks, Automation, and Full-Stack Development.",
-  "about.title": "About Me",
-  "about.description": "I'm a 3rd year Computer Networks and Telecommunications student at ISCAE. I'm passionate about building full-stack applications and automating network infrastructures.",
-  "experience.title": "Experience",
-  "skills.title": "Skills",
-  "projects.title": "Projects",
-  "education.title": "Education",
-  "resume.title": "Resume",
-  "resume.download": "Download My Resume",
-  "resume.update": "Up-to-date as of June 2025",
+  "hero.intro": "Hi, I'm",
+  "hero.title1": "Network Architect",
+  "hero.title2": "Full-Stack Developer",
+  "hero.description1": "I'm not just learning tech - I'm building real tools to shape my world. Driven by purpose, discipline, and vision. I specialize in",
+  "hero.network": "Network Engineering",
+  "hero.linux": "Linux",
+  "hero.backend": "Backend Development",
+  "hero.description2": " I believe in deep learning, creating impact, and never giving up.",
+  "hero.viewWork": "View My Work",
+  "hero.contact": "Get In Touch",
+
+  "about.section": "About Me",
+  "about.title": "My Journey",
+  "about.subtitle": "From networking enthusiast to aspiring full-stack developer",
+  "about.storyTitle": "My Story",
+  "about.story1": "As a dedicated networking student, I've immersed myself in the world of network infrastructure, automation, and system administration. My passion for technology drives me to continuously learn and build tools that solve real-world problems.",
+  "about.story2": "Currently pursuing my journey to become both a network administrator and full-stack developer, I'm working on exciting projects that combine network automation with modern web technologies. My experience with Linux systems, Python programming, and network simulation tools like GNS3 and EVE-NG gives me a unique perspective on infrastructure and development.",
+  "about.story3": "I believe in the power of automation and clean code to transform how we manage and interact with network infrastructure. Every project I work on is an opportunity to learn, grow, and contribute to the tech community.",
+  "about.card1.title": "Network Admin",
+  "about.card1.desc": "Specializing in network automation and infrastructure management",
+  "about.card2.title": "Full-Stack Dev",
+  "about.card2.desc": "Building web applications with Python Flask and modern frontend frameworks",
+  "about.card3.title": "Linux Enthusiast",
+  "about.card3.desc": "Deep expertise in Linux systems and command-line automation",
+  "about.card4.title": "Continuous Learner",
+  "about.card4.desc": "Always exploring new technologies and sharing knowledge with the community",
+
+  "skills.section": "Technical Skills",
+  "skills.title": "My Expertise",
+
+  "skills.networking.title": "Networking & Infrastructure",
+  "skills.networking.ccna": "CCNA Certification",
+  "skills.networking.gns3": "GNS3 & EVE-NG",
+  "skills.networking.automation": "Network Automation",
+  "skills.networking.linux": "Linux Systems",
+
+  "skills.programming.title": "Programming & Development",
+  "skills.programming.python": "Python",
+  "skills.programming.phpmysql": "PHP & MySQL",
+  "skills.programming.java": "Java",
+  "skills.programming.frontend": "HTML, CSS, JavaScript/React",
+
+  "skills.tools.title": "Tools & Technologies",
+  "skills.tools.git": "Git & GitHub",
+  "skills.tools.linux": "Linux",
+  "skills.tools.db": "Database Management",
+  "skills.tools.web": "Web Development",
+
+
+
+  "experience.section": "Work Experience",
+  "experience.title": "Professional Journey",
+  "experience.jobs": [
+    {
+      "company": "Discovery Internship at Mauritel",
+      "role": "Intern in Network & System Administration",
+      "period": "2025/06 - Present",
+      "type": "Full-time",
+      "logo": "Network",
+      "description": "Managing network infrastructure, implementing automation scripts, and maintaining Linux servers for enterprise clients.",
+      "achievements": [
+        "Discovered enterprise-grade networking devices (switches, routers, servers, etc.)",
+        "Learned network management policies in a real environment",
+        "Interacted with engineers and field technicians",
+        "Developed a personal advanced project in parallel: AutoNetConfig"
+      ]
+    },
+    {
+      "company": "III-Networking",
+      "role": "Network Engineering Student Intern (Self-Project)",
+      "period": "2025/02 - Present",
+      "type": "Personal Effort",
+      "logo": "Server",
+      "description": "Developed web applications using Flask, React, and PostgreSQL for startup projects.",
+      "achievements": [
+        "Built lab simulations using Cisco Packet Tracer & GNS3",
+        "CCNA-level routing and switching",
+        "Completed CCNA course from III-Networking",
+        "Completed 40+ CCNA practical labs"
+      ]
+    },
+    {
+      "company": "Google DSC ISCAE",
+      "role": "Student Aid",
+      "period": "2023/01 - 2023/07",
+      "type": "Part-time",
+      "logo": "Code",
+      "description": "Supported peer learning and contributed to collaborative tech projects and problem-solving at Google Developer Student Club.",
+      "achievements": [
+        "Learned importance of planning and creativity in problem-solving",
+        "Gained communication and teamwork skills",
+        "Grew technically through hands-on coding experience"
+      ]
+    }
+  ],
+
+  "education.section": "Education",
+  "education.title": "Academic Journey",
+  "education.schools": [
+    {
+      "institution": "ISCAE – Mauritania",
+      "degree": "Bachelor in Computer Networks & Telecommunications",
+      "period": "2023 - Present",
+      "description": "My goal is to become a Network Administrator and Full Stack Developer, capable of integrating complex systems, managing secure network infrastructures, and building modern software solutions.",
+      "logo": "GraduationCap"
+    },
+    {
+      "institution": "Lycée d’Aïoun, Mauritania",
+      "degree": "High School – Bac C",
+      "period": "2021 - 2023",
+      "description": "This diploma helped me develop strong logic, analytical thinking, and complex problem-solving skills.",
+      "logo": "Award"
+    }
+  ],
+
+  "resume.section": "Resume",
+  "resume.title": "Want to know more?",
+  "resume.description": "Download my resume to explore my professional journey, skills, and achievements in detail.",
+  "resume.cardTitle": "My Resume",
+  "resume.lastUpdate": "Up-to-date as of June 2025",
+  "resume.button": "View CV",
+
+
+  "contact.section": "Contact",
   "contact.title": "Get in Touch",
-  "contact.subtitle": "Have a question or want to work together? Feel free to reach out!",
-  "contact.send": "Send Message",
+  "contact.description": "Have a question or want to work together? Feel free to reach out!",
+  "contact.success": "Thank you! Your message has been successfully sent.",
+  "contact.cards.github": "View my code",
+  "contact.cards.linkedin": "Professional profile",
+  "contact.cards.whatsapp": "Quick chat",
+  "contact.cards.email": "Send Email",
+  "contact.cards.write": "Write to me",
+  "contact.form.name": "Name",
+  "contact.form.email": "Email",
+  "contact.form.subject": "Subject",
+  "contact.form.message": "Message",
+  "contact.form.placeholder": "Your message here...",
+  "contact.form.button": "Send Message",
+
+  "projects.section": "Featured Projects",
+  "projects.title": "My Work",
+  "projects.code": "Code",
+  "projects.documentation": "Documentation",
+  "projects.live_demo": "Live Demo",
+  "projects.coming_soon": "Will be available Soon!",
+  "projects.all_projects": "View All Projects on GitHub",
+  "projects.items.autonet.description": "Advanced network automation tool for configuring and managing network devices at scale. Features automated backup, configuration deployment, and real-time monitoring.",
+  "projects.items.lmd.description": "University student and course management system built with HTML, CSS, JavaScript, and PHP. Supports CRUD operations, form validation, and role-based access.",
+  "projects.items.bank.description": "Full-featured banking application with secure authentication, transaction management, and comprehensive reporting. Built with modern security practices.",
+
   "form.name": "Name",
   "form.email": "Email",
   "form.subject": "Subject",

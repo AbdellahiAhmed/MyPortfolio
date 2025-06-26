@@ -24,6 +24,8 @@ import EducationSection from './components/EducationSection';
 import ResumeSection from './components/ResumeSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import LanguageSwitcher from './components/LanguageSwitcher';
+import './i18n/i18n';
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -110,6 +112,8 @@ const Portfolio = () => {
               >
                 {theme === 'dark' ? <Sun className="h-5 w-5 text-yellow-400" /> : <Moon className="h-5 w-5 text-slate-700" />}
               </button>
+              {/* Language Switcher */}
+              <LanguageSwitcher />
             </div>
 
             <div className="md:hidden">
@@ -154,6 +158,9 @@ const Portfolio = () => {
                   )}
                 </button>
               </div>
+            </div>
+            <div className="flex justify-center mt-4 pb-4">
+              <LanguageSwitcher />
             </div>
           </div>
         )}

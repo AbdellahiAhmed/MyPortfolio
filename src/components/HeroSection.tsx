@@ -1,7 +1,10 @@
 import React from 'react';
 import { ChevronDown, Terminal, MessageSquare } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const HeroSection = () => {
+  const { t } = useTranslation();
+
   const scrollTo = (elementId: string) => {
     document.getElementById(elementId)?.scrollIntoView({ 
       behavior: 'smooth' 
@@ -24,26 +27,23 @@ const HeroSection = () => {
         
         <h1 className="text-5xl md:text-7xl font-bold mb-6">
           <span className="text-black dark:bg-gradient-to-r dark:from-white dark:to-slate-300 dark:bg-clip-text dark:text-transparent">
-            Hi, I'm <span className="text-purple-700 dark:text-purple-400">
-            Abdellahi.
-          </span>
+            {t("hero.intro")} <span className="text-purple-700 dark:text-purple-400">Abdellahi</span>
           </span>
           <br />
           <span className="text-black dark:bg-gradient-to-r dark:from-purple-400 dark:to-cyan-400 dark:bg-clip-text dark:text-transparent">
-            Network Architect
+            {t("hero.title1")}
           </span>
           <br />
           <span className="text-3xl md:text-4xl text-black dark:bg-gradient-to-r dark:from-slate-300 dark:to-slate-400 dark:bg-clip-text dark:text-transparent">
-            & Full-Stack Developer
+            & {t("hero.title2")}
           </span>
         </h1>
         
         <p className="text-xl md:text-2xl text-black dark:text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-          I'm not just learning tech - I'm building real tools to shape my world.
-          Driven by purpose, discipline, and vision, I specialize in <span className="text-cyan-700 dark:text-cyan-400">Network Engineering</span>, 
-          <span className="text-purple-700 dark:text-purple-400"> Linux</span>, and  
-          <span className="text-cyan-700 dark:text-cyan-400"> Backend Development </span>
-          I believe in deep learning, creating impact, and never giving up.  
+          {t("hero.description1")} <span className="text-cyan-700 dark:text-cyan-400">{t("hero.network")}</span>,
+          <span className="text-purple-700 dark:text-purple-400"> {t("hero.linux")}</span>,
+          <span className="text-cyan-700 dark:text-cyan-400"> {t("hero.backend")}</span>.
+          {t("hero.description2")}
         </p>
         
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -52,14 +52,14 @@ const HeroSection = () => {
             className="group px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-3"
           >
             <Terminal className="h-5 w-5 group-hover:rotate-12 transition-transform" />
-            <span>View My Work</span>
+            <span>{t("hero.viewWork")}</span>
           </button>
           <button
             onClick={() => scrollTo('contact')}
             className="group px-8 py-4 border-2 border-purple-500/50 hover:border-purple-400 rounded-xl font-semibold transition-all duration-300 hover:bg-purple-500/10 flex items-center space-x-3"
           >
             <MessageSquare className="h-5 w-5 group-hover:scale-110 transition-transform" />
-            <span>Get In Touch</span>
+            <span>{t("hero.contact")}</span>
           </button>
         </div>
       </div>
