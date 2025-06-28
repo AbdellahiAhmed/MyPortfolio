@@ -12,12 +12,12 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="pt-16 min-h-screen flex items-center justify-center relative">
+    <section id="home" className="pt-16 min-h-screen flex items-center justify-center relative bg-white dark:bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center relative z-10">
         <div className="mb-8">
           <div className="relative inline-block mb-8">
-            <div className="w-32 h-32 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 p-1 mx-auto">
-              <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center overflow-hidden">
+            <div className="w-32 h-32 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 p-1 mx-auto shadow-lg">
+              <div className="w-full h-full rounded-full bg-white dark:bg-slate-900 flex items-center justify-center overflow-hidden">
                 <img src="/profile.jpg" alt="Profile" className="w-full h-full object-cover rounded-full" />
               </div>
             </div>
@@ -25,21 +25,21 @@ const HeroSection = () => {
           </div>
         </div>
         
-        <h1 className="text-5xl md:text-7xl font-bold mb-6">
-          <span className="text-black dark:bg-gradient-to-r dark:from-white dark:to-slate-300 dark:bg-clip-text dark:text-transparent">
+        <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <span className="bg-gradient-to-r from-purple-600 to-cyan-500 bg-clip-text text-transparent dark:from-white dark:to-slate-300">
             {t("hero.intro")} <span className="text-purple-700 dark:text-purple-400">Abdellahi</span>
           </span>
           <br />
-          <span className="text-black dark:bg-gradient-to-r dark:from-purple-400 dark:to-cyan-400 dark:bg-clip-text dark:text-transparent">
+          <span className="bg-gradient-to-r from-purple-600 to-cyan-500 bg-clip-text text-transparent dark:from-purple-400 dark:to-cyan-400">
             {t("hero.title1")}
           </span>
           <br />
-          <span className="text-3xl md:text-4xl text-black dark:bg-gradient-to-r dark:from-slate-300 dark:to-slate-400 dark:bg-clip-text dark:text-transparent">
+          <span className="text-3xl md:text-4xl text-gray-800 dark:bg-gradient-to-r dark:from-slate-300 dark:to-slate-400 dark:bg-clip-text dark:text-transparent">
             & {t("hero.title2")}
           </span>
         </h1>
         
-        <p className="text-xl md:text-2xl text-black dark:text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+        <p className="text-xl md:text-2xl text-gray-800 dark:text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
           {t("hero.description1")} <span className="text-cyan-700 dark:text-cyan-400">{t("hero.network")}</span>,
           <span className="text-purple-700 dark:text-purple-400"> {t("hero.linux")}</span>,
           <span className="text-cyan-700 dark:text-cyan-400"> {t("hero.backend")}</span>.
@@ -49,14 +49,14 @@ const HeroSection = () => {
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
           <button
             onClick={() => scrollTo('projects')}
-            className="group px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-3"
+            className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center space-x-3"
           >
             <Terminal className="h-5 w-5 group-hover:rotate-12 transition-transform" />
             <span>{t("hero.viewWork")}</span>
           </button>
           <button
             onClick={() => scrollTo('contact')}
-            className="group px-8 py-4 border-2 border-purple-500/50 hover:border-purple-400 rounded-xl font-semibold transition-all duration-300 hover:bg-purple-500/10 flex items-center space-x-3"
+            className="group px-8 py-4 border-2 border-purple-500/50 hover:border-purple-500 text-purple-700 dark:text-white rounded-xl font-semibold transition-all duration-300 hover:bg-purple-100/30 dark:hover:bg-purple-500/10 flex items-center space-x-3"
           >
             <MessageSquare className="h-5 w-5 group-hover:scale-110 transition-transform" />
             <span>{t("hero.contact")}</span>

@@ -56,12 +56,11 @@ const ContactSection = () => {
               {t("contact.title")}
             </span>
           </h2>
-          <p className="text-xl text-black dark:text-slate-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-800 dark:text-slate-300 max-w-3xl mx-auto">
             {t("contact.description")}
           </p>
         </div>
 
-        {/* ✅ Message de confirmation */}
         {showSuccess && (
           <div className="mb-6 p-4 text-green-700 bg-green-100 border border-green-300 rounded-lg shadow-sm text-center font-medium">
             ✅ {t("contact.success")}
@@ -74,14 +73,14 @@ const ContactSection = () => {
             <a
               key={index}
               href={contact.link}
-              className="group bg-slate-800/50 backdrop-blur-sm p-6 rounded-2xl border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 text-center"
+              className="group bg-white/80 dark:bg-slate-800/50 backdrop-blur-sm p-6 rounded-2xl border border-slate-300 dark:border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 shadow-md"
             >
               <div className="flex flex-col items-center">
-                <div className={`w-16 h-16 mb-4 bg-gradient-to-r ${contact.color} rounded-xl flex items-center justify-center`}>
+                <div className={`w-16 h-16 mb-4 bg-gradient-to-r ${contact.color} rounded-xl flex items-center justify-center shadow-inner`}>
                   <contact.icon className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-black dark:text-white mb-1">{contact.title}</h3>
-                <p className="text-sm text-slate-700 dark:text-slate-400">{contact.subtitle}</p>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">{contact.title}</h3>
+                <p className="text-sm text-gray-700 dark:text-slate-400">{contact.subtitle}</p>
               </div>
             </a>
           ))}
@@ -89,61 +88,69 @@ const ContactSection = () => {
 
         {/* Contact Form */}
         <div className="max-w-2xl mx-auto">
-          <form 
-            action="https://formsubmit.co/AbdellahiAhmedAhmedBaba@gmail.com" 
-            method="POST" 
-            className="space-y-6 bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-slate-700/50"
+          <form
+            action="https://formsubmit.co/AbdellahiAhmedAhmedBaba@gmail.com"
+            method="POST"
+            className="space-y-6 bg-white/80 dark:bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-slate-300 dark:border-slate-700/50 shadow-lg"
           >
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_next" value="https://abdellahiahmed.vercel.app/#contact" />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-medium text-black dark:text-slate-300 mb-2" htmlFor="name">{t("contact.form.name")}</label>
-                <input 
-                  type="text" 
+                <label className="block text-sm font-medium text-gray-800 dark:text-slate-300 mb-2" htmlFor="name">
+                  {t("contact.form.name")}
+                </label>
+                <input
+                  type="text"
                   id="name"
                   name="name"
                   required
                   placeholder="Abdellahi Ahmed"
-                  className="w-full bg-white dark:bg-slate-900/50 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-2.5 text-black dark:text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
+                  className="w-full bg-white dark:bg-slate-900/50 border border-gray-300 dark:border-slate-700 rounded-lg px-4 py-2.5 text-gray-900 dark:text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-black dark:text-slate-300 mb-2" htmlFor="email">{t("contact.form.email")}</label>
-                <input 
-                  type="email" 
+                <label className="block text-sm font-medium text-gray-800 dark:text-slate-300 mb-2" htmlFor="email">
+                  {t("contact.form.email")}
+                </label>
+                <input
+                  type="email"
                   id="email"
                   name="email"
                   required
                   placeholder="email@example.com"
-                  className="w-full bg-white dark:bg-slate-900/50 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-2.5 text-black dark:text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
+                  className="w-full bg-white dark:bg-slate-900/50 border border-gray-300 dark:border-slate-700 rounded-lg px-4 py-2.5 text-gray-900 dark:text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
                 />
               </div>
             </div>
             <div>
-              <label className="block text-sm font-medium text-black dark:text-slate-300 mb-2" htmlFor="subject">{t("contact.form.subject")}</label>
-              <input 
-                type="text" 
+              <label className="block text-sm font-medium text-gray-800 dark:text-slate-300 mb-2" htmlFor="subject">
+                {t("contact.form.subject")}
+              </label>
+              <input
+                type="text"
                 id="subject"
                 name="subject"
                 required
                 placeholder="Project Inquiry"
-                className="w-full bg-white dark:bg-slate-900/50 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-2.5 text-black dark:text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
+                className="w-full bg-white dark:bg-slate-900/50 border border-gray-300 dark:border-slate-700 rounded-lg px-4 py-2.5 text-gray-900 dark:text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-black dark:text-slate-300 mb-2" htmlFor="message">{t("contact.form.message")}</label>
-              <textarea 
+              <label className="block text-sm font-medium text-gray-800 dark:text-slate-300 mb-2" htmlFor="message">
+                {t("contact.form.message")}
+              </label>
+              <textarea
                 id="message"
                 name="message"
                 rows={6}
                 required
                 placeholder={t("contact.form.placeholder")}
-                className="w-full bg-white dark:bg-slate-900/50 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-2.5 text-black dark:text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all resize-none"
+                className="w-full bg-white dark:bg-slate-900/50 border border-gray-300 dark:border-slate-700 rounded-lg px-4 py-2.5 text-gray-900 dark:text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all resize-none"
               ></textarea>
             </div>
-            <button 
+            <button
               type="submit"
               className="w-full bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold py-3 rounded-xl transition-all duration-300 hover:scale-[1.02] focus:scale-[0.98]"
             >

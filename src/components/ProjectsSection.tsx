@@ -1,18 +1,22 @@
 import { Network, Server, Shield, Github, ExternalLink } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import clsx from 'clsx';
 
 const ProjectsSection = () => {
   const { t } = useTranslation();
 
+  const tagColor = (color: string) =>
+    `px-3 py-1 bg-${color}-500/20 text-${color}-600 text-sm rounded-full border border-${color}-500/30`;
+
   return (
-    <section id="projects" className="py-20 relative">
+    <section id="projects" className="py-20 relative bg-white dark:bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <span className="px-4 py-2 bg-orange-500/20 text-orange-400 rounded-full text-sm font-medium border border-orange-500/30">
             {t("projects.section")}
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mt-6 mb-6">
-            <span className="text-black dark:bg-gradient-to-r dark:from-white dark:to-slate-300 dark:bg-clip-text dark:text-transparent">
+            <span className="bg-gradient-to-r from-orange-600 to-yellow-400 bg-clip-text text-transparent dark:from-white dark:to-slate-300">
               {t("projects.title")}
             </span>
           </h2>
@@ -54,28 +58,54 @@ const ProjectsSection = () => {
               ]
             }
           ].map((project, i) => (
-            <div key={i} className="group bg-slate-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105">
+            <div
+              key={i}
+              className="group bg-white/70 dark:bg-slate-800/50 backdrop-blur-md rounded-2xl overflow-hidden shadow-md dark:shadow-none border border-slate-200 dark:border-slate-700/50 transition-all duration-300 hover:scale-105 hover:border-purple-500/50"
+            >
               <div className="p-8">
                 <div className="flex items-center mb-6">
-                  <div className={`w-12 h-12 bg-gradient-to-r from-${project.colors[0]}-500/20 to-${project.colors[1]}-500/20 rounded-xl flex items-center justify-center border border-${project.colors[0]}-500/30 mr-4`}>
+                  <div
+                    className={clsx(
+                      "w-12 h-12 rounded-xl flex items-center justify-center mr-4 border",
+                      `bg-gradient-to-r from-${project.colors[0]}-500/20 to-${project.colors[1]}-500/20`,
+                      `border-${project.colors[0]}-500/30`
+                    )}
+                  >
                     <project.icon className={`h-6 w-6 text-${project.colors[0]}-400`} />
                   </div>
-                  <h3 className="text-xl font-bold text-black dark:text-white">{project.title}</h3>
+                  <h3 className="text-xl font-bold text-gray-800 dark:text-white">{project.title}</h3>
                 </div>
-                <p className="text-black dark:text-slate-300 mb-6 leading-relaxed">{project.desc}</p>
+
+                <p className="text-gray-700 dark:text-slate-300 mb-6 leading-relaxed">
+                  {project.desc}
+                </p>
+
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag, j) => (
                     <span
                       key={j}
-                      className={`px-3 py-1 bg-${project.colors[j % 3]}-500/20 text-${project.colors[j % 3]}-300 text-sm rounded-full border border-${project.colors[j % 3]}-500/30`}
+                      className={clsx(
+                        "px-3 py-1 rounded-full text-sm border",
+                        `bg-${project.colors[j % 3]}-500/20`,
+                        `text-${project.colors[j % 3]}-600`,
+                        `border-${project.colors[j % 3]}-500/30`
+                      )}
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
+
                 <div className="flex space-x-4">
                   {project.links.map((link, k) => (
-                    <a key={k} href={link.url} className={`flex items-center text-${project.colors[1]}-400 hover:text-${project.colors[1]}-300 transition-colors`}>
+                    <a
+                      key={k}
+                      href={link.url}
+                      className={clsx(
+                        "flex items-center font-medium underline-offset-2 hover:underline",
+                        `text-${project.colors[1]}-500 hover:text-${project.colors[1]}-700`
+                      )}
+                    >
                       <link.icon className="h-4 w-4 mr-2" />
                       {link.label}
                     </a>
