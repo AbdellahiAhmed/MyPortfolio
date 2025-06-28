@@ -31,6 +31,9 @@ export default {
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui'],
       },
+      scrollMargin: {
+        28: '7rem', // pour scroll-mt-28 dans les sections
+      },
       transitionProperty: {
         width: 'width',
         spacing: 'margin, padding',
