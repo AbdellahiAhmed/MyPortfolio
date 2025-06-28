@@ -1,14 +1,14 @@
 {
   "hero.intro": "Salut, je suis",
-"hero.title1": "Architecte Réseau",
-"hero.title2": "Développeur Full-Stack",
-"hero.description1": "Je ne me contente pas d’apprendre la tech – je construis des outils concrets pour transformer le monde. Guidé par la discipline, le but et la vision. Je me spécialise en",
-"hero.network": "Ingénierie Réseau",
-"hero.linux": "Linux",
-"hero.backend": "Développement Backend",
-"hero.description2": " Je crois en l'apprentissage profond, l'impact réel et la persévérance.",
-"hero.viewWork": "Voir mes Projets",
-"hero.contact": "Me Contacter",
+  "hero.title1": "Architecte Réseau",
+  "hero.title2": "Développeur Full-Stack",
+  "hero.description1": "Je ne me contente pas d’apprendre la tech – je construis des outils concrets pour transformer le monde. Guidé par la discipline, le but et la vision. Je me spécialise en",
+  "hero.network": "Ingénierie Réseau",
+  "hero.linux": "Linux",
+  "hero.backend": "Développement Backend",
+  "hero.description2": " Je crois en l'apprentissage profond, l'impact réel et la persévérance.",
+  "hero.viewWork": "Voir mes Projets",
+  "hero.contact": "Me Contacter",
 
   "about.section": "À propos de moi",
   "about.title": "Mon Parcours",
@@ -156,5 +156,17 @@
   "form.email": "Email",
   "form.subject": "Sujet",
   "form.message": "Message",
-  "footer.rights": "Tous droits réservés."
+  "footer.rights": "Tous droits réservés.",
+
+
+  "navbar": {
+  "home": "Accueil",
+  "about": "À propos",
+  "experience": "Expérience",
+  "skills": "Compétences",
+  "projects": "Projets",
+  "education": "Éducation",
+  "resume": "CV",
+  "contact": "Contact"
+  }
 }

@@ -42,7 +42,7 @@ const ProjectsSection = () => {
               tags: ["HTML/CSS/JS", "PHP", "MySQL"],
               colors: ["blue", "red", "yellow"],
               links: [
-                { label: t("projects.code"), url: "#", icon: Github },
+                { label: t("projects.code"), url: "https://github.com/AbdellahiAhmed/Syst-me_LMD", icon: Github },
                 { label: t("projects.live_demo"), url: "#", icon: ExternalLink }
               ]
             },

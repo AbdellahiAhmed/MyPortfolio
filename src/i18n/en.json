@@ -153,5 +153,17 @@
   "form.email": "Email",
   "form.subject": "Subject",
   "form.message": "Message",
-  "footer.rights": "All rights reserved."
+  "footer.rights": "All rights reserved.",
+
+
+  "navbar": {
+  "home": "Home",
+  "about": "About",
+  "experience": "Experience",
+  "skills": "Skills",
+  "projects": "Projects",
+  "education": "Education",
+  "resume": "Resume",
+  "contact": "Contact"
+  }
 }
