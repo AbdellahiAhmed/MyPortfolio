@@ -96,21 +96,23 @@
   ],
 
   "education.section": "Education",
-  "education.title": "Academic Journey",
+  "education.title": "Academic Background",
   "education.schools": [
     {
-      "institution": "ISCAE – Mauritania",
+      "institution": "ISCAE Mauritania",
       "degree": "Bachelor in Computer Networks & Telecommunications",
       "period": "2023 - Present",
-      "description": "My goal is to become a Network Administrator and Full Stack Developer, capable of integrating complex systems, managing secure network infrastructures, and building modern software solutions.",
-      "logo": "GraduationCap"
+      "description": "My goal is to become a Network Administrator and Full Stack Developer, able to integrate complex systems, manage secure network infrastructures, and build modern software solutions.",
+      "logo": "GraduationCap",
+      "link": "https://iscae.mr"
     },
     {
       "institution": "Lycée d’Aïoun, Mauritania",
-      "degree": "High School – Bac C",
+      "degree": "High School Diploma – Science Track (Bac C)",
       "period": "2021 - 2023",
-      "description": "This diploma helped me develop strong logic, analytical thinking, and complex problem-solving skills.",
-      "logo": "Award"
+      "description": "Completed with a strong focus on mathematics and physics, this diploma emphasized logical thinking, problem-solving, and scientific rigor. It provided me with a solid foundation in calculus, algebra, and analytical reasoning — skills that I now apply in networking, automation, and software development.",
+      "logo": "Award",
+      "link": "https://www.mauribac.com/fr/bac-2023-pFrFwkSfV/numero/02398/"
     }
   ],
 

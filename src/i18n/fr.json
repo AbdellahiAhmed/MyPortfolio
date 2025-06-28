@@ -101,15 +101,17 @@
       "institution": "Institut Supérieur de Comptabilité et d'Administration des Entreprises de Mauritanie",
       "degree": "Licence en Réseaux Informatiques et Télécommunications",
       "period": "2023 - Présent",
-      "description": "Mon objectif est de devenir un Administrateur Réseau et un Développeur Full Stack, capable d’intégrer des systèmes complexes, de gérer des infrastructures réseau sécurisées, et de développer des solutions logicielles modernes.",
-      "logo": "GraduationCap"
+      "description": "Formation universitaire axée sur les domaines des technologies de l'information et des communications, avec une spécialisation dans les réseaux informatiques. Cette licence m'a permis de développer des compétences solides à la fois théoriques et pratiques, ainsi qu'une vision globale des infrastructures numériques modernes. Elle a renforcé mon esprit d’analyse, mes capacités techniques, et ma capacité à m’adapter aux évolutions rapides du secteur informatique.",
+      "logo": "GraduationCap",
+      "link": "https://iscae.mr"
     },
     {
       "institution": "Lycée d’Aïoun, Mauritanie",
       "degree": "Baccalauréat – Bac C",
       "period": "2021 - 2023",
-      "description": "Ce baccalauréat m’a permis d’acquérir une base solide en raisonnement logique, en résolution de problèmes complexes et en pensée analytique.",
-      "logo": "Award"
+      "description": "Diplôme obtenu avec une forte spécialisation en mathématiques et sciences physiques, axé sur le raisonnement logique, la résolution de problèmes complexes, et la rigueur scientifique. Cette formation m’a permis de développer une base solide en analyse, algèbre, physique, et raisonnement abstrait — des compétences que j’applique aujourd’hui dans les domaines des réseaux, de l’automatisation et de la programmation.",
+      "logo": "Award",
+      "link": "https://www.mauribac.com/fr/bac-2023-pFrFwkSfV/numero/02398/"
     }
   ],
 

@@ -10,6 +10,7 @@ const EducationSection = () => {
     period: string;
     description: string;
     logo: string;
+    link?: string;
   }>;
 
   const logos: any = {
@@ -51,11 +52,23 @@ const EducationSection = () => {
                       <p className="text-sm text-slate-600 dark:text-slate-400">{edu.period}</p>
                     </div>
                   </div>
-                  <button className="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-white transition-colors">
-                    <ExternalLink className="h-5 w-5" />
-                  </button>
+
+                  {edu.link && (
+                    <a
+                      href={edu.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-white transition-colors"
+                      aria-label="External link"
+                    >
+                      <ExternalLink className="h-5 w-5" />
+                    </a>
+                  )}
                 </div>
-                <p className="text-gray-800 dark:text-slate-300 mt-4 leading-relaxed">{edu.description}</p>
+
+                <p className="text-gray-800 dark:text-slate-300 mt-4 leading-relaxed">
+                  {edu.description}
+                </p>
               </div>
             );
           })}
