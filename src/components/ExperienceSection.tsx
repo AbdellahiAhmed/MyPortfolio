@@ -1,20 +1,25 @@
 import { Network, Code, Server, ExternalLink, Star } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
+interface Experience {
+  company: string;
+  role: string;
+  period: string;
+  type: string;
+  description: string;
+  achievements: string[];
+  logo: string;
+  link?: string;
+}
+
 const ExperienceSection = () => {
   const { t } = useTranslation();
 
-  const experiences = t('experience.jobs', { returnObjects: true }) as Array<{
-    company: string;
-    role: string;
-    period: string;
-    type: string;
-    description: string;
-    achievements: string[];
-    logo: string;
-  }>;
+  const experiences = t('experience.jobs', {
+    returnObjects: true,
+  }) as unknown as Experience[];
 
-  const logos: any = {
+  const logos: Record<string, React.ElementType> = {
     Network,
     Server,
     Code,
@@ -41,7 +46,7 @@ const ExperienceSection = () => {
             return (
               <div
                 key={index}
-                className="bg-white/70 dark:bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-slate-200 dark:border-slate-700/50 shadow-md dark:shadow-none transition-all duration-300"
+                className="bg-white/70 dark:bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-slate-200 dark:border-slate-700/50 shadow-md transition-all duration-300"
               >
                 <div className="flex items-start justify-between mb-6">
                   <div className="flex items-center space-x-4">
@@ -59,12 +64,20 @@ const ExperienceSection = () => {
                       </div>
                     </div>
                   </div>
-                  <button
-                    className="text-gray-400 hover:text-gray-700 dark:text-slate-400 dark:hover:text-white transition-colors"
-                    title="View More"
-                  >
-                    <ExternalLink className="h-5 w-5" />
-                  </button>
+
+                  {job.link ? (
+                    <a
+                      href={job.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-cyan-500 dark:hover:text-white transition-colors"
+                      title="Voir plus"
+                    >
+                      <ExternalLink className="h-5 w-5" />
+                    </a>
+                  ) : (
+                    <ExternalLink className="h-5 w-5 text-gray-300 dark:text-slate-500" title="Aucun lien disponible" />
+                  )}
                 </div>
 
                 <p className="text-gray-800 dark:text-slate-300 mb-4 leading-relaxed">{job.description}</p>

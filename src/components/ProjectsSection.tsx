@@ -1,12 +1,9 @@
-import { Network, Server, Shield, Github, ExternalLink } from 'lucide-react';
+import { Network, Server, Shield, Github } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import clsx from 'clsx';
 
 const ProjectsSection = () => {
   const { t } = useTranslation();
-
-  const tagColor = (color: string) =>
-    `px-3 py-1 bg-${color}-500/20 text-${color}-600 text-sm rounded-full border border-${color}-500/30`;
 
   return (
     <section id="projects" className="py-20 relative bg-white dark:bg-transparent">
@@ -30,10 +27,7 @@ const ProjectsSection = () => {
               desc: t("projects.items.autonet.description"),
               tags: ["Python", "Network Automation", "CLI"],
               colors: ["blue", "green", "purple"],
-              links: [
-                { label: t("projects.code"), url: "#", icon: Github },
-                { label: t("projects.coming_soon"), url: "#", icon: ExternalLink }
-              ]
+              github: ""
             },
             {
               icon: Server,
@@ -41,10 +35,7 @@ const ProjectsSection = () => {
               desc: t("projects.items.lmd.description"),
               tags: ["HTML/CSS/JS", "PHP", "MySQL"],
               colors: ["blue", "red", "yellow"],
-              links: [
-                { label: t("projects.code"), url: "https://github.com/AbdellahiAhmed/Syst-me_LMD", icon: Github },
-                { label: t("projects.live_demo"), url: "#", icon: ExternalLink }
-              ]
+              github: "https://github.com/AbdellahiAhmed/Syst-me_LMD"
             },
             {
               icon: Shield,
@@ -52,15 +43,12 @@ const ProjectsSection = () => {
               desc: t("projects.items.bank.description"),
               tags: ["Java", "Swing", "MySQL"],
               colors: ["orange", "blue", "green"],
-              links: [
-                { label: t("projects.code"), url: "https://github.com/AbdellahiAhmed/Syst-me_de_Gestion_du_Bank", icon: Github },
-                { label: t("projects.documentation"), url: "https://github.com/AbdellahiAhmed/Syst-me_de_Gestion_du_Bank/blob/main/README.md", icon: ExternalLink }
-              ]
+              github: "https://github.com/AbdellahiAhmed/Syst-me_de_Gestion_du_Bank"
             }
           ].map((project, i) => (
             <div
               key={i}
-              className="group bg-white/70 dark:bg-slate-800/50 backdrop-blur-md rounded-2xl overflow-hidden shadow-md dark:shadow-none border border-slate-200 dark:border-slate-700/50 transition-all duration-300 hover:scale-105 hover:border-purple-500/50"
+              className="group bg-white/70 dark:bg-slate-800/50 backdrop-blur-md rounded-2xl overflow-hidden shadow-md border border-slate-200 dark:border-slate-700/50 transition-all duration-300 hover:scale-105 hover:border-purple-500/50"
             >
               <div className="p-8">
                 <div className="flex items-center mb-6">
@@ -76,9 +64,7 @@ const ProjectsSection = () => {
                   <h3 className="text-xl font-bold text-gray-800 dark:text-white">{project.title}</h3>
                 </div>
 
-                <p className="text-gray-700 dark:text-slate-300 mb-6 leading-relaxed">
-                  {project.desc}
-                </p>
+                <p className="text-gray-700 dark:text-slate-300 mb-6 leading-relaxed">{project.desc}</p>
 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag, j) => (
@@ -96,21 +82,18 @@ const ProjectsSection = () => {
                   ))}
                 </div>
 
-                <div className="flex space-x-4">
-                  {project.links.map((link, k) => (
-                    <a
-                      key={k}
-                      href={link.url}
-                      className={clsx(
-                        "flex items-center font-medium underline-offset-2 hover:underline",
-                        `text-${project.colors[1]}-500 hover:text-${project.colors[1]}-700`
-                      )}
-                    >
-                      <link.icon className="h-4 w-4 mr-2" />
-                      {link.label}
-                    </a>
-                  ))}
-                </div>
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={clsx(
+                    "inline-flex items-center font-medium underline-offset-2 hover:underline",
+                    `text-${project.colors[1]}-500 hover:text-${project.colors[1]}-700`
+                  )}
+                >
+                  <Github className="h-4 w-4 mr-2" />
+                  GitHub
+                </a>
               </div>
             </div>
           ))}

@@ -8,17 +8,17 @@ export default {
         light: '#ffffff',
         dark: '#0f172a',
         primary: {
-          DEFAULT: '#7c3aed', // violet-600
+          DEFAULT: '#7c3aed',
           dark: '#8b5cf6',
           light: '#ddd6fe',
         },
         secondary: {
-          DEFAULT: '#06b6d4', // cyan-500
+          DEFAULT: '#06b6d4',
           dark: '#22d3ee',
           light: '#a5f3fc',
         },
         accent: {
-          DEFAULT: '#f59e0b', // amber-500
+          DEFAULT: '#f59e0b',
           dark: '#fbbf24',
           light: '#fef3c7',
         },
@@ -32,11 +32,20 @@ export default {
         sans: ['Inter', 'ui-sans-serif', 'system-ui'],
       },
       scrollMargin: {
-        28: '7rem', // pour scroll-mt-28 dans les sections
+        28: '7rem',
       },
       transitionProperty: {
         width: 'width',
         spacing: 'margin, padding',
+      },
+      animation: {
+        'skill-bar': 'grow 1.8s ease-out forwards',
+      },
+      keyframes: {
+        grow: {
+          '0%': { width: '0%' },
+          '100%': { width: '100%' },
+        },
       },
     },
   },

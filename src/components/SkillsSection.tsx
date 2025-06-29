@@ -34,18 +34,15 @@ const SkillsSection = () => {
         <div className="space-y-4">
           {skills.map(({ skill, level, icon: SubIcon }) => (
             <div key={skill}>
-              <div className="flex justify-between items-center mb-1">
-                <div className="flex items-center space-x-2">
-                  <SubIcon className={`h-4 w-4 text-${iconColor}-500`} />
-                  <span className="text-sm font-medium text-gray-800 dark:text-slate-300">{skill}</span>
-                </div>
-                <span className="text-sm text-gray-600 dark:text-slate-400">{level}%</span>
+              <div className="flex items-center space-x-2 mb-1">
+                <SubIcon className={`h-4 w-4 text-${iconColor}-500`} />
+                <span className="text-sm font-medium text-gray-800 dark:text-slate-300">{skill}</span>
               </div>
-              <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+              <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2 relative overflow-hidden">
                 <div
-                  className={`bg-gradient-to-r from-${gradientFrom}-500 to-${gradientTo}-500 h-2 rounded-full transition-all duration-1000 ease-out`}
+                  className={`absolute top-0 left-0 h-full bg-gradient-to-r from-${gradientFrom}-500 to-${gradientTo}-500 rounded-full animate-skill-bar`}
                   style={{ width: `${level}%` }}
-                ></div>
+                />
               </div>
             </div>
           ))}
