@@ -197,7 +197,7 @@ const BlogSection = () => {
 
   return (
     <section id="blog" className="py-20 relative bg-white dark:bg-transparent">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <span className="px-4 py-2 bg-indigo-500/20 text-indigo-500 rounded-full text-sm font-medium border border-indigo-500/30">
             Technical Blog
@@ -283,7 +283,7 @@ const BlogSection = () => {
         </div>
 
         {/* Regular Posts Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {blogPosts.filter(post => !post.featured).map((post) => (
             <article
               key={post.id}
@@ -381,9 +381,9 @@ const BlogSection = () => {
 
       {/* Blog Modal */}
       {showModal && selectedPost && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-white dark:bg-slate-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
-            <div className="sticky top-0 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-700 p-6 rounded-t-2xl">
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-2 sm:p-4">
+          <div className="bg-white dark:bg-slate-900 rounded-2xl w-full max-w-2xl sm:max-w-3xl md:max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl">
+            <div className="sticky top-0 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-700 p-4 sm:p-6 rounded-t-2xl">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center space-x-3">
                   <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${getCategoryColor(selectedPost.category)}`}>
@@ -400,7 +400,7 @@ const BlogSection = () => {
                   <X className="h-6 w-6 text-slate-500" />
                 </button>
               </div>
-              <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-800 dark:text-white mb-2">
                 {selectedPost.title}
               </h2>
               <div className="flex items-center space-x-4 text-sm text-gray-600 dark:text-slate-400">
@@ -419,9 +419,9 @@ const BlogSection = () => {
               </div>
             </div>
             
-            <div className="p-6">
+            <div className="p-4 sm:p-6">
               <div 
-                className="prose prose-slate dark:prose-invert max-w-none"
+                className="prose prose-slate dark:prose-invert max-w-none text-sm sm:text-base"
                 dangerouslySetInnerHTML={{ 
                   __html: getBlogContent(selectedPost.id).content 
                 }}

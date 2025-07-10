@@ -40,9 +40,12 @@ const SkillsSection = () => {
               </div>
               <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2 relative overflow-hidden">
                 <div
-                  className={`absolute top-0 left-0 h-full bg-gradient-to-r from-${gradientFrom}-500 to-${gradientTo}-500 rounded-full animate-skill-bar`}
+                  className={`absolute top-0 left-0 h-full bg-gradient-to-r from-${gradientFrom}-500 to-${gradientTo}-500 rounded-full transition-all duration-700`}
                   style={{ width: `${level}%` }}
                 />
+                <span className="absolute right-2 top-1/2 -translate-y-1/2 text-xs font-semibold text-gray-700 dark:text-slate-300">
+                  {level}%
+                </span>
               </div>
             </div>
           ))}
