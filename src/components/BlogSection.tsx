@@ -27,7 +27,7 @@ const BlogSection = () => {
       excerpt: 'Learn how to build scalable network automation solutions using Python, Netmiko, and Jinja2 templates. This comprehensive guide covers device discovery, configuration management, and monitoring.',
       category: 'automation',
       readTime: '8 min read',
-      date: '2025-07-15',
+      date: '2025-07-10',
       icon: Network,
       color: 'blue',
       tags: ['Python', 'Netmiko', 'Network Automation', 'Jinja2'],
@@ -39,7 +39,7 @@ const BlogSection = () => {
       excerpt: 'Complete guide to building a professional CCNA lab environment using GNS3 and EVE-NG. Includes topology design, device configuration, and troubleshooting techniques.',
       category: 'networking',
       readTime: '12 min read',
-      date: '2025-07-01',
+      date: '2025-07-10',
       icon: Terminal,
       color: 'green',
       tags: ['CCNA', 'GNS3', 'Cisco', 'Lab Setup']
@@ -50,7 +50,7 @@ const BlogSection = () => {
       excerpt: 'Explore advanced TypeScript patterns in React development, including custom hooks, type safety, and performance optimization techniques for production applications.',
       category: 'development',
       readTime: '10 min read',
-      date: '2025-07-05',
+      date: '2025-07-10',
       icon: Code,
       color: 'purple',
       tags: ['React', 'TypeScript', 'Frontend', 'Best Practices']
@@ -61,7 +61,7 @@ const BlogSection = () => {
       excerpt: 'Comprehensive overview of network security principles, including access control, encryption, monitoring, and incident response for enterprise environments.',
       category: 'security',
       readTime: '15 min read',
-      date: '2025-07-06',
+      date: '2025-07-10',
       icon: Shield,
       color: 'red',
       tags: ['Network Security', 'Access Control', 'Encryption', 'Monitoring']

@@ -18,7 +18,7 @@ const HeroSection = () => {
           <div className="relative inline-block mb-8">
             <div className="w-32 h-32 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 p-1 mx-auto shadow-lg">
               <div className="w-full h-full rounded-full bg-white dark:bg-slate-900 flex items-center justify-center overflow-hidden">
-                <img src="/profile.jpg" alt="Profile" className="w-full h-full object-cover rounded-full" />
+                <img src="/profile.jpg" alt="Profile" className="w-full h-full object-cover rounded-full" loading="lazy" width="128" height="128" />
               </div>
             </div>
             <div className="absolute inset-0 bg-gradient-to-r from-purple-500/30 to-cyan-500/30 rounded-full blur-xl animate-pulse"></div>

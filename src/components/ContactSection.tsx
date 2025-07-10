@@ -95,6 +95,11 @@ const ContactSection = () => {
           >
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_next" value="https://abdellahiahmed.vercel.app/#contact" />
+            {/* Honeypot field for spam protection */}
+            <div style={{ display: 'none' }} aria-hidden="true">
+              <label htmlFor="website">Website</label>
+              <input type="text" id="website" name="website" tabIndex={-1} autoComplete="off" />
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
