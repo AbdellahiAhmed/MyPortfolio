@@ -24,7 +24,6 @@ import ProjectsSection from './components/ProjectsSection';
 import EducationSection from './components/EducationSection';
 import ResumeSection from './components/ResumeSection';
 import BlogSection from './components/BlogSection';
-import PerformanceMetrics from './components/PerformanceMetrics';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import LanguageSwitcher from './components/LanguageSwitcher';
@@ -210,7 +209,6 @@ const Portfolio = () => {
               <EducationSection />
         <ResumeSection />
         <BlogSection />
-        <PerformanceMetrics />
         <ContactSection />
         <Footer />
     </div>
