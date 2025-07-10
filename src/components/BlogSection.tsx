@@ -1,5 +1,5 @@
-import React from 'react';
-import { BookOpen, Calendar, Clock, ArrowRight, Network, Code, Terminal, Shield } from 'lucide-react';
+import React, { useState } from 'react';
+import { BookOpen, Calendar, Clock, ArrowRight, Network, Code, Terminal, Shield, X, ExternalLink, Mail } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 interface BlogPost {
@@ -17,6 +17,8 @@ interface BlogPost {
 
 const BlogSection = () => {
   const { t } = useTranslation();
+  const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
+  const [showModal, setShowModal] = useState(false);
 
   const blogPosts: BlogPost[] = [
     {
@@ -25,7 +27,7 @@ const BlogSection = () => {
       excerpt: 'Learn how to build scalable network automation solutions using Python, Netmiko, and Jinja2 templates. This comprehensive guide covers device discovery, configuration management, and monitoring.',
       category: 'automation',
       readTime: '8 min read',
-      date: '2024-01-15',
+      date: '2025-07-15',
       icon: Network,
       color: 'blue',
       tags: ['Python', 'Netmiko', 'Network Automation', 'Jinja2'],
@@ -37,18 +39,18 @@ const BlogSection = () => {
       excerpt: 'Complete guide to building a professional CCNA lab environment using GNS3 and EVE-NG. Includes topology design, device configuration, and troubleshooting techniques.',
       category: 'networking',
       readTime: '12 min read',
-      date: '2024-01-10',
+      date: '2025-07-01',
       icon: Terminal,
       color: 'green',
       tags: ['CCNA', 'GNS3', 'Cisco', 'Lab Setup']
     },
     {
       id: 'react-typescript-best-practices',
-      title: 'Modern React Development with TypeScript: Best Practices for 2024',
+      title: 'Modern React Development with TypeScript: Best Practices for 2025',
       excerpt: 'Explore advanced TypeScript patterns in React development, including custom hooks, type safety, and performance optimization techniques for production applications.',
       category: 'development',
       readTime: '10 min read',
-      date: '2024-01-08',
+      date: '2025-07-05',
       icon: Code,
       color: 'purple',
       tags: ['React', 'TypeScript', 'Frontend', 'Best Practices']
@@ -59,7 +61,7 @@ const BlogSection = () => {
       excerpt: 'Comprehensive overview of network security principles, including access control, encryption, monitoring, and incident response for enterprise environments.',
       category: 'security',
       readTime: '15 min read',
-      date: '2024-01-05',
+      date: '2025-07-06',
       icon: Shield,
       color: 'red',
       tags: ['Network Security', 'Access Control', 'Encryption', 'Monitoring']
@@ -84,6 +86,113 @@ const BlogSection = () => {
       security: Shield
     };
     return icons[category as keyof typeof icons] || Code;
+  };
+
+  const handleReadArticle = (post: BlogPost) => {
+    setSelectedPost(post);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+    setSelectedPost(null);
+  };
+
+  const getBlogContent = (postId: string) => {
+    const content = {
+      'network-automation-python': {
+        title: 'Building Enterprise Network Automation with Python and Netmiko',
+        content: `
+          <h2>Introduction</h2>
+          <p>Network automation has become essential in modern enterprise environments. This comprehensive guide will walk you through building scalable network automation solutions using Python, Netmiko, and Jinja2 templates.</p>
+          
+          <h3>Prerequisites</h3>
+          <ul>
+            <li>Python 3.9+</li>
+            <li>Basic understanding of networking concepts</li>
+            <li>Access to network devices (physical or virtual)</li>
+          </ul>
+          
+          <h3>Setting Up Your Environment</h3>
+          <pre><code>pip install netmiko jinja2 pyyaml</code></pre>
+          
+          <h3>Device Discovery</h3>
+          <p>Automated device discovery is the foundation of any network automation solution. We'll use SNMP and SSH to identify and catalog network devices.</p>
+          
+          <h3>Configuration Management</h3>
+          <p>Using Jinja2 templates, we can generate consistent configurations across multiple devices while maintaining flexibility for device-specific requirements.</p>
+          
+          <h3>Monitoring and Alerting</h3>
+          <p>Real-time monitoring with automated alerting ensures network health and quick response to issues.</p>
+          
+          <h3>Best Practices</h3>
+          <ul>
+            <li>Always backup configurations before making changes</li>
+            <li>Use version control for your automation scripts</li>
+            <li>Implement proper error handling and logging</li>
+            <li>Test in a lab environment before production deployment</li>
+          </ul>
+        `
+      },
+      'ccna-lab-setup': {
+        title: 'Setting Up a Professional CCNA Lab Environment with GNS3',
+        content: `
+          <h2>Introduction</h2>
+          <p>A professional CCNA lab environment is crucial for hands-on learning and certification preparation. This guide covers setting up GNS3 and EVE-NG for comprehensive network simulation.</p>
+          
+          <h3>GNS3 Installation</h3>
+          <p>Download and install GNS3 from the official website. Ensure you have sufficient system resources for running multiple virtual devices.</p>
+          
+          <h3>Device Images</h3>
+          <p>Obtain Cisco IOS images for routers and switches. These are essential for realistic network simulation.</p>
+          
+          <h3>Topology Design</h3>
+          <p>Design your lab topology to cover all CCNA exam objectives including routing, switching, and network services.</p>
+          
+          <h3>Configuration Examples</h3>
+          <p>Practice with real-world configuration scenarios that you'll encounter in production environments.</p>
+        `
+      },
+      'react-typescript-best-practices': {
+        title: 'Modern React Development with TypeScript: Best Practices for 2025',
+        content: `
+          <h2>Introduction</h2>
+          <p>TypeScript has become the standard for modern React development. This guide covers best practices for building scalable, maintainable React applications.</p>
+          
+          <h3>Type Safety</h3>
+          <p>Leverage TypeScript's type system to catch errors at compile time and improve code quality.</p>
+          
+          <h3>Custom Hooks</h3>
+          <p>Create reusable custom hooks with proper TypeScript typing for better code organization.</p>
+          
+          <h3>Performance Optimization</h3>
+          <p>Use React.memo, useMemo, and useCallback to optimize component rendering and prevent unnecessary re-renders.</p>
+          
+          <h3>State Management</h3>
+          <p>Choose the right state management solution for your application size and complexity.</p>
+        `
+      },
+      'network-security-fundamentals': {
+        title: 'Network Security Fundamentals: From Theory to Implementation',
+        content: `
+          <h2>Introduction</h2>
+          <p>Network security is critical in today's interconnected world. This comprehensive guide covers fundamental security principles and their practical implementation.</p>
+          
+          <h3>Access Control</h3>
+          <p>Implement proper access control mechanisms including authentication, authorization, and accounting (AAA).</p>
+          
+          <h3>Encryption</h3>
+          <p>Understand encryption protocols and implement them to protect data in transit and at rest.</p>
+          
+          <h3>Monitoring and Detection</h3>
+          <p>Set up comprehensive monitoring and intrusion detection systems to identify and respond to security threats.</p>
+          
+          <h3>Incident Response</h3>
+          <p>Develop and maintain incident response procedures to handle security breaches effectively.</p>
+        `
+      }
+    };
+    return content[postId as keyof typeof content] || { title: '', content: '' };
   };
 
   return (
@@ -161,7 +270,10 @@ const BlogSection = () => {
                   ))}
                 </div>
 
-                <button className="inline-flex items-center text-purple-600 dark:text-purple-400 font-medium hover:text-purple-700 dark:hover:text-purple-300 transition-colors group">
+                <button 
+                  onClick={() => handleReadArticle(post)}
+                  className="inline-flex items-center text-purple-600 dark:text-purple-400 font-medium hover:text-purple-700 dark:hover:text-purple-300 transition-colors group"
+                >
                   <span>Read Full Article</span>
                   <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -222,7 +334,10 @@ const BlogSection = () => {
                   ))}
                 </div>
 
-                <button className="inline-flex items-center text-purple-600 dark:text-purple-400 text-sm font-medium hover:text-purple-700 dark:hover:text-purple-300 transition-colors group">
+                <button 
+                  onClick={() => handleReadArticle(post)}
+                  className="inline-flex items-center text-purple-600 dark:text-purple-400 text-sm font-medium hover:text-purple-700 dark:hover:text-purple-300 transition-colors group"
+                >
                   <span>Read More</span>
                   <ArrowRight className="h-3 w-3 ml-1 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -243,16 +358,109 @@ const BlogSection = () => {
               and automation. Subscribe to stay updated with the latest tutorials and best practices.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg">
-                View All Articles
-              </button>
-              <button className="px-6 py-3 border-2 border-indigo-500/50 text-indigo-600 dark:text-white rounded-xl font-semibold transition-all duration-300 hover:bg-indigo-100/30 dark:hover:bg-indigo-500/10">
+              <a 
+                href="https://github.com/AbdellahiAhmed?tab=repositories"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg inline-flex items-center justify-center"
+              >
+                <ExternalLink className="h-5 w-5 mr-2" />
+                View All Projects
+              </a>
+              <a 
+                href="mailto:AbdellahiAhmedAhmedBaba@gmail.com?subject=Blog%20Subscription%20Request"
+                className="px-6 py-3 border-2 border-indigo-500/50 text-indigo-600 dark:text-white rounded-xl font-semibold transition-all duration-300 hover:bg-indigo-100/30 dark:hover:bg-indigo-500/10 inline-flex items-center justify-center"
+              >
+                <Mail className="h-5 w-5 mr-2" />
                 Subscribe to Newsletter
-              </button>
+              </a>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Blog Modal */}
+      {showModal && selectedPost && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-white dark:bg-slate-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+            <div className="sticky top-0 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-700 p-6 rounded-t-2xl">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center space-x-3">
+                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${getCategoryColor(selectedPost.category)}`}>
+                    <selectedPost.icon className="h-5 w-5" />
+                  </div>
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium border ${getCategoryColor(selectedPost.category)}`}>
+                    {selectedPost.category.charAt(0).toUpperCase() + selectedPost.category.slice(1)}
+                  </span>
+                </div>
+                <button
+                  onClick={closeModal}
+                  className="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                >
+                  <X className="h-6 w-6 text-slate-500" />
+                </button>
+              </div>
+              <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">
+                {selectedPost.title}
+              </h2>
+              <div className="flex items-center space-x-4 text-sm text-gray-600 dark:text-slate-400">
+                <div className="flex items-center space-x-1">
+                  <Calendar className="h-4 w-4" />
+                  <span>{new Date(selectedPost.date).toLocaleDateString('en-US', { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric' 
+                  })}</span>
+                </div>
+                <div className="flex items-center space-x-1">
+                  <Clock className="h-4 w-4" />
+                  <span>{selectedPost.readTime}</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="p-6">
+              <div 
+                className="prose prose-slate dark:prose-invert max-w-none"
+                dangerouslySetInnerHTML={{ 
+                  __html: getBlogContent(selectedPost.id).content 
+                }}
+              />
+              
+              <div className="mt-8 pt-6 border-t border-slate-200 dark:border-slate-700">
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {selectedPost.tags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className="px-3 py-1 rounded-full text-sm bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-600"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                
+                <div className="flex items-center justify-between">
+                  <button
+                    onClick={closeModal}
+                    className="px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+                  >
+                    Close
+                  </button>
+                  <a
+                    href={`https://github.com/AbdellahiAhmed?tab=repositories`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+                  >
+                    <ExternalLink className="h-4 w-4 mr-2" />
+                    View Related Projects
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
