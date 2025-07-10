@@ -9,6 +9,7 @@ import {
   Terminal,
   GraduationCap,
   FileText,
+  BookOpen,
   MessageSquare,
   Sun,
   Moon
@@ -22,6 +23,8 @@ import SkillsSection from './components/SkillsSection';
 import ProjectsSection from './components/ProjectsSection';
 import EducationSection from './components/EducationSection';
 import ResumeSection from './components/ResumeSection';
+import BlogSection from './components/BlogSection';
+import PerformanceMetrics from './components/PerformanceMetrics';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import LanguageSwitcher from './components/LanguageSwitcher';
@@ -36,7 +39,7 @@ const Portfolio = () => {
   });
 
   // 👇 Suivi de scroll actif avec IntersectionObserver
-  const sectionIds = ['home', 'about', 'experience', 'skills', 'projects', 'education', 'resume', 'contact'];
+  const sectionIds = ['home', 'about', 'experience', 'skills', 'projects', 'education', 'resume', 'blog', 'contact'];
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
   useEffect(() => {
@@ -90,6 +93,7 @@ const Portfolio = () => {
     { id: 'projects', label: t('navbar.projects'), icon: Terminal },
     { id: 'education', label: t('navbar.education'), icon: GraduationCap },
     { id: 'resume', label: t('navbar.resume'), icon: FileText },
+    { id: 'blog', label: t('navbar.blog'), icon: BookOpen },
     { id: 'contact', label: t('navbar.contact'), icon: MessageSquare },
   ];
 
@@ -203,10 +207,12 @@ const Portfolio = () => {
       <ExperienceSection />
       <SkillsSection />
       <ProjectsSection />
-      <EducationSection />
-      <ResumeSection />
-      <ContactSection />
-      <Footer />
+              <EducationSection />
+        <ResumeSection />
+        <BlogSection />
+        <PerformanceMetrics />
+        <ContactSection />
+        <Footer />
     </div>
   );
 };
