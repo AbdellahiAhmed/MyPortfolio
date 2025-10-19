@@ -1,0 +1,172 @@
+{
+  "hero.intro": "Hi, I'm",
+  "hero.title1": "Network Architect",
+  "hero.title2": "Full-Stack Developer",
+  "hero.description1": "I'm not just learning tech - I'm building real tools to shape my world. Driven by purpose, discipline, and vision. I specialize in",
+  "hero.network": "Network Engineering",
+  "hero.linux": "Linux",
+  "hero.backend": "Backend Development",
+  "hero.description2": " I believe in deep learning, creating impact, and never giving up.",
+  "hero.viewWork": "View My Work",
+  "hero.contact": "Get In Touch",
+
+  "about.section": "About Me",
+  "about.title": "My Journey",
+  "about.subtitle": "Aspiring Network Engineer and FullStack Developer, hands-on with network automation, Linux, real-world programming, and problem-solving.",
+  "about.storyTitle": "Network Automation and FullStack",
+  "about.story1": "I am dedicated to becoming a top-tier Network Administrator and Developer. Experienced in networking, server admin, web development, and automation. Proficient in Python, Java, PHP, OOP, and Git/GitHub, with strong communication and leadership skills.",
+  "about.story2": "My journey spans network simulation labs, full-stack web apps, and advanced automation using modern tools (Linux, GNS3, EVE-NG, Flask, etc.). I thrive on fast learning and tackling complex technical problems.",
+  "about.story3": "I believe that robust automation, teamwork, and clean code can transform tech organizations. Every project and job is an opportunity to grow, apply new knowledge, and build real-world impact.",
+  "about.card1.title": "Network Admin",
+  "about.card1.desc": "Specializing in network automation and infrastructure management",
+  "about.card2.title": "Full-Stack Dev",
+  "about.card2.desc": "Building web applications with Python Flask and modern frontend frameworks",
+  "about.card3.title": "Linux Enthusiast",
+  "about.card3.desc": "Deep expertise in Linux systems and command-line automation",
+  "about.card4.title": "Continuous Learner",
+  "about.card4.desc": "Always exploring new technologies and sharing knowledge with the community",
+
+  "skills.section": "Technical Skills",
+  "skills.title": "My Expertise",
+
+  "skills.networking.title": "Networking & Infrastructure",
+  "skills.networking.ccna": "CCNA Certification",
+  "skills.networking.gns3": "GNS3 & EVE-NG",
+  "skills.networking.automation": "Network Automation",
+  "skills.networking.linux": "Linux Systems",
+
+  "skills.programming.title": "Programming & Development",
+  "skills.programming.python": "Python",
+  "skills.programming.phpmysql": "PHP & MySQL",
+  "skills.programming.java": "Java",
+  "skills.programming.frontend": "HTML, CSS, JavaScript/React",
+
+  "skills.tools.title": "Tools & Technologies",
+  "skills.tools.git": "Git & GitHub",
+  "skills.tools.linux": "Linux",
+  "skills.tools.db": "Database Management",
+  "skills.tools.web": "Web Development",
+
+
+
+  "experience.section": "Work Experience",
+  "experience.title": "Professional Journey",
+  "experience.jobs": [
+    {
+      "company": "Google DSC ISCAE",
+      "role": "Student Aid",
+      "period": "Nov 2023 – Present",
+      "type": "Part-time",
+      "logo": "Code",
+      "description": "Gained strong technical, communication, and problem-solving skills through club tech projects. Proficient in Python, Java, PHP, OOP, Git, and GitHub.",
+      "achievements": [
+        "Supported peer learning, problem-solving, and project delivery.",
+        "Improved coding in Python, Java, PHP; expertise in OOP, Git, GitHub.",
+        "Led and contributed to multi-stack developer projects."
+      ]
+    },
+    {
+      "company": "III-Networking",
+      "role": "Network Engineering Student Intern (Self-Project)",
+      "period": "June 2024 – Present",
+      "type": "Internship",
+      "logo": "Server",
+      "description": "Built advanced virtual labs using Cisco Packet Tracer and GNS3. Completed CCNA through hands-on labs. Developed automated network workflows with Python.",
+      "achievements": [
+        "Simulated enterprise networks in Packet Tracer/GNS3.",
+        "Completed all CCNA labs and certification modules.",
+        "Implemented network automation tasks using Python/scripts."
+      ]
+    },
+    {
+      "company": "Moov Mauritel",
+      "role": "Intern, Network & Systems (Stagiaire Réseaux Informatiques et Admin Systèmes)",
+      "period": "June 2025 – August 2025",
+      "type": "Internship",
+      "logo": "Network",
+      "description": "Lead developer on AutoNetConfig: a hybrid system for real-time monitoring/automation in enterprise networks (EVE-NG, Python, Linux, Flask, Nmap). Collaborated with technicians and engineers to deploy and visualize automated network solutions.",
+      "achievements": [
+        "Designed scalable network automation with EVE-NG, Flask, Nmap, Linux.",
+        "Wrote Python scripts for scanning, inventory, and config management.",
+        "Mentored with multi-disciplinary engineering teams."
+      ]
+    }
+  ],
+
+  "education.section": "Education",
+  "education.title": "Academic Background",
+  "education.schools": [
+    {
+      "institution": "ISCAE Mauritania (Institut Supérieur de Comptabilité et d’Administration des Entreprises)",
+      "degree": "Bachelor in Computer Networks & Telecommunications",
+      "period": "2023 – Present",
+      "description": "Academic training in networks, IT, and digital infrastructure. Strong focus on systems integration, automation, secure network setups, and rapid adaptability in tech environments.",
+      "logo": "GraduationCap",
+      "link": "https://iscae.mr"
+    },
+    {
+      "institution": "Lycée d’Aïoun, Mauritania",
+      "degree": "Scientific Baccalaureate (Bac C), GPA 10",
+      "period": "2021 – 2023",
+      "description": "Specialization in mathematics and physical sciences, graduated with top GPA. Built strong foundations in logic, analysis, and scientific problem-solving for modern tech, programming, and networks.",
+      "logo": "Award",
+      "link": "https://www.mauribac.com/fr/bac-2023-pFrFwkSfV/numero/02398/"
+    }
+  ],
+
+  "resume.section": "Resume",
+  "resume.title": "Want to know more?",
+  "resume.description": "Download my resume to explore my professional journey, skills, and achievements in detail.",
+  "resume.cardTitle": "My Resume",
+  "resume.lastUpdate": "Up-to-date as of June 2025",
+  "resume.button": "View CV",
+
+
+  "contact.section": "Contact",
+  "contact.title": "Get in Touch",
+  "contact.description": "Have a question or want to work together? Feel free to reach out!",
+  "contact.success": "Thank you! Your message has been successfully sent.",
+  "contact.cards.github": "View my code",
+  "contact.cards.linkedin": "Professional profile",
+  "contact.cards.whatsapp": "Quick chat",
+  "contact.cards.email": "Send Email",
+  "contact.cards.write": "Write to me",
+  "contact.form.name": "Name",
+  "contact.form.email": "Email",
+  "contact.form.subject": "Subject",
+  "contact.form.message": "Message",
+  "contact.form.placeholder": "Your message here...",
+  "contact.form.button": "Send Message",
+
+  "projects.section": "Featured Projects",
+  "projects.title": "My Work",
+  "projects.code": "Code",
+  "projects.documentation": "Documentation",
+  "projects.live_demo": "Live Demo",
+  "projects.coming_soon": "Will be available Soon!",
+  "projects.all_projects": "View All Projects on GitHub",
+  "projects.items.autonet.description": "Hybrid real-time visualization and automation tool for network infrastructure using EVE-NG, Nmap, Flask, and Python scripting. Built for enterprise network administration.",
+  "projects.items.lmd.description": "University platform for student and course management: HTML, CSS, JavaScript, PHP, MySQL, supports CRUD, form validation, and role-based access.",
+  "projects.items.bank.description": "Comprehensive Java/Swing desktop banking app for transactions, secure authentication, and modern reporting.",
+  "projects.items.rappory.description": "Advanced reporting and analytics platform for business intelligence with real-time data visualization and automated report generation.",
+  "projects.items.detrack.description": "Comprehensive project tracking and management system with agile methodology support, team collaboration, and progress monitoring.",
+
+  "form.name": "Name",
+  "form.email": "Email",
+  "form.subject": "Subject",
+  "form.message": "Message",
+  "footer.rights": "All rights reserved.",
+
+
+  "navbar": {
+  "home": "Home",
+  "about": "About",
+  "experience": "Experience",
+  "skills": "Skills",
+  "projects": "Projects",
+  "education": "Education",
+  "resume": "Resume",
+  "blog": "Blog",
+  "contact": "Contact"
+  }
+}

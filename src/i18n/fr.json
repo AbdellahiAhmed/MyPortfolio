@@ -1,0 +1,174 @@
+{
+  "hero.intro": "Salut, je suis",
+  "hero.title1": "Architecte Réseau",
+  "hero.title2": "Développeur Full-Stack",
+  "hero.description1": "Je ne me contente pas d’apprendre la tech – je construis des outils concrets pour transformer le monde. Guidé par la discipline, le but et la vision. Je me spécialise en",
+  "hero.network": "Ingénierie Réseau",
+  "hero.linux": "Linux",
+  "hero.backend": "Développement Backend",
+  "hero.description2": " Je crois en l'apprentissage profond, l'impact réel et la persévérance.",
+  "hero.viewWork": "Voir mes Projets",
+  "hero.contact": "Me Contacter",
+
+  "about.section": "À propos de moi",
+  "about.title": "Mon Parcours",
+  "about.subtitle": "Ingénieur Réseau et Développeur FullStack en devenir. Pratique avancée de l’automatisation réseau, Linux, dev logiciel réel et résolution de problèmes.",
+  "about.storyTitle": "Automatisation Réseau et FullStack",
+  "about.story1": "Je vise à devenir un administrateur réseau/dev full-stack de haut niveau. Expérience concrète en admin réseau, serveurs, web, automatisation, Python, Java, PHP, OOP, Git/GitHub, leadership et gestion projets.",
+  "about.story2": "Parcours mêlant labs réseaux/simulations, applications web full-stack et automatisations avancées (Linux, GNS3, EVE-NG, Flask…). Apprentissage rapide et résolution de problématiques tech complexes.",
+  "about.story3": "Convaincu que l’automatisation, l’esprit d’équipe et le clean code transforment l’IT. Chaque mission ou projet est un tremplin pour monter en compétences et impacter le réel.",
+  "about.card1.title": "Administrateur Réseau",
+  "about.card1.desc": "Spécialisé en automatisation et gestion des infrastructures réseau",
+  "about.card2.title": "Développeur Full-Stack",
+  "about.card2.desc": "Développement d'applications web avec Python Flask et des frameworks modernes",
+  "about.card3.title": "Passionné de Linux",
+  "about.card3.desc": "Expertise poussée des systèmes Linux et automatisation en ligne de commande",
+  "about.card4.title": "Apprenant Continu",
+  "about.card4.desc": "Toujours curieux de nouvelles technologies et partage de connaissances",
+
+
+  "skills.section": "Compétences Techniques",
+  "skills.title": "Mon Expertise",
+
+  "skills.networking.title": "Réseaux & Infrastructure",
+  "skills.networking.ccna": "Certification CCNA",
+  "skills.networking.gns3": "GNS3 & EVE-NG",
+  "skills.networking.automation": "Automatisation Réseau",
+  "skills.networking.linux": "Systèmes Linux",
+
+  "skills.programming.title": "Programmation & Développement",
+  "skills.programming.python": "Python",
+  "skills.programming.phpmysql": "PHP & MySQL",
+  "skills.programming.java": "Java",
+  "skills.programming.frontend": "HTML, CSS, JavaScript/React",
+
+  "skills.tools.title": "Outils & Technologies",
+  "skills.tools.git": "Git & GitHub",
+  "skills.tools.linux": "Linux",
+  "skills.tools.db": "Gestion de Base de Données",
+  "skills.tools.web": "Développement Web",
+
+  "experience.section": "Expériences",
+  "experience.title": "Parcours Professionnel",
+  "experience.jobs": [
+    {
+      "company": "Google DSC ISCAE",
+      "role": "Étudiant Assistant",
+      "period": "Nov 2023 – Présent",
+      "type": "Temps partiel",
+      "logo": "Code",
+      "description": "Développement de compétences techniques, communication et gestion projets via des projets clubs. Python, Java, PHP, OOP, Git, GitHub.",
+      "achievements": [
+        "Support pair-à-pair, résolution de problèmes/projets tech club.",
+        "Progression en Python, Java, PHP ; expertise OOP, Git, GitHub.",
+        "Participation/lead sur des projets multi-stack."
+      ]
+    },
+    {
+      "company": "III-Networking",
+      "role": "Stagiaire autonome en ingénierie réseau (projet personnel)",
+      "period": "Juin 2024 – Présent",
+      "type": "Stage",
+      "logo": "Server",
+      "description": "Laboratoires avancés sur Cisco Packet Tracer et GNS3. Certification CCNA en pratique. Automatisation réseau par scripts Python.",
+      "achievements": [
+        "Simulation de réseaux entreprise sur Packet Tracer/GNS3.",
+        "Complétion de tous les labs/certif CCNA.",
+        "Mise en œuvre d’automatisation réseau par Python."
+      ]
+    },
+    {
+      "company": "Moov Mauritel",
+      "role": "Stagiaire Réseaux Info & Admin Systèmes",
+      "period": "Juin 2025 – Août 2025",
+      "type": "Stage",
+      "logo": "Network",
+      "description": "Développement principal d’AutoNetConfig : plateforme hybride d’automatisation/supervision réseau sur EVE-NG, Python, Linux, Flask, Nmap. Collaboration interdisciplinaire pour déployer des solutions automatisées.",
+      "achievements": [
+        "Automatisation réseau à l’échelle avec EVE-NG, Flask, Linux, Nmap.",
+        "Scripts Python pour scan, inventaire, gestion config.",
+        "Travail technique d’équipe avec ingénieurs."
+      ]
+    }
+  ],
+
+  "education.section": "Éducation",
+  "education.title": "Parcours Académique",
+  "education.schools": [
+    {
+      "institution": "Institut Supérieur de Comptabilité et d'Administration des Entreprises de Mauritanie (ISCAE)",
+      "degree": "Licence en Réseaux Informatiques et Télécommunications",
+      "period": "2023 – Présent",
+      "description": "Formation universitaire focalisée sur réseaux, systèmes, automatisation, cybersécurité et intégration numérique. Capacité d’adaptation forte et vision globale de l’IT.",
+      "logo": "GraduationCap",
+      "link": "https://iscae.mr"
+    },
+    {
+      "institution": "Lycée d’Aïoun, Mauritanie",
+      "degree": "Baccalauréat Scientifique (Bac C), Mention Très Bien (GPA 10)",
+      "period": "2021 – 2023",
+      "description": "Spécialisation maths/physique, logique et analyse, méthodes scientifiques, compétences relevées pour le réseau, l’automatisation et la programmation moderne.",
+      "logo": "Award",
+      "link": "https://www.mauribac.com/fr/bac-2023-pFrFwkSfV/numero/02398/"
+    }
+  ],
+
+  "resume.section": "CV",
+  "resume.title": "Envie d’en savoir plus ?",
+  "resume.description": "Téléchargez mon CV pour découvrir mon parcours professionnel, mes compétences et mes réalisations en détail.",
+  "resume.cardTitle": "Mon CV",
+  "resume.lastUpdate": "Mis à jour en juin 2025",
+  "resume.button": "Voir le CV",
+
+
+  "contact.section": "Contact",
+  "contact.title": "Me contacter",
+  "contact.description": "Une question ou une collaboration ? N'hésitez pas à me contacter !",
+  "contact.success": "Merci ! Votre message a été envoyé avec succès.",
+  "contact.cards.github": "Voir mes projets",
+  "contact.cards.linkedin": "Profil professionnel",
+  "contact.cards.whatsapp": "Discuter rapidement",
+  "contact.cards.email": "Envoyer un e-mail",
+  "contact.cards.write": "M'écrire",
+  "contact.form.name": "Nom",
+  "contact.form.email": "E-mail",
+  "contact.form.subject": "Sujet",
+  "contact.form.message": "Message",
+  "contact.form.placeholder": "Votre message ici...",
+  "contact.form.button": "Envoyer le message",
+
+
+  
+  "projects.section": "Projets en vedette",
+  "projects.title": "Mes Réalisations",
+  "projects.code": "Code",
+  "projects.documentation": "Documentation",
+  "projects.live_demo": "Démo en ligne",
+  "projects.coming_soon": "Bientôt disponible !",
+  "projects.all_projects": "Voir tous les projets sur GitHub",
+  "projects.items.autonet.description": "Plateforme hybride temps réel d’automatisation/supervision d’infrastructure réseau (EVE-NG, Nmap, Flask, Python).",
+  "projects.items.lmd.description": "Système universitaire de gestion étudiants/cours (HTML, CSS, JavaScript, PHP, MySQL, CRUD, gestion rôles).",
+  "projects.items.bank.description": "Application bancaire Java/Swing avec transactions, authentification sécurisée, reporting moderne.",
+  "projects.items.rappory.description": "Plateforme avancée de reporting et d'analytics pour l'intelligence d'affaires avec visualisation de données en temps réel et génération automatisée de rapports.",
+  "projects.items.detrack.description": "Système complet de suivi et gestion de projets avec support méthodologie agile, collaboration d'équipe et monitoring des progrès.",
+
+
+
+  "form.name": "Nom",
+  "form.email": "Email",
+  "form.subject": "Sujet",
+  "form.message": "Message",
+  "footer.rights": "Tous droits réservés.",
+
+
+  "navbar": {
+  "home": "Accueil",
+  "about": "À propos",
+  "experience": "Expérience",
+  "skills": "Compétences",
+  "projects": "Projets",
+  "education": "Éducation",
+  "resume": "CV",
+  "contact": "Contact"
+  }
+}
