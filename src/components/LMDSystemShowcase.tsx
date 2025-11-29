@@ -75,28 +75,28 @@ const LMDSystemShowcase: React.FC<LMDSystemShowcaseProps> = ({ onBack }) => {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-black dark:bg-slate-900 dark:text-white">
+    <div className="min-h-screen bg-white text-slate-900 dark:bg-slate-950 dark:text-white">
       {/* Header */}
-      <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-16">
+      <div className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center mb-8">
             <button
               onClick={onBack}
-              className="flex items-center space-x-2 px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg transition-colors"
+              className="flex items-center space-x-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors backdrop-blur-sm"
             >
               <ArrowLeft className="h-5 w-5" />
               <span>Back to Portfolio</span>
             </button>
           </div>
-          
+
           <div className="text-center">
             <div className="flex justify-center mb-6">
-              <div className="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center">
+              <div className="w-20 h-20 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-md border border-white/20">
                 <Server className="h-10 w-10 text-white" />
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-4">LMD System</h1>
-            <p className="text-xl md:text-2xl text-green-100 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-emerald-100 mb-8 max-w-3xl mx-auto">
               University platform for student and course management with comprehensive academic features
             </p>
             <div className="flex justify-center space-x-4">
@@ -104,7 +104,7 @@ const LMDSystemShowcase: React.FC<LMDSystemShowcaseProps> = ({ onBack }) => {
                 href="https://github.com/AbdellahiAhmed/Syst-me_LMD"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 px-6 py-3 bg-white/20 hover:bg-white/30 rounded-lg transition-colors"
+                className="flex items-center space-x-2 px-6 py-3 bg-white/10 hover:bg-white/20 rounded-lg transition-colors backdrop-blur-sm border border-white/20"
               >
                 <Github className="h-5 w-5" />
                 <span>View Code</span>
@@ -115,55 +115,55 @@ const LMDSystemShowcase: React.FC<LMDSystemShowcaseProps> = ({ onBack }) => {
       </div>
 
       {/* Project Overview */}
-      <section className="py-16 bg-slate-50 dark:bg-slate-800">
+      <section className="py-16 bg-slate-50 dark:bg-slate-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-6">Project Overview</h2>
-              <p className="text-lg text-slate-600 dark:text-slate-300 mb-6">
-                LMD System is a comprehensive university management platform designed to streamline 
-                academic operations. Built with modern web technologies, it provides a complete 
+              <h2 className="text-3xl font-bold mb-6 text-slate-900 dark:text-white">Project Overview</h2>
+              <p className="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+                LMD System is a comprehensive university management platform designed to streamline
+                academic operations. Built with modern web technologies, it provides a complete
                 solution for student enrollment, course management, and academic record keeping.
               </p>
-              <p className="text-lg text-slate-600 dark:text-slate-300 mb-8">
-                The system features role-based access control, form validation, and a user-friendly 
+              <p className="text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
+                The system features role-based access control, form validation, and a user-friendly
                 interface that simplifies complex academic processes for students, faculty, and administrators.
               </p>
-              
+
               <div className="flex flex-wrap gap-3">
                 {["HTML", "CSS", "JavaScript", "PHP", "MySQL", "CRUD Operations"].map((tech, index) => (
                   <span
                     key={index}
-                    className="px-4 py-2 bg-green-500/20 text-green-600 dark:text-green-400 rounded-full text-sm font-medium border border-green-500/30"
+                    className="px-4 py-2 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-full text-sm font-medium border border-emerald-500/20"
                   >
                     {tech}
                   </span>
                 ))}
               </div>
             </div>
-            
-            <div className="bg-white dark:bg-slate-700 rounded-2xl p-8 shadow-lg">
-              <h3 className="text-xl font-bold mb-4">Key Achievements</h3>
+
+            <div className="glass-card bg-white/50 dark:bg-slate-800/50 rounded-2xl p-8 shadow-xl border border-slate-200 dark:border-slate-700">
+              <h3 className="text-xl font-bold mb-4 text-slate-900 dark:text-white">Key Achievements</h3>
               <ul className="space-y-3">
                 <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
-                  <span>Implemented complete CRUD operations for all entities</span>
+                  <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2"></div>
+                  <span className="text-slate-700 dark:text-slate-300">Implemented complete CRUD operations for all entities</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
-                  <span>Designed responsive user interface for all devices</span>
+                  <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2"></div>
+                  <span className="text-slate-700 dark:text-slate-300">Designed responsive user interface for all devices</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
-                  <span>Built secure authentication and role-based access</span>
+                  <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2"></div>
+                  <span className="text-slate-700 dark:text-slate-300">Built secure authentication and role-based access</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
-                  <span>Optimized database queries and relationships</span>
+                  <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2"></div>
+                  <span className="text-slate-700 dark:text-slate-300">Optimized database queries and relationships</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
-                  <span>Implemented comprehensive form validation</span>
+                  <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2"></div>
+                  <span className="text-slate-700 dark:text-slate-300">Implemented comprehensive form validation</span>
                 </li>
               </ul>
             </div>
@@ -175,22 +175,22 @@ const LMDSystemShowcase: React.FC<LMDSystemShowcaseProps> = ({ onBack }) => {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Key Features</h2>
+            <h2 className="text-3xl font-bold mb-4 text-slate-900 dark:text-white">Key Features</h2>
             <p className="text-lg text-slate-600 dark:text-slate-300">
               Comprehensive academic management capabilities
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700"
+                className="glass-card bg-white/50 dark:bg-slate-800/50 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700 hover:border-emerald-500/30 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="h-6 w-6 text-green-500" />
+                <div className="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
+                <h3 className="text-xl font-bold mb-2 text-slate-900 dark:text-white">{feature.title}</h3>
                 <p className="text-slate-600 dark:text-slate-300">{feature.description}</p>
               </div>
             ))}
@@ -199,48 +199,49 @@ const LMDSystemShowcase: React.FC<LMDSystemShowcaseProps> = ({ onBack }) => {
       </section>
 
       {/* Screenshots */}
-      <section className="py-16 bg-slate-50 dark:bg-slate-800">
+      <section className="py-16 bg-slate-50 dark:bg-slate-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Project Screenshots</h2>
+            <h2 className="text-3xl font-bold mb-4 text-slate-900 dark:text-white">Project Screenshots</h2>
             <p className="text-lg text-slate-600 dark:text-slate-300">
               Visual overview of the LMD System interface and functionality
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             {screenshots.map((screenshot) => (
               <div
                 key={screenshot.id}
-                className="bg-white dark:bg-slate-700 rounded-xl overflow-hidden shadow-lg"
+                className="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-700"
               >
-                <div className="aspect-video bg-slate-200 dark:bg-slate-600 overflow-hidden">
+                <div className="aspect-video bg-slate-200 dark:bg-slate-700 overflow-hidden relative group">
                   <img
                     src={screenshot.image}
                     alt={screenshot.alt}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.style.display = 'none';
                       const parent = target.parentElement;
                       if (parent) {
                         parent.innerHTML = `
-                          <div class="flex items-center justify-center h-full text-center">
+                          <div class="flex items-center justify-center h-full text-center p-6">
                             <div>
-                              <svg class="h-16 w-16 text-slate-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                              </svg>
-                              <p class="text-slate-500 dark:text-slate-400">Screenshot not found</p>
-                              <p class="text-sm text-slate-400 mt-2">Expected: ${screenshot.image}</p>
+                              <div class="w-16 h-16 bg-slate-300 dark:bg-slate-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <BookOpen className="h-8 w-8 text-slate-500 dark:text-slate-400" />
+                              </div>
+                              <p class="text-slate-500 dark:text-slate-400 font-medium">Screenshot Preview</p>
+                              <p class="text-xs text-slate-400 mt-2 font-mono">${screenshot.image}</p>
                             </div>
                           </div>
                         `;
                       }
                     }}
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">{screenshot.title}</h3>
+                  <h3 className="text-xl font-bold mb-2 text-slate-900 dark:text-white">{screenshot.title}</h3>
                   <p className="text-slate-600 dark:text-slate-300">{screenshot.description}</p>
                 </div>
               </div>
@@ -254,10 +255,10 @@ const LMDSystemShowcase: React.FC<LMDSystemShowcaseProps> = ({ onBack }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold mb-6">Technical Implementation</h2>
+              <h2 className="text-3xl font-bold mb-6 text-slate-900 dark:text-white">Technical Implementation</h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-bold mb-3">Frontend Technologies</h3>
+                  <h3 className="text-xl font-bold mb-3 text-slate-800 dark:text-slate-200">Frontend Technologies</h3>
                   <ul className="space-y-2 text-slate-600 dark:text-slate-300">
                     <li>• HTML5 semantic markup for accessibility</li>
                     <li>• CSS3 with responsive design principles</li>
@@ -265,9 +266,9 @@ const LMDSystemShowcase: React.FC<LMDSystemShowcaseProps> = ({ onBack }) => {
                     <li>• Modern UI/UX design patterns</li>
                   </ul>
                 </div>
-                
+
                 <div>
-                  <h3 className="text-xl font-bold mb-3">Backend Architecture</h3>
+                  <h3 className="text-xl font-bold mb-3 text-slate-800 dark:text-slate-200">Backend Architecture</h3>
                   <ul className="space-y-2 text-slate-600 dark:text-slate-300">
                     <li>• PHP server-side scripting and logic</li>
                     <li>• MySQL database with optimized queries</li>
@@ -277,20 +278,20 @@ const LMDSystemShowcase: React.FC<LMDSystemShowcaseProps> = ({ onBack }) => {
                 </div>
               </div>
             </div>
-            
+
             <div>
-              <h2 className="text-3xl font-bold mb-6">Project Impact</h2>
+              <h2 className="text-3xl font-bold mb-6 text-slate-900 dark:text-white">Project Impact</h2>
               <div className="space-y-6">
-                <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6">
-                  <h3 className="text-lg font-bold mb-2 text-green-800 dark:text-green-200">
+                <div className="bg-emerald-50 dark:bg-emerald-900/20 rounded-lg p-6 border border-emerald-100 dark:border-emerald-800">
+                  <h3 className="text-lg font-bold mb-2 text-emerald-800 dark:text-emerald-200">
                     Academic Efficiency
                   </h3>
-                  <p className="text-green-700 dark:text-green-300">
+                  <p className="text-emerald-700 dark:text-emerald-300">
                     Streamlined student enrollment and course management processes
                   </p>
                 </div>
-                
-                <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6">
+
+                <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-100 dark:border-blue-800">
                   <h3 className="text-lg font-bold mb-2 text-blue-800 dark:text-blue-200">
                     Data Management
                   </h3>
@@ -298,12 +299,12 @@ const LMDSystemShowcase: React.FC<LMDSystemShowcaseProps> = ({ onBack }) => {
                     Centralized academic records with secure data handling
                   </p>
                 </div>
-                
-                <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6">
-                  <h3 className="text-lg font-bold mb-2 text-purple-800 dark:text-purple-200">
+
+                <div className="bg-teal-50 dark:bg-teal-900/20 rounded-lg p-6 border border-teal-100 dark:border-teal-800">
+                  <h3 className="text-lg font-bold mb-2 text-teal-800 dark:text-teal-200">
                     User Experience
                   </h3>
-                  <p className="text-purple-700 dark:text-purple-300">
+                  <p className="text-teal-700 dark:text-teal-300">
                     Intuitive interface reducing administrative workload
                   </p>
                 </div>
@@ -314,7 +315,7 @@ const LMDSystemShowcase: React.FC<LMDSystemShowcaseProps> = ({ onBack }) => {
       </section>
 
       {/* Footer */}
-      <div className="bg-slate-900 text-white py-8">
+      <div className="bg-slate-950 text-white py-8 border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-slate-400">
             LMD System - University Management Platform | Full-Stack Web Development

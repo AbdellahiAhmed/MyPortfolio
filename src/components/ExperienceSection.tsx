@@ -1,4 +1,4 @@
-import { Network, Code, Server, ExternalLink, Star } from 'lucide-react';
+import { Network, Code, Server, ExternalLink, Star, Calendar, MapPin, Briefcase } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 interface Experience {
@@ -26,73 +26,113 @@ const ExperienceSection = () => {
   };
 
   return (
-    <section id="experience" className="py-20 relative">
+    <section id="experience" className="py-20 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-72 h-72 bg-indigo-500/5 rounded-full blur-3xl"></div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <span className="px-4 py-2 bg-cyan-500/20 text-cyan-500 rounded-full text-sm font-medium border border-cyan-500/30">
+        {/* Section Header */}
+        <div className="text-center mb-16 animate-slide-up-fade">
+          <span className="px-4 py-2 bg-blue-500/10 text-blue-600 dark:text-blue-400 rounded-full text-sm font-medium border border-blue-500/20 inline-block">
             {t('experience.section')}
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mt-6 mb-6">
-            <span className="bg-gradient-to-r from-cyan-600 to-blue-500 bg-clip-text text-transparent dark:from-white dark:to-slate-300">
+            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 bg-clip-text text-transparent">
               {t('experience.title')}
             </span>
           </h2>
+          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+            Professional journey and key achievements
+          </p>
         </div>
 
-        <div className="space-y-8">
-          {experiences.map((job, index) => {
-            const Icon = logos[job.logo] || Network;
+        {/* Timeline */}
+        <div className="relative">
+          {/* Timeline Line */}
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-blue-500 via-indigo-500 to-slate-500 rounded-full opacity-30"></div>
 
-            return (
-              <div
-                key={index}
-                className="bg-white/70 dark:bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-slate-200 dark:border-slate-700/50 shadow-md transition-all duration-300"
-              >
-                <div className="flex items-start justify-between mb-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-xl flex items-center justify-center border border-purple-500/30">
-                      <Icon className="h-8 w-8 text-purple-500 dark:text-purple-400" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-800 dark:text-white">{job.company}</h3>
-                      <p className="text-purple-700 dark:text-purple-400 font-medium">{job.role}</p>
-                      <div className="flex items-center space-x-3 mt-1">
-                        <span className="text-sm text-gray-600 dark:text-slate-400">{job.period}</span>
-                        <span className="px-2 py-1 bg-cyan-100 text-cyan-700 dark:bg-cyan-500/20 dark:text-cyan-400 rounded-full text-xs border border-cyan-200 dark:border-cyan-500/30">
+          <div className="space-y-12">
+            {experiences.map((job, index) => {
+              const Icon = logos[job.logo] || Network;
+              const isEven = index % 2 === 0;
+
+              return (
+                <div
+                  key={index}
+                  className={`relative flex items-center ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} animate-slide-up-fade`}
+                  style={{ animationDelay: `${index * 150}ms` }}
+                >
+                  {/* Timeline Dot */}
+                  <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-white dark:bg-slate-900 rounded-full items-center justify-center border-4 border-blue-100 dark:border-slate-800 shadow-lg z-10">
+                    <div className="w-4 h-4 bg-blue-600 rounded-full animate-pulse"></div>
+                  </div>
+
+                  {/* Content Card */}
+                  <div className={`w-full md:w-5/12 ${isEven ? 'md:pr-12' : 'md:pl-12'}`}>
+                    <div className="glass-card p-6 rounded-2xl hover:border-blue-500/30 transition-all duration-300 group">
+                      {/* Company Header */}
+                      <div className="flex items-start justify-between mb-4">
+                        <div className="flex items-center space-x-3">
+                          <div className="md:hidden w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center">
+                            <Icon className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+                          </div>
+                          <div>
+                            <h3 className="text-xl font-bold text-slate-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                              {job.company}
+                            </h3>
+                            <p className="text-indigo-600 dark:text-indigo-400 font-semibold">{job.role}</p>
+                          </div>
+                        </div>
+
+                        {job.link && (
+                          <a
+                            href={job.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                            title="View more"
+                          >
+                            <ExternalLink className="h-5 w-5" />
+                          </a>
+                        )}
+                      </div>
+
+                      {/* Period and Type */}
+                      <div className="flex items-center space-x-3 mb-4">
+                        <div className="flex items-center space-x-2 text-sm text-slate-500 dark:text-slate-400">
+                          <Calendar className="h-4 w-4" />
+                          <span>{job.period}</span>
+                        </div>
+                        <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded-full text-xs font-medium border border-slate-200 dark:border-slate-700">
                           {job.type}
                         </span>
                       </div>
+
+                      {/* Description */}
+                      <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                        {job.description}
+                      </p>
+
+                      {/* Achievements */}
+                      <div className="space-y-2">
+                        {job.achievements.map((achievement, i) => (
+                          <div key={i} className="flex items-start space-x-2">
+                            <Star className="h-4 w-4 text-amber-500 mt-0.5 flex-shrink-0" />
+                            <span className="text-sm text-slate-600 dark:text-slate-300 leading-snug">
+                              {achievement}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
-
-                  {job.link ? (
-                    <a
-                      href={job.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-cyan-500 dark:hover:text-white transition-colors"
-                      title="Voir plus"
-                    >
-                      <ExternalLink className="h-5 w-5" />
-                    </a>
-                  ) : (
-                    <ExternalLink className="h-5 w-5 text-gray-300 dark:text-slate-500" title="Aucun lien disponible" />
-                  )}
                 </div>
-
-                <p className="text-gray-800 dark:text-slate-300 mb-4 leading-relaxed">{job.description}</p>
-
-                <div className="space-y-2">
-                  {job.achievements.map((achievement, i) => (
-                    <div key={i} className="flex items-start space-x-2">
-                      <Star className="h-4 w-4 text-yellow-500 mt-1" />
-                      <span className="text-sm text-gray-800 dark:text-slate-300 leading-snug">{achievement}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

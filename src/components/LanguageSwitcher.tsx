@@ -13,13 +13,13 @@ const LanguageSwitcher = () => {
     <div className="flex space-x-2 ml-4">
       <button
         onClick={() => changeLanguage('en')}
-        className={`px-2 py-1 text-sm rounded ${i18n.language === 'en' ? 'bg-cyan-600 text-white' : 'text-cyan-600 border border-cyan-500'}`}
+        className={`px-2 py-1 text-sm rounded transition-colors ${i18n.language === 'en' ? 'bg-blue-600 text-white' : 'text-blue-600 border border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20'}`}
       >
         EN
       </button>
       <button
         onClick={() => changeLanguage('fr')}
-        className={`px-2 py-1 text-sm rounded ${i18n.language === 'fr' ? 'bg-purple-600 text-white' : 'text-purple-600 border border-purple-500'}`}
+        className={`px-2 py-1 text-sm rounded transition-colors ${i18n.language === 'fr' ? 'bg-indigo-600 text-white' : 'text-indigo-600 border border-indigo-500 hover:bg-indigo-50 dark:hover:bg-indigo-900/20'}`}
       >
         FR
       </button>

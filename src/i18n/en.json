@@ -1,15 +1,8 @@
 {
-  "hero.intro": "Hi, I'm",
-  "hero.title1": "Network Architect",
-  "hero.title2": "Full-Stack Developer",
-  "hero.description1": "I'm not just learning tech - I'm building real tools to shape my world. Driven by purpose, discipline, and vision. I specialize in",
-  "hero.network": "Network Engineering",
-  "hero.linux": "Linux",
-  "hero.backend": "Backend Development",
-  "hero.description2": " I believe in deep learning, creating impact, and never giving up.",
-  "hero.viewWork": "View My Work",
-  "hero.contact": "Get In Touch",
-
+  "hero.greeting": "Hi, I'm",
+  "hero.name": "Abdellahi Ahmed",
+  "hero.description": "I'm not just learning tech - I'm building real tools to shape my world. Driven by purpose, discipline, and vision. I specialize in Network Engineering, Linux, and Backend Development. I believe in deep learning, creating impact, and never giving up.",
+  "hero.cta": "View My Work",
   "about.section": "About Me",
   "about.title": "My Journey",
   "about.subtitle": "Aspiring Network Engineer and FullStack Developer, hands-on with network automation, Linux, real-world programming, and problem-solving.",
@@ -25,30 +18,26 @@
   "about.card3.desc": "Deep expertise in Linux systems and command-line automation",
   "about.card4.title": "Continuous Learner",
   "about.card4.desc": "Always exploring new technologies and sharing knowledge with the community",
-
-  "skills.section": "Technical Skills",
   "skills.title": "My Expertise",
-
+  "skills.categories.frontend": "Frontend Development",
+  "skills.categories.backend": "Backend Development",
+  "skills.categories.network": "Network & Cloud",
+  "skills.categories.tools": "DevOps & Tools",
   "skills.networking.title": "Networking & Infrastructure",
   "skills.networking.ccna": "CCNA Certification",
   "skills.networking.gns3": "GNS3 & EVE-NG",
   "skills.networking.automation": "Network Automation",
   "skills.networking.linux": "Linux Systems",
-
   "skills.programming.title": "Programming & Development",
   "skills.programming.python": "Python",
   "skills.programming.phpmysql": "PHP & MySQL",
   "skills.programming.java": "Java",
   "skills.programming.frontend": "HTML, CSS, JavaScript/React",
-
   "skills.tools.title": "Tools & Technologies",
   "skills.tools.git": "Git & GitHub",
   "skills.tools.linux": "Linux",
   "skills.tools.db": "Database Management",
   "skills.tools.web": "Web Development",
-
-
-
   "experience.section": "Work Experience",
   "experience.title": "Professional Journey",
   "experience.jobs": [
@@ -92,7 +81,6 @@
       ]
     }
   ],
-
   "education.section": "Education",
   "education.title": "Academic Background",
   "education.schools": [
@@ -113,15 +101,12 @@
       "link": "https://www.mauribac.com/fr/bac-2023-pFrFwkSfV/numero/02398/"
     }
   ],
-
   "resume.section": "Resume",
   "resume.title": "Want to know more?",
   "resume.description": "Download my resume to explore my professional journey, skills, and achievements in detail.",
   "resume.cardTitle": "My Resume",
   "resume.lastUpdate": "Up-to-date as of June 2025",
   "resume.button": "View CV",
-
-
   "contact.section": "Contact",
   "contact.title": "Get in Touch",
   "contact.description": "Have a question or want to work together? Feel free to reach out!",
@@ -137,7 +122,6 @@
   "contact.form.message": "Message",
   "contact.form.placeholder": "Your message here...",
   "contact.form.button": "Send Message",
-
   "projects.section": "Featured Projects",
   "projects.title": "My Work",
   "projects.code": "Code",
@@ -145,28 +129,79 @@
   "projects.live_demo": "Live Demo",
   "projects.coming_soon": "Will be available Soon!",
   "projects.all_projects": "View All Projects on GitHub",
-  "projects.items.autonet.description": "Hybrid real-time visualization and automation tool for network infrastructure using EVE-NG, Nmap, Flask, and Python scripting. Built for enterprise network administration.",
-  "projects.items.lmd.description": "University platform for student and course management: HTML, CSS, JavaScript, PHP, MySQL, supports CRUD, form validation, and role-based access.",
-  "projects.items.bank.description": "Comprehensive Java/Swing desktop banking app for transactions, secure authentication, and modern reporting.",
-  "projects.items.rappory.description": "Advanced reporting and analytics platform for business intelligence with real-time data visualization and automated report generation.",
-  "projects.items.detrack.description": "Comprehensive project tracking and management system with agile methodology support, team collaboration, and progress monitoring.",
-
+  "projects.items": [
+    {
+      "title": "AutoNetConfig",
+      "description": "Hybrid real-time visualization and automation tool for network infrastructure using EVE-NG, Nmap, Flask, and Python scripting. Built for enterprise network administration.",
+      "tags": [
+        "Python",
+        "Flask",
+        "EVE-NG",
+        "Nmap",
+        "Network Automation"
+      ],
+      "github": "https://github.com/AbdellahiAhmed/AutoNetConfig",
+      "featured": true
+    },
+    {
+      "title": "LMD System",
+      "description": "University platform for student and course management: HTML, CSS, JavaScript, PHP, MySQL, supports CRUD, form validation, and role-based access.",
+      "tags": [
+        "PHP",
+        "MySQL",
+        "JavaScript",
+        "HTML/CSS",
+        "Web Dev"
+      ],
+      "github": "https://github.com/AbdellahiAhmed/Syst-me_LMD",
+      "featured": true
+    },
+    {
+      "title": "Bank App",
+      "description": "Comprehensive Java/Swing desktop banking app for transactions, secure authentication, and modern reporting.",
+      "tags": [
+        "Java",
+        "Swing",
+        "MySQL",
+        "Desktop App"
+      ],
+      "github": "https://github.com/AbdellahiAhmed/Gestion-Bancaire-Java-Swing"
+    },
+    {
+      "title": "Rappory",
+      "description": "Advanced reporting and analytics platform for business intelligence with real-time data visualization and automated report generation.",
+      "tags": [
+        "Data Analysis",
+        "Reporting",
+        "Business Intelligence"
+      ],
+      "github": "https://github.com/AbdellahiAhmed"
+    },
+    {
+      "title": "Detrack",
+      "description": "Comprehensive project tracking and management system with agile methodology support, team collaboration, and progress monitoring.",
+      "tags": [
+        "Project Management",
+        "Agile",
+        "Tracking"
+      ],
+      "github": "https://github.com/AbdellahiAhmed"
+    }
+  ],
   "form.name": "Name",
   "form.email": "Email",
   "form.subject": "Subject",
   "form.message": "Message",
   "footer.rights": "All rights reserved.",
-
-
   "navbar": {
-  "home": "Home",
-  "about": "About",
-  "experience": "Experience",
-  "skills": "Skills",
-  "projects": "Projects",
-  "education": "Education",
-  "resume": "Resume",
-  "blog": "Blog",
-  "contact": "Contact"
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "education": "Education",
+    "resume": "Resume",
+    "blog": "Blog",
+    "contact": "Contact"
   }
 }
