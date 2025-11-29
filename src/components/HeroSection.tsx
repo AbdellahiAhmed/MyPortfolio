@@ -53,9 +53,9 @@ const HeroSection = () => {
 
           {/* Text Content */}
           <div className="flex-1 text-center md:text-left animate-slideInLeft">
-            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full mb-6 backdrop-blur-sm animate-bounce-in">
+            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full mb-6 backdrop-blur-sm animate-bounce-in shadow-sm">
               <Sparkles className="h-4 w-4 text-amber-400" />
-              <span className="text-sm font-medium text-blue-600 dark:text-blue-300">Available for work</span>
+              <span className="text-sm font-semibold text-blue-700 dark:text-blue-200 drop-shadow-sm">Available for work</span>
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">

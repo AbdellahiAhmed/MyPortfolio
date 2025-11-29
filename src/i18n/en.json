@@ -18,7 +18,9 @@
   "about.card3.desc": "Deep expertise in Linux systems and command-line automation",
   "about.card4.title": "Continuous Learner",
   "about.card4.desc": "Always exploring new technologies and sharing knowledge with the community",
+  "skills.section": "Technical Skills",
   "skills.title": "My Expertise",
+  "skills.subtitle": "Operator-grade skills across network automation, backend services, and UI systems.",
   "skills.categories.frontend": "Frontend Development",
   "skills.categories.backend": "Backend Development",
   "skills.categories.network": "Network & Cloud",
@@ -38,6 +40,61 @@
   "skills.tools.linux": "Linux",
   "skills.tools.db": "Database Management",
   "skills.tools.web": "Web Development",
+  "skills.pillars": {
+    "network": {
+      "title": "Network & Infrastructure",
+      "subtitle": "Cisco IOS/NX-OS, BGP/OSPF, VLAN/VXLAN, Wireshark/NetFlow",
+      "metrics": ["30+ labs", "CCNA 2024", "BGP/OSPF"],
+      "points": [
+        "Design and troubleshoot routed/switched topologies with segmentation and QoS.",
+        "Automate discovery, inventory, and config validation with Python tooling.",
+        "Harden access with ACLs, secure management, and observability."
+      ]
+    },
+    "automation": {
+      "title": "Automation & Backend",
+      "subtitle": "Python/Node, REST APIs, CI/CD for network ops",
+      "metrics": ["APIs & scripts", "GitHub Actions", "Test coverage"],
+      "points": [
+        "Build APIs and workers that orchestrate network tasks and enforce policy.",
+        "Ship CI/CD pipelines with checks, linting, and deployment hooks.",
+        "Instrument code with logging/metrics for faster incident triage."
+      ]
+    },
+    "frontend": {
+      "title": "Frontend & Operator UX",
+      "subtitle": "React/TypeScript dashboards, accessibility-first",
+      "metrics": ["Design systems", "A11y-first", "Real-time views"],
+      "points": [
+        "Deliver clear dashboards for config/state with responsive, accessible UI.",
+        "Model components for reuse across status boards and runbooks.",
+        "Integrate live data (WebSockets/polling) with graceful degradation."
+      ]
+    }
+  },
+  "skills.stacks.title": "Delivery toolchain",
+  "skills.stacks.subtitle": "What I use to ship, observe, and keep systems healthy",
+  "skills.stacks.automation": {
+    "title": "Automation & Backend",
+    "subtitle": "APIs, scripting, CI/CD",
+    "tags": ["Python (Flask/FastAPI)", "Node.js", "REST/GraphQL", "PostgreSQL", "GitHub Actions", "Unit tests"]
+  },
+  "skills.stacks.cloud": {
+    "title": "Cloud & Infra",
+    "subtitle": "Deployable, observable services",
+    "tags": ["AWS", "Docker", "Linux/Bash", "Nginx", "Terraform/Ansible", "SSL/TLS"]
+  },
+  "skills.stacks.observability": {
+    "title": "Observability & Security",
+    "subtitle": "Know what's happening and where",
+    "tags": ["Wireshark/NetFlow", "Nmap", "Syslog/ELK", "Prometheus/Grafana", "Alerts/SLOs", "Incident playbooks"]
+  },
+  "skills.stacks.frontend": {
+    "title": "Frontend Systems",
+    "subtitle": "Usable dashboards for operators",
+    "tags": ["React", "TypeScript", "Next.js", "Tailwind CSS", "Component systems", "Accessibility"]
+  },
+  "skills.badge": "CCNA (2024) • 30+ GNS3/EVE-NG labs • Python-driven network automation",
   "experience.section": "Work Experience",
   "experience.title": "Professional Journey",
   "experience.jobs": [
@@ -124,11 +181,18 @@
   "contact.form.button": "Send Message",
   "projects.section": "Featured Projects",
   "projects.title": "My Work",
+  "projects.subtitle": "Operator-grade builds for automation, visibility, and reliable delivery.",
+  "projects.case_study": "Case Study",
+  "projects.stack": "Stack",
   "projects.code": "Code",
   "projects.documentation": "Documentation",
   "projects.live_demo": "Live Demo",
   "projects.coming_soon": "Will be available Soon!",
   "projects.all_projects": "View All Projects on GitHub",
+  "projects.view_repo": "View repo",
+  "projects.view_demo": "Live demo",
+  "projects.more": "More builds",
+  "projects.more_caption": "Selected experiments and utilities",
   "projects.items": [
     {
       "title": "AutoNetConfig",

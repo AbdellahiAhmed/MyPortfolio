@@ -20,6 +20,7 @@
   "about.card4.desc": "Toujours curieux de nouvelles technologies et partage de connaissances",
   "skills.section": "Compétences Techniques",
   "skills.title": "Mon Expertise",
+  "skills.subtitle": "Competences operateur : automatisation reseau, backend et interfaces.",
   "skills.categories.frontend": "Développement Frontend",
   "skills.categories.backend": "Développement Backend",
   "skills.categories.network": "Réseaux & Cloud",
@@ -39,6 +40,101 @@
   "skills.tools.linux": "Linux",
   "skills.tools.db": "Gestion de Base de Données",
   "skills.tools.web": "Développement Web",
+  "skills.pillars": {
+    "network": {
+      "title": "Reseau & Infrastructure",
+      "subtitle": "Cisco IOS/NX-OS, BGP/OSPF, VLAN/VXLAN, Wireshark/NetFlow",
+      "metrics": [
+        "30+ labs",
+        "CCNA 2024",
+        "BGP/OSPF"
+      ],
+      "points": [
+        "Conception et troubleshooting de topologies routees/commutees avec segmentation et QoS.",
+        "Automatisation decouverte, inventaire et validation de config via scripts Python.",
+        "Renforcement securite avec ACL, management securise et observabilite."
+      ]
+    },
+    "automation": {
+      "title": "Automatisation & Backend",
+      "subtitle": "Python/Node, APIs REST, CI/CD pour les ops reseau",
+      "metrics": [
+        "APIs & scripts",
+        "GitHub Actions",
+        "Tests automatiques"
+      ],
+      "points": [
+        "APIs et workers qui orchestrent les taches reseau et appliquent les policies.",
+        "Pipelines CI/CD avec verifications, lint et hooks de deploiement.",
+        "Code instrumente (logs/metrics) pour triage incident plus rapide."
+      ]
+    },
+    "frontend": {
+      "title": "Frontend & UX Operateur",
+      "subtitle": "Dashboards React/TypeScript, accessibilite en premier",
+      "metrics": [
+        "Design systems",
+        "A11y-first",
+        "Vue temps reel"
+      ],
+      "points": [
+        "Dashboards clairs pour config/etat avec UI responsive et accessible.",
+        "Composants modelises pour la reutilisation sur status boards et runbooks.",
+        "Integration donnees live (WebSockets/polling) avec degradation maitrisee."
+      ]
+    }
+  },
+  "skills.stacks.title": "Toolchain de livraison",
+  "skills.stacks.subtitle": "Ce que j'utilise pour livrer, observer et garder les services stables",
+  "skills.stacks.automation": {
+    "title": "Automatisation & Backend",
+    "subtitle": "APIs, scripting, CI/CD",
+    "tags": [
+      "Python (Flask/FastAPI)",
+      "Node.js",
+      "REST/GraphQL",
+      "PostgreSQL",
+      "GitHub Actions",
+      "Tests unitaires"
+    ]
+  },
+  "skills.stacks.cloud": {
+    "title": "Cloud & Infra",
+    "subtitle": "Services deployables et observables",
+    "tags": [
+      "AWS",
+      "Docker",
+      "Linux/Bash",
+      "Nginx",
+      "Terraform/Ansible",
+      "SSL/TLS"
+    ]
+  },
+  "skills.stacks.observability": {
+    "title": "Observabilite & Securite",
+    "subtitle": "Savoir ce qui se passe et ou",
+    "tags": [
+      "Wireshark/NetFlow",
+      "Nmap",
+      "Syslog/ELK",
+      "Prometheus/Grafana",
+      "Alertes/SLOs",
+      "Runbooks d'incident"
+    ]
+  },
+  "skills.stacks.frontend": {
+    "title": "Frontend Systeme",
+    "subtitle": "Dashboards utiles pour les operateurs",
+    "tags": [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Tailwind CSS",
+      "Design system",
+      "Accessibilite"
+    ]
+  },
+  "skills.badge": "CCNA (2024) ? 30+ labs GNS3/EVE-NG ? Automatisation reseau en Python",
   "experience.section": "Expériences",
   "experience.title": "Parcours Professionnel",
   "experience.jobs": [
@@ -125,11 +221,18 @@
   "contact.form.button": "Envoyer le message",
   "projects.section": "Projets en vedette",
   "projects.title": "Mes Réalisations",
+  "projects.subtitle": "Projets operateur pour l'automatisation, la visibilite et la fiabilite.",
+  "projects.case_study": "?tude de cas",
+  "projects.stack": "Stack",
   "projects.code": "Code",
   "projects.documentation": "Documentation",
   "projects.live_demo": "Démo en ligne",
   "projects.coming_soon": "Bientôt disponible !",
   "projects.all_projects": "Voir tous les projets sur GitHub",
+  "projects.view_repo": "Voir le repo",
+  "projects.view_demo": "D??mo en direct",
+  "projects.more": "Autres builds",
+  "projects.more_caption": "Exp??riences et utilitaires s??lectionn??s",
   "projects.items": [
     {
       "title": "AutoNetConfig",

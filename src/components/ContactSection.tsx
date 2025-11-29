@@ -78,7 +78,7 @@ const ContactSection = () => {
           <div className="mb-8 p-4 bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-200 dark:border-emerald-500/30 rounded-xl shadow-sm text-center animate-slide-up-fade">
             <div className="flex items-center justify-center space-x-2 text-emerald-700 dark:text-emerald-400 font-medium">
               <CheckCircle className="h-5 w-5" />
-              <span>✅ {t("contact.success")}</span>
+              <span>バ. {t("contact.success")}</span>
             </div>
           </div>
         )}
