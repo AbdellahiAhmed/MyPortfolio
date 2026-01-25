@@ -1,6 +1,7 @@
-import { ExternalLink, Github } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import SpacedText from './utils/SpacedText';
 
 interface Project {
   title: string;
@@ -17,12 +18,7 @@ const ProjectsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const projects = t('projects.items', { returnObjects: true }) as Project[];
-
-  // Image mapping for projects
-  const projectImages: Record<string, string> = {
-    "AutoNetConfig": "/autonetconfig/dashboard.png",
-    "LMD System": "/lmd-system/admin-panel.png"
-  };
+  const featuredProjects = projects.filter(p => p.featured).slice(0, 3);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -43,116 +39,127 @@ const ProjectsSection = () => {
   }, []);
 
   return (
-    <section id="projects" className="py-24 relative overflow-hidden bg-gray-50 dark:bg-gray-800">
+    <section id="projects" className="py-32 relative overflow-hidden bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Header */}
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-5xl md:text-7xl font-bold mb-6" style={{ fontFamily: "'Righteous', cursive" }}>
-            <span className="text-gray-900 dark:text-white">My Latest Work</span>
+
+        {/* Section Header - Editorial Style */}
+        <div className={`mb-20 transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <p className="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-500 mb-4">
+            Featured Work
+          </p>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gray-900 dark:text-white mb-6 max-w-4xl">
+            Discover my latest work and projects
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl">
             {t('projects.subtitle')}
           </p>
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => {
-            const image = projectImages[project.title];
-
-            return (
-              <div
-                key={index}
-                className={`group cursor-pointer transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-                style={{ transitionDelay: `${index * 150}ms` }}
+        {/* Projects List - Editorial Layout */}
+        <div className="space-y-24">
+          {featuredProjects.map((project, index) => (
+            <article
+              key={index}
+              className={`group transition-all duration-700 ease-out ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
+              style={{ transitionDelay: `${index * 200}ms` }}
+            >
+              {/* Project Image */}
+              <Link
+                to={`/project/${project.title.toLowerCase().replace(/\s+/g, '-')}`}
+                className="block relative mb-8 rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-50 dark:from-gray-800 dark:to-gray-900 aspect-[16/9] group-hover:shadow-2xl transition-shadow duration-500"
               >
-                {/* Project Image */}
-                <div className="relative mb-6 rounded-2xl overflow-hidden bg-gray-200 dark:bg-gray-700 aspect-[4/3]">
-                  {image ? (
-                    <img
-                      src={image}
-                      alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center text-gray-400 dark:text-gray-500">
-                      <span className="text-4xl">🚀</span>
-                    </div>
-                  )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                {/* Gradient Placeholder */}
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-accent/5 to-transparent"></div>
 
-                  {/* Overlay Actions */}
-                  <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    {project.github && (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-3 bg-white dark:bg-gray-900 rounded-full text-gray-900 dark:text-white hover:scale-110 transition-transform shadow-lg"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <Github className="h-5 w-5" />
-                      </a>
-                    )}
-                    {project.demo && (
-                      <a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-3 bg-white dark:bg-gray-900 rounded-full text-gray-900 dark:text-white hover:scale-110 transition-transform shadow-lg"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <ExternalLink className="h-5 w-5" />
-                      </a>
-                    )}
-                  </div>
+                {/* Hover Overlay - Minimal & Sophisticated */}
+                <div className="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/5 dark:group-hover:bg-white/5 transition-all duration-500"></div>
+
+                {/* Project Number - Watermark Style */}
+                <div className="absolute top-8 right-8 text-8xl md:text-9xl font-display font-bold text-gray-900/5 dark:text-white/5 select-none pointer-events-none">
+                  0{index + 1}
                 </div>
+              </Link>
 
-                {/* Project Info */}
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors" style={{ fontFamily: "'Righteous', cursive" }}>
+              {/* Project Info - Clean Typography */}
+              <div className="grid md:grid-cols-12 gap-8 items-start">
+
+                {/* Left Column - Title & Category */}
+                <div className="md:col-span-7 space-y-4">
+                  <div>
+                    <p className="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-500 mb-2">
+                      {project.tags[0]}
+                    </p>
+                    <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gray-900 dark:text-white group-hover:text-accent dark:group-hover:text-accent transition-colors duration-300">
                       {project.title}
                     </h3>
-                    {project.tags[0] && (
-                      <span className="text-sm text-gray-500 dark:text-gray-400 font-medium">
-                        {project.tags[0]}
-                      </span>
-                    )}
                   </div>
 
-                  <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                  <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
                     {project.description}
                   </p>
 
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2 pt-2">
-                    {project.tags.slice(1).map((tag, i) => (
+                  {/* Spaced Link - Azizkhaldi.com Style */}
+                  <Link
+                    to={`/project/${project.title.toLowerCase().replace(/\s+/g, '-')}`}
+                    className="inline-block mt-4 text-sm text-gray-900 dark:text-white hover:text-accent dark:hover:text-accent transition-colors duration-300 group/link"
+                  >
+                    <SpacedText text="View Project" className="font-medium" />
+                    <div className="h-px bg-gray-900 dark:bg-white mt-1 w-0 group-hover/link:w-full transition-all duration-500 ease-out"></div>
+                  </Link>
+                </div>
+
+                {/* Right Column - Tech Stack */}
+                <div className="md:col-span-5">
+                  <p className="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-500 mb-4">
+                    Tech Stack
+                  </p>
+                  <div className="flex flex-wrap gap-3">
+                    {project.tags.map((tag, i) => (
                       <span
                         key={i}
-                        className="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-xs font-medium"
+                        className="px-4 py-2 text-sm bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
+
+                  {/* GitHub Link */}
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block mt-6 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-300"
+                    >
+                      <SpacedText text="View Code" className="text-xs" />
+                      →
+                    </a>
+                  )}
                 </div>
               </div>
-            );
-          })}
+            </article>
+          ))}
         </div>
 
-        {/* View All Projects Link */}
-        <div className={`text-center mt-16 transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <a
-            href="https://github.com/AbdellahiAhmed"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 px-8 py-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-lg"
-          >
-            <Github className="h-5 w-5" />
-            <span>View All Projects</span>
-          </a>
+        {/* View All Works - Editorial CTA */}
+        <div className={`text-center mt-32 transition-all duration-700 ease-out delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="inline-block">
+            <Link
+              to="/works"
+              className="group/cta inline-flex flex-col items-center"
+            >
+              <span className="text-sm mb-2 text-gray-500 dark:text-gray-500">
+                Explore More
+              </span>
+              <span className="text-2xl md:text-3xl font-display font-bold text-gray-900 dark:text-white group-hover/cta:text-accent transition-colors duration-300">
+                <SpacedText text="All Projects" />
+              </span>
+              <div className="h-px bg-gray-900 dark:bg-white mt-2 w-0 group-hover/cta:w-full transition-all duration-500 ease-out"></div>
+            </Link>
+          </div>
         </div>
       </div>
     </section>
