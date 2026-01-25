@@ -25,6 +25,10 @@
   animation: wave 7s ease-in-out infinite;
 }
 
+.wave-path {
+  will-change: d;
+}
+
 /* Text Reveal Animation with Clip Path */
 @keyframes textReveal {
   from {
@@ -50,8 +54,12 @@
   }
 }
 
-.marquee {
-  animation: marquee 20s linear infinite;
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
 }
 
 /* Base Animations */

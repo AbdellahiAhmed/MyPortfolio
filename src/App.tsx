@@ -18,6 +18,8 @@ import LoadingScreen from './components/LoadingScreen';
 import CursorTrail from './components/CursorTrail';
 import Footer from './components/Footer';
 import LanguageSwitcher from './components/LanguageSwitcher';
+import MarqueeSection from './components/MarqueeSection';
+import WaveAnimation from './components/WaveAnimation';
 import './i18n/i18n';
 
 // Lazy load heavy sections for performance
@@ -250,11 +252,17 @@ const Portfolio = () => {
       {/* Main Sections */}
       <main className="relative z-10">
         <HeroSection />
+        <WaveAnimation />
+        <MarqueeSection />
         <AboutSection />
+        <WaveAnimation />
         <Suspense fallback={<SectionLoader />}>
           <ExperienceSection />
           <SkillsSection />
+          <WaveAnimation />
+          <MarqueeSection variant="secondary" />
           <ProjectsSection />
+          <WaveAnimation />
           <EducationSection />
           <ResumeSection />
           <ContactSection />
