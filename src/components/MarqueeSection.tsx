@@ -10,40 +10,40 @@ const MarqueeSection = ({ variant = 'primary' }: MarqueeSectionProps) => {
       <div className="relative flex">
         {/* First marquee */}
         <div className="flex animate-marquee whitespace-nowrap">
-          {[...Array(4)].map((_, i) => (
-            <div key={i} className="flex items-center mx-8">
-              <span className={`text-4xl md:text-6xl font-bold ${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'}`} style={{ fontFamily: "'Righteous', cursive" }}>
+          {[...Array(3)].map((_, i) => (
+            <div key={i} className="flex items-center shrink-0">
+              <span className={`text-4xl md:text-6xl font-display font-bold ${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'} px-6`}>
                 FULL-STACK DEVELOPER
               </span>
-              <span className={`mx-8 ${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'} text-2xl`}>•</span>
-              <span className={`text-4xl md:text-6xl font-bold ${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'}`} style={{ fontFamily: "'Righteous', cursive" }}>
+              <span className={`${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'} text-2xl px-6`}>•</span>
+              <span className={`text-4xl md:text-6xl font-display font-bold ${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'} px-6`}>
                 NETWORK ENGINEER
               </span>
-              <span className={`mx-8 ${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'} text-2xl`}>•</span>
-              <span className={`text-4xl md:text-6xl font-bold ${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'}`} style={{ fontFamily: "'Righteous', cursive" }}>
+              <span className={`${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'} text-2xl px-6`}>•</span>
+              <span className={`text-4xl md:text-6xl font-display font-bold ${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'} px-6`}>
                 UI & UX DESIGNER
               </span>
-              <span className={`mx-8 ${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'} text-2xl`}>•</span>
+              <span className={`${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'} text-2xl px-6`}>•</span>
             </div>
           ))}
         </div>
 
-        {/* Second marquee for seamless loop */}
-        <div className="flex animate-marquee whitespace-nowrap absolute left-0" aria-hidden="true">
-          {[...Array(4)].map((_, i) => (
-            <div key={i} className="flex items-center mx-8">
-              <span className={`text-4xl md:text-6xl font-bold ${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'}`} style={{ fontFamily: "'Righteous', cursive" }}>
+        {/* Second marquee for seamless loop - positioned after first */}
+        <div className="flex animate-marquee whitespace-nowrap absolute left-full" aria-hidden="true">
+          {[...Array(3)].map((_, i) => (
+            <div key={i} className="flex items-center shrink-0">
+              <span className={`text-4xl md:text-6xl font-display font-bold ${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'} px-6`}>
                 FULL-STACK DEVELOPER
               </span>
-              <span className={`mx-8 ${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'} text-2xl`}>•</span>
-              <span className={`text-4xl md:text-6xl font-bold ${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'}`} style={{ fontFamily: "'Righteous', cursive" }}>
+              <span className={`${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'} text-2xl px-6`}>•</span>
+              <span className={`text-4xl md:text-6xl font-display font-bold ${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'} px-6`}>
                 NETWORK ENGINEER
               </span>
-              <span className={`mx-8 ${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'} text-2xl`}>•</span>
-              <span className={`text-4xl md:text-6xl font-bold ${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'}`} style={{ fontFamily: "'Righteous', cursive" }}>
+              <span className={`${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'} text-2xl px-6`}>•</span>
+              <span className={`text-4xl md:text-6xl font-display font-bold ${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'} px-6`}>
                 UI & UX DESIGNER
               </span>
-              <span className={`mx-8 ${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'} text-2xl`}>•</span>
+              <span className={`${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'} text-2xl px-6`}>•</span>
             </div>
           ))}
         </div>
