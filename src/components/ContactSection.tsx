@@ -50,83 +50,59 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden bg-black">
-      {/* Grid Background */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="h-full w-full" style={{
-          backgroundImage: `
-            linear-gradient(to right, rgba(0,255,217,0.1) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(0,255,217,0.1) 1px, transparent 1px)
-          `,
-          backgroundSize: '60px 60px'
-        }} />
-      </div>
-
-      {/* Glowing Orbs */}
-      <div className="absolute top-20 left-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse-slow" />
-      <div className="absolute bottom-20 right-20 w-96 h-96 bg-lime-500/20 rounded-full blur-3xl animate-pulse-slow delay-1000" />
-
+    <section id="contact" className="py-24 relative overflow-hidden bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="mb-16 animate-slide-up-fade">
-          <div className="inline-flex items-center space-x-2 px-4 py-2 bg-black/60 border-2 border-amber-500/50 rounded-lg mb-6 font-mono backdrop-blur-sm">
-            <Mail className="h-4 w-4 text-amber-400" />
-            <span className="text-sm font-bold text-amber-400 tracking-wider uppercase">{t("contact.section")}</span>
-          </div>
-          <h2 className="text-5xl md:text-7xl font-black mb-6 tracking-tighter">
-            <span className="bg-gradient-to-r from-cyan-400 via-lime-400 to-amber-400 bg-clip-text text-transparent drop-shadow-[0_0_50px_rgba(0,255,217,0.5)]" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
-              {t("contact.title")}
-            </span>
+        <div className="text-center mb-16">
+          <h2 className="text-5xl md:text-7xl font-bold mb-6" style={{ fontFamily: "'Righteous', cursive" }}>
+            <span className="text-gray-900 dark:text-white">Get In Touch</span>
           </h2>
-          <p className="text-xl text-white/60 max-w-3xl font-mono">
-            <span className="text-lime-400">$</span> {t("contact.description")}
+          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            {t("contact.description")}
           </p>
         </div>
 
         {/* Success Message */}
         {showSuccess && (
-          <div className="mb-8 p-4 bg-black/60 border-2 border-lime-500/50 rounded-lg shadow-[0_0_30px_rgba(57,255,20,0.3)] backdrop-blur-sm text-center animate-slide-up-fade">
-            <div className="flex items-center justify-center space-x-2 text-lime-400 font-mono font-bold">
+          <div className="mb-8 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-500/30 rounded-xl text-center">
+            <div className="flex items-center justify-center space-x-2 text-green-700 dark:text-green-400 font-medium">
               <CheckCircle className="h-5 w-5" />
-              <span>&gt; {t("contact.success")}</span>
+              <span>{t("contact.success")}</span>
             </div>
           </div>
         )}
 
-        {/* Contact Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {contacts.map((contact, index) => {
-            const borderColors = ['border-cyan-500/30 hover:border-cyan-400', 'border-lime-500/30 hover:border-lime-400', 'border-amber-500/30 hover:border-amber-400', 'border-white/20 hover:border-white/40'];
-            const glowColors = ['hover:shadow-[0_0_30px_rgba(0,255,217,0.3)]', 'hover:shadow-[0_0_30px_rgba(57,255,20,0.3)]', 'hover:shadow-[0_0_30px_rgba(255,176,0,0.3)]', ''];
-            const iconColors = ['text-cyan-400', 'text-lime-400', 'text-amber-400', 'text-white/60'];
-
-            return (
-              <a
-                key={index}
-                href={contact.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`group bg-black/60 border ${borderColors[index]} ${glowColors[index]} rounded-lg p-6 backdrop-blur-sm transition-all duration-300 hover:scale-105 animate-slide-up-fade`}
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 mb-4 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300">
-                    <contact.icon className={`h-8 w-8 ${iconColors[index]}`} />
-                  </div>
-                  <h3 className="text-lg font-bold text-white mb-1 font-mono">{contact.title}</h3>
-                  <p className="text-sm text-white/60 font-mono">{contact.subtitle}</p>
-                </div>
-              </a>
-            );
-          })}
+        {/* Contact Info */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="text-center">
+            <Mail className="h-8 w-8 mx-auto mb-4 text-gray-900 dark:text-white" />
+            <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">Email</h3>
+            <a href="mailto:AbdellahiAhmedAhmedBaba@gmail.com" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+              contact@abdellahi.com
+            </a>
+          </div>
+          <div className="text-center">
+            <FaLinkedin className="h-8 w-8 mx-auto mb-4 text-gray-900 dark:text-white" />
+            <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">LinkedIn</h3>
+            <a href="https://www.linkedin.com/in/abdellahiahmedahmedbaba/" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+              Connect with me
+            </a>
+          </div>
+          <div className="text-center">
+            <FaWhatsapp className="h-8 w-8 mx-auto mb-4 text-gray-900 dark:text-white" />
+            <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">WhatsApp</h3>
+            <a href="https://wa.me/+22243638670" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+              +222 43 63 86 70
+            </a>
+          </div>
         </div>
 
-        {/* Contact Form - Terminal Style */}
-        <div className="max-w-2xl mx-auto animate-slide-up-fade delay-500">
+        {/* Contact Form */}
+        <div className="max-w-2xl mx-auto">
           <form
             action="https://formsubmit.co/AbdellahiAhmedAhmedBaba@gmail.com"
             method="POST"
-            className="bg-black/80 border-2 border-cyan-500/50 rounded-lg p-8 backdrop-blur-sm space-y-6 shadow-[0_0_40px_rgba(0,255,217,0.2)]"
+            className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-xl space-y-6"
           >
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_next" value="https://abdellahiahmed.vercel.app/#contact" />
@@ -137,54 +113,50 @@ const ContactSection = () => {
               <input type="text" id="website" name="website" tabIndex={-1} autoComplete="off" />
             </div>
 
-            {/* Form Header - Terminal Style */}
-            <div className="mb-6">
-              <div className="flex items-center space-x-2 mb-4 pb-3 border-b border-cyan-500/30">
-                <Send className="h-4 w-4 text-cyan-400" />
-                <span className="text-xs text-cyan-400 tracking-wider font-mono uppercase">Message Terminal</span>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-2 font-mono">
-                <span className="text-lime-400">$</span> send_message.sh
+            {/* Form Header */}
+            <div className="text-center mb-8">
+              <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-2" style={{ fontFamily: "'Righteous', cursive" }}>
+                Send a Message
               </h3>
-              <p className="text-white/60 font-mono text-sm">
-                <span className="text-cyan-400">&gt;</span> Let's discuss your project or opportunity
+              <p className="text-gray-600 dark:text-gray-400">
+                Let's discuss your project or opportunity
               </p>
             </div>
 
             {/* Name and Email */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-bold text-cyan-400 mb-2 font-mono uppercase tracking-wider" htmlFor="name">
-                  <span className="text-white/40">$</span> {t("contact.form.name")}
+                <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2" htmlFor="name">
+                  {t("contact.form.name")}
                 </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
                   required
-                  placeholder="Abdellahi Ahmed"
-                  className="w-full bg-black/60 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-white/30 focus:border-cyan-400 focus:shadow-[0_0_20px_rgba(0,255,217,0.3)] transition-all outline-none font-mono"
+                  placeholder="Your name"
+                  className="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-xl px-4 py-3 text-gray-900 dark:text-white placeholder:text-gray-400 focus:border-gray-900 dark:focus:border-white focus:ring-2 focus:ring-gray-900/10 dark:focus:ring-white/10 transition-all outline-none"
                 />
               </div>
               <div>
-                <label className="block text-sm font-bold text-cyan-400 mb-2 font-mono uppercase tracking-wider" htmlFor="email">
-                  <span className="text-white/40">$</span> {t("contact.form.email")}
+                <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2" htmlFor="email">
+                  {t("contact.form.email")}
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
                   required
-                  placeholder="email@example.com"
-                  className="w-full bg-black/60 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-white/30 focus:border-cyan-400 focus:shadow-[0_0_20px_rgba(0,255,217,0.3)] transition-all outline-none font-mono"
+                  placeholder="your@email.com"
+                  className="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-xl px-4 py-3 text-gray-900 dark:text-white placeholder:text-gray-400 focus:border-gray-900 dark:focus:border-white focus:ring-2 focus:ring-gray-900/10 dark:focus:ring-white/10 transition-all outline-none"
                 />
               </div>
             </div>
 
             {/* Subject */}
             <div>
-              <label className="block text-sm font-bold text-lime-400 mb-2 font-mono uppercase tracking-wider" htmlFor="subject">
-                <span className="text-white/40">$</span> {t("contact.form.subject")}
+              <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2" htmlFor="subject">
+                {t("contact.form.subject")}
               </label>
               <input
                 type="text"
@@ -192,14 +164,14 @@ const ContactSection = () => {
                 name="subject"
                 required
                 placeholder="Project Inquiry"
-                className="w-full bg-black/60 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-white/30 focus:border-lime-400 focus:shadow-[0_0_20px_rgba(57,255,20,0.3)] transition-all outline-none font-mono"
+                className="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-xl px-4 py-3 text-gray-900 dark:text-white placeholder:text-gray-400 focus:border-gray-900 dark:focus:border-white focus:ring-2 focus:ring-gray-900/10 dark:focus:ring-white/10 transition-all outline-none"
               />
             </div>
 
             {/* Message */}
             <div>
-              <label className="block text-sm font-bold text-amber-400 mb-2 font-mono uppercase tracking-wider" htmlFor="message">
-                <span className="text-white/40">$</span> {t("contact.form.message")}
+              <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2" htmlFor="message">
+                {t("contact.form.message")}
               </label>
               <textarea
                 id="message"
@@ -207,20 +179,17 @@ const ContactSection = () => {
                 rows={6}
                 required
                 placeholder={t("contact.form.placeholder")}
-                className="w-full bg-black/60 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-white/30 focus:border-amber-400 focus:shadow-[0_0_20px_rgba(255,176,0,0.3)] transition-all resize-none outline-none font-mono"
+                className="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-xl px-4 py-3 text-gray-900 dark:text-white placeholder:text-gray-400 focus:border-gray-900 dark:focus:border-white focus:ring-2 focus:ring-gray-900/10 dark:focus:ring-white/10 transition-all resize-none outline-none"
               ></textarea>
             </div>
 
             {/* Submit Button */}
             <button
               type="submit"
-              className="group relative w-full bg-cyan-500/10 border-2 border-cyan-500/50 text-cyan-400 font-bold py-4 rounded-lg transition-all duration-300 hover:shadow-[0_0_40px_rgba(0,255,217,0.5)] flex items-center justify-center space-x-2 overflow-hidden font-mono uppercase tracking-wider"
+              className="w-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-semibold py-4 rounded-xl hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
             >
-              {/* Shimmer Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400/20 to-transparent animate-shimmer"></div>
-
-              <Send className="h-5 w-5 group-hover:translate-x-1 transition-transform relative z-10" />
-              <span className="relative z-10">{t("contact.form.button")}</span>
+              <Send className="h-5 w-5" />
+              <span>{t("contact.form.button")}</span>
             </button>
           </form>
         </div>
