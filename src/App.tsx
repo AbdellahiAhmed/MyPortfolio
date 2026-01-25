@@ -131,7 +131,7 @@ const Portfolio = () => {
   }
 
   return (
-    <div className="min-h-screen bg-white text-slate-900 dark:bg-slate-950 dark:text-white relative overflow-x-hidden selection:bg-blue-500 selection:text-white">
+    <div className="min-h-screen bg-black text-white relative overflow-x-hidden selection:bg-cyan-400 selection:text-black">
       {/* Custom Cursor */}
       <div className="hidden md:block">
         <CursorTrail />
@@ -140,20 +140,20 @@ const Portfolio = () => {
       {/* Scroll Progress Bar */}
       <div className="fixed top-0 left-0 w-full h-1 z-[60] bg-transparent">
         <div
-          className="h-full bg-gradient-to-r from-blue-600 via-indigo-600 to-amber-500"
+          className="h-full bg-gradient-to-r from-cyan-400 via-lime-400 to-amber-400 shadow-[0_0_10px_rgba(0,255,217,0.8)]"
           style={{ width: `${scrollProgress * 100}%` }}
         ></div>
       </div>
 
       {/* Background animation */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50/10 to-slate-50 dark:from-slate-950 dark:via-blue-950/10 dark:to-slate-950"></div>
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute inset-0 bg-black"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-lime-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
       {/* Navbar */}
-      <nav className="fixed top-0 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200/50 dark:border-slate-800/50 z-50 transition-all duration-300 shadow-sm dark:shadow-none">
+      <nav className="fixed top-0 w-full bg-black/80 backdrop-blur-xl border-b border-cyan-500/30 z-50 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
@@ -162,31 +162,31 @@ const Portfolio = () => {
               onClick={() => scrollTo('home')}
             >
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
-                <div className="relative w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-105 transition-transform duration-300">
+                <div className="absolute inset-0 bg-cyan-400 rounded-lg blur opacity-40 group-hover:opacity-60 transition-opacity duration-300"></div>
+                <div className="relative w-10 h-10 bg-black border-2 border-cyan-400 rounded-lg flex items-center justify-center text-cyan-400 font-bold text-xl font-mono shadow-[0_0_20px_rgba(0,255,217,0.5)] group-hover:scale-105 transition-transform duration-300">
                   AA
                 </div>
               </div>
-              <div className="flex flex-col">
-                <span className="text-lg font-bold text-slate-900 dark:text-white leading-none group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+              <div className="flex flex-col font-mono">
+                <span className="text-lg font-bold text-white leading-none group-hover:text-cyan-400 transition-colors">
                   Abdellahi
                 </span>
-                <span className="text-xs font-medium text-slate-500 dark:text-slate-400 tracking-wider">
-                  PORTFOLIO
+                <span className="text-xs font-medium text-cyan-400/70 tracking-wider">
+                  $ ~/PORTFOLIO
                 </span>
               </div>
             </div>
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-2">
-              <div className="flex items-center bg-slate-100/50 dark:bg-slate-800/50 rounded-full p-1 border border-slate-200 dark:border-slate-700/50 backdrop-blur-sm">
+              <div className="flex items-center bg-black/60 border border-white/10 rounded-lg p-1 backdrop-blur-sm">
                 {navItems.map(({ id, label }) => (
                   <button
                     key={id}
                     onClick={() => scrollTo(id)}
-                    className={`relative px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${activeSection === id
-                      ? 'text-blue-600 dark:text-blue-400 bg-white dark:bg-slate-800 shadow-sm'
-                      : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/50 dark:hover:bg-slate-700/50'
+                    className={`relative px-5 py-2 rounded-lg text-sm font-bold font-mono uppercase tracking-wider transition-all duration-300 ${activeSection === id
+                      ? 'text-black bg-cyan-400 shadow-[0_0_20px_rgba(0,255,217,0.5)]'
+                      : 'text-white/60 hover:text-white hover:bg-white/5'
                       }`}
                   >
                     {label}
@@ -194,13 +194,13 @@ const Portfolio = () => {
                 ))}
               </div>
 
-              <div className="h-8 w-px bg-slate-200 dark:bg-slate-700 mx-4"></div>
+              <div className="h-8 w-px bg-white/10 mx-4"></div>
 
               <div className="flex items-center space-x-3">
-                {/* Theme Switch */}
+                {/* Theme Switch - Hidden for now since we're using dark theme */}
                 <button
                   onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                  className="p-2.5 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-300 text-slate-600 dark:text-slate-400 hover:text-amber-500 dark:hover:text-amber-400"
+                  className="hidden p-2.5 rounded-lg bg-black/60 border border-white/10 hover:border-amber-400/50 transition-all duration-300 text-white/60 hover:text-amber-400"
                   aria-label="Toggle Theme"
                 >
                   {theme === 'dark' ? (
@@ -218,7 +218,7 @@ const Portfolio = () => {
                   href="/CV.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hidden lg:flex items-center space-x-2 px-5 py-2.5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-full font-medium hover:bg-blue-600 dark:hover:bg-blue-100 transition-all duration-300 shadow-lg hover:shadow-blue-500/25 transform hover:-translate-y-0.5"
+                  className="hidden lg:flex items-center space-x-2 px-5 py-2.5 bg-lime-500/10 border-2 border-lime-500/50 text-lime-400 rounded-lg font-bold font-mono uppercase tracking-wider hover:shadow-[0_0_30px_rgba(57,255,20,0.5)] transition-all duration-300 transform hover:-translate-y-0.5"
                 >
                   <span>Resume</span>
                   <Download className="h-4 w-4" />
@@ -229,19 +229,8 @@ const Portfolio = () => {
             {/* Mobile Menu Icon */}
             <div className="md:hidden flex items-center space-x-4">
               <button
-                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                className="p-2 rounded-full bg-slate-100 dark:bg-slate-800"
-              >
-                {theme === 'dark' ? (
-                  <Sun className="h-5 w-5 text-amber-400" />
-                ) : (
-                  <Moon className="h-5 w-5 text-slate-600" />
-                )}
-              </button>
-
-              <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                className="p-2 rounded-lg border border-white/20 text-white hover:border-cyan-400 hover:text-cyan-400 transition-all"
               >
                 {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
@@ -250,23 +239,23 @@ const Portfolio = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`md:hidden absolute top-20 left-0 w-full bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 transition-all duration-300 ease-in-out origin-top ${isMenuOpen ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0 pointer-events-none'
+        <div className={`md:hidden absolute top-20 left-0 w-full bg-black/95 backdrop-blur-xl border-b border-cyan-500/30 transition-all duration-300 ease-in-out origin-top ${isMenuOpen ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0 pointer-events-none'
           }`}>
           <div className="px-4 pt-2 pb-6 space-y-2">
             {navItems.map(({ id, label, icon: Icon }) => (
               <button
                 key={id}
                 onClick={() => scrollTo(id)}
-                className={`flex items-center space-x-3 w-full px-4 py-3 rounded-xl text-base font-medium transition-all ${activeSection === id
-                  ? 'bg-blue-50/50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400'
-                  : 'text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800'
+                className={`flex items-center space-x-3 w-full px-4 py-3 rounded-lg text-base font-bold font-mono uppercase transition-all ${activeSection === id
+                  ? 'bg-cyan-500/10 border border-cyan-500/50 text-cyan-400 shadow-[0_0_20px_rgba(0,255,217,0.3)]'
+                  : 'text-white/60 hover:bg-white/5 hover:text-white border border-transparent'
                   }`}
               >
                 <Icon className="h-5 w-5" />
                 <span>{label}</span>
               </button>
             ))}
-            <div className="pt-4 border-t border-slate-200 dark:border-slate-800 mt-4 flex flex-col space-y-4">
+            <div className="pt-4 border-t border-white/10 mt-4 flex flex-col space-y-4">
               <div className="flex justify-center">
                 <LanguageSwitcher />
               </div>
@@ -274,7 +263,7 @@ const Portfolio = () => {
                 href="/CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center space-x-2 px-5 py-3 bg-blue-600 text-white rounded-xl font-medium hover:bg-blue-700 transition-colors"
+                className="flex items-center justify-center space-x-2 px-5 py-3 bg-lime-500/10 border-2 border-lime-500/50 text-lime-400 rounded-lg font-bold font-mono uppercase tracking-wider hover:shadow-[0_0_30px_rgba(57,255,20,0.5)] transition-all"
               >
                 <span>Download Resume</span>
                 <Download className="h-4 w-4" />
