@@ -131,7 +131,7 @@ const Portfolio = () => {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-x-hidden selection:bg-cyan-400 selection:text-black">
+    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white relative overflow-x-hidden selection:bg-gray-900 selection:text-white dark:selection:bg-white dark:selection:text-gray-900">
       {/* Custom Cursor */}
       <div className="hidden md:block">
         <CursorTrail />
@@ -140,20 +140,13 @@ const Portfolio = () => {
       {/* Scroll Progress Bar */}
       <div className="fixed top-0 left-0 w-full h-1 z-[60] bg-transparent">
         <div
-          className="h-full bg-gradient-to-r from-cyan-400 via-lime-400 to-amber-400 shadow-[0_0_10px_rgba(0,255,217,0.8)]"
+          className="h-full bg-gray-900 dark:bg-white"
           style={{ width: `${scrollProgress * 100}%` }}
         ></div>
       </div>
 
-      {/* Background animation */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-        <div className="absolute inset-0 bg-black"></div>
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-lime-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-      </div>
-
       {/* Navbar */}
-      <nav className="fixed top-0 w-full bg-black/80 backdrop-blur-xl border-b border-cyan-500/30 z-50 transition-all duration-300">
+      <nav className="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200 dark:border-gray-800 z-50 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
@@ -161,46 +154,33 @@ const Portfolio = () => {
               className="flex items-center space-x-3 cursor-pointer group"
               onClick={() => scrollTo('home')}
             >
-              <div className="relative">
-                <div className="absolute inset-0 bg-cyan-400 rounded-lg blur opacity-40 group-hover:opacity-60 transition-opacity duration-300"></div>
-                <div className="relative w-10 h-10 bg-black border-2 border-cyan-400 rounded-lg flex items-center justify-center text-cyan-400 font-bold text-xl font-mono shadow-[0_0_20px_rgba(0,255,217,0.5)] group-hover:scale-105 transition-transform duration-300">
-                  AA
-                </div>
-              </div>
-              <div className="flex flex-col font-mono">
-                <span className="text-lg font-bold text-white leading-none group-hover:text-cyan-400 transition-colors">
-                  Abdellahi
-                </span>
-                <span className="text-xs font-medium text-cyan-400/70 tracking-wider">
-                  $ ~/PORTFOLIO
+              <div className="flex flex-col">
+                <span className="text-xl font-bold text-gray-900 dark:text-white leading-none transition-colors" style={{ fontFamily: "'Righteous', cursive" }}>
+                  Abdellahi Ahmed
                 </span>
               </div>
             </div>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex items-center space-x-2">
-              <div className="flex items-center bg-black/60 border border-white/10 rounded-lg p-1 backdrop-blur-sm">
-                {navItems.map(({ id, label }) => (
-                  <button
-                    key={id}
-                    onClick={() => scrollTo(id)}
-                    className={`relative px-5 py-2 rounded-lg text-sm font-bold font-mono uppercase tracking-wider transition-all duration-300 ${activeSection === id
-                      ? 'text-black bg-cyan-400 shadow-[0_0_20px_rgba(0,255,217,0.5)]'
-                      : 'text-white/60 hover:text-white hover:bg-white/5'
-                      }`}
-                  >
-                    {label}
-                  </button>
-                ))}
-              </div>
-
-              <div className="h-8 w-px bg-white/10 mx-4"></div>
+            <div className="hidden md:flex items-center space-x-8">
+              {navItems.map(({ id, label }) => (
+                <button
+                  key={id}
+                  onClick={() => scrollTo(id)}
+                  className={`text-sm font-medium transition-all duration-300 ${activeSection === id
+                    ? 'text-gray-900 dark:text-white font-semibold'
+                    : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
+                    }`}
+                >
+                  {label}
+                </button>
+              ))}
 
               <div className="flex items-center space-x-3">
-                {/* Theme Switch - Hidden for now since we're using dark theme */}
+                {/* Theme Switch */}
                 <button
                   onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                  className="hidden p-2.5 rounded-lg bg-black/60 border border-white/10 hover:border-amber-400/50 transition-all duration-300 text-white/60 hover:text-amber-400"
+                  className="p-2.5 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300 text-gray-600 dark:text-gray-400"
                   aria-label="Toggle Theme"
                 >
                   {theme === 'dark' ? (
@@ -213,15 +193,12 @@ const Portfolio = () => {
                 {/* Language Switcher */}
                 <LanguageSwitcher />
 
-                {/* Resume CTA */}
+                {/* Contact CTA */}
                 <a
-                  href="/CV.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hidden lg:flex items-center space-x-2 px-5 py-2.5 bg-lime-500/10 border-2 border-lime-500/50 text-lime-400 rounded-lg font-bold font-mono uppercase tracking-wider hover:shadow-[0_0_30px_rgba(57,255,20,0.5)] transition-all duration-300 transform hover:-translate-y-0.5"
+                  href="#contact"
+                  className="hidden lg:flex items-center space-x-2 px-5 py-2.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full font-semibold hover:scale-105 transition-all duration-300 shadow-lg"
                 >
-                  <span>Resume</span>
-                  <Download className="h-4 w-4" />
+                  <span>Contact</span>
                 </a>
               </div>
             </div>
@@ -230,7 +207,7 @@ const Portfolio = () => {
             <div className="md:hidden flex items-center space-x-4">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="p-2 rounded-lg border border-white/20 text-white hover:border-cyan-400 hover:text-cyan-400 transition-all"
+                className="p-2 rounded-lg text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-all"
               >
                 {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
@@ -239,34 +216,31 @@ const Portfolio = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`md:hidden absolute top-20 left-0 w-full bg-black/95 backdrop-blur-xl border-b border-cyan-500/30 transition-all duration-300 ease-in-out origin-top ${isMenuOpen ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0 pointer-events-none'
+        <div className={`md:hidden absolute top-20 left-0 w-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl border-b border-gray-200 dark:border-gray-800 transition-all duration-300 ease-in-out origin-top ${isMenuOpen ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0 pointer-events-none'
           }`}>
           <div className="px-4 pt-2 pb-6 space-y-2">
             {navItems.map(({ id, label, icon: Icon }) => (
               <button
                 key={id}
                 onClick={() => scrollTo(id)}
-                className={`flex items-center space-x-3 w-full px-4 py-3 rounded-lg text-base font-bold font-mono uppercase transition-all ${activeSection === id
-                  ? 'bg-cyan-500/10 border border-cyan-500/50 text-cyan-400 shadow-[0_0_20px_rgba(0,255,217,0.3)]'
-                  : 'text-white/60 hover:bg-white/5 hover:text-white border border-transparent'
+                className={`flex items-center space-x-3 w-full px-4 py-3 rounded-lg text-base font-medium transition-all ${activeSection === id
+                  ? 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white'
+                  : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800'
                   }`}
               >
                 <Icon className="h-5 w-5" />
                 <span>{label}</span>
               </button>
             ))}
-            <div className="pt-4 border-t border-white/10 mt-4 flex flex-col space-y-4">
+            <div className="pt-4 border-t border-gray-200 dark:border-gray-800 mt-4 flex flex-col space-y-4">
               <div className="flex justify-center">
                 <LanguageSwitcher />
               </div>
               <a
-                href="/CV.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center space-x-2 px-5 py-3 bg-lime-500/10 border-2 border-lime-500/50 text-lime-400 rounded-lg font-bold font-mono uppercase tracking-wider hover:shadow-[0_0_30px_rgba(57,255,20,0.5)] transition-all"
+                href="#contact"
+                className="flex items-center justify-center space-x-2 px-5 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full font-semibold hover:scale-105 transition-all"
               >
-                <span>Download Resume</span>
-                <Download className="h-4 w-4" />
+                <span>Contact Me</span>
               </a>
             </div>
           </div>

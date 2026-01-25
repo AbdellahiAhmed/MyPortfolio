@@ -1,32 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Megrim&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* ============================================
-   TERMINAL NOIR DESIGN SYSTEM
+   MODERN MINIMALIST DESIGN SYSTEM
    ============================================ */
 
-/* Scan Lines Effect */
-.bg-scan-lines {
-  background-image: repeating-linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.15) 0px,
-    transparent 1px,
-    transparent 2px,
-    rgba(0, 0, 0, 0.15) 3px
-  );
-  animation: scan 8s linear infinite;
+/* Wave Animation - SVG Path Morphing */
+@keyframes wave {
+  0%, 100% {
+    d: path("M0,100 Q250,50 500,100 T1000,100 L1000,200 L0,200 Z");
+  }
+  33% {
+    d: path("M0,100 Q250,150 500,100 T1000,100 L1000,200 L0,200 Z");
+  }
+  66% {
+    d: path("M0,100 Q250,100 500,150 T1000,100 L1000,200 L0,200 Z");
+  }
 }
 
-@keyframes scan {
+.wave-animation {
+  animation: wave 7s ease-in-out infinite;
+}
+
+/* Text Reveal Animation with Clip Path */
+@keyframes textReveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.text-reveal {
+  animation: textReveal 0.6s ease-out forwards;
+  will-change: clip-path;
+}
+
+/* Marquee Scroll Animation */
+@keyframes marquee {
   0% {
-    background-position: 0 0;
+    transform: translateX(0);
   }
   100% {
-    background-position: 0 100%;
+    transform: translateX(-50%);
   }
+}
+
+.marquee {
+  animation: marquee 20s linear infinite;
 }
 
 /* Base Animations */
@@ -600,48 +625,63 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Terminal Noir Custom Scrollbar */
+/* Minimalist Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000;
-  border-radius: 0;
+  background: #f1f1f1;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #00FFD9, #39FF14);
-  border-radius: 0;
+  background: #888;
+  border-radius: 10px;
   transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(0, 255, 217, 0.5);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #00FFD9, #FFB000);
-  box-shadow: 0 0 15px rgba(0, 255, 217, 0.8);
+  background: #555;
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #444;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #666;
 }
 
 /* Firefox Scrollbar */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #00FFD9 #000000;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+.dark * {
+  scrollbar-color: #444 #1a1a1a;
 }
 
 /* Focus styles */
 *:focus {
-  outline: 2px solid #00FFD9;
+  outline: 2px solid #000;
   outline-offset: 2px;
 }
 
 /* Selection styles */
 ::selection {
-  background: #00FFD9;
-  color: #000000;
+  background: #000;
+  color: #fff;
 }
 
 ::-moz-selection {
-  background: #00FFD9;
-  color: #000000;
+  background: #000;
+  color: #fff;
 }
