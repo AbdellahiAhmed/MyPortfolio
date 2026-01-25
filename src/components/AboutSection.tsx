@@ -28,8 +28,8 @@ const AboutSection = () => {
     <section id="about" className="py-24 relative overflow-hidden bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Title */}
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-5xl md:text-7xl font-bold mb-4" style={{ fontFamily: "'Righteous', cursive" }}>
+        <div className={`text-center mb-16 transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4" style={{ fontFamily: "'Righteous', cursive" }}>
             <span className="text-gray-900 dark:text-white">My Short Story</span>
           </h2>
         </div>
@@ -37,7 +37,7 @@ const AboutSection = () => {
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left - Profile Image */}
-          <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+          <div className={`transition-all duration-700 ease-out delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <div className="relative">
               <img
                 src="/MyProfile.PNG"
@@ -48,7 +48,7 @@ const AboutSection = () => {
           </div>
 
           {/* Right - Story Text */}
-          <div className={`space-y-6 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+          <div className={`space-y-6 transition-all duration-700 ease-out delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <div className="space-y-4 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               <p>
                 {t('about.story1')}

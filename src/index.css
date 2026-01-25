@@ -44,6 +44,31 @@
   will-change: clip-path;
 }
 
+/* Word Wrapper Animation - Aziz Khaldi Style */
+.word-wrapper {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.word-wrapper span {
+  display: inline-block;
+  animation: wordReveal 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(100%);
+  will-change: transform, opacity;
+}
+
+@keyframes wordReveal {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Marquee Scroll Animation */
 @keyframes marquee {
   0% {
@@ -62,17 +87,29 @@
   animation-play-state: paused;
 }
 
-/* Base Animations */
+/* Base Animations - Enhanced with Aziz Khaldi Style */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
 
   to {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Smooth Opacity Transition */
+.fade-in-section {
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  will-change: transform, opacity;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @keyframes slideInLeft {

@@ -122,10 +122,10 @@ const Portfolio = () => {
 
   // Simplified Nav Items for cleaner header
   const navItems = [
-    { id: 'about', label: t('navbar.about'), icon: User },
-    { id: 'experience', label: t('navbar.experience'), icon: Briefcase },
-    { id: 'projects', label: t('navbar.projects'), icon: Terminal },
-    { id: 'contact', label: t('navbar.contact'), icon: MessageSquare },
+    { id: 'home', label: 'Home', icon: User },
+    { id: 'about', label: 'About', icon: User },
+    { id: 'projects', label: 'Works', icon: Terminal },
+    { id: 'contact', label: 'Contact', icon: MessageSquare },
   ];
 
   if (isLoading) {
@@ -194,14 +194,6 @@ const Portfolio = () => {
 
                 {/* Language Switcher */}
                 <LanguageSwitcher />
-
-                {/* Contact CTA */}
-                <a
-                  href="#contact"
-                  className="hidden lg:flex items-center space-x-2 px-5 py-2.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full font-semibold hover:scale-105 transition-all duration-300 shadow-lg"
-                >
-                  <span>Contact</span>
-                </a>
               </div>
             </div>
 
@@ -234,16 +226,10 @@ const Portfolio = () => {
                 <span>{label}</span>
               </button>
             ))}
-            <div className="pt-4 border-t border-gray-200 dark:border-gray-800 mt-4 flex flex-col space-y-4">
+            <div className="pt-4 border-t border-gray-200 dark:border-gray-800 mt-4">
               <div className="flex justify-center">
                 <LanguageSwitcher />
               </div>
-              <a
-                href="#contact"
-                className="flex items-center justify-center space-x-2 px-5 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full font-semibold hover:scale-105 transition-all"
-              >
-                <span>Contact Me</span>
-              </a>
             </div>
           </div>
         </div>
