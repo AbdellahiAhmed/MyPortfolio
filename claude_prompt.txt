@@ -1,0 +1,96 @@
+You are Claude Code (senior frontend engineer + UI reverse-engineer). Your job is to REDESIGN my existing portfolio so it matches https://azizkhaldi.com/ 100% (pixel-perfect) in UI, layout, spacing, typography, animations, interactions, and responsive behavior — while keeping MY content/data (projects, experience, links, images). Do NOT invent projects.
+
+CRITICAL REQUIREMENTS
+- MUST use the already-installed skill: frontend-design. Use it actively for audit, token extraction, UI spec, and implementation guidance.
+- Output must be visually and behaviorally indistinguishable from the reference site (azizkhaldi.com).
+- If any design detail is uncertain, inspect and measure it from the reference site (DevTools computed styles). No guessing.
+- Keep my current tech stack/framework unless absolutely necessary; prefer adapting within the existing repo patterns.
+
+MANDATORY PROCESS (FOLLOW IN ORDER)
+
+1) REPO AUDIT (my codebase)
+- Explore the repo structure: routes/pages, components, styling system, animation libs, data files.
+- Identify where my content lives (projects/experience/social links/images) and keep it as source of truth.
+- Document what needs to be created/modified: pages, components, layout primitives, styles, animations.
+
+2) REVERSE-ENGINEER THE REFERENCE (azizkhaldi.com)
+Use frontend-design skill to extract and document:
+- Typography: font families (titles/body/UI), weights, font sizes, line-heights, letter-spacing (especially spaced nav labels like "H o m e"), text transforms.
+- Colors: exact background, text, borders, accent, hover/active states, opacities.
+- Layout: container widths, grid rules, section paddings, gaps, alignment, whitespace rhythm.
+- UI patterns: header/nav behavior, hero composition, button/link styling, card styling, timeline styling.
+- Animations: scroll reveals, marquees, hover effects, counters, page transitions, smooth scrolling.
+Create a "Design Token Sheet" and map it to Tailwind config or CSS variables (whichever my repo uses).
+
+3) PAGES TO REPRODUCE EXACTLY (structure + UI)
+
+A) HOME (/)
+- Minimal header with logo + spaced-letter nav items (e.g., "H o m e", "A b o u t", "W o r k s") and Contact link; match spacing/hover/active.
+- Hero section: large multi-line headline (3 lines), intro lines, small name line, "scroll down" indicator; match typography and spacing.
+- Intro paragraph + CTA (e.g., "About Me") + "Scroll to Explore" microtext.
+- "My Short Story" section:
+  - Infinite marquee/band repeating with a flower-like icon and repeated text (e.g., "FULL-STACK DEVELOPER UI & UX DESIGNER.") in a seamless loop.
+  - Profile block (image), heading/statement, paragraph.
+  - Animated counters (start at 0, animate on scroll) like YEARS OF EXPERIENCE / PROJECTS COMPLETED.
+- Numbered services/skills section (01/02/03/04) with titles + descriptions; match layout and numbering style.
+- "Discover my latest work…" section: projects list/cards with project name + category + stylized spaced link text; match hover.
+- "Explore my journey…" section: timeline of experience (company, role, dates, description) styled like the reference.
+- Large repeating marquee section (multiple phrases) in continuous loop; match speed and responsiveness.
+- Footer (multi-column) exactly like reference:
+  - LINKS (Home / Work / About / Contact)
+  - SOCIALS (Email / LinkedIn / Whatsapp / Github)
+  - LOCAL TIME (live updating clock with same format)
+  - VERSION (e.g., "2025 © Edition" style)
+  - Signature/name lockup + short bio/link area
+
+B) WORKS (/works)
+- Title "My Work" + intro paragraph.
+- Full projects list styled like reference.
+- Same footer.
+
+C) PROJECT DETAILS (/project/[slug] or equivalent)
+- Hero: project title + two-line subtitle + "Scroll to Explore".
+- Hero image.
+- Project description + stylized "Live Website" button/link with spaced letters.
+- Tech tags list (chips/labels) styled like reference.
+- Two-image gallery section.
+- "Tech Stack" section (icons/labels if present on reference).
+- "My Role" + "Key Responsibilities" bullets + "Project Impact".
+- "Other Projects ✦ Explore More ✦ …" section with scroller/loop + project grid/list.
+- Same footer.
+
+4) ANIMATIONS & MICRO-INTERACTIONS (must match)
+- Smooth scrolling and scroll-triggered reveals for headings/paragraphs/sections.
+- Infinite marquees: perfectly seamless, same speed, same spacing, responsive.
+- Hover states identical (underline/opacity/translate/letter-spacing transitions).
+- Active nav states and transitions.
+- "Scroll down" / "Scroll to Explore" indicator behavior.
+- Counters animate when section enters viewport.
+- Local Time updates live (every second or minute) with same formatting.
+- Page transitions (if present): match fade/slide/blur exactly.
+
+5) DESIGN SYSTEM IMPLEMENTATION
+- Implement design tokens (CSS vars or Tailwind theme extension):
+  - exact colors (including accent)
+  - typography scale (giant titles + micro UI text)
+  - spacing scale + containers
+  - radius + borders + shadows
+- Maintain accessibility (focus states, contrast) without changing the look.
+
+6) RESPONSIVE PIXEL-PERFECT
+- Match desktop, tablet, mobile layouts precisely.
+- Mobile menu behavior must match (overlay/menu button if reference has it).
+- Prevent overflow; ensure fluid typography and marquee behavior on small screens.
+
+7) DELIVERABLES
+- Make necessary file changes (create/modify components/pages/styles/animations).
+- Provide a pixel-perfect validation checklist: desktop + mobile comparisons, tokens verification, animation verification.
+- Provide exact commands to run, build, and lint/test.
+- Keep my data intact: reuse my content sources; do not replace with fake content.
+
+NON-NEGOTIABLE
+- Not "inspired by" — must be a clone-level redesign.
+- Use frontend-design skill throughout (audit → spec → tokens → implementation).
+- Follow existing repo patterns/components; do not introduce a different style system unless required.
+
+Start now by: (1) auditing the repository, (2) producing the design token sheet, (3) listing exact components/pages to build, then (4) implementing in the codebase.

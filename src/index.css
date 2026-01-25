@@ -5,6 +5,34 @@
 @tailwind utilities;
 
 /* ============================================
+   AZIZKHALDI.COM PIXEL-PERFECT CLONE
+   Design System Animations & Utilities
+   ============================================ */
+
+/* ============================================
+   AZIZKHALDI.COM - SCROLL REVEAL ANIMATIONS
+   Exact timing: 0.6s ease, stagger +0.15s
+   ============================================ */
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays for multiple elements */
+.delay-1 { transition-delay: 0.15s; }
+.delay-2 { transition-delay: 0.3s; }
+.delay-3 { transition-delay: 0.45s; }
+.delay-4 { transition-delay: 0.6s; }
+.delay-5 { transition-delay: 0.75s; }
+
+/* ============================================
    MODERN MINIMALIST DESIGN SYSTEM
    ============================================ */
 
