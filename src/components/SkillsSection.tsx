@@ -111,80 +111,16 @@ const SkillsSection = () => {
                     </div>
                   )}
 
-                  {/* Divider Line */}
-                  <div className="pt-8 mt-8 border-t border-gray-200 dark:border-gray-800">
-                    <p className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-500">
-                      Service {service.number}
-                    </p>
-                  </div>
+                  
                 </div>
               </div>
             </article>
           ))}
         </div>
 
-        {/* Tech Stack Section */}
-        <div className={`mt-32 transition-all duration-700 ease-out delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="border-t border-gray-200 dark:border-gray-800 pt-20">
-            <div className="grid md:grid-cols-12 gap-8">
 
-              {/* Left - Label */}
-              <div className="md:col-span-2">
-                <p className="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-500">
-                  Tech Stack
-                </p>
-              </div>
-
-              {/* Right - Technologies */}
-              <div className="md:col-span-10">
-                <h3 className="text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white mb-6">
-                  Tools & Technologies
-                </h3>
-                <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-3xl mb-8">
-                  A curated selection of technologies and tools I work with to deliver exceptional results
-                </p>
-
-                {/* Tech Categories */}
-                <div className="grid md:grid-cols-2 gap-8">
-                  {/* Networking */}
-                  <div>
-                    <p className="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-500 mb-4">
-                      Networking & Infrastructure
-                    </p>
-                    <div className="flex flex-wrap gap-3">
-                      {['Cisco IOS', 'BGP/OSPF', 'VLAN/VXLAN', 'GNS3', 'EVE-NG', 'Wireshark'].map((tech, i) => (
-                        <span
-                          key={i}
-                          className="px-4 py-2 text-sm bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Development */}
-                  <div>
-                    <p className="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-500 mb-4">
-                      Development & Automation
-                    </p>
-                    <div className="flex flex-wrap gap-3">
-                      {['Python', 'Flask/FastAPI', 'React', 'TypeScript', 'Node.js', 'Docker'].map((tech, i) => (
-                        <span
-                          key={i}
-                          className="px-4 py-2 text-sm bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
+        
+            
         {/* Availability CTA */}
         <div className={`text-center mt-32 transition-all duration-700 ease-out delay-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-block">

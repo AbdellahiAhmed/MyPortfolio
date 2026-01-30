@@ -66,7 +66,7 @@ const AboutSection = () => {
             <div className="grid grid-cols-2 gap-8 pt-8">
               <div>
                 <div className="text-5xl md:text-6xl font-display font-bold text-gray-900 dark:text-white mb-2">
-                  <AnimatedCounter end={5} suffix="+" />
+                  <AnimatedCounter end={2} suffix="+" />
                 </div>
                 <div className="text-sm uppercase tracking-wide text-gray-600 dark:text-gray-400 font-medium">
                   Years of Experience
@@ -74,7 +74,7 @@ const AboutSection = () => {
               </div>
               <div>
                 <div className="text-5xl md:text-6xl font-display font-bold text-gray-900 dark:text-white mb-2">
-                  <AnimatedCounter end={20} suffix="+" />
+                  <AnimatedCounter end={15} suffix="+" />
                 </div>
                 <div className="text-sm uppercase tracking-wide text-gray-600 dark:text-gray-400 font-medium">
                   Projects Completed

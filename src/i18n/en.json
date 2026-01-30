@@ -1,19 +1,19 @@
 {
   "hero.greeting": "Hi, I'm",
   "hero.name": "Abdellahi Ahmed",
-  "hero.description": "I'm not just learning tech - I'm building real tools to shape my world. Driven by purpose, discipline, and vision. I specialize in Network Engineering, Linux, and Backend Development. I believe in deep learning, creating impact, and never giving up.",
+  "hero.description": "I'm not just learning technology — I'm building real products that solve real problems. Driven by purpose, discipline, and long-term vision, I design and develop modern Web and Mobile applications with a strong engineering mindset. My work bridges backend systems, clean architectures, and user-focused experiences, turning ideas into reliable, scalable solutions.",
   "hero.cta": "View My Work",
   "about.section": "About Me",
   "about.title": "My Journey",
   "about.subtitle": "Aspiring Network Engineer and FullStack Developer, hands-on with network automation, Linux, real-world programming, and problem-solving.",
-  "about.storyTitle": "Network Automation and FullStack",
-  "about.story1": "I am dedicated to becoming a top-tier Network Administrator and Developer. Experienced in networking, server admin, web development, and automation. Proficient in Python, Java, PHP, OOP, and Git/GitHub, with strong communication and leadership skills.",
-  "about.story2": "My journey spans network simulation labs, full-stack web apps, and advanced automation using modern tools (Linux, GNS3, EVE-NG, Flask, etc.). I thrive on fast learning and tackling complex technical problems.",
-  "about.story3": "I believe that robust automation, teamwork, and clean code can transform tech organizations. Every project and job is an opportunity to grow, apply new knowledge, and build real-world impact.",
+  "about.storyTitle": "Network Engineering and FullStack",
+  "about.story1": "I am focused on growing into a senior Web & Mobile Developer with a strong Network Engineering foundation, building production-ready applications that are secure, scalable, and aligned with real organizational needs. My background spans web and mobile systems, server environments, and enterprise networking, supported by strong communication and leadership skills.",
+  "about.story2": "My journey includes full-stack application projects, network design and simulation, and hands-on work with Linux-based systems. Through academic and personal projects, I’ve designed complete solutions end-to-end — from architecture and implementation to testing and optimization — delivering reliable results under real constraints.",
+  "about.story3": "I believe that clean architecture, intelligent automation, and cross-team collaboration are what drive high-performing tech organizations. Every project I take on is an opportunity to improve system quality, strengthen my engineering judgment, and create measurable real-world impact.",
   "about.card1.title": "Network Admin",
-  "about.card1.desc": "Specializing in network automation and infrastructure management",
+  "about.card1.desc": "Specializing in network engineering and infrastructure management",
   "about.card2.title": "Full-Stack Dev",
-  "about.card2.desc": "Building web applications with Python Flask and modern frontend frameworks",
+  "about.card2.desc": "Building web applications with modern frontend frameworks",
   "about.card3.title": "Linux Enthusiast",
   "about.card3.desc": "Deep expertise in Linux systems and command-line automation",
   "about.card4.title": "Continuous Learner",
@@ -101,27 +101,23 @@
     {
       "company": "Google DSC ISCAE",
       "role": "Student Aid",
-      "period": "Nov 2023 – Present",
+      "period": "Nov 2023 – Juin 2024",
       "type": "Part-time",
       "logo": "Code",
-      "description": "Gained strong technical, communication, and problem-solving skills through club tech projects. Proficient in Python, Java, PHP, OOP, Git, and GitHub.",
+      "description": "Developed technical, communication, and project management skills through club projects. Python, Java, OOP, Git, GitHub.",
       "achievements": [
-        "Supported peer learning, problem-solving, and project delivery.",
-        "Improved coding in Python, Java, PHP; expertise in OOP, Git, GitHub.",
-        "Led and contributed to multi-stack developer projects."
+        
       ]
     },
     {
       "company": "III-Networking",
       "role": "Network Engineering Student Intern (Self-Project)",
-      "period": "June 2024 – Present",
+      "period": "June 2024 – June 2025",
       "type": "Internship",
       "logo": "Server",
       "description": "Built advanced virtual labs using Cisco Packet Tracer and GNS3. Completed CCNA through hands-on labs. Developed automated network workflows with Python.",
       "achievements": [
-        "Simulated enterprise networks in Packet Tracer/GNS3.",
-        "Completed all CCNA labs and certification modules.",
-        "Implemented network automation tasks using Python/scripts."
+        
       ]
     },
     {
@@ -132,9 +128,18 @@
       "logo": "Network",
       "description": "Lead developer on AutoNetConfig: a hybrid system for real-time monitoring/automation in enterprise networks (EVE-NG, Python, Linux, Flask, Nmap). Collaborated with technicians and engineers to deploy and visualize automated network solutions.",
       "achievements": [
-        "Designed scalable network automation with EVE-NG, Flask, Nmap, Linux.",
-        "Wrote Python scripts for scanning, inventory, and config management.",
-        "Mentored with multi-disciplinary engineering teams."
+        
+      ]
+    },
+    {
+      "company": "MCS Consulting",
+      "role": "Web & Digital Solutions Developer",
+      "period": "2025 – Present",
+      "type": "Professional Experience",
+      "logo": "Web",
+      "description": "Contributed to digital and technology projects at MCS Consulting, a firm specialized in financial consulting, ERP solutions, and digital transformation. Worked on the design and improvement of modern web solutions, ensuring alignment between business requirements, corporate visual identity, and user experience.",
+      "achievements": [
+        
       ]
     }
   ],

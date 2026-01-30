@@ -1,19 +1,19 @@
 {
   "hero.greeting": "Salut, je suis",
   "hero.name": "Abdellahi Ahmed",
-  "hero.description": "Je ne me contente pas d’apprendre la tech – je construis des outils concrets pour transformer le monde. Guidé par la discipline et la vision. Je me spécialise en Ingénierie Réseau, Linux et Développement Backend. Je crois en l'apprentissage profond et l'impact réel.",
+  "hero.description": "Je ne me contente pas d’apprendre la technologie — je conçois et développe des produits concrets qui répondent à de vrais besoins. Guidé par le sens, la discipline et une vision à long terme, je crée des applications Web et Mobile modernes avec une forte approche d’ingénierie. Mon travail relie les systèmes backend, les architectures propres et l’expérience utilisateur, afin de transformer des idées en solutions fiables, évolutives et durables.",
   "hero.cta": "Voir mes Projets",
   "about.section": "À propos de moi",
   "about.title": "Mon Parcours",
   "about.subtitle": "Ingénieur Réseau et Développeur FullStack en devenir. Pratique avancée de l’automatisation réseau, Linux, dev logiciel réel et résolution de problèmes.",
   "about.storyTitle": "Automatisation Réseau et FullStack",
-  "about.story1": "Je vise à devenir un administrateur réseau/dev full-stack de haut niveau. Expérience concrète en admin réseau, serveurs, web, automatisation, Python, Java, PHP, OOP, Git/GitHub, leadership et gestion projets.",
-  "about.story2": "Parcours mêlant labs réseaux/simulations, applications web full-stack et automatisations avancées (Linux, GNS3, EVE-NG, Flask…). Apprentissage rapide et résolution de problématiques tech complexes.",
-  "about.story3": "Convaincu que l’automatisation, l’esprit d’équipe et le clean code transforment l’IT. Chaque mission ou projet est un tremplin pour monter en compétences et impacter le réel.",
+  "about.story1": "Je me concentre sur mon évolution vers un rôle de développeur Web & Mobile senior, avec une solide base en ingénierie des réseaux, en concevant des applications prêtes pour la production, sécurisées, évolutives et alignées sur les besoins réels des organisations. Mon parcours couvre les systèmes Web et Mobile, les environnements serveurs et les réseaux d’entreprise, soutenu par de solides compétences en communication et en leadership.",
+  "about.story2": "Mon parcours comprend des projets d’applications full-stack, la conception et la simulation de réseaux, ainsi qu’un travail pratique sur des systèmes basés sur Linux. À travers des projets académiques et personnels, j’ai conçu des solutions complètes de bout en bout — de l’architecture et l’implémentation jusqu’aux tests et à l’optimisation — en produisant des résultats fiables dans des contextes réels.",
+  "about.story3": "Je suis convaincu que des architectures propres, une automatisation intelligente et une collaboration efficace entre équipes sont les piliers des organisations technologiques performantes. Chaque projet que je mène est une opportunité d’améliorer la qualité des systèmes, d’affiner mon jugement d’ingénieur et de créer un impact concret et mesurable.",
   "about.card1.title": "Administrateur Réseau",
-  "about.card1.desc": "Spécialisé en automatisation et gestion des infrastructures réseau",
+  "about.card1.desc": "Spécialisé en administration et gestion des infrastructures réseau",
   "about.card2.title": "Développeur Full-Stack",
-  "about.card2.desc": "Développement d'applications web avec Python Flask et des frameworks modernes",
+  "about.card2.desc": "Développement d'applications web avec des frameworks modernes",
   "about.card3.title": "Passionné de Linux",
   "about.card3.desc": "Expertise poussée des systèmes Linux et automatisation en ligne de commande",
   "about.card4.title": "Apprenant Continu",
@@ -141,27 +141,23 @@
     {
       "company": "Google DSC ISCAE",
       "role": "Étudiant Assistant",
-      "period": "Nov 2023 – Présent",
+      "period": "Nov 2023 – Juin 2024",
       "type": "Temps partiel",
       "logo": "Code",
-      "description": "Développement de compétences techniques, communication et gestion projets via des projets clubs. Python, Java, PHP, OOP, Git, GitHub.",
+      "description": "Développement de compétences techniques, communication et gestion projets via des projets clubs. Python, Java, OOP, Git, GitHub.",
       "achievements": [
-        "Support pair-à-pair, résolution de problèmes/projets tech club.",
-        "Progression en Python, Java, PHP ; expertise OOP, Git, GitHub.",
-        "Participation/lead sur des projets multi-stack."
+        
       ]
     },
     {
       "company": "III-Networking",
       "role": "Stagiaire autonome en ingénierie réseau (projet personnel)",
-      "period": "Juin 2024 – Présent",
+      "period": "June 2024 – June 2025",
       "type": "Stage",
       "logo": "Server",
       "description": "Laboratoires avancés sur Cisco Packet Tracer et GNS3. Certification CCNA en pratique. Automatisation réseau par scripts Python.",
       "achievements": [
-        "Simulation de réseaux entreprise sur Packet Tracer/GNS3.",
-        "Complétion de tous les labs/certif CCNA.",
-        "Mise en œuvre d’automatisation réseau par Python."
+        
       ]
     },
     {
@@ -172,9 +168,18 @@
       "logo": "Network",
       "description": "Développement principal d’AutoNetConfig : plateforme hybride d’automatisation/supervision réseau sur EVE-NG, Python, Linux, Flask, Nmap. Collaboration interdisciplinaire pour déployer des solutions automatisées.",
       "achievements": [
-        "Automatisation réseau à l’échelle avec EVE-NG, Flask, Linux, Nmap.",
-        "Scripts Python pour scan, inventaire, gestion config.",
-        "Travail technique d’équipe avec ingénieurs."
+        
+      ]
+    },
+    {
+      "company": "MCS Consulting",
+      "role": "Web & Digital Solutions Developer",
+      "period": "2025 – Present",
+      "type": "Professional Experience",
+      "logo": "Web",
+      "description": "Participation à des projets digitaux et technologiques au sein de MCS Consulting, cabinet spécialisé en conseil financier, solutions ERP et transformation digitale. Contribution à la conception et à l’amélioration de solutions web modernes, en assurant l’alignement entre les besoins métiers, l’identité visuelle de l’entreprise et l’expérience utilisateur.",
+      "achievements": [
+        
       ]
     }
   ],
