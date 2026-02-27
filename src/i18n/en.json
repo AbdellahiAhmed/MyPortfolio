@@ -198,6 +198,7 @@
   "projects.view_demo": "Live demo",
   "projects.more": "More builds",
   "projects.more_caption": "Selected experiments and utilities",
+  "projects.categories": ["All", "Web Development", "Network", "Desktop"],
   "projects.items": [
     {
       "title": "AutoNetConfig",
@@ -209,6 +210,8 @@
         "Nmap",
         "Network Automation"
       ],
+      "category": "Network",
+      "image": "/autonetconfig/dashboard.png",
       "github": "https://github.com/AbdellahiAhmed/AutoNetConfig",
       "featured": true
     },
@@ -222,6 +225,8 @@
         "HTML/CSS",
         "Web Dev"
       ],
+      "category": "Web Development",
+      "image": "/lmd-system/student-dashboard.png",
       "github": "https://github.com/AbdellahiAhmed/Syst-me_LMD",
       "featured": true
     },
@@ -234,6 +239,7 @@
         "MySQL",
         "Desktop App"
       ],
+      "category": "Desktop",
       "github": "https://github.com/AbdellahiAhmed/Gestion-Bancaire-Java-Swing"
     },
     {
@@ -244,6 +250,7 @@
         "Reporting",
         "Business Intelligence"
       ],
+      "category": "Web Development",
       "github": "https://github.com/AbdellahiAhmed"
     },
     {
@@ -254,6 +261,7 @@
         "Agile",
         "Tracking"
       ],
+      "category": "Web Development",
       "github": "https://github.com/AbdellahiAhmed"
     }
   ],

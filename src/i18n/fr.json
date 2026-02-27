@@ -238,6 +238,7 @@
   "projects.view_demo": "D??mo en direct",
   "projects.more": "Autres builds",
   "projects.more_caption": "Exp??riences et utilitaires s??lectionn??s",
+  "projects.categories": ["Tout", "Développement Web", "Réseau", "Bureau"],
   "projects.items": [
     {
       "title": "AutoNetConfig",
@@ -249,6 +250,8 @@
         "Nmap",
         "Automatisation Réseau"
       ],
+      "category": "Réseau",
+      "image": "/autonetconfig/dashboard.png",
       "github": "https://github.com/AbdellahiAhmed/AutoNetConfig",
       "featured": true
     },
@@ -262,6 +265,8 @@
         "HTML/CSS",
         "Dev Web"
       ],
+      "category": "Développement Web",
+      "image": "/lmd-system/student-dashboard.png",
       "github": "https://github.com/AbdellahiAhmed/Syst-me_LMD",
       "featured": true
     },
@@ -274,26 +279,29 @@
         "MySQL",
         "App Bureau"
       ],
+      "category": "Bureau",
       "github": "https://github.com/AbdellahiAhmed/Gestion-Bancaire-Java-Swing"
     },
     {
       "title": "Rappory",
-      "description": "Plateforme avancée de reporting et d'analytics pour l'intelligence d'affaires avec visualisation de données en temps réel.",
+      "description": "Plateforme avancée de reporting et d’analytics pour l’intelligence d’affaires avec visualisation de données en temps réel.",
       "tags": [
         "Analyse de Données",
         "Reporting",
         "Business Intelligence"
       ],
+      "category": "Développement Web",
       "github": "https://github.com/AbdellahiAhmed"
     },
     {
       "title": "Detrack",
-      "description": "Système complet de suivi et gestion de projets avec support méthodologie agile, collaboration d'équipe.",
+      "description": "Système complet de suivi et gestion de projets avec support méthodologie agile, collaboration d’équipe.",
       "tags": [
         "Gestion de Projet",
         "Agile",
         "Suivi"
       ],
+      "category": "Développement Web",
       "github": "https://github.com/AbdellahiAhmed"
     }
   ],
