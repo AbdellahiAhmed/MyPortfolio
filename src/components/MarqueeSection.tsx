@@ -8,18 +8,18 @@ const MarqueeSection = ({ variant = 'primary' }: MarqueeSectionProps) => {
   // Content to repeat
   const MarqueeContent = () => (
     <>
-      <span className={`text-4xl md:text-6xl font-display font-bold ${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'} inline-block px-8`}>
+      <span className={`text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-display font-bold ${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'} inline-block px-4 sm:px-6 md:px-8`}>
         FULL-STACK DEVELOPER
       </span>
-      <span className={`${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'} text-3xl inline-block px-8`}>•</span>
-      <span className={`text-4xl md:text-6xl font-display font-bold ${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'} inline-block px-8`}>
+      <span className={`${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'} text-xl sm:text-2xl md:text-3xl inline-block px-4 sm:px-6 md:px-8`}>•</span>
+      <span className={`text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-display font-bold ${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'} inline-block px-4 sm:px-6 md:px-8`}>
         NETWORK ENGINEER
       </span>
-      <span className={`${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'} text-3xl inline-block px-8`}>•</span>
-      <span className={`text-4xl md:text-6xl font-display font-bold ${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'} inline-block px-8`}>
+      <span className={`${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'} text-xl sm:text-2xl md:text-3xl inline-block px-4 sm:px-6 md:px-8`}>•</span>
+      <span className={`text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-display font-bold ${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'} inline-block px-4 sm:px-6 md:px-8`}>
         UI & UX DESIGNER
       </span>
-      <span className={`${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'} text-3xl inline-block px-8`}>•</span>
+      <span className={`${isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'} text-xl sm:text-2xl md:text-3xl inline-block px-4 sm:px-6 md:px-8`}>•</span>
     </>
   );
 

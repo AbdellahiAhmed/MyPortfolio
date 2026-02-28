@@ -80,7 +80,7 @@ const SkillsSection = () => {
     subtitle.split(/[,\/]/).map((s) => s.trim()).filter(Boolean);
 
   return (
-    <section id="skills" className="py-32 relative overflow-hidden bg-white dark:bg-gray-900">
+    <section id="skills" className="py-16 md:py-24 lg:py-32 relative overflow-hidden bg-white dark:bg-gray-900">
       {/* Subtle background texture */}
       <div
         className="absolute inset-0 opacity-[0.015] dark:opacity-[0.03]"
@@ -93,11 +93,11 @@ const SkillsSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* Section Header */}
-        <div className={`mb-12 transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`mb-6 md:mb-12 transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <p className="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-500 mb-4">
             {t('skills.section')}
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gray-900 dark:text-white mb-6 max-w-4xl">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gray-900 dark:text-white mb-6 max-w-4xl">
             {t('skills.title')}
           </h2>
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl">
@@ -106,7 +106,7 @@ const SkillsSection = () => {
         </div>
 
         {/* Separator */}
-        <div className={`mb-20 transition-all duration-700 delay-100 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+        <div className={`mb-10 md:mb-20 transition-all duration-700 delay-100 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
           <div className="h-px bg-gray-200 dark:bg-gray-800" />
         </div>
 
@@ -126,7 +126,7 @@ const SkillsSection = () => {
                 <div className="h-px bg-gray-200 dark:bg-gray-800 mx-0" />
               )}
 
-              <div className="py-16 md:py-20 relative">
+              <div className="py-8 md:py-12 lg:py-16 relative">
                 {/* Animated left accent border */}
                 <div
                   className="absolute left-0 top-0 w-0.5 bg-gradient-to-b from-accent via-accent to-accent/30 transition-all duration-1000 ease-out"
@@ -136,13 +136,13 @@ const SkillsSection = () => {
                   }}
                 />
 
-                <div className="grid md:grid-cols-12 gap-8 items-start pl-6 md:pl-8">
+                <div className="grid md:grid-cols-12 gap-4 md:gap-8 items-start pl-3 md:pl-6 lg:pl-8">
 
                   {/* Left Column - Number */}
                   <div className="md:col-span-2">
                     <div className="sticky top-32">
                       <div
-                        className="text-8xl md:text-9xl font-display font-bold select-none leading-none transition-all duration-500 opacity-10 group-hover:opacity-100"
+                        className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-display font-bold select-none leading-none transition-all duration-500 opacity-10 group-hover:opacity-100"
                         style={{
                           background: 'linear-gradient(135deg, #3b82f6, #2563eb, #60a5fa)',
                           WebkitBackgroundClip: 'text',
@@ -158,7 +158,7 @@ const SkillsSection = () => {
                   {/* Right Column - Pillar Details */}
                   <div className="md:col-span-10 space-y-6">
                     <div>
-                      <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gray-900 dark:text-white mb-4 group-hover:text-accent dark:group-hover:text-accent transition-colors duration-300">
+                      <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gray-900 dark:text-white mb-4 group-hover:text-accent dark:group-hover:text-accent transition-colors duration-300">
                         {pillar.title}
                       </h3>
 
@@ -213,7 +213,7 @@ const SkillsSection = () => {
         </div>
 
         {/* CTA */}
-        <div className={`text-center mt-32 transition-all duration-700 ease-out delay-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`text-center mt-16 md:mt-24 lg:mt-32 transition-all duration-700 ease-out delay-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-block">
             <a
               href="#contact"

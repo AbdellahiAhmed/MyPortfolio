@@ -50,14 +50,14 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden bg-white dark:bg-gray-900">
+    <section id="contact" className="py-12 md:py-16 lg:py-24 relative overflow-hidden bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-7xl font-bold mb-6" style={{ fontFamily: "'Righteous', cursive" }}>
+        <div className="text-center mb-8 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6" style={{ fontFamily: "'Righteous', cursive" }}>
             <span className="text-gray-900 dark:text-white">{t("contact.title")}</span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+          <p className="text-base md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
             {t("contact.description")}
           </p>
         </div>
@@ -73,7 +73,7 @@ const ContactSection = () => {
         )}
 
         {/* Contact Info */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-3 gap-4 md:gap-8 mb-8 md:mb-16">
           <div className="text-center">
             <Mail className="h-8 w-8 mx-auto mb-4 text-gray-900 dark:text-white" />
             <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">{t("contact.email_label")}</h3>
@@ -102,7 +102,7 @@ const ContactSection = () => {
           <form
             action="https://formsubmit.co/AbdellahiAhmedAhmedBaba@gmail.com"
             method="POST"
-            className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-xl space-y-6"
+            className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-4 sm:p-6 md:p-8 shadow-xl space-y-4 md:space-y-6"
           >
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_next" value="https://abdellahiahmed.vercel.app/#contact" />
@@ -114,8 +114,8 @@ const ContactSection = () => {
             </div>
 
             {/* Form Header */}
-            <div className="text-center mb-8">
-              <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-2" style={{ fontFamily: "'Righteous', cursive" }}>
+            <div className="text-center mb-4 md:mb-8">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2" style={{ fontFamily: "'Righteous', cursive" }}>
                 {t("contact.form.title")}
               </h3>
               <p className="text-gray-600 dark:text-gray-400">
@@ -124,7 +124,7 @@ const ContactSection = () => {
             </div>
 
             {/* Name and Email */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <div>
                 <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2" htmlFor="name">
                   {t("contact.form.name")}
@@ -186,7 +186,7 @@ const ContactSection = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-semibold py-4 rounded-xl hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
+              className="w-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-semibold py-3 md:py-4 rounded-xl hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
             >
               <Send className="h-5 w-5" />
               <span>{t("contact.form.button")}</span>

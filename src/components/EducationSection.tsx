@@ -34,15 +34,15 @@ const EducationSection = () => {
   }, []);
 
   return (
-    <section id="education" className="py-32 relative overflow-hidden bg-white dark:bg-gray-900">
+    <section id="education" className="py-16 md:py-24 lg:py-32 relative overflow-hidden bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* Section Header - Editorial Style */}
-        <div className={`mb-20 transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`mb-10 md:mb-16 lg:mb-20 transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <p className="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-500 mb-4">
             {t('education.label')}
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gray-900 dark:text-white mb-6 max-w-4xl">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gray-900 dark:text-white mb-6 max-w-4xl">
             {t('education.heading')}
           </h2>
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl">
@@ -51,7 +51,7 @@ const EducationSection = () => {
         </div>
 
         {/* Education Timeline - Vertical Editorial Layout */}
-        <div className="space-y-20">
+        <div className="space-y-10 md:space-y-16 lg:space-y-20">
           {educationData.map((edu, index) => (
             <article
               key={index}
@@ -61,7 +61,7 @@ const EducationSection = () => {
               style={{ transitionDelay: `${index * 200}ms` }}
             >
               {/* Timeline Structure */}
-              <div className="grid md:grid-cols-12 gap-8 items-start">
+              <div className="grid md:grid-cols-12 gap-4 md:gap-8 items-start">
 
                 {/* Left Column - Period & Number */}
                 <div className="md:col-span-3">
@@ -70,7 +70,7 @@ const EducationSection = () => {
                       {edu.period}
                     </p>
                     {/* Large Index Number - Editorial Style */}
-                    <div className="text-7xl font-display font-bold text-gray-900/10 dark:text-white/10 select-none">
+                    <div className="text-5xl sm:text-6xl md:text-7xl font-display font-bold text-gray-900/10 dark:text-white/10 select-none">
                       0{index + 1}
                     </div>
                   </div>
@@ -80,10 +80,10 @@ const EducationSection = () => {
                 <div className="md:col-span-9 space-y-6">
                   {/* Institution Name */}
                   <div>
-                    <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gray-900 dark:text-white mb-3 group-hover:text-accent dark:group-hover:text-accent transition-colors duration-300">
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gray-900 dark:text-white mb-3 group-hover:text-accent dark:group-hover:text-accent transition-colors duration-300">
                       {edu.institution}
                     </h3>
-                    <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 font-medium">
+                    <p className="text-lg md:text-xl lg:text-2xl text-gray-700 dark:text-gray-300 font-medium">
                       {edu.degree}
                     </p>
                   </div>
@@ -119,9 +119,9 @@ const EducationSection = () => {
         </div>
 
         {/* Continuous Learning Section */}
-        <div className={`mt-32 transition-all duration-700 ease-out delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="border-t border-gray-200 dark:border-gray-800 pt-20">
-            <div className="grid md:grid-cols-12 gap-8">
+        <div className={`mt-16 md:mt-24 lg:mt-32 transition-all duration-700 ease-out delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="border-t border-gray-200 dark:border-gray-800 pt-10 md:pt-16 lg:pt-20">
+            <div className="grid md:grid-cols-12 gap-4 md:gap-8">
 
               {/* Left - Label */}
               <div className="md:col-span-3">
@@ -132,7 +132,7 @@ const EducationSection = () => {
 
               {/* Right - Content */}
               <div className="md:col-span-9">
-                <h3 className="text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white mb-6">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white mb-4 md:mb-6">
                   {t('education.lifelong')}
                 </h3>
                 <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-3xl mb-8">

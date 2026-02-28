@@ -26,25 +26,25 @@ const ExperienceSection = () => {
   };
 
   return (
-    <section id="experience" className="py-20 relative overflow-hidden">
+    <section id="experience" className="py-12 md:py-16 lg:py-20 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-72 h-72 bg-cyan-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 left-10 w-48 h-48 md:w-72 md:h-72 bg-blue-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-48 h-48 md:w-72 md:h-72 bg-cyan-500/5 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-slide-up-fade">
+        <div className="text-center mb-8 md:mb-16 animate-slide-up-fade">
           <span className="px-4 py-2 bg-blue-500/10 text-blue-600 dark:text-blue-400 rounded-full text-sm font-medium border border-blue-500/20 inline-block">
             {t('experience.section')}
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-6 mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-4 md:mt-6 mb-4 md:mb-6">
             <span className="bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-blue-400 dark:to-cyan-400 bg-clip-text text-transparent">
               {t('experience.title')}
             </span>
           </h2>
-          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+          <p className="text-base md:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
             {t('experience.description')}
           </p>
         </div>
@@ -54,7 +54,7 @@ const ExperienceSection = () => {
           {/* Timeline Line */}
           <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-blue-500 via-cyan-500 to-slate-500 rounded-full opacity-30"></div>
 
-          <div className="space-y-12">
+          <div className="space-y-6 md:space-y-12">
             {experiences.map((job, index) => {
               const Icon = logos[job.logo] || Network;
               const isEven = index % 2 === 0;
@@ -72,7 +72,7 @@ const ExperienceSection = () => {
 
                   {/* Content Card */}
                   <div className={`w-full md:w-5/12 ${isEven ? 'md:pr-12' : 'md:pl-12'}`}>
-                    <div className="glass-card p-6 rounded-2xl hover:border-blue-500/30 transition-all duration-300 group">
+                    <div className="glass-card p-4 md:p-6 rounded-2xl hover:border-blue-500/30 transition-all duration-300 group">
                       {/* Company Header */}
                       <div className="flex items-start justify-between mb-4">
                         <div className="flex items-center space-x-3">

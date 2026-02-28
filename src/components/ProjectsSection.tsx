@@ -238,7 +238,7 @@ const ProjectsSection = () => {
       >
         <div data-shine className="absolute inset-0 rounded-3xl pointer-events-none opacity-0 transition-opacity duration-300 z-10" />
 
-        <div className="grid md:grid-cols-2 items-center gap-8 p-8 md:p-12">
+        <div className="grid md:grid-cols-2 items-center gap-4 md:gap-8 p-4 sm:p-6 md:p-8 lg:p-12">
           {/* Info */}
           <div className="space-y-6 relative z-20 order-2 md:order-1">
             <div className="flex items-center gap-3">
@@ -250,7 +250,7 @@ const ProjectsSection = () => {
               </span>
             </div>
             <div>
-              <h3 className="text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white mb-3 group-hover:text-accent transition-colors duration-300">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white mb-3 group-hover:text-accent transition-colors duration-300">
                 {project.title}
               </h3>
               <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed">
@@ -292,7 +292,7 @@ const ProjectsSection = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="max-h-[520px] w-auto mx-auto drop-shadow-2xl"
+                  className="max-h-[300px] sm:max-h-[400px] md:max-h-[520px] w-auto mx-auto drop-shadow-2xl"
                   loading="lazy"
                 />
               )}
@@ -325,7 +325,7 @@ const ProjectsSection = () => {
       >
         <div data-shine className="absolute inset-0 rounded-3xl pointer-events-none opacity-0 transition-opacity duration-300 z-10" />
 
-        <div className="grid md:grid-cols-2 items-center gap-8 p-8 md:p-12">
+        <div className="grid md:grid-cols-2 items-center gap-4 md:gap-8 p-4 sm:p-6 md:p-8 lg:p-12">
           {/* Info */}
           <div className="space-y-6 relative z-20 order-2 md:order-1">
             <div className="flex items-center gap-3">
@@ -337,7 +337,7 @@ const ProjectsSection = () => {
               </span>
             </div>
             <div>
-              <h3 className="text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white mb-3 group-hover:text-accent transition-colors duration-300">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white mb-3 group-hover:text-accent transition-colors duration-300">
                 {project.title}
               </h3>
               <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed">
@@ -385,7 +385,7 @@ const ProjectsSection = () => {
   );
 
   return (
-    <section id="projects" className="py-32 relative overflow-hidden bg-white dark:bg-gray-900">
+    <section id="projects" className="py-16 md:py-24 lg:py-32 relative overflow-hidden bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* Header */}
@@ -398,7 +398,7 @@ const ProjectsSection = () => {
               {String(projects.length).padStart(2, '0')} {t('projects.projects_count')}
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gray-900 dark:text-white mb-6 max-w-4xl">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gray-900 dark:text-white mb-6 max-w-4xl">
             {t('projects.title')}
           </h2>
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl">
@@ -411,14 +411,14 @@ const ProjectsSection = () => {
         </div>
 
         {/* Category Tabs */}
-        <div className={`mb-14 transition-all duration-700 ease-out delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="relative inline-flex gap-1 border-b border-gray-200 dark:border-gray-800">
+        <div className={`mb-8 md:mb-14 transition-all duration-700 ease-out delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="relative inline-flex flex-wrap gap-1 border-b border-gray-200 dark:border-gray-800">
             {categories.map((cat, index) => (
               <button
                 key={cat}
                 ref={(el) => { tabsRef.current[index] = el; }}
                 onClick={() => handleCategoryChange(index)}
-                className={`relative px-5 py-3 text-sm font-medium transition-colors duration-300 whitespace-nowrap ${
+                className={`relative px-3 py-2 sm:px-5 sm:py-3 text-xs sm:text-sm font-medium transition-colors duration-300 whitespace-nowrap ${
                   activeCategory === index
                     ? 'text-gray-900 dark:text-white'
                     : 'text-gray-500 dark:text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'
@@ -456,7 +456,7 @@ const ProjectsSection = () => {
 
         {/* CTA */}
         <div
-          className={`text-center mt-24 transition-all duration-700 ease-out delay-700 ${
+          className={`text-center mt-12 md:mt-16 lg:mt-24 transition-all duration-700 ease-out delay-700 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >

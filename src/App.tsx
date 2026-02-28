@@ -99,19 +99,19 @@ const Portfolio = () => {
       {/* Navbar - Azizkhaldi.com Style */}
       <nav className="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-800/50 z-50 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+          <div className="flex justify-between items-center h-16 md:h-20">
             {/* Logo */}
             <Link
               to="/"
               className="flex items-center space-x-3 group"
             >
-              <span className="text-xl font-display font-bold text-gray-900 dark:text-white leading-none transition-colors">
+              <span className="text-lg md:text-xl font-display font-bold text-gray-900 dark:text-white leading-none transition-colors">
                 Abdellahi Ahmed
               </span>
             </Link>
 
             {/* Desktop Menu - Spaced Letters */}
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center space-x-4 lg:space-x-8">
               {navItems.map(({ path, label, spaced }) => (
                 path.includes('#') ? (
                   <button
@@ -147,8 +147,15 @@ const Portfolio = () => {
               </div>
             </div>
 
-            {/* Mobile Menu Icon */}
-            <div className="md:hidden flex items-center space-x-4">
+            {/* Mobile Menu Icons */}
+            <div className="md:hidden flex items-center space-x-2">
+              <button
+                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                className="p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all"
+                aria-label="Toggle Theme"
+              >
+                {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+              </button>
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="p-2 rounded-lg text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-all"
@@ -161,7 +168,7 @@ const Portfolio = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden absolute top-20 left-0 w-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl border-b border-gray-200 dark:border-gray-800 transition-all duration-300 ease-in-out origin-top ${
+          className={`md:hidden absolute top-16 md:top-20 left-0 w-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl border-b border-gray-200 dark:border-gray-800 transition-all duration-300 ease-in-out origin-top ${
             isMenuOpen ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0 pointer-events-none'
           }`}
         >
