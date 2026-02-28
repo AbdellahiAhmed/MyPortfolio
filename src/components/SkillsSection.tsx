@@ -53,21 +53,18 @@ const SkillsSection = () => {
 
   const pillars = [
     {
-      number: '01',
       title: t('skills.pillars.network.title'),
       subtitle: t('skills.pillars.network.subtitle'),
       metrics: t('skills.pillars.network.metrics', { returnObjects: true }) as string[],
       points: t('skills.pillars.network.points', { returnObjects: true }) as string[],
     },
     {
-      number: '02',
       title: t('skills.pillars.automation.title'),
       subtitle: t('skills.pillars.automation.subtitle'),
       metrics: t('skills.pillars.automation.metrics', { returnObjects: true }) as string[],
       points: t('skills.pillars.automation.points', { returnObjects: true }) as string[],
     },
     {
-      number: '03',
       title: t('skills.pillars.frontend.title'),
       subtitle: t('skills.pillars.frontend.subtitle'),
       metrics: t('skills.pillars.frontend.metrics', { returnObjects: true }) as string[],
@@ -136,27 +133,8 @@ const SkillsSection = () => {
                   }}
                 />
 
-                <div className="grid md:grid-cols-12 gap-8 items-start pl-6 md:pl-8">
-
-                  {/* Left Column - Number */}
-                  <div className="md:col-span-2">
-                    <div className="sticky top-32">
-                      <div
-                        className="text-8xl md:text-9xl font-display font-bold select-none leading-none transition-all duration-500 opacity-10 group-hover:opacity-100"
-                        style={{
-                          background: 'linear-gradient(135deg, #3b82f6, #2563eb, #60a5fa)',
-                          WebkitBackgroundClip: 'text',
-                          WebkitTextFillColor: 'transparent',
-                          backgroundClip: 'text',
-                        }}
-                      >
-                        {pillar.number}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Right Column - Pillar Details */}
-                  <div className="md:col-span-10 space-y-6">
+                <div className="pl-6 md:pl-8">
+                  <div className="space-y-6">
                     <div>
                       <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gray-900 dark:text-white mb-4 group-hover:text-accent dark:group-hover:text-accent transition-colors duration-300">
                         {pillar.title}
@@ -207,7 +185,6 @@ const SkillsSection = () => {
                     )}
                   </div>
                 </div>
-              </div>
             </article>
           ))}
         </div>
