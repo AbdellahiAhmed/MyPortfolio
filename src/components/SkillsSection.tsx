@@ -144,7 +144,7 @@ const SkillsSection = () => {
                       <div
                         className="text-8xl md:text-9xl font-display font-bold select-none leading-none transition-all duration-500 text-gray-900/10 dark:text-white/10 group-hover:text-transparent"
                         style={{
-                          backgroundImage: 'linear-gradient(135deg, #10B981, #059669, #10B981)',
+                          backgroundImage: 'linear-gradient(135deg, #3b82f6, #2563eb, #3b82f6)',
                           WebkitBackgroundClip: 'text',
                           backgroundClip: 'text',
                           WebkitTextFillColor: undefined,
@@ -154,7 +154,7 @@ const SkillsSection = () => {
                         <span
                           className="absolute inset-0 invisible group-hover:visible text-8xl md:text-9xl font-display font-bold leading-none"
                           style={{
-                            background: 'linear-gradient(135deg, #10B981, #059669, #34D399)',
+                            background: 'linear-gradient(135deg, #3b82f6, #2563eb, #60a5fa)',
                             WebkitBackgroundClip: 'text',
                             WebkitTextFillColor: 'transparent',
                           }}

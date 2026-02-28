@@ -36,8 +36,8 @@ const ContactSection = () => {
       title: "WhatsApp",
       subtitle: t("contact.cards.whatsapp"),
       link: "https://wa.me/+22243638670",
-      gradient: "from-emerald-500 to-emerald-600",
-      hoverColor: "hover:shadow-emerald-500/30"
+      gradient: "from-green-500 to-green-600",
+      hoverColor: "hover:shadow-green-500/30"
     },
     {
       icon: Mail,

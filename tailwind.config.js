@@ -31,9 +31,9 @@ export default {
           dark: '#334155',
         },
         accent: {
-          DEFAULT: '#10B981',
-          light: '#34D399',
-          dark: '#059669',
+          DEFAULT: '#3b82f6',
+          light: '#60a5fa',
+          dark: '#2563eb',
         },
       },
       fontFamily: {

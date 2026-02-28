@@ -22,13 +22,13 @@ const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
     return (
         <div className="fixed inset-0 z-[100] bg-white dark:bg-slate-950 flex flex-col items-center justify-center transition-opacity duration-500">
             <div className="relative mb-8">
-                <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full blur-xl opacity-50 animate-pulse"></div>
-                <Network className="h-16 w-16 text-emerald-600 dark:text-emerald-400 relative z-10 animate-bounce" />
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full blur-xl opacity-50 animate-pulse"></div>
+                <Network className="h-16 w-16 text-blue-600 dark:text-blue-400 relative z-10 animate-bounce" />
             </div>
 
             <div className="w-64 h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden relative">
                 <div
-                    className="h-full bg-gradient-to-r from-emerald-500 to-teal-600 transition-all duration-300 ease-out relative"
+                    className="h-full bg-gradient-to-r from-blue-500 to-cyan-600 transition-all duration-300 ease-out relative"
                     style={{ width: `${Math.min(progress, 100)}%` }}
                 >
                     <div className="absolute inset-0 bg-white/30 animate-shimmer"></div>

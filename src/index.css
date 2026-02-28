@@ -254,20 +254,20 @@
   }
 }
 
-/* Glow Pulse - Emerald */
+/* Glow Pulse - Blue */
 @keyframes glowPulse {
 
   0%,
   100% {
-    box-shadow: 0 0 20px rgba(16, 185, 129, 0.3),
-      0 0 40px rgba(16, 185, 129, 0.2),
-      0 0 60px rgba(16, 185, 129, 0.1);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3),
+      0 0 40px rgba(59, 130, 246, 0.2),
+      0 0 60px rgba(59, 130, 246, 0.1);
   }
 
   50% {
-    box-shadow: 0 0 30px rgba(16, 185, 129, 0.5),
-      0 0 60px rgba(16, 185, 129, 0.3),
-      0 0 90px rgba(16, 185, 129, 0.2);
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.5),
+      0 0 60px rgba(59, 130, 246, 0.3),
+      0 0 90px rgba(59, 130, 246, 0.2);
   }
 }
 
@@ -600,39 +600,39 @@
 }
 
 /* ============================================
-   GRADIENT UTILITIES - EMERALD PALETTE
+   GRADIENT UTILITIES - BLUE TECH PALETTE
    ============================================ */
 
 .gradient-blue-slate {
-  background: linear-gradient(135deg, #10B981 0%, #475569 100%);
+  background: linear-gradient(135deg, #3b82f6 0%, #475569 100%);
 }
 
 .gradient-blue-amber {
-  background: linear-gradient(135deg, #059669 0%, #0d9488 100%);
+  background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
 }
 
 .gradient-slate-blue {
-  background: linear-gradient(135deg, #0f172a 0%, #064e3b 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
 }
 
 .gradient-amber-orange {
-  background: linear-gradient(135deg, #34D399 0%, #10B981 100%);
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
 }
 
 .gradient-emerald-teal {
-  background: linear-gradient(135deg, #059669 0%, #0d9488 100%);
+  background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
 }
 
 .gradient-animated {
   background: linear-gradient(-45deg,
-      #064e3b,
-      /* Dark Emerald */
-      #10B981,
-      /* Emerald */
+      #1e3a8a,
+      /* Dark Blue */
+      #3b82f6,
+      /* Blue */
       #475569,
       /* Slate */
-      #0d9488
-      /* Teal */
+      #06b6d4
+      /* Cyan */
     );
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
@@ -640,7 +640,7 @@
 
 /* Text Gradients */
 .text-gradient-blue-gold {
-  background: linear-gradient(135deg, #10B981 0%, #0d9488 100%);
+  background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -648,9 +648,9 @@
 
 .text-gradient-animated {
   background: linear-gradient(-45deg,
-      #064e3b,
-      #10B981,
-      #34D399,
+      #1e3a8a,
+      #3b82f6,
+      #60a5fa,
       #0f172a);
   background-size: 300% 300%;
   -webkit-background-clip: text;
