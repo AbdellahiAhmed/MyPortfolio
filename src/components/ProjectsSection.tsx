@@ -12,6 +12,7 @@ interface Project {
   github?: string;
   demo?: string;
   featured?: boolean;
+  type?: 'mobile' | 'web';
 }
 
 const ProjectsSection = () => {
@@ -35,7 +36,6 @@ const ProjectsSection = () => {
     return counts;
   }, [projects, categories]);
 
-  // Check for pointer device (disable tilt on touch)
   useEffect(() => {
     const mq = window.matchMedia('(hover: hover) and (pointer: fine)');
     setCanTilt(mq.matches);
@@ -99,7 +99,6 @@ const ProjectsSection = () => {
     }, 300);
   };
 
-  // ─── 3D TILT + SHINE ─────────────────────────────────
   const handleMouseMove = useCallback(
     (e: React.MouseEvent<HTMLElement>) => {
       if (!canTilt) return;
@@ -111,9 +110,7 @@ const ProjectsSection = () => {
       const centerY = rect.height / 2;
       const rotateX = ((y - centerY) / centerY) * -5;
       const rotateY = ((x - centerX) / centerX) * 5;
-
       el.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02,1.02,1.02)`;
-
       const shine = el.querySelector('[data-shine]') as HTMLElement;
       if (shine) {
         const px = (x / rect.width) * 100;
@@ -137,53 +134,253 @@ const ProjectsSection = () => {
 
   const getSlug = (title: string) => title.toLowerCase().replace(/\s+/g, '-');
 
-  const isShowingAll = activeCategory === 0;
-  const heroProject = isShowingAll && filteredProjects.length > 0 ? filteredProjects[0] : null;
-  const gridProjects = isShowingAll ? filteredProjects.slice(1) : filteredProjects;
-
-  // ─── RENDER HELPERS ───────────────────────────────────
-  const renderPlaceholder = (project: Project) => (
-    <div className="absolute inset-0">
-      <div
-        className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]"
-        style={{
-          backgroundImage:
-            'radial-gradient(circle, currentColor 1px, transparent 1px)',
-          backgroundSize: '24px 24px',
-        }}
-      />
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-gray-50 to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-800" />
-      <div className="absolute inset-0 bg-gradient-to-tl from-accent/8 via-transparent to-transparent" />
-      <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-        <span className="text-[8rem] md:text-[10rem] font-display font-bold text-gray-200/80 dark:text-gray-700/80 select-none leading-none">
-          {project.title.charAt(0)}
-        </span>
-        <span className="text-[10px] uppercase tracking-[0.25em] text-gray-400 dark:text-gray-600 font-medium">
-          {project.tags[0]}
-        </span>
-      </div>
-    </div>
-  );
-
-  const renderTags = (tags: string[], limit = 3, light = false) => (
+  const renderTags = (tags: string[], limit = 3) => (
     <div className="flex flex-wrap gap-2">
       {tags.slice(0, limit).map((tag) => (
         <span
           key={tag}
-          className={`px-3 py-1 text-xs rounded-full font-medium transition-colors duration-300 ${
-            light
-              ? 'bg-white/15 text-white/90 backdrop-blur-sm'
-              : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400'
-          }`}
+          className="px-3 py-1 text-xs rounded-full font-medium bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400"
         >
           {tag}
         </span>
       ))}
       {tags.length > limit && (
-        <span className={`px-3 py-1 text-xs font-medium ${light ? 'text-white/50' : 'text-gray-400 dark:text-gray-600'}`}>
+        <span className="px-3 py-1 text-xs font-medium text-gray-400 dark:text-gray-600">
           +{tags.length - limit}
         </span>
       )}
+    </div>
+  );
+
+  // Browser mockup
+  const renderBrowserFrame = (project: Project) => (
+    <div className="relative w-full max-w-[560px] mx-auto">
+      {/* Browser chrome */}
+      <div
+        className="rounded-xl overflow-hidden shadow-2xl bg-gray-100 dark:bg-gray-800 border border-gray-200/80 dark:border-gray-700/60"
+        style={{ boxShadow: '0 25px 60px -12px rgba(0,0,0,0.25)' }}
+      >
+        {/* Title bar */}
+        <div className="flex items-center gap-2 px-4 py-2.5 bg-gray-200/80 dark:bg-gray-800 border-b border-gray-300/50 dark:border-gray-700/50">
+          {/* Traffic lights */}
+          <div className="flex gap-1.5">
+            <div className="w-3 h-3 rounded-full bg-[#FF5F57]" />
+            <div className="w-3 h-3 rounded-full bg-[#FEBC2E]" />
+            <div className="w-3 h-3 rounded-full bg-[#28C840]" />
+          </div>
+          {/* URL bar */}
+          <div className="flex-1 mx-3">
+            <div className="flex items-center gap-2 px-3 py-1 bg-white dark:bg-gray-900 rounded-md text-[11px] text-gray-400 dark:text-gray-500 font-mono">
+              <svg className="w-3 h-3 text-gray-400 dark:text-gray-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+              <span className="truncate">
+                {project.github
+                  ? project.github.replace('https://', '').replace('github.com/', '')
+                  : `${project.title.toLowerCase().replace(/\s+/g, '')}.app`}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* Website content - scrollable preview */}
+        <div className="relative overflow-y-auto overflow-x-hidden" style={{ maxHeight: '380px' }}>
+          {project.image ? (
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-auto block"
+              loading="lazy"
+            />
+          ) : (
+            <div className="w-full aspect-[16/10] relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-850 dark:to-gray-800" />
+              <div
+                className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]"
+                style={{
+                  backgroundImage: 'radial-gradient(circle, currentColor 1px, transparent 1px)',
+                  backgroundSize: '20px 20px',
+                }}
+              />
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
+                <span className="text-7xl md:text-8xl font-display font-bold text-gray-200/80 dark:text-gray-700/80 select-none leading-none">
+                  {project.title.charAt(0)}
+                </span>
+                <span className="text-[10px] uppercase tracking-[0.25em] text-gray-400 dark:text-gray-600 font-medium">
+                  {project.tags[0]}
+                </span>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+
+  // Mobile project card
+  const renderMobileCard = (project: Project, index: number) => (
+    <div
+      key={project.title}
+      className={`transition-all ease-out ${
+        isFiltering ? 'opacity-0 scale-95 duration-200' : 'opacity-100 scale-100 duration-600'
+      } ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}
+      style={{ transitionDelay: isFiltering ? '0ms' : `${300 + index * 150}ms` }}
+    >
+      <div
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        className="group relative rounded-3xl overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-800/80 dark:via-gray-900 dark:to-gray-800/80 border border-gray-200/60 dark:border-gray-700/40 hover:shadow-2xl"
+        style={{
+          transition: 'transform 0.2s ease-out, box-shadow 0.5s ease',
+          transformStyle: 'preserve-3d',
+          willChange: 'transform',
+        }}
+      >
+        <div data-shine className="absolute inset-0 rounded-3xl pointer-events-none opacity-0 transition-opacity duration-300 z-10" />
+
+        <div className="grid md:grid-cols-2 items-center gap-8 p-8 md:p-12">
+          {/* Info */}
+          <div className="space-y-6 relative z-20 order-2 md:order-1">
+            <div className="flex items-center gap-3">
+              <span className="px-3 py-1 text-[10px] uppercase tracking-widest font-medium text-accent bg-accent/10 rounded-full border border-accent/20">
+                {project.category}
+              </span>
+              <span className="text-[10px] uppercase tracking-widest text-gray-400 dark:text-gray-500 font-medium">
+                iOS & Android
+              </span>
+            </div>
+            <div>
+              <h3 className="text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white mb-3 group-hover:text-accent transition-colors duration-300">
+                {project.title}
+              </h3>
+              <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+                {project.description}
+              </p>
+            </div>
+            {renderTags(project.tags, 5)}
+            <div className="flex flex-wrap gap-3 pt-2">
+              {project.demo && (
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-sm font-medium rounded-full hover:bg-accent dark:hover:bg-accent dark:hover:text-white transition-colors duration-300"
+                >
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                  </svg>
+                  App Store
+                </a>
+              )}
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-full hover:border-accent hover:text-accent transition-colors duration-300"
+                >
+                  {t('projects.view_repo')}
+                </a>
+              )}
+            </div>
+          </div>
+
+          {/* Mobile screenshot */}
+          <div className="relative z-20 flex justify-center order-1 md:order-2">
+            <div className="relative group-hover:-translate-y-2 transition-transform duration-700 ease-out">
+              {project.image && (
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="max-h-[520px] w-auto mx-auto drop-shadow-2xl"
+                  loading="lazy"
+                />
+              )}
+              <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-[200px] h-[60px] bg-accent/10 dark:bg-accent/5 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  // Web project card (side-by-side with browser mockup)
+  const renderWebCard = (project: Project, index: number) => (
+    <div
+      key={project.title}
+      className={`transition-all ease-out ${
+        isFiltering ? 'opacity-0 scale-95 duration-200' : 'opacity-100 scale-100 duration-600'
+      } ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}
+      style={{ transitionDelay: isFiltering ? '0ms' : `${300 + index * 150}ms` }}
+    >
+      <div
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        className="group relative rounded-3xl overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-800/80 dark:via-gray-900 dark:to-gray-800/80 border border-gray-200/60 dark:border-gray-700/40 hover:shadow-2xl"
+        style={{
+          transition: 'transform 0.2s ease-out, box-shadow 0.5s ease',
+          transformStyle: 'preserve-3d',
+          willChange: 'transform',
+        }}
+      >
+        <div data-shine className="absolute inset-0 rounded-3xl pointer-events-none opacity-0 transition-opacity duration-300 z-10" />
+
+        <div className="grid md:grid-cols-2 items-center gap-8 p-8 md:p-12">
+          {/* Info */}
+          <div className="space-y-6 relative z-20 order-2 md:order-1">
+            <div className="flex items-center gap-3">
+              <span className="px-3 py-1 text-[10px] uppercase tracking-widest font-medium text-accent bg-accent/10 rounded-full border border-accent/20">
+                {project.category}
+              </span>
+              <span className="text-[10px] uppercase tracking-widest text-gray-400 dark:text-gray-500 font-medium">
+                Web Application
+              </span>
+            </div>
+            <div>
+              <h3 className="text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white mb-3 group-hover:text-accent transition-colors duration-300">
+                {project.title}
+              </h3>
+              <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+                {project.description}
+              </p>
+            </div>
+            {renderTags(project.tags, 5)}
+            <div className="flex flex-wrap gap-3 pt-2">
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-sm font-medium rounded-full hover:bg-accent dark:hover:bg-accent dark:hover:text-white transition-colors duration-300"
+                >
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                  </svg>
+                  {t('projects.view_repo')}
+                </a>
+              )}
+              {project.demo && (
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-full hover:border-accent hover:text-accent transition-colors duration-300"
+                >
+                  {t('projects.view_demo')}
+                </a>
+              )}
+            </div>
+          </div>
+
+          {/* Browser mockup */}
+          <div className="relative z-20 flex justify-center order-1 md:order-2">
+            <div className="relative group-hover:-translate-y-2 transition-transform duration-700 ease-out w-full">
+              {renderBrowserFrame(project)}
+              <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-[280px] h-[50px] bg-accent/10 dark:bg-accent/5 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 
@@ -191,7 +388,7 @@ const ProjectsSection = () => {
     <section id="projects" className="py-32 relative overflow-hidden bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-        {/* ─── HEADER ─── */}
+        {/* Header */}
         <div className={`mb-8 transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="flex items-baseline gap-4 mb-4">
             <p className="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-500">
@@ -209,12 +406,11 @@ const ProjectsSection = () => {
           </p>
         </div>
 
-        {/* Separator */}
         <div className={`mb-10 transition-all duration-700 ease-out delay-100 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
           <div className="h-px bg-gray-200 dark:bg-gray-800" />
         </div>
 
-        {/* ─── CATEGORY TABS ─── */}
+        {/* Category Tabs */}
         <div className={`mb-14 transition-all duration-700 ease-out delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="relative inline-flex gap-1 border-b border-gray-200 dark:border-gray-800">
             {categories.map((cat, index) => (
@@ -231,9 +427,7 @@ const ProjectsSection = () => {
                 {cat}
                 <span
                   className={`ml-1.5 text-xs tabular-nums transition-colors duration-300 ${
-                    activeCategory === index
-                      ? 'text-accent'
-                      : 'text-gray-400 dark:text-gray-600'
+                    activeCategory === index ? 'text-accent' : 'text-gray-400 dark:text-gray-600'
                   }`}
                 >
                   ({categoryCounts[index]})
@@ -251,165 +445,16 @@ const ProjectsSection = () => {
           </div>
         </div>
 
-        {/* ─── HERO CARD (only when "All" is active) ─── */}
-        {heroProject && (
-          <div
-            className={`mb-10 transition-all duration-700 ease-out ${
-              isFiltering ? 'opacity-0 scale-[0.98]' : 'opacity-100 scale-100'
-            } ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
-            style={{ transitionDelay: isFiltering ? '0ms' : '300ms' }}
-          >
-            <div
-              onMouseMove={handleMouseMove}
-              onMouseLeave={handleMouseLeave}
-              style={{
-                transition: 'transform 0.2s ease-out, box-shadow 0.5s ease',
-                transformStyle: 'preserve-3d',
-                willChange: 'transform',
-              }}
-              className="group relative rounded-3xl shadow-lg hover:shadow-2xl"
-            >
-              <Link to={`/project/${getSlug(heroProject.title)}`} className="block">
-                <div className="relative overflow-hidden rounded-3xl bg-gray-100 dark:bg-gray-800 aspect-[16/10] md:aspect-[2.3/1]">
-                  {/* Image */}
-                  {heroProject.image ? (
-                    <img
-                      src={heroProject.image}
-                      alt={heroProject.title}
-                      className="w-full h-full object-cover object-top transition-transform duration-[1.2s] ease-out group-hover:scale-[1.06]"
-                      loading="lazy"
-                    />
-                  ) : (
-                    renderPlaceholder(heroProject)
-                  )}
-
-                  {/* Shine overlay */}
-                  <div
-                    data-shine
-                    className="absolute inset-0 rounded-3xl pointer-events-none opacity-0 transition-opacity duration-300 z-10"
-                  />
-
-                  {/* Bottom gradient + info */}
-                  <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent pointer-events-none" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10 lg:p-12 z-10">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span className="px-3 py-1 text-[10px] uppercase tracking-widest font-medium text-accent bg-accent/10 backdrop-blur-sm rounded-full border border-accent/20">
-                        {heroProject.category}
-                      </span>
-                      <span className="text-white/40 text-xs">—</span>
-                      <span className="text-[10px] uppercase tracking-widest text-white/50 font-medium">
-                        Featured
-                      </span>
-                    </div>
-                    <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-3 group-hover:text-accent transition-colors duration-500">
-                      {heroProject.title}
-                    </h3>
-                    <p className="text-white/60 text-sm md:text-base max-w-2xl leading-relaxed mb-5 line-clamp-2">
-                      {heroProject.description}
-                    </p>
-                    {renderTags(heroProject.tags, 4, true)}
-                  </div>
-
-                  {/* "View Project" indicator */}
-                  <div className="absolute top-6 right-6 md:top-8 md:right-8 z-10 opacity-0 group-hover:opacity-100 -translate-y-2 group-hover:translate-y-0 transition-all duration-500">
-                    <span className="text-white text-xs font-medium tracking-wide bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10">
-                      View Project&ensp;→
-                    </span>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          </div>
-        )}
-
-        {/* ─── GRID CARDS ─── */}
-        <div
-          className={`grid gap-6 ${
-            isShowingAll
-              ? 'grid-cols-1 md:grid-cols-2'
-              : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
-          }`}
-        >
-          {gridProjects.map((project, index) => (
-            <div
-              key={project.title}
-              className={`transition-all ease-out ${
-                isFiltering
-                  ? 'opacity-0 scale-95 duration-200'
-                  : 'opacity-100 scale-100 duration-600'
-              } ${
-                isVisible
-                  ? 'translate-y-0 opacity-100'
-                  : 'translate-y-12 opacity-0'
-              }`}
-              style={{
-                transitionDelay: isFiltering
-                  ? '0ms'
-                  : `${(heroProject ? 450 : 300) + index * 120}ms`,
-              }}
-            >
-              <div
-                onMouseMove={handleMouseMove}
-                onMouseLeave={handleMouseLeave}
-                className="group relative rounded-2xl"
-                style={{
-                  transition: 'transform 0.2s ease-out, box-shadow 0.5s ease',
-                  transformStyle: 'preserve-3d',
-                  willChange: 'transform',
-                }}
-              >
-                <Link to={`/project/${getSlug(project.title)}`} className="block">
-                  {/* Image area */}
-                  <div className="relative overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800 aspect-[4/3] shadow-sm group-hover:shadow-2xl transition-shadow duration-600">
-                    {project.image ? (
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-full object-cover object-top transition-transform duration-[1s] ease-out group-hover:scale-110"
-                        loading="lazy"
-                      />
-                    ) : (
-                      renderPlaceholder(project)
-                    )}
-
-                    {/* Shine overlay */}
-                    <div
-                      data-shine
-                      className="absolute inset-0 rounded-2xl pointer-events-none opacity-0 transition-opacity duration-300 z-10"
-                    />
-
-                    {/* Hover overlay */}
-                    <div className="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/50 dark:group-hover:bg-black/60 transition-all duration-500 flex items-center justify-center pointer-events-none z-20">
-                      <span className="text-white text-sm font-medium tracking-wide opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-75">
-                        View Project&ensp;→
-                      </span>
-                    </div>
-
-                    {/* Category badge */}
-                    {project.category && (
-                      <div className="absolute top-4 left-4 z-20 px-3 py-1 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm rounded-full text-[10px] uppercase tracking-wider font-medium text-gray-700 dark:text-gray-300 opacity-0 group-hover:opacity-100 -translate-y-2 group-hover:translate-y-0 transition-all duration-400">
-                        {project.category}
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Card info */}
-                  <div className="pt-5 space-y-2.5">
-                    <h3 className="text-xl md:text-2xl font-display font-bold text-gray-900 dark:text-white group-hover:text-accent transition-colors duration-300">
-                      {project.title}
-                    </h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-2">
-                      {project.description}
-                    </p>
-                    {renderTags(project.tags)}
-                  </div>
-                </Link>
-              </div>
-            </div>
-          ))}
+        {/* Projects */}
+        <div className="space-y-10">
+          {filteredProjects.map((project, index) =>
+            project.type === 'mobile'
+              ? renderMobileCard(project, index)
+              : renderWebCard(project, index)
+          )}
         </div>
 
-        {/* ─── CTA ─── */}
+        {/* CTA */}
         <div
           className={`text-center mt-24 transition-all duration-700 ease-out delay-700 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'

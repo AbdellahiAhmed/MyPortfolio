@@ -238,7 +238,7 @@
   "projects.view_demo": "D??mo en direct",
   "projects.more": "Autres builds",
   "projects.more_caption": "Exp??riences et utilitaires s??lectionn??s",
-  "projects.categories": ["Tout", "Développement Web", "Réseau", "Bureau"],
+  "projects.categories": ["Tout", "Réseau", "Mobile", "Web", "ERP", "Desktop"],
   "projects.items": [
     {
       "title": "AutoNetConfig",
@@ -256,53 +256,94 @@
       "featured": true
     },
     {
-      "title": "LMD System",
-      "description": "Système universitaire de gestion étudiants/cours (HTML, CSS, JavaScript, PHP, MySQL, CRUD, gestion rôles).",
+      "title": "Traiteurs App",
+      "description": "Application mobile Flutter (iOS & Android) de commande de traiteurs pour mariages, connectee a Supabase. Trois espaces : client (recherche, commande, panier, paiement mobile Bankily/Masrivi/Sedad, suivi temps reel), traiteur (gestion plats, reception et suivi commandes, statistiques) et livreur (assignation et suivi livraisons). Support multilingue arabe/francais avec RTL.",
+      "tags": [
+        "Flutter",
+        "Dart",
+        "Supabase",
+        "Firebase",
+        "App Mobile"
+      ],
+      "category": "Mobile",
+      "image": "/projects_images/home_screen_client.png",
+      "type": "mobile",
+      "demo": "https://apps.apple.com/mr/app/traiteurs/id6759182605?l=fr-FR",
+      "featured": true
+    },
+    {
+      "title": "MCS Consulting",
+      "description": "Site web officiel de MCS Consulting, cabinet specialise en conseil financier, solutions ERP et transformation digitale. Conception et developpement d’une presence web moderne et responsive refletant l’identite professionnelle et les offres de services du cabinet.",
+      "tags": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Responsive",
+        "Corporate"
+      ],
+      "category": "Web",
+      "image": "/projects_images/mcs_consulting.png",
+      "demo": "https://mcsconsulting.mr",
+      "featured": true
+    },
+    {
+      "title": "GestionParc",
+      "description": "Module ERP complet de gestion de flotte vehicules integre a Dolibarr. Couvre le cycle de vie complet : suivi des statuts en temps reel, workflow de maintenance avec alertes preventives, gestion de stock materiel avec systeme de reservation, et suivi carburant avec preuves photo et calcul automatique de consommation. Dashboard avec 15+ KPIs, 15 permissions granulaires, protection CSRF et interface bilingue FR/EN.",
       "tags": [
         "PHP",
         "MySQL",
         "JavaScript",
-        "HTML/CSS",
-        "Dev Web"
+        "Dolibarr",
+        "Docker",
+        "ERP"
       ],
-      "category": "Développement Web",
-      "image": "/lmd-system/student-dashboard.png",
-      "github": "https://github.com/AbdellahiAhmed/Syst-me_LMD",
+      "category": "ERP",
+      "image": "/projects_images/module_gestionparc.png",
+      "github": "https://github.com/AbdellahiAhmed",
       "featured": true
     },
     {
-      "title": "Bank App",
-      "description": "Application bancaire Java/Swing avec transactions, authentification sécurisée, reporting moderne.",
+      "title": "Gestion Archivage & Courrier",
+      "description": "Application web et desktop de gestion documentaire et suivi de courrier, construite en JavaScript vanilla avec Supabase. Dashboard temps reel avec KPIs, gestion documentaire complete avec versioning automatique, suivi courrier entrant/sortant avec indicateurs d'echeance, messagerie interne, import CSV en masse, scanner par glisser-deposer, administration RBAC avec journaux d'audit complets, et bilingue FR/AR avec support RTL. Deployee en SPA et app desktop Electron.",
       "tags": [
-        "Java",
-        "Swing",
-        "MySQL",
-        "App Bureau"
+        "JavaScript",
+        "Supabase",
+        "Electron",
+        "Vite",
+        "PostgreSQL"
       ],
-      "category": "Bureau",
-      "github": "https://github.com/AbdellahiAhmed/Gestion-Bancaire-Java-Swing"
+      "category": "Desktop",
+      "image": "/projects_images/gestion_archivage.png",
+      "featured": true
     },
     {
-      "title": "Rappory",
-      "description": "Plateforme avancée de reporting et d’analytics pour l’intelligence d’affaires avec visualisation de données en temps réel.",
+      "title": "Traiteurs Admin",
+      "description": "Application web back-office complete pour la gestion d'une plateforme de traiteurs. Dashboard temps reel avec statistiques commandes et revenus, validation et approbation des traiteurs, gestion des statuts de commandes de bout en bout, module livraison avec attribution et suivi des gains, systeme de notifications et FAQ integre, et authentification avec gestion des roles (admin, traiteur, livreur, client).",
       "tags": [
-        "Analyse de Données",
-        "Reporting",
-        "Business Intelligence"
+        "React",
+        "TypeScript",
+        "Supabase",
+        "Zustand",
+        "Tailwind CSS",
+        "Recharts"
       ],
-      "category": "Développement Web",
-      "github": "https://github.com/AbdellahiAhmed"
+      "category": "Web",
+      "image": "/projects_images/traiteurs-admin.png",
+      "featured": true
     },
     {
-      "title": "Detrack",
-      "description": "Système complet de suivi et gestion de projets avec support méthodologie agile, collaboration d’équipe.",
+      "title": "Clinique El Ihsane",
+      "description": "Site web medical bilingue (francais/arabe avec support RTL complet) construit avec React 18, Vite, Tailwind CSS, Framer Motion et GSAP. Prise de rendez-vous en ligne, CMS headless Strapi v5 avec medias Cloudinary, systeme de contact Nodemailer, 30+ composants reutilisables sur 7 pages, accessibilite WCAG AA, et optimisation des performances avec lazy loading et code splitting.",
       "tags": [
-        "Gestion de Projet",
-        "Agile",
-        "Suivi"
+        "React",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Strapi",
+        "Cloudinary"
       ],
-      "category": "Développement Web",
-      "github": "https://github.com/AbdellahiAhmed"
+      "category": "Web",
+      "image": "/projects_images/clinique-elihsan.png",
+      "featured": true
     }
   ],
   "form.name": "Nom",

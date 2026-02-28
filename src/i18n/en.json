@@ -198,7 +198,7 @@
   "projects.view_demo": "Live demo",
   "projects.more": "More builds",
   "projects.more_caption": "Selected experiments and utilities",
-  "projects.categories": ["All", "Web Development", "Network", "Desktop"],
+  "projects.categories": ["All", "Network", "Mobile", "Web", "ERP", "Desktop"],
   "projects.items": [
     {
       "title": "AutoNetConfig",
@@ -216,53 +216,94 @@
       "featured": true
     },
     {
-      "title": "LMD System",
-      "description": "University platform for student and course management: HTML, CSS, JavaScript, PHP, MySQL, supports CRUD, form validation, and role-based access.",
+      "title": "Traiteurs App",
+      "description": "Flutter mobile app (iOS & Android) for ordering wedding catering services, powered by Supabase. Covers three user spaces: client (search, order, cart, payment, real-time tracking), caterer (menu management, order tracking, stats), and delivery driver (assignment & live tracking).",
+      "tags": [
+        "Flutter",
+        "Dart",
+        "Supabase",
+        "Firebase",
+        "Mobile App"
+      ],
+      "category": "Mobile",
+      "image": "/projects_images/home_screen_client.png",
+      "type": "mobile",
+      "demo": "https://apps.apple.com/mr/app/traiteurs/id6759182605?l=fr-FR",
+      "featured": true
+    },
+    {
+      "title": "MCS Consulting",
+      "description": "Official corporate website for MCS Consulting, a firm specialized in financial consulting, ERP solutions, and digital transformation. Designed and developed a modern, responsive web presence reflecting the company's professional identity and service offerings.",
+      "tags": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Responsive",
+        "Corporate"
+      ],
+      "category": "Web",
+      "image": "/projects_images/mcs_consulting.png",
+      "demo": "https://mcsconsulting.mr",
+      "featured": true
+    },
+    {
+      "title": "GestionParc",
+      "description": "Full-featured fleet management ERP module built for Dolibarr. Covers the complete vehicle lifecycle: real-time status tracking, maintenance workflows with preventive alerts, material inventory with reservation system, and fuel monitoring with photo proof and automatic consumption calculation. Dashboard with 15+ KPIs, granular permissions, CSRF protection, and bilingual FR/EN interface.",
       "tags": [
         "PHP",
         "MySQL",
         "JavaScript",
-        "HTML/CSS",
-        "Web Dev"
+        "Dolibarr",
+        "Docker",
+        "ERP"
       ],
-      "category": "Web Development",
-      "image": "/lmd-system/student-dashboard.png",
-      "github": "https://github.com/AbdellahiAhmed/Syst-me_LMD",
+      "category": "ERP",
+      "image": "/projects_images/module_gestionparc.png",
+      "github": "https://github.com/AbdellahiAhmed",
       "featured": true
     },
     {
-      "title": "Bank App",
-      "description": "Comprehensive Java/Swing desktop banking app for transactions, secure authentication, and modern reporting.",
+      "title": "Gestion Archivage & Courrier",
+      "description": "Web & desktop document management and mail tracking application built with vanilla JavaScript and Supabase. Features real-time dashboard with KPIs, full document CRUD with automatic versioning, incoming/outgoing mail tracking with deadline indicators, internal messaging, bulk CSV import, drag-and-drop scanner upload, RBAC administration with full audit logs, and bilingual FR/AR with RTL support. Deployed as SPA and Electron desktop app.",
       "tags": [
-        "Java",
-        "Swing",
-        "MySQL",
-        "Desktop App"
+        "JavaScript",
+        "Supabase",
+        "Electron",
+        "Vite",
+        "PostgreSQL"
       ],
       "category": "Desktop",
-      "github": "https://github.com/AbdellahiAhmed/Gestion-Bancaire-Java-Swing"
+      "image": "/projects_images/gestion_archivage.png",
+      "featured": true
     },
     {
-      "title": "Rappory",
-      "description": "Advanced reporting and analytics platform for business intelligence with real-time data visualization and automated report generation.",
+      "title": "Traiteurs Admin",
+      "description": "Full-featured back-office web app for managing a catering platform. Real-time dashboard with order and revenue stats, caterer validation and approval workflows, end-to-end order status management, delivery module with driver assignment and earnings tracking, integrated notifications and FAQ system, and role-based authentication (admin, caterer, driver, client).",
       "tags": [
-        "Data Analysis",
-        "Reporting",
-        "Business Intelligence"
+        "React",
+        "TypeScript",
+        "Supabase",
+        "Zustand",
+        "Tailwind CSS",
+        "Recharts"
       ],
-      "category": "Web Development",
-      "github": "https://github.com/AbdellahiAhmed"
+      "category": "Web",
+      "image": "/projects_images/traiteurs-admin.png",
+      "featured": true
     },
     {
-      "title": "Detrack",
-      "description": "Comprehensive project tracking and management system with agile methodology support, team collaboration, and progress monitoring.",
+      "title": "Clinique El Ihsane",
+      "description": "Bilingual medical clinic website (French/Arabic with full RTL support) built with React 18, Vite, Tailwind CSS, Framer Motion, and GSAP. Features online appointment booking, headless CMS via Strapi v5 with Cloudinary media, Nodemailer contact system, 30+ reusable components across 7 pages, WCAG AA accessibility, and performance optimization with lazy loading and code splitting.",
       "tags": [
-        "Project Management",
-        "Agile",
-        "Tracking"
+        "React",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Strapi",
+        "Cloudinary"
       ],
-      "category": "Web Development",
-      "github": "https://github.com/AbdellahiAhmed"
+      "category": "Web",
+      "image": "/projects_images/clinique-elihsan.png",
+      "featured": true
     }
   ],
   "form.name": "Name",

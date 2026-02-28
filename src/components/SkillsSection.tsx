@@ -1,24 +1,12 @@
 import { useTranslation } from 'react-i18next';
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import SpacedText from './utils/SpacedText';
 
 const SkillsSection = () => {
   const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
-  const [toolchainVisible, setToolchainVisible] = useState(false);
-  const [canTilt, setCanTilt] = useState(false);
   const [pillarBorders, setPillarBorders] = useState<boolean[]>([false, false, false]);
-  const toolchainRef = useRef<HTMLDivElement>(null);
   const pillarRefs = useRef<(HTMLElement | null)[]>([]);
-
-  // Detect pointer device for 3D tilt
-  useEffect(() => {
-    const mq = window.matchMedia('(hover: hover) and (pointer: fine)');
-    setCanTilt(mq.matches);
-    const handler = (e: MediaQueryListEvent) => setCanTilt(e.matches);
-    mq.addEventListener('change', handler);
-    return () => mq.removeEventListener('change', handler);
-  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -35,24 +23,6 @@ const SkillsSection = () => {
 
     return () => {
       if (section) observer.unobserve(section);
-    };
-  }, []);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setToolchainVisible(true);
-        }
-      },
-      { threshold: 0.15 }
-    );
-
-    const el = toolchainRef.current;
-    if (el) observer.observe(el);
-
-    return () => {
-      if (el) observer.unobserve(el);
     };
   }, []);
 
@@ -81,40 +51,6 @@ const SkillsSection = () => {
     return () => observers.forEach((obs) => obs.disconnect());
   }, [isVisible]);
 
-  // 3D Tilt handler for toolchain cards
-  const handleMouseMove = useCallback(
-    (e: React.MouseEvent<HTMLElement>) => {
-      if (!canTilt) return;
-      const el = e.currentTarget;
-      const rect = el.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      const rotateX = ((y - centerY) / centerY) * -5;
-      const rotateY = ((x - centerX) / centerX) * 5;
-      el.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02,1.02,1.02)`;
-      const shine = el.querySelector('[data-shine]') as HTMLElement;
-      if (shine) {
-        const px = (x / rect.width) * 100;
-        const py = (y / rect.height) * 100;
-        shine.style.background = `radial-gradient(circle at ${px}% ${py}%, rgba(255,255,255,0.15), transparent 50%)`;
-        shine.style.opacity = '1';
-      }
-    },
-    [canTilt]
-  );
-
-  const handleMouseLeave = useCallback(
-    (e: React.MouseEvent<HTMLElement>) => {
-      if (!canTilt) return;
-      e.currentTarget.style.transform = '';
-      const shine = e.currentTarget.querySelector('[data-shine]') as HTMLElement;
-      if (shine) shine.style.opacity = '0';
-    },
-    [canTilt]
-  );
-
   const pillars = [
     {
       number: '01',
@@ -139,29 +75,6 @@ const SkillsSection = () => {
     },
   ];
 
-  const stacks = [
-    {
-      title: t('skills.stacks.automation.title'),
-      subtitle: t('skills.stacks.automation.subtitle'),
-      tags: t('skills.stacks.automation.tags', { returnObjects: true }) as string[],
-    },
-    {
-      title: t('skills.stacks.cloud.title'),
-      subtitle: t('skills.stacks.cloud.subtitle'),
-      tags: t('skills.stacks.cloud.tags', { returnObjects: true }) as string[],
-    },
-    {
-      title: t('skills.stacks.observability.title'),
-      subtitle: t('skills.stacks.observability.subtitle'),
-      tags: t('skills.stacks.observability.tags', { returnObjects: true }) as string[],
-    },
-    {
-      title: t('skills.stacks.frontend.title'),
-      subtitle: t('skills.stacks.frontend.subtitle'),
-      tags: t('skills.stacks.frontend.tags', { returnObjects: true }) as string[],
-    },
-  ];
-
   // Split subtitle into pills (comma or slash separated)
   const splitSubtitle = (subtitle: string) =>
     subtitle.split(/[,\/]/).map((s) => s.trim()).filter(Boolean);
@@ -179,7 +92,7 @@ const SkillsSection = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-        {/* Section Header - Editorial Style */}
+        {/* Section Header */}
         <div className={`mb-12 transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <p className="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-500 mb-4">
             {t('skills.section')}
@@ -307,96 +220,6 @@ const SkillsSection = () => {
               </div>
             </article>
           ))}
-        </div>
-
-        {/* Delivery Toolchain */}
-        <div
-          ref={toolchainRef}
-          className={`mt-32 transition-all duration-700 ease-out ${toolchainVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-        >
-          <div className="border-t border-gray-200 dark:border-gray-800 pt-20">
-            <div className="grid md:grid-cols-12 gap-8 mb-16">
-              <div className="md:col-span-3">
-                <p className="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-500">
-                  {t('skills.stacks.title')}
-                </p>
-              </div>
-              <div className="md:col-span-9">
-                <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400">
-                  {t('skills.stacks.subtitle')}
-                </p>
-              </div>
-            </div>
-
-            {/* Stacks Grid - 3D Tilt Cards */}
-            <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
-              {stacks.map((stack, index) => (
-                <div
-                  key={index}
-                  className={`transition-all ease-out ${
-                    toolchainVisible ? 'opacity-100 translate-y-0 duration-600' : 'opacity-0 translate-y-8 duration-200'
-                  }`}
-                  style={{ transitionDelay: toolchainVisible ? `${200 + index * 150}ms` : '0ms' }}
-                >
-                  <div
-                    onMouseMove={handleMouseMove}
-                    onMouseLeave={handleMouseLeave}
-                    className="group/stack relative p-8 rounded-2xl bg-gray-50 dark:bg-gray-800/50 border border-transparent hover:border-gray-200 dark:hover:border-gray-700 hover:shadow-2xl"
-                    style={{
-                      transition: 'transform 0.2s ease-out, box-shadow 0.5s ease, border-color 0.3s ease',
-                      transformStyle: 'preserve-3d',
-                      willChange: 'transform',
-                    }}
-                  >
-                    {/* Shine overlay */}
-                    <div
-                      data-shine
-                      className="absolute inset-0 rounded-2xl pointer-events-none opacity-0 transition-opacity duration-300 z-10"
-                    />
-
-                    {/* Card number indicator */}
-                    <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-gray-200/60 dark:bg-gray-700/60 flex items-center justify-center group-hover/stack:bg-accent/20 transition-colors duration-300">
-                      <span className="text-xs font-display font-bold text-gray-400 dark:text-gray-500 group-hover/stack:text-accent transition-colors duration-300">
-                        {String(index + 1).padStart(2, '0')}
-                      </span>
-                    </div>
-
-                    <h4 className="text-xl md:text-2xl font-display font-bold text-gray-900 dark:text-white mb-2 group-hover/stack:text-accent transition-colors duration-300 relative z-20">
-                      {stack.title}
-                    </h4>
-                    <p className="text-sm text-gray-500 dark:text-gray-500 mb-6 relative z-20">
-                      {stack.subtitle}
-                    </p>
-                    <div className="flex flex-wrap gap-2 relative z-20">
-                      {stack.tags.map((tag, i) => (
-                        <span
-                          key={i}
-                          className="px-3 py-1.5 text-sm bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 rounded-full font-medium border border-gray-100 dark:border-gray-800 hover:border-accent/40 hover:text-accent hover:bg-accent/5 dark:hover:bg-accent/10 transition-all duration-300 cursor-default"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Badge - Premium accent style */}
-            <div
-              className={`mt-16 flex justify-center transition-all duration-700 ease-out ${
-                toolchainVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
-              }`}
-              style={{ transitionDelay: '900ms' }}
-            >
-              <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-accent/20 bg-accent/5 dark:bg-accent/10">
-                <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                <p className="text-sm font-medium text-gray-700 dark:text-gray-300 tracking-wide">
-                  {t('skills.badge')}
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* CTA */}

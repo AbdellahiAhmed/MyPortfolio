@@ -78,7 +78,7 @@ const ContactSection = () => {
             <Mail className="h-8 w-8 mx-auto mb-4 text-gray-900 dark:text-white" />
             <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">Email</h3>
             <a href="mailto:AbdellahiAhmedAhmedBaba@gmail.com" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
-              contact@abdellahi.com
+              AbdellahiAhmedAhmedBaba@gmail.com
             </a>
           </div>
           <div className="text-center">
