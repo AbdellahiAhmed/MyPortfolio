@@ -29,7 +29,7 @@ const ProjectDetailPage = () => {
           className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
         >
           <ArrowLeft className="h-5 w-5" />
-          <span className="text-sm uppercase tracking-wide">Back to Works</span>
+          <span className="text-sm uppercase tracking-wide">{t('projects.back_to_works')}</span>
         </Link>
       </div>
 
@@ -44,7 +44,7 @@ const ProjectDetailPage = () => {
               {project.description}
             </p>
             <p className="text-sm uppercase tracking-widest text-gray-500 dark:text-gray-500 mb-8">
-              Scroll to Explore
+              {t('projects.scroll_to_explore')}
             </p>
           </div>
         </div>
@@ -70,7 +70,7 @@ const ProjectDetailPage = () => {
           <div className="space-y-8">
             <div>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white mb-6">
-                About This Project
+                {t('projects.about_project')}
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
                 {project.description}
@@ -86,7 +86,7 @@ const ProjectDetailPage = () => {
                 className="inline-flex items-center gap-3 px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full hover:scale-105 transition-transform duration-300"
               >
                 <Github className="h-5 w-5" />
-                <SpacedText text="View Repository" className="text-sm font-medium" />
+                <SpacedText text={t('projects.view_repository')} className="text-sm font-medium" />
               </a>
             )}
           </div>
@@ -97,7 +97,7 @@ const ProjectDetailPage = () => {
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white mb-8">
-            Tech Stack
+            {t('projects.tech_stack')}
           </h2>
           <div className="flex flex-wrap gap-3">
             {project.tags.map((tag: string, index: number) => (
@@ -116,28 +116,22 @@ const ProjectDetailPage = () => {
       <section className="py-20 bg-surface-light dark:bg-surface-dark">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white mb-8">
-            My Role
+            {t('projects.my_role')}
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-            Lead Developer & Designer
+            {t('projects.role_description')}
           </p>
 
           <h3 className="text-2xl font-display font-bold text-gray-900 dark:text-white mb-4">
-            Key Responsibilities
+            {t('projects.key_responsibilities')}
           </h3>
           <ul className="space-y-3 text-lg text-gray-600 dark:text-gray-400">
-            <li className="flex items-start gap-3">
-              <span className="text-accent">•</span>
-              <span>Architected and developed the complete solution</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-accent">•</span>
-              <span>Implemented core features and functionality</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-accent">•</span>
-              <span>Designed user interface and experience</span>
-            </li>
+            {(t('projects.responsibilities', { returnObjects: true }) as string[]).map((resp, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <span className="text-accent">•</span>
+                <span>{resp}</span>
+              </li>
+            ))}
           </ul>
         </div>
       </section>
@@ -147,7 +141,7 @@ const ProjectDetailPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white">
-              Other Projects ✦ Explore More ✦
+              {t('projects.other_projects')}
             </h2>
           </div>
 

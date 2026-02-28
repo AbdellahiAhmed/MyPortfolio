@@ -55,7 +55,7 @@ const ContactSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-7xl font-bold mb-6" style={{ fontFamily: "'Righteous', cursive" }}>
-            <span className="text-gray-900 dark:text-white">Get In Touch</span>
+            <span className="text-gray-900 dark:text-white">{t("contact.title")}</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
             {t("contact.description")}
@@ -76,21 +76,21 @@ const ContactSection = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="text-center">
             <Mail className="h-8 w-8 mx-auto mb-4 text-gray-900 dark:text-white" />
-            <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">Email</h3>
+            <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">{t("contact.email_label")}</h3>
             <a href="mailto:AbdellahiAhmedAhmedBaba@gmail.com" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
               AbdellahiAhmedAhmedBaba@gmail.com
             </a>
           </div>
           <div className="text-center">
             <FaLinkedin className="h-8 w-8 mx-auto mb-4 text-gray-900 dark:text-white" />
-            <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">LinkedIn</h3>
+            <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">{t("contact.linkedin_label")}</h3>
             <a href="https://www.linkedin.com/in/abdellahiahmedahmedbaba/" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
-              Connect with me
+              {t("contact.connect")}
             </a>
           </div>
           <div className="text-center">
             <FaWhatsapp className="h-8 w-8 mx-auto mb-4 text-gray-900 dark:text-white" />
-            <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">WhatsApp</h3>
+            <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">{t("contact.whatsapp_label")}</h3>
             <a href="https://wa.me/+22243638670" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
               +222 43 63 86 70
             </a>
@@ -116,10 +116,10 @@ const ContactSection = () => {
             {/* Form Header */}
             <div className="text-center mb-8">
               <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-2" style={{ fontFamily: "'Righteous', cursive" }}>
-                Send a Message
+                {t("contact.form.title")}
               </h3>
               <p className="text-gray-600 dark:text-gray-400">
-                Let's discuss your project or opportunity
+                {t("contact.form.subtitle")}
               </p>
             </div>
 
@@ -134,7 +134,7 @@ const ContactSection = () => {
                   id="name"
                   name="name"
                   required
-                  placeholder="Your name"
+                  placeholder={t("contact.form.name_placeholder")}
                   className="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-xl px-4 py-3 text-gray-900 dark:text-white placeholder:text-gray-400 focus:border-gray-900 dark:focus:border-white focus:ring-2 focus:ring-gray-900/10 dark:focus:ring-white/10 transition-all outline-none"
                 />
               </div>
@@ -147,7 +147,7 @@ const ContactSection = () => {
                   id="email"
                   name="email"
                   required
-                  placeholder="your@email.com"
+                  placeholder={t("contact.form.email_placeholder")}
                   className="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-xl px-4 py-3 text-gray-900 dark:text-white placeholder:text-gray-400 focus:border-gray-900 dark:focus:border-white focus:ring-2 focus:ring-gray-900/10 dark:focus:ring-white/10 transition-all outline-none"
                 />
               </div>
@@ -163,7 +163,7 @@ const ContactSection = () => {
                 id="subject"
                 name="subject"
                 required
-                placeholder="Project Inquiry"
+                placeholder={t("contact.form.subject_placeholder")}
                 className="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-xl px-4 py-3 text-gray-900 dark:text-white placeholder:text-gray-400 focus:border-gray-900 dark:focus:border-white focus:ring-2 focus:ring-gray-900/10 dark:focus:ring-white/10 transition-all outline-none"
               />
             </div>

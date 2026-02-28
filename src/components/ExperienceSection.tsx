@@ -45,7 +45,7 @@ const ExperienceSection = () => {
             </span>
           </h2>
           <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
-            Professional journey and key achievements
+            {t('experience.description')}
           </p>
         </div>
 

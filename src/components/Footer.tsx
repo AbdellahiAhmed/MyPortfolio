@@ -16,7 +16,7 @@ const Footer = () => {
           {/* Column 1: Links */}
           <div>
             <h3 className="text-sm font-medium text-gray-900 dark:text-white mb-6">
-              <SpacedText text="LINKS" />
+              <SpacedText text={t('footer.links')} />
             </h3>
             <ul className="space-y-3">
               <li>
@@ -24,7 +24,7 @@ const Footer = () => {
                   to="/"
                   className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors text-sm"
                 >
-                  Home
+                  {t('footer.home')}
                 </Link>
               </li>
               <li>
@@ -32,7 +32,7 @@ const Footer = () => {
                   to="/works"
                   className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors text-sm"
                 >
-                  Works
+                  {t('footer.works')}
                 </Link>
               </li>
               <li>
@@ -40,7 +40,7 @@ const Footer = () => {
                   href="/#about"
                   className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors text-sm"
                 >
-                  About
+                  {t('footer.about')}
                 </a>
               </li>
               <li>
@@ -48,7 +48,7 @@ const Footer = () => {
                   href="/#contact"
                   className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors text-sm"
                 >
-                  Contact
+                  {t('footer.contact')}
                 </a>
               </li>
             </ul>
@@ -57,7 +57,7 @@ const Footer = () => {
           {/* Column 2: Socials */}
           <div>
             <h3 className="text-sm font-medium text-gray-900 dark:text-white mb-6">
-              <SpacedText text="SOCIALS" />
+              <SpacedText text={t('footer.socials')} />
             </h3>
             <ul className="space-y-3">
               <li>
@@ -67,7 +67,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Email
+                  {t('footer.email')}
                 </a>
               </li>
               <li>
@@ -77,7 +77,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  LinkedIn
+                  {t('footer.linkedin')}
                 </a>
               </li>
               <li>
@@ -87,7 +87,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  WhatsApp
+                  {t('footer.whatsapp')}
                 </a>
               </li>
               <li>
@@ -97,7 +97,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  GitHub
+                  {t('footer.github')}
                 </a>
               </li>
             </ul>
@@ -106,26 +106,26 @@ const Footer = () => {
           {/* Column 3: Local Time */}
           <div>
             <h3 className="text-sm font-medium text-gray-900 dark:text-white mb-6">
-              <SpacedText text="LOCAL TIME" />
+              <SpacedText text={t('footer.local_time')} />
             </h3>
             <div className="text-2xl font-display font-bold text-gray-900 dark:text-white">
               <LiveClock timezone="Africa/Nouakchott" format="24h" />
             </div>
             <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-              Nouakchott, Mauritania
+              {t('footer.location')}
             </p>
           </div>
 
           {/* Column 4: Version */}
           <div>
             <h3 className="text-sm font-medium text-gray-900 dark:text-white mb-6">
-              <SpacedText text="VERSION" />
+              <SpacedText text={t('footer.version')} />
             </h3>
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              {currentYear} © Edition
+              {currentYear} © {t('footer.edition')}
             </p>
             <p className="text-xs text-gray-500 dark:text-gray-500 mt-2">
-              Designed & Built by Abdellahi Ahmed
+              {t('footer.credit')}
             </p>
           </div>
         </div>
@@ -138,7 +138,7 @@ const Footer = () => {
                 Abdellahi Ahmed
               </p>
               <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                Network Engineer & Full-Stack Developer
+                {t('footer.subtitle')}
               </p>
             </div>
 

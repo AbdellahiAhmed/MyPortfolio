@@ -40,13 +40,13 @@ const EducationSection = () => {
         {/* Section Header - Editorial Style */}
         <div className={`mb-20 transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <p className="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-500 mb-4">
-            Academic Journey
+            {t('education.label')}
           </p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gray-900 dark:text-white mb-6 max-w-4xl">
-            Explore my academic journey and continuous learning
+            {t('education.heading')}
           </h2>
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl">
-            Building strong foundations through formal education and self-directed study
+            {t('education.subtitle')}
           </p>
         </div>
 
@@ -101,7 +101,7 @@ const EducationSection = () => {
                       rel="noopener noreferrer"
                       className="inline-block text-sm text-gray-900 dark:text-white hover:text-accent dark:hover:text-accent transition-colors duration-300 group/link"
                     >
-                      <SpacedText text="View Certificate" className="font-medium" />
+                      <SpacedText text={t('education.view_certificate')} className="font-medium" />
                       <div className="h-px bg-gray-900 dark:bg-white mt-1 w-0 group-hover/link:w-full transition-all duration-500 ease-out"></div>
                     </a>
                   )}
@@ -109,7 +109,7 @@ const EducationSection = () => {
                   {/* Divider Line */}
                   <div className="pt-8 mt-8 border-t border-gray-200 dark:border-gray-800">
                     <p className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-500">
-                      Formal Education
+                      {t('education.formal')}
                     </p>
                   </div>
                 </div>
@@ -126,29 +126,22 @@ const EducationSection = () => {
               {/* Left - Label */}
               <div className="md:col-span-3">
                 <p className="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-500">
-                  Continuous Growth
+                  {t('education.continuous_growth')}
                 </p>
               </div>
 
               {/* Right - Content */}
               <div className="md:col-span-9">
                 <h3 className="text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white mb-6">
-                  Lifelong Learning
+                  {t('education.lifelong')}
                 </h3>
                 <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-3xl mb-8">
-                  Beyond formal education, I continuously expand my knowledge through online courses, certifications, and hands-on projects in networking, automation, and software development. Learning never stops.
+                  {t('education.lifelong_description')}
                 </p>
 
                 {/* Learning Areas - Clean Pills */}
                 <div className="flex flex-wrap gap-3">
-                  {[
-                    'Online Courses',
-                    'Certifications',
-                    'Technical Books',
-                    'Hands-on Projects',
-                    'Community Learning',
-                    'Documentation'
-                  ].map((area, i) => (
+                  {(t('education.learning_areas', { returnObjects: true }) as string[]).map((area, i) => (
                     <span
                       key={i}
                       className="px-4 py-2 text-sm bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"

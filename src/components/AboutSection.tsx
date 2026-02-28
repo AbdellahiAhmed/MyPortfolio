@@ -31,7 +31,7 @@ const AboutSection = () => {
         {/* Section Title */}
         <div className={`text-center mb-16 transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4" style={{ fontFamily: "'Righteous', cursive" }}>
-            <span className="text-gray-900 dark:text-white">My Short Story</span>
+            <span className="text-gray-900 dark:text-white">{t('about.my_short_story')}</span>
           </h2>
         </div>
 
@@ -69,7 +69,7 @@ const AboutSection = () => {
                   <AnimatedCounter end={2} suffix="+" />
                 </div>
                 <div className="text-sm uppercase tracking-wide text-gray-600 dark:text-gray-400 font-medium">
-                  Years of Experience
+                  {t('about.years_experience')}
                 </div>
               </div>
               <div>
@@ -77,7 +77,7 @@ const AboutSection = () => {
                   <AnimatedCounter end={15} suffix="+" />
                 </div>
                 <div className="text-sm uppercase tracking-wide text-gray-600 dark:text-gray-400 font-medium">
-                  Projects Completed
+                  {t('about.projects_completed')}
                 </div>
               </div>
             </div>

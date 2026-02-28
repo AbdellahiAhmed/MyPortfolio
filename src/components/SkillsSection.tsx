@@ -230,10 +230,10 @@ const SkillsSection = () => {
               className="group/cta inline-flex flex-col items-center"
             >
               <span className="text-sm mb-2 text-gray-500 dark:text-gray-500">
-                Let's Work Together
+                {t('skills.cta_subtitle')}
               </span>
               <span className="text-2xl md:text-3xl font-display font-bold text-gray-900 dark:text-white group-hover/cta:text-accent transition-colors duration-300">
-                <SpacedText text="Get In Touch" />
+                <SpacedText text={t('skills.cta_text')} />
               </span>
               <div className="h-px bg-gray-900 dark:bg-white mt-2 w-0 group-hover/cta:w-full transition-all duration-500 ease-out" />
             </a>

@@ -20,7 +20,7 @@ const HeroSection = () => {
           <div className={`transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h1 className="font-display font-normal leading-tight text-gray-900 dark:text-white">
               <span className="block text-hero-sm md:text-hero-md lg:text-hero">
-                Hi! i'm
+                {t('hero.greeting')}
               </span>
               <span className="block text-hero-sm md:text-hero-md lg:text-hero">
                 {t('hero.name')}
@@ -31,10 +31,10 @@ const HeroSection = () => {
           {/* Subtitle - Two Lines */}
           <div className={`space-y-3 transition-all duration-700 ease-out delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <p className="text-3xl md:text-4xl lg:text-5xl font-display font-normal text-gray-800 dark:text-gray-200 leading-tight">
-              Full-stack Developer
+              {t('hero.subtitle1')}
             </p>
             <p className="text-2xl md:text-3xl lg:text-4xl font-display font-normal text-gray-600 dark:text-gray-400 leading-tight">
-              Network Engineer
+              {t('hero.subtitle2')}
             </p>
           </div>
 
@@ -51,10 +51,10 @@ const HeroSection = () => {
               href="#about"
               className="inline-block px-8 py-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full font-medium text-base hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              About Me
+              {t('hero.cta_about')}
             </a>
             <p className="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-500 mt-4">
-              Scroll to Explore
+              {t('hero.scroll')}
             </p>
           </div>
 
@@ -92,7 +92,7 @@ const HeroSection = () => {
       {/* Scroll Indicator - Bottom Center */}
       <div className={`absolute bottom-12 left-1/2 transform -translate-x-1/2 transition-all duration-700 delay-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
         <div className="flex flex-col items-center space-y-3">
-          <span className="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-500">scroll down</span>
+          <span className="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-500">{t('hero.scroll_down')}</span>
           <div className="h-12 w-px bg-gray-300 dark:bg-gray-700 animate-pulse"></div>
         </div>
       </div>
