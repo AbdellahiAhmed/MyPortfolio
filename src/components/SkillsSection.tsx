@@ -142,25 +142,15 @@ const SkillsSection = () => {
                   <div className="md:col-span-2">
                     <div className="sticky top-32">
                       <div
-                        className="text-8xl md:text-9xl font-display font-bold select-none leading-none transition-all duration-500 text-gray-900/10 dark:text-white/10 group-hover:text-transparent"
+                        className="text-8xl md:text-9xl font-display font-bold select-none leading-none transition-all duration-500 opacity-10 group-hover:opacity-100"
                         style={{
-                          backgroundImage: 'linear-gradient(135deg, #3b82f6, #2563eb, #3b82f6)',
+                          background: 'linear-gradient(135deg, #3b82f6, #2563eb, #60a5fa)',
                           WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
                           backgroundClip: 'text',
-                          WebkitTextFillColor: undefined,
                         }}
                       >
-                        <span className="group-hover:invisible">{pillar.number}</span>
-                        <span
-                          className="absolute inset-0 invisible group-hover:visible text-8xl md:text-9xl font-display font-bold leading-none"
-                          style={{
-                            background: 'linear-gradient(135deg, #3b82f6, #2563eb, #60a5fa)',
-                            WebkitBackgroundClip: 'text',
-                            WebkitTextFillColor: 'transparent',
-                          }}
-                        >
-                          {pillar.number}
-                        </span>
+                        {pillar.number}
                       </div>
                     </div>
                   </div>
