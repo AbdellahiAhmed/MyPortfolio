@@ -291,11 +291,11 @@ const LMDSystemShowcase: React.FC<LMDSystemShowcaseProps> = ({ onBack }) => {
                   </p>
                 </div>
 
-                <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-100 dark:border-blue-800">
-                  <h3 className="text-lg font-bold mb-2 text-blue-800 dark:text-blue-200">
+                <div className="bg-emerald-50 dark:bg-emerald-900/20 rounded-lg p-6 border border-emerald-100 dark:border-emerald-800">
+                  <h3 className="text-lg font-bold mb-2 text-emerald-800 dark:text-emerald-200">
                     Data Management
                   </h3>
-                  <p className="text-blue-700 dark:text-blue-300">
+                  <p className="text-emerald-700 dark:text-emerald-300">
                     Centralized academic records with secure data handling
                   </p>
                 </div>
