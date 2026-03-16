@@ -59,7 +59,15 @@ const ProjectDetailPage = () => {
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="rounded-2xl overflow-hidden bg-gray-100 dark:bg-gray-800 aspect-video">
-            <div className="w-full h-full bg-gradient-to-br from-accent/20 to-accent/5"></div>
+            {project.image ? (
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <div className="w-full h-full bg-gradient-to-br from-accent/20 to-accent/5"></div>
+            )}
           </div>
         </div>
       </section>
@@ -146,14 +154,25 @@ const ProjectDetailPage = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.slice(0, 3).map((otherProject, index) => (
+            {projects
+              .filter((otherProject) => otherProject.title !== project.title)
+              .slice(0, 3)
+              .map((otherProject, index) => (
               <Link
                 key={index}
                 to={`/project/${otherProject.title.toLowerCase().replace(/\s+/g, '-')}`}
                 className="group"
               >
                 <div className="relative overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800 aspect-[4/3] mb-4">
-                  <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/5"></div>
+                  {otherProject.image ? (
+                    <img
+                      src={otherProject.image}
+                      alt={otherProject.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/5"></div>
+                  )}
                   <div className="absolute inset-0 bg-gray-900/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 <h3 className="text-xl font-display font-bold text-gray-900 dark:text-white group-hover:text-accent transition-colors">

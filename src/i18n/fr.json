@@ -394,6 +394,20 @@
       "category": "Web",
       "image": "/projects_images/clinique-elihsan.png",
       "featured": true
+    },
+    {
+      "title": "Sadara Media",
+      "description": "Plateforme d’actualites arabophone premium developpee comme MVP pour un quotidien numerique institutionnel. Architecture front-back sous Next.js et TypeScript, design editorial RTL inspire de la charte Sadara, integration Supabase pour l’authentification et la gestion des articles, categories et annonces. Realisation des pages publiques, d’une homepage riche et d’un back-office complet avec dashboard et CRUD, en assurant une experience fluide sur mobile, tablette et desktop.",
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Supabase",
+        "RTL"
+      ],
+      "category": "Web",
+      "image": "/projects_images/sadaramedia.png",
+      "featured": true
     }
   ],
   "form.name": "Nom",
