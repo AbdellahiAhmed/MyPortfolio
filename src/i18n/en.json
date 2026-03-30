@@ -368,6 +368,22 @@
       "category": "Web",
       "image": "/projects_images/sadaramedia.png",
       "featured": true
+    },
+    {
+      "title": "OxCoreX",
+      "description": "Built a mobile-first crypto trading platform with a full user area, USDT wallet, KYC, referral system, notifications, and a complete admin panel. Developed with Next.js, TypeScript, Supabase, and Tailwind CSS.",
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "Supabase",
+        "PostgreSQL",
+        "Tailwind CSS",
+        "React Query"
+      ],
+      "category": "Web",
+      "image": "/projects_images/oxcorex_project.png",
+      "type": "mobile",
+      "featured": true
     }
   ],
   "form.name": "Name",
