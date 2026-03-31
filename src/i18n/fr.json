@@ -333,6 +333,7 @@
       ],
       "category": "Web",
       "image": "/projects_images/mcs_consulting.png",
+      "displayUrl": "mcsconsulting.vercel.app",
       "demo": "https://mcsconsulting.mr",
       "featured": true
     },
@@ -349,6 +350,7 @@
       ],
       "category": "ERP",
       "image": "/projects_images/module_gestionparc.png",
+      "displayUrl": "Gestion Parc Auto-Mobile",
       "github": "https://github.com/AbdellahiAhmed",
       "featured": true
     },
@@ -364,6 +366,7 @@
       ],
       "category": "Desktop",
       "image": "/projects_images/gestion_archivage.png",
+      "hideUrl": true,
       "featured": true
     },
     {
@@ -379,6 +382,7 @@
       ],
       "category": "Web",
       "image": "/projects_images/traiteurs-admin.png",
+      "hideUrl": true,
       "featured": true
     },
     {
@@ -393,6 +397,7 @@
       ],
       "category": "Web",
       "image": "/projects_images/clinique-elihsan.png",
+      "displayUrl": "clinique-elihsan.vercel.app",
       "featured": true
     },
     {
@@ -407,6 +412,7 @@
       ],
       "category": "Web",
       "image": "/projects_images/sadaramedia.png",
+      "displayUrl": "sadaramedia.com",
       "featured": true
     },
     {
