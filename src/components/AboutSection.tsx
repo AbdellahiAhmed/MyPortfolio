@@ -41,7 +41,7 @@ const AboutSection = () => {
           <div className={`transition-all duration-700 ease-out delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <div className="relative">
               <img
-                src="/MyProfile.PNG"
+                src="/me.heic"
                 alt="Abdellahi Ahmed"
                 className="w-full rounded-2xl shadow-2xl"
               />
