@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 const HeroSection = () => {
   const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
+  const resumeHref = '/CV.pdf?v=2026-04-26-latest';
 
   useEffect(() => {
     setIsVisible(true);
@@ -77,7 +78,7 @@ const HeroSection = () => {
             </a>
 
             <a
-              href="/CV.pdf"
+              href={resumeHref}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-2 py-4 text-sm font-semibold text-slate-500 transition-colors duration-300 hover:text-slate-950 dark:text-slate-400 dark:hover:text-white"

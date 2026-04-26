@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 const ResumeSection = () => {
   const { t } = useTranslation();
+  const resumeHref = '/CV.pdf?v=2026-04-26-latest';
 
   return (
     <section id="resume" className="relative overflow-hidden py-16 md:py-20">
@@ -36,7 +37,7 @@ const ResumeSection = () => {
 
             <div className="grid gap-3 sm:min-w-[240px]">
               <a
-                href="/CV.pdf"
+                href={resumeHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-4 text-base font-semibold text-slate-950 transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-100"
