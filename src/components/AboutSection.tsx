@@ -72,15 +72,6 @@ const AboutSection = () => {
                 alt="Abdellahi Ahmed"
                 className="h-full w-full rounded-[1.5rem] object-cover"
               />
-
-              <div className="absolute inset-x-6 bottom-6 rounded-[1.5rem] border border-white/60 bg-slate-950/85 p-5 text-white shadow-2xl backdrop-blur dark:border-white/10 dark:bg-slate-950/75">
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-300">
-                  {t('hero.panelTitle')}
-                </p>
-                <p className="mt-3 text-sm leading-6 text-slate-200">
-                  {t('hero.panelText')}
-                </p>
-              </div>
             </div>
           </div>
 
