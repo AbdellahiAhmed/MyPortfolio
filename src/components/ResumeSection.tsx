@@ -1,43 +1,57 @@
-import { Download } from 'lucide-react';
+import { ArrowRight, Download } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const ResumeSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="resume" className="py-12 md:py-16 lg:py-20 relative">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        <span className="px-4 py-2 bg-blue-500/10 text-blue-600 dark:text-blue-400 rounded-full text-sm font-medium border border-blue-500/20 inline-block">
-          {t("resume.section")}
-        </span>
+    <section id="resume" className="relative overflow-hidden py-16 md:py-20">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(59,130,246,0.08),_transparent_30%)] dark:bg-[radial-gradient(circle_at_center,_rgba(59,130,246,0.12),_transparent_32%)]" />
 
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-4 md:mt-6 mb-4 md:mb-6">
-          <span className="bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-blue-400 dark:to-cyan-400 bg-clip-text text-transparent">
-            {t("resume.title")}
-          </span>
-        </h2>
+      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="overflow-hidden rounded-[2rem] border border-slate-200/80 bg-slate-950 text-white shadow-[0_30px_90px_-35px_rgba(15,23,42,0.8)] dark:border-white/10">
+          <div className="grid gap-8 p-8 md:p-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-10 lg:p-12">
+            <div className="max-w-3xl">
+              <span className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-slate-200">
+                {t('resume.section')}
+              </span>
 
-        <p className="text-base md:text-xl text-slate-600 dark:text-slate-300 mb-8 md:mb-12 max-w-3xl mx-auto">
-          {t("resume.description")}
-        </p>
+              <h2 className="mt-6 text-3xl font-display font-extrabold tracking-[-0.04em] text-white sm:text-4xl md:text-5xl">
+                {t('resume.title')}
+              </h2>
 
-        <div className="glass-card p-4 sm:p-6 md:p-8 rounded-2xl max-w-2xl mx-auto hover:border-blue-500/30 transition-all duration-300">
-          <div className="flex flex-col sm:flex-row items-center sm:justify-between gap-4">
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center shadow-lg shrink-0">
-                <Download className="h-6 w-6 md:h-8 md:w-8 text-white" />
-              </div>
-              <div className="text-left">
-                <h3 className="text-lg md:text-xl font-bold text-slate-800 dark:text-white">{t("resume.cardTitle")}</h3>
-                <p className="text-slate-500 dark:text-slate-400 text-sm">{t("resume.lastUpdate")}</p>
+              <p className="mt-5 text-base leading-8 text-slate-300 md:text-lg">
+                {t('resume.description')}
+              </p>
+
+              <p className="mt-4 text-sm leading-7 text-slate-400">
+                {t('resume.note')}
+              </p>
+
+              <div className="mt-8 flex flex-wrap items-center gap-3 text-sm text-slate-300">
+                <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2">{t('resume.cardTitle')}</span>
+                <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2">{t('resume.lastUpdate')}</span>
               </div>
             </div>
-            <a href="/CV.pdf" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-              <button className="w-full sm:w-auto px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl transition-all duration-300 hover:bg-blue-700 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 flex items-center justify-center space-x-2">
-                <span>{t("resume.button")}</span>
+
+            <div className="grid gap-3 sm:min-w-[240px]">
+              <a
+                href="/CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-4 text-base font-semibold text-slate-950 transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-100"
+              >
+                <span>{t('resume.button')}</span>
                 <Download className="h-4 w-4" />
-              </button>
-            </a>
+              </a>
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-4 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/10"
+              >
+                <span>{t('resume.contactButton')}</span>
+                <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
           </div>
         </div>
       </div>

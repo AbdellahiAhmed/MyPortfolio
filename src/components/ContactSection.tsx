@@ -54,7 +54,7 @@ const ContactSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-8 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6" style={{ fontFamily: "'Righteous', cursive" }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-display font-bold mb-4 md:mb-6">
             <span className="text-gray-900 dark:text-white">{t("contact.title")}</span>
           </h2>
           <p className="text-base md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
@@ -115,7 +115,7 @@ const ContactSection = () => {
 
             {/* Form Header */}
             <div className="text-center mb-4 md:mb-8">
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2" style={{ fontFamily: "'Righteous', cursive" }}>
+              <h3 className="text-2xl md:text-3xl font-display font-bold text-gray-900 dark:text-white mb-2">
                 {t("contact.form.title")}
               </h3>
               <p className="text-gray-600 dark:text-gray-400">

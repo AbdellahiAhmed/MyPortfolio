@@ -37,9 +37,9 @@ export default {
         },
       },
       fontFamily: {
-        display: ["'Righteous'", 'cursive'],
-        decorative: ["'Megrim'", 'cursive'],
-        sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+        display: ["'Manrope'", 'system-ui', 'sans-serif'],
+        decorative: ["'Manrope'", 'system-ui', 'sans-serif'],
+        sans: ["'Manrope'", 'system-ui', 'sans-serif'],
       },
       fontSize: {
         'hero': ['6rem', { lineHeight: '1.1' }],
