@@ -68,7 +68,7 @@ const AboutSection = () => {
           >
             <div className="relative overflow-hidden rounded-[2rem] border border-white/70 bg-white/80 p-4 shadow-[0_25px_70px_-30px_rgba(15,23,42,0.4)] backdrop-blur dark:border-white/10 dark:bg-slate-900/70 dark:shadow-[0_25px_70px_-30px_rgba(2,6,23,0.85)]">
               <img
-                src="/me.heic"
+                src="/MyProfile.PNG"
                 alt="Abdellahi Ahmed"
                 className="h-full w-full rounded-[1.5rem] object-cover"
               />
