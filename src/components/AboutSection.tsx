@@ -6,6 +6,7 @@ import AnimatedCounter from './utils/AnimatedCounter';
 const AboutSection = () => {
   const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
+  const profileImageSrc = '/me.jpg?v=2026-04-26-profile';
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -68,9 +69,9 @@ const AboutSection = () => {
           >
             <div className="relative overflow-hidden rounded-[2rem] border border-white/70 bg-white/80 p-4 shadow-[0_25px_70px_-30px_rgba(15,23,42,0.4)] backdrop-blur dark:border-white/10 dark:bg-slate-900/70 dark:shadow-[0_25px_70px_-30px_rgba(2,6,23,0.85)]">
               <img
-                src="/me.jpg"
+                src={profileImageSrc}
                 alt="Abdellahi Ahmed"
-                className="h-full w-full rounded-[1.5rem] object-cover"
+                className="block aspect-[4/5] w-full rounded-[1.5rem] object-cover"
               />
             </div>
           </div>
