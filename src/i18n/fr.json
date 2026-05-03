@@ -164,9 +164,7 @@
       "type": "Temps partiel",
       "logo": "Code",
       "description": "Développement de compétences techniques, communication et gestion projets via des projets clubs. Python, Java, OOP, Git, GitHub.",
-      "achievements": [
-        
-      ]
+      "achievements": []
     },
     {
       "company": "III-Networking",
@@ -175,9 +173,7 @@
       "type": "Stage",
       "logo": "Server",
       "description": "Laboratoires avancés sur Cisco Packet Tracer et GNS3. Certification CCNA en pratique. Automatisation réseau par scripts Python.",
-      "achievements": [
-        
-      ]
+      "achievements": []
     },
     {
       "company": "Moov Mauritel",
@@ -186,9 +182,7 @@
       "type": "Stage",
       "logo": "Network",
       "description": "Développement principal d’AutoNetConfig : plateforme hybride d’automatisation/supervision réseau sur EVE-NG, Python, Linux, Flask, Nmap. Collaboration interdisciplinaire pour déployer des solutions automatisées.",
-      "achievements": [
-        
-      ]
+      "achievements": []
     },
     {
       "company": "MCS Consulting",
@@ -197,9 +191,7 @@
       "type": "Expérience professionnelle",
       "logo": "Web",
       "description": "Participation à des projets digitaux et technologiques au sein de MCS Consulting, cabinet spécialisé en conseil financier, solutions ERP et transformation digitale. Contribution à la conception et à l’amélioration de solutions web modernes, en assurant l’alignement entre les besoins métiers, l’identité visuelle de l’entreprise et l’expérience utilisateur.",
-      "achievements": [
-        
-      ]
+      "achievements": []
     }
   ],
   "education.section": "Éducation",
@@ -212,7 +204,14 @@
   "education.continuous_growth": "Croissance continue",
   "education.lifelong": "Apprentissage continu",
   "education.lifelong_description": "Au-delà de l'éducation formelle, j'élargis continuellement mes connaissances à travers des cours en ligne, des certifications et des projets pratiques en réseau, automatisation et développement logiciel. L'apprentissage ne s'arrête jamais.",
-  "education.learning_areas": ["Cours en ligne", "Certifications", "Livres techniques", "Projets pratiques", "Apprentissage communautaire", "Documentation"],
+  "education.learning_areas": [
+    "Cours en ligne",
+    "Certifications",
+    "Livres techniques",
+    "Projets pratiques",
+    "Apprentissage communautaire",
+    "Documentation"
+  ],
   "education.schools": [
     {
       "institution": "Institut Supérieur de Comptabilité et d'Administration des Entreprises de Mauritanie (ISCAE)",
@@ -298,23 +297,15 @@
     "Conception de l'interface utilisateur et de l'expérience"
   ],
   "projects.other_projects": "Autres projets",
-  "projects.categories": ["Tout", "Réseau", "Mobile", "Web", "ERP", "Desktop"],
+  "projects.categories": [
+    "Tout",
+    "Réseau",
+    "Mobile",
+    "Web",
+    "ERP",
+    "Desktop"
+  ],
   "projects.items": [
-    {
-      "title": "AutoNetConfig",
-      "description": "Plateforme hybride temps réel d’automatisation/supervision d’infrastructure réseau (EVE-NG, Nmap, Flask, Python).",
-      "tags": [
-        "Python",
-        "Flask",
-        "EVE-NG",
-        "Nmap",
-        "Automatisation Réseau"
-      ],
-      "category": "Réseau",
-      "image": "/autonetconfig/dashboard.png",
-      "github": "https://github.com/AbdellahiAhmed/AutoNetConfig",
-      "featured": true
-    },
     {
       "title": "Traiteurs App",
       "description": "Application mobile Flutter (iOS & Android) de commande de traiteurs pour mariages, connectee a Supabase. Trois espaces : client (recherche, commande, panier, paiement mobile Bankily/Masrivi/Sedad, suivi temps reel), traiteur (gestion plats, reception et suivi commandes, statistiques) et livreur (assignation et suivi livraisons). Support multilingue arabe/francais avec RTL.",
@@ -329,6 +320,52 @@
       "image": "/projects_images/home_screen_client.png",
       "type": "mobile",
       "demo": "https://apps.apple.com/mr/app/traiteurs/id6759182605?l=fr-FR",
+      "featured": true
+    },
+    {
+      "title": "OxCoreX",
+      "description": "Developpement d’une plateforme de trading crypto mobile-first avec espace utilisateur, portefeuille USDT, KYC, parrainage, notifications et panel d’administration complet. Projet realise avec Next.js, TypeScript, Supabase et Tailwind CSS.",
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "Supabase",
+        "PostgreSQL",
+        "Tailwind CSS",
+        "React Query"
+      ],
+      "category": "Web",
+      "image": "/projects_images/oxcorex_project.png",
+      "type": "mobile",
+      "featured": true
+    },
+    {
+      "title": "Sadara Media",
+      "description": "Plateforme d’actualites arabophone premium developpee comme MVP pour un quotidien numerique institutionnel. Architecture front-back sous Next.js et TypeScript, design editorial RTL inspire de la charte Sadara, integration Supabase pour l’authentification et la gestion des articles, categories et annonces. Realisation des pages publiques, d’une homepage riche et d’un back-office complet avec dashboard et CRUD, en assurant une experience fluide sur mobile, tablette et desktop.",
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Supabase",
+        "RTL"
+      ],
+      "category": "Web",
+      "image": "/projects_images/sadaramedia.png",
+      "displayUrl": "sadaramedia.com",
+      "featured": true
+    },
+    {
+      "title": "AutoNetConfig",
+      "description": "Plateforme hybride temps réel d’automatisation/supervision d’infrastructure réseau (EVE-NG, Nmap, Flask, Python).",
+      "tags": [
+        "Python",
+        "Flask",
+        "EVE-NG",
+        "Nmap",
+        "Automatisation Réseau"
+      ],
+      "category": "Réseau",
+      "image": "/autonetconfig/dashboard.png",
+      "github": "https://github.com/AbdellahiAhmed/AutoNetConfig",
       "featured": true
     },
     {
@@ -365,21 +402,6 @@
       "featured": true
     },
     {
-      "title": "Gestion Archivage & Courrier",
-      "description": "Application web et desktop de gestion documentaire et suivi de courrier, construite en JavaScript vanilla avec Supabase. Dashboard temps reel avec KPIs, gestion documentaire complete avec versioning automatique, suivi courrier entrant/sortant avec indicateurs d'echeance, messagerie interne, import CSV en masse, scanner par glisser-deposer, administration RBAC avec journaux d'audit complets, et bilingue FR/AR avec support RTL. Deployee en SPA et app desktop Electron.",
-      "tags": [
-        "JavaScript",
-        "Supabase",
-        "Electron",
-        "Vite",
-        "PostgreSQL"
-      ],
-      "category": "Desktop",
-      "image": "/projects_images/gestion_archivage.png",
-      "hideUrl": true,
-      "featured": true
-    },
-    {
       "title": "Clinique El Ihsane",
       "description": "Site web medical bilingue (francais/arabe avec support RTL complet) construit avec React 18, Vite, Tailwind CSS, Framer Motion et GSAP. Prise de rendez-vous en ligne, CMS headless Strapi v5 avec medias Cloudinary, systeme de contact Nodemailer, 30+ composants reutilisables sur 7 pages, accessibilite WCAG AA, et optimisation des performances avec lazy loading et code splitting.",
       "tags": [
@@ -395,34 +417,18 @@
       "featured": true
     },
     {
-      "title": "Sadara Media",
-      "description": "Plateforme d’actualites arabophone premium developpee comme MVP pour un quotidien numerique institutionnel. Architecture front-back sous Next.js et TypeScript, design editorial RTL inspire de la charte Sadara, integration Supabase pour l’authentification et la gestion des articles, categories et annonces. Realisation des pages publiques, d’une homepage riche et d’un back-office complet avec dashboard et CRUD, en assurant une experience fluide sur mobile, tablette et desktop.",
+      "title": "Gestion Archivage & Courrier",
+      "description": "Application web et desktop de gestion documentaire et suivi de courrier, construite en JavaScript vanilla avec Supabase. Dashboard temps reel avec KPIs, gestion documentaire complete avec versioning automatique, suivi courrier entrant/sortant avec indicateurs d'echeance, messagerie interne, import CSV en masse, scanner par glisser-deposer, administration RBAC avec journaux d'audit complets, et bilingue FR/AR avec support RTL. Deployee en SPA et app desktop Electron.",
       "tags": [
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
+        "JavaScript",
         "Supabase",
-        "RTL"
+        "Electron",
+        "Vite",
+        "PostgreSQL"
       ],
-      "category": "Web",
-      "image": "/projects_images/sadaramedia.png",
-      "displayUrl": "sadaramedia.com",
-      "featured": true
-    },
-    {
-      "title": "OxCoreX",
-      "description": "Developpement d’une plateforme de trading crypto mobile-first avec espace utilisateur, portefeuille USDT, KYC, parrainage, notifications et panel d’administration complet. Projet realise avec Next.js, TypeScript, Supabase et Tailwind CSS.",
-      "tags": [
-        "Next.js",
-        "TypeScript",
-        "Supabase",
-        "PostgreSQL",
-        "Tailwind CSS",
-        "React Query"
-      ],
-      "category": "Web",
-      "image": "/projects_images/oxcorex_project.png",
-      "type": "mobile",
+      "category": "Desktop",
+      "image": "/projects_images/gestion_archivage.png",
+      "hideUrl": true,
       "featured": true
     }
   ],

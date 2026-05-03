@@ -60,7 +60,11 @@
     "network": {
       "title": "Network & Infrastructure",
       "subtitle": "Cisco IOS/NX-OS, BGP/OSPF, VLAN/VXLAN, Wireshark/NetFlow",
-      "metrics": ["30+ labs", "CCNA 2024", "BGP/OSPF"],
+      "metrics": [
+        "30+ labs",
+        "CCNA 2024",
+        "BGP/OSPF"
+      ],
       "points": [
         "Design and troubleshoot routed/switched topologies with segmentation and QoS.",
         "Automate discovery, inventory, and config validation with Python tooling.",
@@ -70,7 +74,11 @@
     "automation": {
       "title": "Automation & Backend",
       "subtitle": "Python/Node, REST APIs, CI/CD for network ops",
-      "metrics": ["APIs & scripts", "GitHub Actions", "Test coverage"],
+      "metrics": [
+        "APIs & scripts",
+        "GitHub Actions",
+        "Test coverage"
+      ],
       "points": [
         "Build APIs and workers that orchestrate network tasks and enforce policy.",
         "Ship CI/CD pipelines with checks, linting, and deployment hooks.",
@@ -80,7 +88,11 @@
     "frontend": {
       "title": "Frontend & Operator UX",
       "subtitle": "React/TypeScript dashboards, accessibility-first",
-      "metrics": ["Design systems", "A11y-first", "Real-time views"],
+      "metrics": [
+        "Design systems",
+        "A11y-first",
+        "Real-time views"
+      ],
       "points": [
         "Deliver clear dashboards for config/state with responsive, accessible UI.",
         "Model components for reuse across status boards and runbooks.",
@@ -93,22 +105,50 @@
   "skills.stacks.automation": {
     "title": "Automation & Backend",
     "subtitle": "APIs, scripting, CI/CD",
-    "tags": ["Python (Flask/FastAPI)", "Node.js", "REST/GraphQL", "PostgreSQL", "GitHub Actions", "Unit tests"]
+    "tags": [
+      "Python (Flask/FastAPI)",
+      "Node.js",
+      "REST/GraphQL",
+      "PostgreSQL",
+      "GitHub Actions",
+      "Unit tests"
+    ]
   },
   "skills.stacks.cloud": {
     "title": "Cloud & Infra",
     "subtitle": "Deployable, observable services",
-    "tags": ["AWS", "Docker", "Linux/Bash", "Nginx", "Terraform/Ansible", "SSL/TLS"]
+    "tags": [
+      "AWS",
+      "Docker",
+      "Linux/Bash",
+      "Nginx",
+      "Terraform/Ansible",
+      "SSL/TLS"
+    ]
   },
   "skills.stacks.observability": {
     "title": "Observability & Security",
     "subtitle": "Know what's happening and where",
-    "tags": ["Wireshark/NetFlow", "Nmap", "Syslog/ELK", "Prometheus/Grafana", "Alerts/SLOs", "Incident playbooks"]
+    "tags": [
+      "Wireshark/NetFlow",
+      "Nmap",
+      "Syslog/ELK",
+      "Prometheus/Grafana",
+      "Alerts/SLOs",
+      "Incident playbooks"
+    ]
   },
   "skills.stacks.frontend": {
     "title": "Frontend Systems",
     "subtitle": "Usable dashboards for operators",
-    "tags": ["React", "TypeScript", "Next.js", "Tailwind CSS", "Component systems", "Accessibility"]
+    "tags": [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Tailwind CSS",
+      "Component systems",
+      "Accessibility"
+    ]
   },
   "skills.badge": "CCNA (2024) • 30+ GNS3/EVE-NG labs • Python-driven network automation",
   "skills.cta_subtitle": "Let's Work Together",
@@ -124,9 +164,7 @@
       "type": "Part-time",
       "logo": "Code",
       "description": "Developed technical, communication, and project management skills through club projects. Python, Java, OOP, Git, GitHub.",
-      "achievements": [
-        
-      ]
+      "achievements": []
     },
     {
       "company": "III-Networking",
@@ -135,9 +173,7 @@
       "type": "Internship",
       "logo": "Server",
       "description": "Built advanced virtual labs using Cisco Packet Tracer and GNS3. Completed CCNA through hands-on labs. Developed automated network workflows with Python.",
-      "achievements": [
-        
-      ]
+      "achievements": []
     },
     {
       "company": "Moov Mauritel",
@@ -146,9 +182,7 @@
       "type": "Internship",
       "logo": "Network",
       "description": "Lead developer on AutoNetConfig: a hybrid system for real-time monitoring/automation in enterprise networks (EVE-NG, Python, Linux, Flask, Nmap). Collaborated with technicians and engineers to deploy and visualize automated network solutions.",
-      "achievements": [
-        
-      ]
+      "achievements": []
     },
     {
       "company": "MCS Consulting",
@@ -157,9 +191,7 @@
       "type": "Professional Experience",
       "logo": "Web",
       "description": "Contributed to digital and technology projects at MCS Consulting, a firm specialized in financial consulting, ERP solutions, and digital transformation. Worked on the design and improvement of modern web solutions, ensuring alignment between business requirements, corporate visual identity, and user experience.",
-      "achievements": [
-        
-      ]
+      "achievements": []
     }
   ],
   "education.section": "Education",
@@ -172,7 +204,14 @@
   "education.continuous_growth": "Continuous Growth",
   "education.lifelong": "Lifelong Learning",
   "education.lifelong_description": "Beyond formal education, I continuously expand my knowledge through online courses, certifications, and hands-on projects in networking, automation, and software development. Learning never stops.",
-  "education.learning_areas": ["Online Courses", "Certifications", "Technical Books", "Hands-on Projects", "Community Learning", "Documentation"],
+  "education.learning_areas": [
+    "Online Courses",
+    "Certifications",
+    "Technical Books",
+    "Hands-on Projects",
+    "Community Learning",
+    "Documentation"
+  ],
   "education.schools": [
     {
       "institution": "ISCAE Mauritania (Institut Supérieur de Comptabilité et d’Administration des Entreprises)",
@@ -258,23 +297,15 @@
     "Designed user interface and experience"
   ],
   "projects.other_projects": "Other Projects",
-  "projects.categories": ["All", "Network", "Mobile", "Web", "ERP", "Desktop"],
+  "projects.categories": [
+    "All",
+    "Network",
+    "Mobile",
+    "Web",
+    "ERP",
+    "Desktop"
+  ],
   "projects.items": [
-    {
-      "title": "AutoNetConfig",
-      "description": "Hybrid real-time visualization and automation tool for network infrastructure using EVE-NG, Nmap, Flask, and Python scripting. Built for enterprise network administration.",
-      "tags": [
-        "Python",
-        "Flask",
-        "EVE-NG",
-        "Nmap",
-        "Network Automation"
-      ],
-      "category": "Network",
-      "image": "/autonetconfig/dashboard.png",
-      "github": "https://github.com/AbdellahiAhmed/AutoNetConfig",
-      "featured": true
-    },
     {
       "title": "Traiteurs App",
       "description": "Flutter mobile app (iOS & Android) for ordering wedding catering services, powered by Supabase. Covers three user spaces: client (search, order, cart, payment, real-time tracking), caterer (menu management, order tracking, stats), and delivery driver (assignment & live tracking).",
@@ -289,6 +320,52 @@
       "image": "/projects_images/home_screen_client.png",
       "type": "mobile",
       "demo": "https://apps.apple.com/mr/app/traiteurs/id6759182605?l=fr-FR",
+      "featured": true
+    },
+    {
+      "title": "OxCoreX",
+      "description": "Built a mobile-first crypto trading platform with a full user area, USDT wallet, KYC, referral system, notifications, and a complete admin panel. Developed with Next.js, TypeScript, Supabase, and Tailwind CSS.",
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "Supabase",
+        "PostgreSQL",
+        "Tailwind CSS",
+        "React Query"
+      ],
+      "category": "Web",
+      "image": "/projects_images/oxcorex_project.png",
+      "type": "mobile",
+      "featured": true
+    },
+    {
+      "title": "Sadara Media",
+      "description": "Premium Arabic-language news platform built as an MVP for an institutional digital newspaper. Designed and developed with a Next.js and TypeScript front-back architecture, an editorial RTL interface inspired by Sadara's visual identity, and Supabase integration for authentication plus article, category, and advertising data. Delivered public-facing pages, a rich homepage, and a complete back office with dashboard and CRUD workflows, while maintaining a polished experience across mobile, tablet, and desktop.",
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Supabase",
+        "RTL"
+      ],
+      "category": "Web",
+      "image": "/projects_images/sadaramedia.png",
+      "displayUrl": "sadaramedia.com",
+      "featured": true
+    },
+    {
+      "title": "AutoNetConfig",
+      "description": "Hybrid real-time visualization and automation tool for network infrastructure using EVE-NG, Nmap, Flask, and Python scripting. Built for enterprise network administration.",
+      "tags": [
+        "Python",
+        "Flask",
+        "EVE-NG",
+        "Nmap",
+        "Network Automation"
+      ],
+      "category": "Network",
+      "image": "/autonetconfig/dashboard.png",
+      "github": "https://github.com/AbdellahiAhmed/AutoNetConfig",
       "featured": true
     },
     {
@@ -325,21 +402,6 @@
       "featured": true
     },
     {
-      "title": "Gestion Archivage & Courrier",
-      "description": "Web & desktop document management and mail tracking application built with vanilla JavaScript and Supabase. Features real-time dashboard with KPIs, full document CRUD with automatic versioning, incoming/outgoing mail tracking with deadline indicators, internal messaging, bulk CSV import, drag-and-drop scanner upload, RBAC administration with full audit logs, and bilingual FR/AR with RTL support. Deployed as SPA and Electron desktop app.",
-      "tags": [
-        "JavaScript",
-        "Supabase",
-        "Electron",
-        "Vite",
-        "PostgreSQL"
-      ],
-      "category": "Desktop",
-      "image": "/projects_images/gestion_archivage.png",
-      "hideUrl": true,
-      "featured": true
-    },
-    {
       "title": "Clinique El Ihsane",
       "description": "Bilingual medical clinic website (French/Arabic with full RTL support) built with React 18, Vite, Tailwind CSS, Framer Motion, and GSAP. Features online appointment booking, headless CMS via Strapi v5 with Cloudinary media, Nodemailer contact system, 30+ reusable components across 7 pages, WCAG AA accessibility, and performance optimization with lazy loading and code splitting.",
       "tags": [
@@ -355,34 +417,18 @@
       "featured": true
     },
     {
-      "title": "Sadara Media",
-      "description": "Premium Arabic-language news platform built as an MVP for an institutional digital newspaper. Designed and developed with a Next.js and TypeScript front-back architecture, an editorial RTL interface inspired by Sadara's visual identity, and Supabase integration for authentication plus article, category, and advertising data. Delivered public-facing pages, a rich homepage, and a complete back office with dashboard and CRUD workflows, while maintaining a polished experience across mobile, tablet, and desktop.",
+      "title": "Gestion Archivage & Courrier",
+      "description": "Web & desktop document management and mail tracking application built with vanilla JavaScript and Supabase. Features real-time dashboard with KPIs, full document CRUD with automatic versioning, incoming/outgoing mail tracking with deadline indicators, internal messaging, bulk CSV import, drag-and-drop scanner upload, RBAC administration with full audit logs, and bilingual FR/AR with RTL support. Deployed as SPA and Electron desktop app.",
       "tags": [
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
+        "JavaScript",
         "Supabase",
-        "RTL"
+        "Electron",
+        "Vite",
+        "PostgreSQL"
       ],
-      "category": "Web",
-      "image": "/projects_images/sadaramedia.png",
-      "displayUrl": "sadaramedia.com",
-      "featured": true
-    },
-    {
-      "title": "OxCoreX",
-      "description": "Built a mobile-first crypto trading platform with a full user area, USDT wallet, KYC, referral system, notifications, and a complete admin panel. Developed with Next.js, TypeScript, Supabase, and Tailwind CSS.",
-      "tags": [
-        "Next.js",
-        "TypeScript",
-        "Supabase",
-        "PostgreSQL",
-        "Tailwind CSS",
-        "React Query"
-      ],
-      "category": "Web",
-      "image": "/projects_images/oxcorex_project.png",
-      "type": "mobile",
+      "category": "Desktop",
+      "image": "/projects_images/gestion_archivage.png",
+      "hideUrl": true,
       "featured": true
     }
   ],
