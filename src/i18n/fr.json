@@ -380,22 +380,6 @@
       "featured": true
     },
     {
-      "title": "Traiteurs Admin",
-      "description": "Application web back-office complete pour la gestion d'une plateforme de traiteurs. Dashboard temps reel avec statistiques commandes et revenus, validation et approbation des traiteurs, gestion des statuts de commandes de bout en bout, module livraison avec attribution et suivi des gains, systeme de notifications et FAQ integre, et authentification avec gestion des roles (admin, traiteur, livreur, client).",
-      "tags": [
-        "React",
-        "TypeScript",
-        "Supabase",
-        "Zustand",
-        "Tailwind CSS",
-        "Recharts"
-      ],
-      "category": "Web",
-      "image": "/projects_images/traiteurs-admin.png",
-      "hideUrl": true,
-      "featured": true
-    },
-    {
       "title": "Clinique El Ihsane",
       "description": "Site web medical bilingue (francais/arabe avec support RTL complet) construit avec React 18, Vite, Tailwind CSS, Framer Motion et GSAP. Prise de rendez-vous en ligne, CMS headless Strapi v5 avec medias Cloudinary, systeme de contact Nodemailer, 30+ composants reutilisables sur 7 pages, accessibilite WCAG AA, et optimisation des performances avec lazy loading et code splitting.",
       "tags": [

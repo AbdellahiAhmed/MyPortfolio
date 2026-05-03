@@ -340,22 +340,6 @@
       "featured": true
     },
     {
-      "title": "Traiteurs Admin",
-      "description": "Full-featured back-office web app for managing a catering platform. Real-time dashboard with order and revenue stats, caterer validation and approval workflows, end-to-end order status management, delivery module with driver assignment and earnings tracking, integrated notifications and FAQ system, and role-based authentication (admin, caterer, driver, client).",
-      "tags": [
-        "React",
-        "TypeScript",
-        "Supabase",
-        "Zustand",
-        "Tailwind CSS",
-        "Recharts"
-      ],
-      "category": "Web",
-      "image": "/projects_images/traiteurs-admin.png",
-      "hideUrl": true,
-      "featured": true
-    },
-    {
       "title": "Clinique El Ihsane",
       "description": "Bilingual medical clinic website (French/Arabic with full RTL support) built with React 18, Vite, Tailwind CSS, Framer Motion, and GSAP. Features online appointment booking, headless CMS via Strapi v5 with Cloudinary media, Nodemailer contact system, 30+ reusable components across 7 pages, WCAG AA accessibility, and performance optimization with lazy loading and code splitting.",
       "tags": [
