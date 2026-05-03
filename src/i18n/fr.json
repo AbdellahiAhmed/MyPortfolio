@@ -17,15 +17,15 @@
   "hero.metric_location_value": "Mauritanie",
   "about.section": "À propos de moi",
   "about.title": "Mon Parcours",
-  "about.subtitle": "Ingénieur Réseau et Développeur FullStack en devenir. Pratique avancée de l’automatisation réseau, Linux, dev logiciel réel et résolution de problèmes.",
+  "about.subtitle": "Ingénieur Logiciel avec une solide expertise en Architecture Réseau, concevant des applications prêtes pour la production qui résolvent des problématiques métiers complexes.",
   "about.my_short_story": "Mon Histoire",
   "about.strengths": "Forces clés",
   "about.years_experience": "Années d'expérience",
   "about.projects_completed": "Projets réalisés",
   "about.storyTitle": "Automatisation Réseau et FullStack",
-  "about.story1": "Je me concentre sur mon évolution vers un rôle de développeur Web & Mobile senior, avec une solide base en ingénierie des réseaux, en concevant des applications prêtes pour la production, sécurisées, évolutives et alignées sur les besoins réels des organisations. Mon parcours couvre les systèmes Web et Mobile, les environnements serveurs et les réseaux d’entreprise, soutenu par de solides compétences en communication et en leadership.",
-  "about.story2": "Mon parcours comprend des projets d’applications full-stack, la conception et la simulation de réseaux, ainsi qu’un travail pratique sur des systèmes basés sur Linux. À travers des projets académiques et personnels, j’ai conçu des solutions complètes de bout en bout — de l’architecture et l’implémentation jusqu’aux tests et à l’optimisation — en produisant des résultats fiables dans des contextes réels.",
-  "about.story3": "Je suis convaincu que des architectures propres, une automatisation intelligente et une collaboration efficace entre équipes sont les piliers des organisations technologiques performantes. Chaque projet que je mène est une opportunité d’améliorer la qualité des systèmes, d’affiner mon jugement d’ingénieur et de créer un impact concret et mesurable.",
+  "about.story1": "Je suis un Ingénieur Logiciel et Architecte Réseau dédié à la création d'applications sécurisées, évolutives et performantes. Mon expertise fait le pont entre le développement full-stack moderne et les infrastructures d'entreprise robustes.",
+  "about.story2": "À travers mes expériences professionnelles et mes projets pratiques, j'ai conçu des solutions complètes de bout en bout — du développement de modules ERP complexes et d'applications mobiles à l'automatisation de topologies réseaux d'entreprise. Je livre des résultats fiables sous des contraintes réelles.",
+  "about.story3": "Je suis convaincu qu'une architecture propre, une automatisation intelligente et une connaissance approfondie des systèmes sont les clés pour créer de la valeur ajoutée. Je recherche activement des opportunités où je pourrai utiliser cette double compétence pour avoir un impact immédiat au sein d'une équipe technique performante.",
   "about.card1.title": "Administrateur Réseau",
   "about.card1.desc": "Spécialisé en administration et gestion des infrastructures réseau",
   "about.card2.title": "Développeur Full-Stack",
@@ -164,7 +164,10 @@
       "type": "Temps partiel",
       "logo": "Code",
       "description": "Développement de compétences techniques, communication et gestion projets via des projets clubs. Python, Java, OOP, Git, GitHub.",
-      "achievements": []
+      "achievements": [
+        "Animation d'ateliers techniques et gestion de projets de club interfonctionnels.",
+        "Développement de solides compétences en communication et leadership technique sur Python et Java."
+      ]
     },
     {
       "company": "III-Networking",
@@ -173,7 +176,10 @@
       "type": "Stage",
       "logo": "Server",
       "description": "Laboratoires avancés sur Cisco Packet Tracer et GNS3. Certification CCNA en pratique. Automatisation réseau par scripts Python.",
-      "achievements": []
+      "achievements": [
+        "Architecture et simulation de topologies réseaux d'entreprise avancées via Cisco Packet Tracer et GNS3.",
+        "Ingénierie de flux de travail automatisés pour la découverte et la configuration de réseaux avec Python."
+      ]
     },
     {
       "company": "Moov Mauritel",
@@ -182,7 +188,10 @@
       "type": "Stage",
       "logo": "Network",
       "description": "Développement principal d’AutoNetConfig : plateforme hybride d’automatisation/supervision réseau sur EVE-NG, Python, Linux, Flask, Nmap. Collaboration interdisciplinaire pour déployer des solutions automatisées.",
-      "achievements": []
+      "achievements": [
+        "Architecture de 'AutoNetConfig', un outil automatisé de découverte et de cartographie réseau intégrant EVE-NG, Python et Flask.",
+        "Réduction des erreurs de configuration manuelle et gain de plusieurs heures de gestion administrative par semaine."
+      ]
     },
     {
       "company": "MCS Consulting",
@@ -191,7 +200,10 @@
       "type": "Expérience professionnelle",
       "logo": "Web",
       "description": "Participation à des projets digitaux et technologiques au sein de MCS Consulting, cabinet spécialisé en conseil financier, solutions ERP et transformation digitale. Contribution à la conception et à l’amélioration de solutions web modernes, en assurant l’alignement entre les besoins métiers, l’identité visuelle de l’entreprise et l’expérience utilisateur.",
-      "achievements": []
+      "achievements": [
+        "Développement et livraison d'applications web responsives, garantissant un alignement parfait avec les objectifs commerciaux et l'identité de la marque.",
+        "Collaboration avec des équipes pluridisciplinaires pour intégrer des solutions ERP, optimisant les flux de transformation numérique internes."
+      ]
     }
   ],
   "education.section": "Éducation",
@@ -242,7 +254,7 @@
   "contact.whatsapp_label": "WhatsApp",
   "contact.connect": "Me contacter",
   "contact.form.title": "Envoyer un message",
-  "contact.form.subtitle": "Discutons de votre projet ou opportunité",
+  "contact.form.subtitle": "Discutons de la manière dont mon profil d'Ingénieur Logiciel et Architecte Réseau peut apporter une valeur immédiate à votre équipe.",
   "contact.form.name_placeholder": "Votre nom",
   "contact.form.email_placeholder": "votre@email.com",
   "contact.form.subject_placeholder": "Demande de projet",

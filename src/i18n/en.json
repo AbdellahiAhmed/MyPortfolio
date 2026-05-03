@@ -17,15 +17,15 @@
   "hero.metric_location_value": "Mauritania",
   "about.section": "About Me",
   "about.title": "My Journey",
-  "about.subtitle": "Aspiring Network Engineer and FullStack Developer, hands-on with network automation, Linux, real-world programming, and problem-solving.",
+  "about.subtitle": "Software Engineer with a deep foundation in Network Architecture, building production-ready applications that solve complex business problems.",
   "about.my_short_story": "My Short Story",
   "about.strengths": "Core strengths",
   "about.years_experience": "Years of Experience",
   "about.projects_completed": "Projects Completed",
   "about.storyTitle": "Network Engineering and FullStack",
-  "about.story1": "I am focused on growing into a senior Web & Mobile Developer with a strong Network Engineering foundation, building production-ready applications that are secure, scalable, and aligned with real organizational needs. My background spans web and mobile systems, server environments, and enterprise networking, supported by strong communication and leadership skills.",
-  "about.story2": "My journey includes full-stack application projects, network design and simulation, and hands-on work with Linux-based systems. Through academic and personal projects, I’ve designed complete solutions end-to-end — from architecture and implementation to testing and optimization — delivering reliable results under real constraints.",
-  "about.story3": "I believe that clean architecture, intelligent automation, and cross-team collaboration are what drive high-performing tech organizations. Every project I take on is an opportunity to improve system quality, strengthen my engineering judgment, and create measurable real-world impact.",
+  "about.story1": "I am a Software Engineer and Network Architect dedicated to building secure, scalable, and high-performance applications. My expertise bridges the gap between modern full-stack development and robust enterprise infrastructure.",
+  "about.story2": "Through my professional roles and hands-on projects, I have designed complete end-to-end solutions—from developing complex ERP modules and mobile applications to automating enterprise network topologies. I deliver reliable results under real-world constraints.",
+  "about.story3": "I believe that clean architecture, intelligent automation, and deep systems knowledge are the keys to driving business value. I am actively looking for opportunities where I can leverage this unique blend of skills to make an immediate impact on a high-performing engineering team.",
   "about.card1.title": "Network Admin",
   "about.card1.desc": "Specializing in network engineering and infrastructure management",
   "about.card2.title": "Full-Stack Dev",
@@ -164,7 +164,10 @@
       "type": "Part-time",
       "logo": "Code",
       "description": "Developed technical, communication, and project management skills through club projects. Python, Java, OOP, Git, GitHub.",
-      "achievements": []
+      "achievements": [
+        "Led technical workshops and managed cross-functional club projects.",
+        "Developed strong communication and technical leadership skills in Python and Java environments."
+      ]
     },
     {
       "company": "III-Networking",
@@ -173,7 +176,10 @@
       "type": "Internship",
       "logo": "Server",
       "description": "Built advanced virtual labs using Cisco Packet Tracer and GNS3. Completed CCNA through hands-on labs. Developed automated network workflows with Python.",
-      "achievements": []
+      "achievements": [
+        "Architected and simulated advanced enterprise network topologies using Cisco Packet Tracer and GNS3.",
+        "Engineered automated network discovery and configuration workflows using Python scripting."
+      ]
     },
     {
       "company": "Moov Mauritel",
@@ -182,7 +188,10 @@
       "type": "Internship",
       "logo": "Network",
       "description": "Lead developer on AutoNetConfig: a hybrid system for real-time monitoring/automation in enterprise networks (EVE-NG, Python, Linux, Flask, Nmap). Collaborated with technicians and engineers to deploy and visualize automated network solutions.",
-      "achievements": []
+      "achievements": [
+        "Architected 'AutoNetConfig', an automated network discovery and mapping tool integrating EVE-NG, Python, and Flask.",
+        "Reduced manual configuration errors and saved hours of administrative overhead per week."
+      ]
     },
     {
       "company": "MCS Consulting",
@@ -191,7 +200,10 @@
       "type": "Professional Experience",
       "logo": "Web",
       "description": "Contributed to digital and technology projects at MCS Consulting, a firm specialized in financial consulting, ERP solutions, and digital transformation. Worked on the design and improvement of modern web solutions, ensuring alignment between business requirements, corporate visual identity, and user experience.",
-      "achievements": []
+      "achievements": [
+        "Developed and shipped responsive web applications, ensuring perfect alignment with business goals and brand identity.",
+        "Collaborated with cross-functional teams to integrate ERP solutions, improving internal digital transformation workflows."
+      ]
     }
   ],
   "education.section": "Education",
@@ -242,7 +254,7 @@
   "contact.whatsapp_label": "WhatsApp",
   "contact.connect": "Connect with me",
   "contact.form.title": "Send a Message",
-  "contact.form.subtitle": "Let's discuss your project or opportunity",
+  "contact.form.subtitle": "Let's discuss how my blend of Software Engineering and Network Architecture can add immediate value to your team.",
   "contact.form.name_placeholder": "Your name",
   "contact.form.email_placeholder": "your@email.com",
   "contact.form.subject_placeholder": "Project Inquiry",
