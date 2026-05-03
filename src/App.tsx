@@ -50,12 +50,11 @@ const Portfolio = () => {
     setIsMenuOpen(false);
   }, [location]);
 
-  // Navigation items with spaced text (azizkhaldi.com style)
   const navItems = [
     { path: '/', label: 'Home', spaced: true },
     { path: '/#about', label: 'About', spaced: true },
     { path: '/works', label: 'Works', spaced: true },
-    { path: '/#contact', label: 'Contact', spaced: false },
+    { path: '/#contact', label: 'Contact', spaced: true },
   ];
 
   const scrollToSection = (sectionId: string) => {
