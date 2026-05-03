@@ -1,15 +1,15 @@
 {
   "hero.greeting": "Hi, I'm",
   "hero.name": "Abdellahi Ahmed",
-  "hero.description": "I'm not just learning technology — I'm building real products that solve real problems. Driven by purpose, discipline, and long-term vision, I design and develop modern Web and Mobile applications with a strong engineering mindset. My work bridges backend systems, clean architectures, and user-focused experiences, turning ideas into reliable, scalable solutions.",
-  "hero.subtitle1": "Full-stack Developer",
-  "hero.subtitle2": "Network Engineer",
+  "hero.description": "I engineer scalable web and mobile applications backed by a deep foundation in network architecture and system automation. I bridge the gap between complex backend infrastructure, clean code, and user-focused experiences to build enterprise-grade systems that solve real business problems.",
+  "hero.subtitle1": "Software Engineer",
+  "hero.subtitle2": "Network Architect",
   "hero.cta": "View My Work",
   "hero.cta_about": "About Me",
   "hero.cta_contact": "Let's Talk",
   "hero.scroll": "Scroll to Explore",
   "hero.scroll_down": "scroll down",
-  "hero.badge": "Open to high-impact internships and serious product work",
+  "hero.badge": "Available for high-impact Software Engineering and DevOps roles starting Summer 2026",
   "hero.panelTitle": "What I bring",
   "hero.panelText": "A disciplined blend of product thinking, frontend execution, backend logic, and network automation for reliable real-world systems.",
   "hero.metric_role": "Core focus",
@@ -307,7 +307,7 @@
   "projects.items": [
     {
       "title": "Traiteurs App",
-      "description": "Flutter mobile app (iOS & Android) for ordering wedding catering services, powered by Supabase. Covers three user spaces: client (search, order, cart, payment, real-time tracking), caterer (menu management, order tracking, stats), and delivery driver (assignment & live tracking).",
+      "description": "Flutter mobile app (iOS & Android) for ordering wedding catering services, powered by Supabase. Connects clients, caterers, and drivers in real-time. Streamlined the entire catering ordering process, eliminating manual coordination and enabling real-time tracking for hundreds of potential users.",
       "tags": [
         "Flutter",
         "Dart",
@@ -354,7 +354,7 @@
     },
     {
       "title": "AutoNetConfig",
-      "description": "Hybrid real-time visualization and automation tool for network infrastructure using EVE-NG, Nmap, Flask, and Python scripting. Built for enterprise network administration.",
+      "description": "Hybrid real-time visualization and automation tool for network infrastructure using EVE-NG, Nmap, Flask, and Python scripting. Automated complex network discovery and configuration tasks, saving network admins hours of manual effort per week and drastically reducing configuration errors.",
       "tags": [
         "Python",
         "Flask",
@@ -369,7 +369,7 @@
     },
     {
       "title": "MCS Consulting",
-      "description": "Official corporate website for MCS Consulting, a firm specialized in financial consulting, ERP solutions, and digital transformation. Designed and developed a modern, responsive web presence reflecting the company's professional identity and service offerings.",
+      "description": "Official corporate website for MCS Consulting, a firm specialized in financial consulting and ERP solutions. Delivered a high-performance, responsive digital presence that strengthens the firm's brand identity and serves as a primary lead generation tool for enterprise clients.",
       "tags": [
         "React",
         "TypeScript",
@@ -385,7 +385,7 @@
     },
     {
       "title": "GestionParc",
-      "description": "Full-featured fleet management ERP module built for Dolibarr. Covers the complete vehicle lifecycle: real-time status tracking, maintenance workflows with preventive alerts, material inventory with reservation system, and fuel monitoring with photo proof and automatic consumption calculation. Dashboard with 15+ KPIs, granular permissions, CSRF protection, and bilingual FR/EN interface.",
+      "description": "Full-featured fleet management ERP module built for Dolibarr. Covers the complete vehicle lifecycle: real-time status tracking, maintenance workflows, and fuel monitoring. Digitized the entire fleet workflow, reducing manual tracking time and providing real-time operational data for 50+ vehicles.",
       "tags": [
         "PHP",
         "MySQL",

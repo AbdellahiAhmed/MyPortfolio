@@ -1,15 +1,15 @@
 {
   "hero.greeting": "Salut, je suis",
   "hero.name": "Abdellahi Ahmed",
-  "hero.description": "Je ne me contente pas d’apprendre la technologie — je conçois et développe des produits concrets qui répondent à de vrais besoins. Guidé par le sens, la discipline et une vision à long terme, je crée des applications Web et Mobile modernes avec une forte approche d’ingénierie. Mon travail relie les systèmes backend, les architectures propres et l’expérience utilisateur, afin de transformer des idées en solutions fiables, évolutives et durables.",
-  "hero.subtitle1": "Développeur Full-stack",
-  "hero.subtitle2": "Ingénieur Réseau",
+  "hero.description": "Je conçois des applications web et mobiles évolutives, adossées à une solide expertise en architecture réseau et en automatisation des systèmes. Je fais le pont entre les infrastructures backend complexes, le code propre et l'expérience utilisateur pour créer des solutions d'entreprise qui répondent à de véritables enjeux métiers.",
+  "hero.subtitle1": "Ingénieur Logiciel",
+  "hero.subtitle2": "Architecte Réseau",
   "hero.cta": "Voir mes Projets",
   "hero.cta_about": "À propos",
   "hero.cta_contact": "Discutons",
   "hero.scroll": "Défiler pour explorer",
   "hero.scroll_down": "défiler",
-  "hero.badge": "Ouvert aux stages à fort impact et aux projets produits sérieux",
+  "hero.badge": "Disponible pour des postes d'Ingénieur Logiciel et DevOps à fort impact à partir de l'été 2026",
   "hero.panelTitle": "Ce que j'apporte",
   "hero.panelText": "Un mélange discipliné de vision produit, d'exécution frontend, de logique backend et d'automatisation réseau pour des systèmes fiables en conditions réelles.",
   "hero.metric_role": "Focus principal",
@@ -307,7 +307,7 @@
   "projects.items": [
     {
       "title": "Traiteurs App",
-      "description": "Application mobile Flutter (iOS & Android) de commande de traiteurs pour mariages, connectee a Supabase. Trois espaces : client (recherche, commande, panier, paiement mobile Bankily/Masrivi/Sedad, suivi temps reel), traiteur (gestion plats, reception et suivi commandes, statistiques) et livreur (assignation et suivi livraisons). Support multilingue arabe/francais avec RTL.",
+      "description": "Application mobile Flutter (iOS & Android) de commande de traiteurs pour mariages, propulsée par Supabase. Connecte clients, traiteurs et livreurs en temps réel. A simplifié l'ensemble du processus de commande, éliminant la coordination manuelle et permettant un suivi en direct pour des centaines d'utilisateurs potentiels.",
       "tags": [
         "Flutter",
         "Dart",
@@ -354,7 +354,7 @@
     },
     {
       "title": "AutoNetConfig",
-      "description": "Plateforme hybride temps réel d’automatisation/supervision d’infrastructure réseau (EVE-NG, Nmap, Flask, Python).",
+      "description": "Outil hybride de visualisation et d'automatisation en temps réel pour l'infrastructure réseau via EVE-NG, Nmap, Flask et Python. A automatisé les tâches complexes de découverte et de configuration, faisant gagner des heures de travail manuel par semaine aux administrateurs réseau et réduisant les erreurs humaines.",
       "tags": [
         "Python",
         "Flask",
@@ -369,7 +369,7 @@
     },
     {
       "title": "MCS Consulting",
-      "description": "Site web officiel de MCS Consulting, cabinet specialise en conseil financier, solutions ERP et transformation digitale. Conception et developpement d’une presence web moderne et responsive refletant l’identite professionnelle et les offres de services du cabinet.",
+      "description": "Site web officiel de MCS Consulting, cabinet spécialisé en conseil financier et solutions ERP. A livré une présence numérique performante et responsive qui renforce l'identité de la marque et sert de canal principal d'acquisition pour les clients institutionnels.",
       "tags": [
         "React",
         "TypeScript",
@@ -385,7 +385,7 @@
     },
     {
       "title": "GestionParc",
-      "description": "Module ERP complet de gestion de flotte vehicules integre a Dolibarr. Couvre le cycle de vie complet : suivi des statuts en temps reel, workflow de maintenance avec alertes preventives, gestion de stock materiel avec systeme de reservation, et suivi carburant avec preuves photo et calcul automatique de consommation. Dashboard avec 15+ KPIs, 15 permissions granulaires, protection CSRF et interface bilingue FR/EN.",
+      "description": "Module ERP complet de gestion de flotte pour Dolibarr. Couvre le cycle de vie complet des véhicules : suivi en temps réel, maintenance et gestion du carburant. A numérisé l'ensemble du flux de gestion de flotte, réduisant considérablement le temps de suivi manuel et fournissant des données opérationnelles en direct pour plus de 50 véhicules.",
       "tags": [
         "PHP",
         "MySQL",
