@@ -58,45 +58,45 @@
   "skills.tools.web": "Web Development",
   "skills.pillars": {
     "network": {
-      "title": "Network & Infrastructure",
-      "subtitle": "Cisco IOS/NX-OS, BGP/OSPF, VLAN/VXLAN, Wireshark/NetFlow",
+      "title": "Network Engineering & Automation",
+      "subtitle": "Cisco CCNA, Python, Linux, Bash, EVE-NG",
       "metrics": [
-        "30+ labs",
-        "CCNA 2024",
-        "BGP/OSPF"
+        "CCNA Certified",
+        "Python Automation",
+        "Infrastructure Design"
       ],
       "points": [
-        "Design and troubleshoot routed/switched topologies with segmentation and QoS.",
-        "Automate discovery, inventory, and config validation with Python tooling.",
-        "Harden access with ACLs, secure management, and observability."
+        "Design, configure, and troubleshoot secure enterprise-grade network topologies and infrastructure.",
+        "Automate repetitive network administration tasks and configuration management using Python and Bash scripting.",
+        "Deploy comprehensive monitoring and hybrid real-time visualization tools to ensure absolute network reliability."
       ]
     },
     "automation": {
-      "title": "Automation & Backend",
-      "subtitle": "Python/Node, REST APIs, CI/CD for network ops",
+      "title": "Enterprise ERP & System Architecture",
+      "subtitle": "Dolibarr, PHP, MySQL, System Integration, Business Workflows",
       "metrics": [
-        "APIs & scripts",
-        "GitHub Actions",
-        "Test coverage"
+        "ERP Modules",
+        "Business Logic",
+        "Optimized Workflows"
       ],
       "points": [
-        "Build APIs and workers that orchestrate network tasks and enforce policy.",
-        "Ship CI/CD pipelines with checks, linting, and deployment hooks.",
-        "Instrument code with logging/metrics for faster incident triage."
+        "Engineer full-featured, customized ERP modules (Dolibarr) that digitize and streamline complex enterprise operations.",
+        "Design secure, robust database architectures and APIs to connect disparate business systems efficiently.",
+        "Translate complex business requirements into tangible, scalable software solutions with granular role-based access."
       ]
     },
     "frontend": {
-      "title": "Frontend & Operator UX",
-      "subtitle": "React/TypeScript dashboards, accessibility-first",
+      "title": "Full-Stack Web & Mobile Engineering",
+      "subtitle": "React, Next.js, Node.js, Flutter, Supabase, TypeScript",
       "metrics": [
-        "Design systems",
-        "A11y-first",
-        "Real-time views"
+        "End-to-End Delivery",
+        "Production Ready",
+        "Cross-Platform"
       ],
       "points": [
-        "Deliver clear dashboards for config/state with responsive, accessible UI.",
-        "Model components for reuse across status boards and runbooks.",
-        "Integrate live data (WebSockets/polling) with graceful degradation."
+        "Architect and deliver scalable, high-performance web and mobile applications from concept to production.",
+        "Develop complex, robust business logic and seamless user interfaces using modern frameworks (Next.js, Flutter).",
+        "Integrate secure backend architectures (Supabase, Node.js) ensuring seamless data flow and reliability."
       ]
     }
   },
@@ -216,7 +216,7 @@
     {
       "institution": "ISCAE Mauritania (Institut Supérieur de Comptabilité et d’Administration des Entreprises)",
       "degree": "Bachelor in Computer Networks & Telecommunications",
-      "period": "2023 – Present",
+      "period": "2023 – 2026",
       "description": "Academic training in networks, IT, and digital infrastructure. Strong focus on systems integration, automation, secure network setups, and rapid adaptability in tech environments.",
       "logo": "GraduationCap",
       "link": "https://iscae.mr"

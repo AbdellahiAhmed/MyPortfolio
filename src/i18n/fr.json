@@ -58,45 +58,45 @@
   "skills.tools.web": "Développement Web",
   "skills.pillars": {
     "network": {
-      "title": "Reseau & Infrastructure",
-      "subtitle": "Cisco IOS/NX-OS, BGP/OSPF, VLAN/VXLAN, Wireshark/NetFlow",
+      "title": "Ingénierie & Automatisation Réseau",
+      "subtitle": "Cisco CCNA, Python, Linux, Bash, EVE-NG",
       "metrics": [
-        "30+ labs",
-        "CCNA 2024",
-        "BGP/OSPF"
+        "Certifié CCNA",
+        "Automatisation Python",
+        "Design d'Infrastructure"
       ],
       "points": [
-        "Conception et troubleshooting de topologies routees/commutees avec segmentation et QoS.",
-        "Automatisation decouverte, inventaire et validation de config via scripts Python.",
-        "Renforcement securite avec ACL, management securise et observabilite."
+        "Conception, configuration et dépannage d'infrastructures et de topologies réseaux sécurisées de niveau entreprise.",
+        "Automatisation des tâches d'administration réseau et de la gestion des configurations via des scripts Python et Bash.",
+        "Déploiement d'outils de surveillance globale et de visualisation en temps réel pour garantir une fiabilité réseau absolue."
       ]
     },
     "automation": {
-      "title": "Automatisation & Backend",
-      "subtitle": "Python/Node, APIs REST, CI/CD pour les ops reseau",
+      "title": "ERP d'Entreprise & Architecture Système",
+      "subtitle": "Dolibarr, PHP, MySQL, Intégration Système, Workflows",
       "metrics": [
-        "APIs & scripts",
-        "GitHub Actions",
-        "Tests automatiques"
+        "Modules ERP",
+        "Logique Métier",
+        "Workflows Optimisés"
       ],
       "points": [
-        "APIs et workers qui orchestrent les taches reseau et appliquent les policies.",
-        "Pipelines CI/CD avec verifications, lint et hooks de deploiement.",
-        "Code instrumente (logs/metrics) pour triage incident plus rapide."
+        "Ingénierie de modules ERP complets et sur mesure (Dolibarr) pour numériser et optimiser les opérations complexes des entreprises.",
+        "Conception d'architectures de bases de données et d'APIs sécurisées pour connecter efficacement les systèmes métiers.",
+        "Traduction des exigences métiers complexes en solutions logicielles tangibles et évolutives avec un contrôle d'accès granulaire."
       ]
     },
     "frontend": {
-      "title": "Frontend & UX Operateur",
-      "subtitle": "Dashboards React/TypeScript, accessibilite en premier",
+      "title": "Ingénierie Web & Mobile Full-Stack",
+      "subtitle": "React, Next.js, Node.js, Flutter, Supabase, TypeScript",
       "metrics": [
-        "Design systems",
-        "A11y-first",
-        "Vue temps reel"
+        "Livraison de Bout-en-Bout",
+        "Prêt pour la Production",
+        "Multiplateforme"
       ],
       "points": [
-        "Dashboards clairs pour config/etat avec UI responsive et accessible.",
-        "Composants modelises pour la reutilisation sur status boards et runbooks.",
-        "Integration donnees live (WebSockets/polling) avec degradation maitrisee."
+        "Architecture et développement d'applications web et mobiles évolutives et performantes, du concept à la production.",
+        "Conception d'interfaces utilisateur fluides et de logiques métier complexes via des frameworks modernes (Next.js, Flutter).",
+        "Intégration d'architectures backend sécurisées (Supabase, Node.js) garantissant la fiabilité et le flux des données."
       ]
     }
   },
@@ -216,7 +216,7 @@
     {
       "institution": "Institut Supérieur de Comptabilité et d'Administration des Entreprises de Mauritanie (ISCAE)",
       "degree": "Licence en Réseaux Informatiques et Télécommunications",
-      "period": "2023 – Présent",
+      "period": "2023 – 2026",
       "description": "Formation universitaire focalisée sur réseaux, systèmes, automatisation, cybersécurité et intégration numérique. Capacité d’adaptation forte et vision globale de l’IT.",
       "logo": "GraduationCap",
       "link": "https://iscae.mr"
