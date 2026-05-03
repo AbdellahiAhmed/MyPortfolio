@@ -25,10 +25,6 @@ const ResumeSection = () => {
                 {t('resume.description')}
               </p>
 
-              <p className="mt-4 text-sm leading-7 text-slate-400">
-                {t('resume.note')}
-              </p>
-
               <div className="mt-8 flex flex-wrap items-center gap-3 text-sm text-slate-300">
                 <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2">{t('resume.cardTitle')}</span>
                 <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2">{t('resume.lastUpdate')}</span>
