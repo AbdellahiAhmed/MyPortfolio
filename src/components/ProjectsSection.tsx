@@ -68,39 +68,28 @@ const ProjectsSection = () => {
 
   // Auto-scroll logic
   useEffect(() => {
-    if (!scrollContainerRef.current || isHovering || filteredProjects.length === 0) return;
+    if (!scrollContainerRef.current || isHovering || filteredProjects.length <= 1) return;
 
     const interval = setInterval(() => {
       const container = scrollContainerRef.current;
       if (!container) return;
 
-      const projectNodes = Array.from(container.querySelectorAll('.snap-center')) as HTMLElement[];
-      if (projectNodes.length === 0) return;
+      const cards = Array.from(container.querySelectorAll(':scope > div'));
+      if (cards.length === 0) return;
 
-      const containerCenter = container.scrollLeft + container.clientWidth / 2;
-      let minProjDist = Infinity;
-      let currProjIdx = 0;
-
-      // Find the currently centered project
-      projectNodes.forEach((node, idx) => {
-        const nodeCenter = node.offsetLeft + node.clientWidth / 2;
-        const dist = Math.abs(nodeCenter - containerCenter);
-        if (dist < minProjDist) {
-          minProjDist = dist;
-          currProjIdx = idx;
-        }
-      });
-
-      const nextProjIdx = currProjIdx + 1;
+      const scrollPos = container.scrollLeft;
+      const cardWidth = cards[0].clientWidth + 24; // width + gap
+      const currentIndex = Math.round(scrollPos / cardWidth);
       
-      // If we reached the end, scroll back to the first item
-      if (nextProjIdx >= projectNodes.length) {
-        container.scrollTo({ left: 0, behavior: 'smooth' });
-      } else {
-        const nextNode = projectNodes[nextProjIdx];
-        const targetScrollLeft = nextNode.offsetLeft - (container.clientWidth - nextNode.clientWidth) / 2;
-        container.scrollTo({ left: targetScrollLeft, behavior: 'smooth' });
-      }
+      const nextIndex = (currentIndex + 1) % cards.length;
+      
+      const targetCard = cards[nextIndex] as HTMLElement;
+      const targetScrollPos = targetCard.offsetLeft - (container.clientWidth - targetCard.clientWidth) / 2;
+
+      container.scrollTo({
+        left: targetScrollPos,
+        behavior: 'smooth'
+      });
     }, 2500); // Scroll every 2.5 seconds
 
     return () => clearInterval(interval);
@@ -494,6 +483,9 @@ const ProjectsSection = () => {
         </div>
 
         {/* Projects */}
+        <style dangerouslySetInnerHTML={{__html: `
+          .hide-scrollbar::-webkit-scrollbar { display: none; }
+        `}} />
         <div 
           ref={scrollContainerRef}
           onMouseEnter={() => setIsHovering(true)}
@@ -503,9 +495,6 @@ const ProjectsSection = () => {
           className="flex flex-nowrap overflow-x-auto gap-6 pb-12 pt-4 snap-x snap-mandatory scroll-smooth hide-scrollbar items-stretch"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
-          <style dangerouslySetInnerHTML={{__html: `
-            .hide-scrollbar::-webkit-scrollbar { display: none; }
-          `}} />
           {filteredProjects.map((project, index) => (
             <div 
               key={project.title} 
