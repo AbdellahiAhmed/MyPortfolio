@@ -73,16 +73,35 @@ const ProjectsSection = () => {
     const interval = setInterval(() => {
       const container = scrollContainerRef.current;
       if (!container) return;
+
+      const projectNodes = Array.from(container.querySelectorAll('.snap-center')) as HTMLElement[];
+      if (projectNodes.length === 0) return;
+
+      const containerCenter = container.scrollLeft + container.clientWidth / 2;
+      let minProjDist = Infinity;
+      let currProjIdx = 0;
+
+      // Find the currently centered project
+      projectNodes.forEach((node, idx) => {
+        const nodeCenter = node.offsetLeft + node.clientWidth / 2;
+        const dist = Math.abs(nodeCenter - containerCenter);
+        if (dist < minProjDist) {
+          minProjDist = dist;
+          currProjIdx = idx;
+        }
+      });
+
+      const nextProjIdx = currProjIdx + 1;
       
-      const maxScrollLeft = container.scrollWidth - container.clientWidth;
-      // If we're at the end (with a small buffer for precision)
-      if (container.scrollLeft >= maxScrollLeft - 10) {
+      // If we reached the end, scroll back to the first item
+      if (nextProjIdx >= projectNodes.length) {
         container.scrollTo({ left: 0, behavior: 'smooth' });
       } else {
-        // Scroll by ~80% of the container width to show the next item
-        container.scrollBy({ left: container.clientWidth * 0.8, behavior: 'smooth' });
+        const nextNode = projectNodes[nextProjIdx];
+        const targetScrollLeft = nextNode.offsetLeft - (container.clientWidth - nextNode.clientWidth) / 2;
+        container.scrollTo({ left: targetScrollLeft, behavior: 'smooth' });
       }
-    }, 3000);
+    }, 2500); // Scroll every 2.5 seconds
 
     return () => clearInterval(interval);
   }, [isHovering, filteredProjects]);
