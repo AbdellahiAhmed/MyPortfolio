@@ -25,6 +25,8 @@ const ProjectsSection = () => {
   const [isFiltering, setIsFiltering] = useState(false);
   const [canTilt, setCanTilt] = useState(false);
   const tabsRef = useRef<(HTMLButtonElement | null)[]>([]);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [isHovering, setIsHovering] = useState(false);
   const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0 });
 
   const projects = t('projects.items', { returnObjects: true }) as Project[];
@@ -63,6 +65,27 @@ const ProjectsSection = () => {
       if (section) observer.unobserve(section);
     };
   }, []);
+
+  // Auto-scroll logic
+  useEffect(() => {
+    if (!scrollContainerRef.current || isHovering || filteredProjects.length === 0) return;
+
+    const interval = setInterval(() => {
+      const container = scrollContainerRef.current;
+      if (!container) return;
+      
+      const maxScrollLeft = container.scrollWidth - container.clientWidth;
+      // If we're at the end (with a small buffer for precision)
+      if (container.scrollLeft >= maxScrollLeft - 10) {
+        container.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        // Scroll by ~80% of the container width to show the next item
+        container.scrollBy({ left: container.clientWidth * 0.8, behavior: 'smooth' });
+      }
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [isHovering, filteredProjects]);
 
   const updateUnderline = useCallback(() => {
     const tab = tabsRef.current[activeCategory];
@@ -227,9 +250,9 @@ const ProjectsSection = () => {
   const renderMobileCard = (project: Project, index: number) => (
     <div
       key={project.title}
-      className={`transition-all ease-out ${
+      className={`transition-all ease-out h-full ${
         isFiltering ? 'opacity-0 scale-95 duration-200' : 'opacity-100 scale-100 duration-600'
-      } ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}
+      } ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}
       style={{ transitionDelay: isFiltering ? '0ms' : `${300 + index * 150}ms` }}
     >
       <div
@@ -314,9 +337,9 @@ const ProjectsSection = () => {
   const renderWebCard = (project: Project, index: number) => (
     <div
       key={project.title}
-      className={`transition-all ease-out ${
+      className={`transition-all ease-out h-full ${
         isFiltering ? 'opacity-0 scale-95 duration-200' : 'opacity-100 scale-100 duration-600'
-      } ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}
+      } ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}
       style={{ transitionDelay: isFiltering ? '0ms' : `${300 + index * 150}ms` }}
     >
       <div
@@ -452,12 +475,28 @@ const ProjectsSection = () => {
         </div>
 
         {/* Projects */}
-        <div className="space-y-10">
-          {filteredProjects.map((project, index) =>
-            project.type === 'mobile'
-              ? renderMobileCard(project, index)
-              : renderWebCard(project, index)
-          )}
+        <div 
+          ref={scrollContainerRef}
+          onMouseEnter={() => setIsHovering(true)}
+          onMouseLeave={() => setIsHovering(false)}
+          onTouchStart={() => setIsHovering(true)}
+          onTouchEnd={() => setIsHovering(false)}
+          className="flex flex-nowrap overflow-x-auto gap-6 pb-12 pt-4 snap-x snap-mandatory scroll-smooth hide-scrollbar items-stretch"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
+          <style dangerouslySetInnerHTML={{__html: `
+            .hide-scrollbar::-webkit-scrollbar { display: none; }
+          `}} />
+          {filteredProjects.map((project, index) => (
+            <div 
+              key={project.title} 
+              className="w-full min-w-full md:min-w-[85%] lg:min-w-[80%] shrink-0 snap-center"
+            >
+              {project.type === 'mobile'
+                ? renderMobileCard(project, index)
+                : renderWebCard(project, index)}
+            </div>
+          ))}
         </div>
 
         {/* CTA */}
