@@ -32,7 +32,7 @@ const ResumeSection = () => {
                 <p className="text-slate-500 dark:text-slate-400 text-sm">{t("resume.lastUpdate")}</p>
               </div>
             </div>
-            <a href="/CV.pdf" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+            <a href="/cv.pdf?v=2026-05-18-latest" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
               <button className="w-full sm:w-auto px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl transition-all duration-300 hover:bg-blue-700 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 flex items-center justify-center space-x-2">
                 <span>{t("resume.button")}</span>
                 <Download className="h-4 w-4" />
