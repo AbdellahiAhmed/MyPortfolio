@@ -1,37 +1,37 @@
 {
   "hero.greeting": "Hi, I'm",
   "hero.name": "Abdellahi Ahmed",
-  "hero.description": "I engineer scalable web and mobile applications backed by a deep foundation in network architecture and system automation. I bridge the gap between complex backend infrastructure, clean code, and user-focused experiences to build enterprise-grade systems that solve real business problems.",
-  "hero.subtitle1": "Software Engineer",
-  "hero.subtitle2": "Network Architect",
+  "hero.description": "I build production web, mobile, ERP and business applications across Next.js, React, Flutter, Supabase, PHP/MySQL and Dolibarr ERP — anchored by a CCNA networking foundation and Python-driven network automation. I ship real systems that solve real business problems.",
+  "hero.subtitle1": "Full-Stack Developer",
+  "hero.subtitle2": "Network Engineer (CCNA)",
   "hero.cta": "View My Work",
   "hero.cta_about": "About Me",
   "hero.cta_contact": "Let's Talk",
   "hero.scroll": "Scroll to Explore",
   "hero.scroll_down": "scroll down",
-  "hero.badge": "Available for high-impact Software Engineering and DevOps roles starting Summer 2026",
+  "hero.badge": "Available for Full-Stack Developer and Software Engineering roles starting Summer 2026",
   "hero.panelTitle": "What I bring",
-  "hero.panelText": "A disciplined blend of product thinking, frontend execution, backend logic, and network automation for reliable real-world systems.",
+  "hero.panelText": "A disciplined blend of full-stack delivery, ERP module engineering and network automation — for reliable web, mobile and business systems.",
   "hero.metric_role": "Core focus",
-  "hero.metric_role_value": "Frontend systems, backend delivery, and network automation",
-  "hero.metric_location_value": "Mauritania",
+  "hero.metric_role_value": "Web, mobile, ERP and business apps + network automation",
+  "hero.metric_location_value": "Nouakchott, Mauritania",
   "about.section": "About Me",
   "about.title": "My Journey",
-  "about.subtitle": "Software Engineer with a deep foundation in Network Architecture, building production-ready applications that solve complex business problems.",
+  "about.subtitle": "Full-Stack Developer shipping production web, mobile, ERP and business applications — backed by a CCNA networking foundation and hands-on Python network automation.",
   "about.my_short_story": "My Short Story",
   "about.strengths": "Core strengths",
   "about.years_experience": "Years of Experience",
   "about.projects_completed": "Projects Completed",
-  "about.storyTitle": "Network Engineering and FullStack",
-  "about.story1": "I am a Software Engineer and Network Architect dedicated to building secure, scalable, and high-performance applications. My expertise bridges the gap between modern full-stack development and robust enterprise infrastructure.",
-  "about.story2": "Through my professional roles and hands-on projects, I have designed complete end-to-end solutions—from developing complex ERP modules and mobile applications to automating enterprise network topologies. I deliver reliable results under real-world constraints.",
-  "about.story3": "I believe that clean architecture, intelligent automation, and deep systems knowledge are the keys to driving business value. I am actively looking for opportunities where I can leverage this unique blend of skills to make an immediate impact on a high-performing engineering team.",
-  "about.card1.title": "Network Admin",
-  "about.card1.desc": "Specializing in network engineering and infrastructure management",
-  "about.card2.title": "Full-Stack Dev",
-  "about.card2.desc": "Building web applications with modern frontend frameworks",
-  "about.card3.title": "Automation Focus",
-  "about.card3.desc": "Designing reliable workflows, reducing manual work, and improving overall system efficiency",
+  "about.storyTitle": "From Networks to Full-Stack Delivery",
+  "about.story1": "I'm a Full-Stack Developer based in Nouakchott, Mauritania, building production web, mobile, ERP and business applications. My stack spans Next.js, React, Flutter and Supabase as well as enterprise systems like Dolibarr ERP and PHP/MySQL — anchored by a strong CCNA networking foundation.",
+  "about.story2": "At MCS Consulting (Dec 2025 – Apr 2026) I delivered custom Dolibarr ERP modules in PHP/MySQL and contributed to production web applications including a document management system, a bilingual medical website and an internal point-of-sale app. On the side I shipped Traiteurs to the App Store with Bankily, Masrivi and Sedad mobile-money rails on a Supabase backend, and co-built AutoNetConfig — a Python + Nmap toolkit for network discovery, visualisation and auto-configuration.",
+  "about.story3": "I'm comfortable across REST APIs, SQL (PostgreSQL, MySQL), Git/GitHub, Docker and Linux, and I care about clean architecture, secure data handling and reliable delivery. I'm actively looking for full-stack and software engineering roles where this mix can ship real business value from day one.",
+  "about.card1.title": "Full-Stack Delivery",
+  "about.card1.desc": "Shipping production web and mobile apps across Next.js, React, Flutter and Supabase",
+  "about.card2.title": "ERP & Business Apps",
+  "about.card2.desc": "Custom Dolibarr modules and internal business tools in PHP/MySQL",
+  "about.card3.title": "Network Automation",
+  "about.card3.desc": "CCNA foundation, Python + Nmap toolkits and EVE-NG / GNS3 lab validation",
   "about.card4.title": "Continuous Learner",
   "about.card4.desc": "Always exploring new technologies and sharing knowledge with the community",
   "skills.section": "Technical Skills",
@@ -59,98 +59,98 @@
   "skills.pillars": {
     "network": {
       "title": "Network Engineering & Automation",
-      "subtitle": "Cisco CCNA, Python, Linux, Bash, EVE-NG",
+      "subtitle": "Cisco CCNA, Python, Nmap, EVE-NG, GNS3, Packet Tracer",
       "metrics": [
         "CCNA Certified",
-        "Python Automation",
-        "Infrastructure Design"
+        "Python + Nmap Toolkit",
+        "Multi-router / Multi-switch Labs"
       ],
       "points": [
-        "Design, configure, and troubleshoot secure enterprise-grade network topologies and infrastructure.",
-        "Automate repetitive network administration tasks and configuration management using Python and Bash scripting.",
-        "Deploy comprehensive monitoring and hybrid real-time visualization tools to ensure absolute network reliability."
+        "Design and validate multi-router / multi-switch topologies in EVE-NG, GNS3 and Packet Tracer before production cutover.",
+        "Co-built AutoNetConfig — a Python + Nmap toolkit that scans, visualises and auto-configures network infrastructure.",
+        "Run live network analysis, monitoring and troubleshooting across production-like environments."
       ]
     },
     "automation": {
-      "title": "Enterprise ERP & System Architecture",
-      "subtitle": "Dolibarr, PHP, MySQL, System Integration, Business Workflows",
+      "title": "Enterprise ERP & Business Applications",
+      "subtitle": "Dolibarr, PHP, MySQL, Custom Modules, Business Workflows",
       "metrics": [
-        "ERP Modules",
-        "Business Logic",
-        "Optimized Workflows"
+        "Custom Dolibarr Modules",
+        "Client → Payment Chain",
+        "Internal Business Tools"
       ],
       "points": [
-        "Engineer full-featured, customized ERP modules (Dolibarr) that digitize and streamline complex enterprise operations.",
-        "Design secure, robust database architectures and APIs to connect disparate business systems efficiently.",
-        "Translate complex business requirements into tangible, scalable software solutions with granular role-based access."
+        "Deliver custom Dolibarr ERP modules in PHP/MySQL covering client, supplier, order, invoice and payment workflows.",
+        "Build and maintain internal business applications — document management, a point-of-sale and client websites — alongside the ERP layer.",
+        "Translate operational requirements into structured data models, role-based access and audit-ready document fields."
       ]
     },
     "frontend": {
       "title": "Full-Stack Web & Mobile Engineering",
-      "subtitle": "React, Next.js, Node.js, Flutter, Supabase, TypeScript",
+      "subtitle": "Next.js, React, Flutter, Supabase, Node.js, TypeScript",
       "metrics": [
-        "End-to-End Delivery",
-        "Production Ready",
-        "Cross-Platform"
+        "App Store Shipped",
+        "Supabase + Row-Level Security",
+        "End-to-End Delivery"
       ],
       "points": [
-        "Architect and deliver scalable, high-performance web and mobile applications from concept to production.",
-        "Develop complex, robust business logic and seamless user interfaces using modern frameworks (Next.js, Flutter).",
-        "Integrate secure backend architectures (Supabase, Node.js) ensuring seamless data flow and reliability."
+        "Architect and ship full-stack web and mobile applications — including Traiteurs on the App Store and the OxCoreX crypto platform.",
+        "Build secure Supabase backends with Auth, Postgres, Storage, Realtime and Row-Level Security.",
+        "Integrate REST APIs, mobile-money rails (Bankily, Masrivi, Sedad) and complex business logic across web and mobile."
       ]
     }
   },
   "skills.stacks.title": "Delivery toolchain",
-  "skills.stacks.subtitle": "What I use to ship, observe, and keep systems healthy",
+  "skills.stacks.subtitle": "What I use day-to-day to design, ship and run real systems",
   "skills.stacks.automation": {
-    "title": "Automation & Backend",
-    "subtitle": "APIs, scripting, CI/CD",
+    "title": "Backend & APIs",
+    "subtitle": "Server logic, data and integrations",
     "tags": [
-      "Python (Flask/FastAPI)",
-      "Node.js",
-      "REST/GraphQL",
+      "Node.js (via Next.js)",
+      "Python (Flask)",
+      "PHP / MySQL",
+      "REST APIs",
       "PostgreSQL",
-      "GitHub Actions",
-      "Unit tests"
+      "Row-Level Security / JWT"
     ]
   },
   "skills.stacks.cloud": {
-    "title": "Cloud & Infra",
-    "subtitle": "Deployable, observable services",
+    "title": "Cloud & DevOps",
+    "subtitle": "Where my apps actually run",
     "tags": [
-      "AWS",
+      "Supabase",
+      "Firebase",
+      "Vercel",
       "Docker",
-      "Linux/Bash",
-      "Nginx",
-      "Terraform/Ansible",
-      "SSL/TLS"
+      "GitHub Actions (CI/CD)",
+      "Linux / Bash"
     ]
   },
   "skills.stacks.observability": {
-    "title": "Observability & Security",
-    "subtitle": "Know what's happening and where",
+    "title": "Networking & Infrastructure",
+    "subtitle": "From CCNA fundamentals to Python automation",
     "tags": [
-      "Wireshark/NetFlow",
+      "TCP/IP",
+      "Routing & Switching",
+      "Network Automation",
       "Nmap",
-      "Syslog/ELK",
-      "Prometheus/Grafana",
-      "Alerts/SLOs",
-      "Incident playbooks"
+      "EVE-NG / GNS3",
+      "Packet Tracer"
     ]
   },
   "skills.stacks.frontend": {
-    "title": "Frontend Systems",
-    "subtitle": "Usable dashboards for operators",
+    "title": "Frontend & Mobile",
+    "subtitle": "Interfaces users actually enjoy",
     "tags": [
+      "Next.js",
       "React",
       "TypeScript",
-      "Next.js",
       "Tailwind CSS",
-      "Component systems",
-      "Accessibility"
+      "Flutter",
+      "Responsive Design"
     ]
   },
-  "skills.badge": "CCNA (2024) • 30+ GNS3/EVE-NG labs • Python-driven network automation",
+  "skills.badge": "CCNA (2024) • EVE-NG (2025) • Python — Udemy (2025) • Multi-router / multi-switch lab topologies",
   "skills.cta_subtitle": "Let's Work Together",
   "skills.cta_text": "Get In Touch",
   "experience.section": "Work Experience",
@@ -183,26 +183,27 @@
     },
     {
       "company": "Moov Mauritel",
-      "role": "Intern, Network & Systems (Stagiaire Réseaux Informatiques et Admin Systèmes)",
-      "period": "June 2025 – August 2025",
+      "role": "Network & Systems Intern",
+      "period": "June 2025 – July 2025",
       "type": "Internship",
       "logo": "Network",
-      "description": "Lead developer on AutoNetConfig: a hybrid system for real-time monitoring/automation in enterprise networks (EVE-NG, Python, Linux, Flask, Nmap). Collaborated with technicians and engineers to deploy and visualize automated network solutions.",
+      "description": "Designed and validated multi-router / multi-switch topologies in EVE-NG, GNS3 and Packet Tracer before production cutover, while co-building AutoNetConfig — a Python + Nmap toolkit for network discovery, visualisation and auto-configuration.",
       "achievements": [
-        "Architected 'AutoNetConfig', an automated network discovery and mapping tool integrating EVE-NG, Python, and Flask.",
-        "Reduced manual configuration errors and saved hours of administrative overhead per week."
+        "Co-built AutoNetConfig — a Python + Nmap toolkit that scans, visualises and auto-configures network infrastructure (host & port discovery, topology mapping).",
+        "Ran live network analysis, monitoring and troubleshooting on production-like topologies built in EVE-NG, GNS3 and Packet Tracer."
       ]
     },
     {
       "company": "MCS Consulting",
-      "role": "Full-Stack Developer | ERP & Business Applications Developer",
-      "period": "Dec 2025 – May 2026",
+      "role": "Full-Stack Developer — ERP & Business Applications",
+      "period": "Dec 2025 – Apr 2026",
       "type": "Professional Experience",
       "logo": "Web",
-      "description": "Contributed to digital and technology projects at MCS Consulting, a firm specialized in financial consulting, ERP solutions, and digital transformation. Worked on the design and improvement of modern web solutions, ensuring alignment between business requirements, corporate visual identity, and user experience.",
+      "description": "Full-Stack Developer at MCS Consulting — a firm specialised in financial consulting, ERP solutions and digital transformation. Delivered custom Dolibarr ERP modules in PHP/MySQL while contributing to production web applications, client-facing websites and an internal point-of-sale app currently under development.",
       "achievements": [
-        "Developed and shipped responsive web applications, ensuring perfect alignment with business goals and brand identity.",
-        "Collaborated with cross-functional teams to integrate ERP solutions, improving internal digital transformation workflows."
+        "Delivered 6 custom Dolibarr ERP modules in PHP/MySQL covering the client → supplier → order → invoice → payment chain.",
+        "Developed and maintained production web projects including Gestion Archivage & Courrier and Clinique El Ihsan, and contributed to an internal point-of-sale web application currently under development.",
+        "Integrated REST APIs, improved UI components and supported backend architecture, debugging and MySQL performance tuning using Git/GitHub on a Linux development environment."
       ]
     }
   ],
@@ -243,10 +244,10 @@
     }
   ],
   "resume.section": "Resume",
-  "resume.title": "Want to know more?",
-  "resume.description": "Download my resume to explore my professional journey, skills, and achievements in detail.",
-  "resume.cardTitle": "My Resume",
-  "resume.lastUpdate": "Up-to-date as of May 2026",
+  "resume.title": "Want the full picture?",
+  "resume.description": "Download my recruiter-ready CV — Full-Stack Developer across Next.js, Supabase, Dolibarr ERP and CCNA-grade networking, with shipped App Store, ERP and web projects.",
+  "resume.cardTitle": "My Resume — ATS-friendly, recruiter-ready",
+  "resume.lastUpdate": "Updated May 2026",
   "resume.button": "View CV",
   "resume.contactButton": "Start a Conversation",
   "contact.email_label": "Email",
@@ -254,7 +255,7 @@
   "contact.whatsapp_label": "WhatsApp",
   "contact.connect": "Connect with me",
   "contact.form.title": "Send a Message",
-  "contact.form.subtitle": "Let's discuss how my blend of Software Engineering and Network Architecture can add immediate value to your team.",
+  "contact.form.subtitle": "Let's discuss how my mix of full-stack delivery, ERP module engineering and CCNA-grade networking can add immediate value to your team.",
   "contact.form.name_placeholder": "Your name",
   "contact.form.email_placeholder": "your@email.com",
   "contact.form.subject_placeholder": "Project Inquiry",
@@ -319,13 +320,14 @@
   "projects.items": [
     {
       "title": "Traiteurs App",
-      "description": "Flutter mobile app (iOS & Android) for ordering wedding catering services, powered by Supabase. Connects clients, caterers, and drivers in real-time. Streamlined the entire catering ordering process, eliminating manual coordination and enabling real-time tracking for hundreds of potential users.",
+      "description": "Flutter + Supabase catering platform shipped to the App Store. Connects clients, caterers and drivers in real time, with integrated Mauritanian mobile-money rails (Bankily, Masrivi, Sedad). Backend built on Supabase Auth, Postgres, Storage, Realtime and Row-Level Security.",
       "tags": [
         "Flutter",
         "Dart",
         "Supabase",
-        "Firebase",
-        "Mobile App"
+        "Bankily / Masrivi / Sedad",
+        "Row-Level Security",
+        "App Store"
       ],
       "category": "Mobile",
       "image": "/projects_images/home_screen_client.png",
@@ -335,14 +337,14 @@
     },
     {
       "title": "OxCoreX",
-      "description": "Built a mobile-first crypto trading platform with a full user area, USDT wallet, KYC, referral system, notifications, and a complete admin panel. Developed with Next.js, TypeScript, Supabase, and Tailwind CSS.",
+      "description": "Full-stack crypto trading platform built with Next.js, TypeScript, Supabase and Tailwind CSS. Includes USDT wallet, KYC flow, referral system, notifications and a complete admin dashboard — backed by Supabase Auth, Postgres, Row-Level Security and role-based access.",
       "tags": [
         "Next.js",
         "TypeScript",
         "Supabase",
         "PostgreSQL",
-        "Tailwind CSS",
-        "React Query"
+        "Row-Level Security",
+        "Admin Dashboard"
       ],
       "category": "Web",
       "image": "/projects_images/oxcorex_project.png",
@@ -351,7 +353,7 @@
     },
     {
       "title": "Sadara Media",
-      "description": "Premium Arabic-language news platform built as an MVP for an institutional digital newspaper. Designed and developed with a Next.js and TypeScript front-back architecture, an editorial RTL interface inspired by Sadara's visual identity, and Supabase integration for authentication plus article, category, and advertising data. Delivered public-facing pages, a rich homepage, and a complete back office with dashboard and CRUD workflows, while maintaining a polished experience across mobile, tablet, and desktop.",
+      "description": "Arabic-first RTL news platform built on Next.js with server-side rendering for SEO. Delivered an editorial RTL interface inspired by the Sadara visual identity, a custom CMS for article drafting, publishing workflow, media uploads and category management, a rich homepage and a complete back office — polished across mobile, tablet and desktop.",
       "tags": [
         "Next.js",
         "TypeScript",
@@ -366,12 +368,12 @@
     },
     {
       "title": "AutoNetConfig",
-      "description": "Hybrid real-time visualization and automation tool for network infrastructure using EVE-NG, Nmap, Flask, and Python scripting. Automated complex network discovery and configuration tasks, saving network admins hours of manual effort per week and drastically reducing configuration errors.",
+      "description": "Python + Nmap toolkit co-built during the Moov Mauritel internship for scanning, visualising and auto-configuring network infrastructure. Implements Nmap-based discovery for hosts, open ports and topology mapping, with a hybrid real-time visualisation layer over Flask to render discovered topologies and device relationships.",
       "tags": [
         "Python",
-        "Flask",
-        "EVE-NG",
         "Nmap",
+        "Flask",
+        "EVE-NG / GNS3",
         "Network Automation"
       ],
       "category": "Network",
@@ -414,7 +416,7 @@
     },
     {
       "title": "Clinique El Ihsane",
-      "description": "Bilingual medical clinic website (French/Arabic with full RTL support) built with React 18, Vite, Tailwind CSS, Framer Motion, and GSAP. Features online appointment booking, headless CMS via Strapi v5 with Cloudinary media, Nodemailer contact system, 30+ reusable components across 7 pages, WCAG AA accessibility, and performance optimization with lazy loading and code splitting.",
+      "description": "Bilingual French/Arabic medical clinic website (full RTL support) delivered at MCS Consulting. Built with React 18, Vite, Tailwind CSS, Framer Motion and GSAP, with online appointment requests, a Strapi v5 headless CMS, Cloudinary media, Nodemailer contact system, 30+ reusable components across 7 pages, WCAG AA accessibility, and lazy-loading + code-splitting for low-end devices and slower connections.",
       "tags": [
         "React",
         "Tailwind CSS",
@@ -429,7 +431,7 @@
     },
     {
       "title": "Gestion Archivage & Courrier",
-      "description": "Web & desktop document management and mail tracking application built with vanilla JavaScript and Supabase. Features real-time dashboard with KPIs, full document CRUD with automatic versioning, incoming/outgoing mail tracking with deadline indicators, internal messaging, bulk CSV import, drag-and-drop scanner upload, RBAC administration with full audit logs, and bilingual FR/AR with RTL support. Deployed as SPA and Electron desktop app.",
+      "description": "Document and mail management system delivered at MCS Consulting for administrative teams, with structured data handling, role-based access (RBAC) and audit-style document fields. Real-time dashboard with KPIs, full document CRUD with automatic versioning, incoming/outgoing mail tracking with deadline indicators, internal messaging, bulk CSV import, drag-and-drop scanner upload, and bilingual FR/AR with RTL support. Deployed as SPA and Electron desktop app on a Supabase backend.",
       "tags": [
         "JavaScript",
         "Supabase",
@@ -463,7 +465,7 @@
   "footer.version": "VERSION",
   "footer.edition": "Edition",
   "footer.credit": "Designed & Built by Abdellahi Ahmed",
-  "footer.subtitle": "Network Engineer & Full-Stack Developer",
+  "footer.subtitle": "Full-Stack Developer · ERP · CCNA Networking",
   "navbar": {
     "home": "Home",
     "about": "About",
