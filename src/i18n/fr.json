@@ -184,7 +184,7 @@
     {
       "company": "Moov Mauritel",
       "role": "Stagiaire Réseaux & Systèmes",
-      "period": "Juin 2025 – Juillet 2025",
+      "period": "Juin 2025 – Août 2025",
       "type": "Stage",
       "logo": "Network",
       "description": "Conception et validation de topologies multi-routeurs / multi-switches dans EVE-NG, GNS3 et Packet Tracer avant mise en production, et co-construction d'AutoNetConfig — une boîte à outils Python + Nmap pour la découverte, la visualisation et l'auto-configuration de l'infrastructure réseau.",

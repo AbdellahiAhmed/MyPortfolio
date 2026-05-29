@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route, Link, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
@@ -16,6 +16,7 @@ import './i18n/i18n';
 const Portfolio = () => {
   const { t } = useTranslation();
   const location = useLocation();
+  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -65,16 +66,31 @@ const Portfolio = () => {
   };
 
   const handleNavClick = (path: string) => {
-    if (path.includes('#')) {
+    if (path === '/') {
+      if (location.pathname === '/') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        navigate('/');
+      }
+    } else if (path.includes('#')) {
       const sectionId = path.split('#')[1];
       if (location.pathname === '/') {
         scrollToSection(sectionId);
       } else {
-        window.location.href = path;
+        navigate('/', { state: { scrollTo: sectionId } });
       }
+    } else {
+      navigate(path);
     }
     setIsMenuOpen(false);
   };
+
+  useEffect(() => {
+    const state = location.state as { scrollTo?: string } | null;
+    if (location.pathname === '/' && state?.scrollTo) {
+      setTimeout(() => scrollToSection(state.scrollTo!), 80);
+    }
+  }, [location]);
 
   if (isLoading) {
     return <LoadingScreen onComplete={() => setIsLoading(false)} />;
@@ -100,35 +116,27 @@ const Portfolio = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 md:h-20">
             {/* Logo */}
-            <Link
-              to="/"
+            <button
+              type="button"
+              onClick={() => handleNavClick('/')}
               className="flex items-center space-x-3 group"
+              aria-label="Home"
             >
               <span className="text-lg md:text-xl font-display font-bold text-gray-900 dark:text-white leading-none transition-colors">
                 Abdellahi Ahmed
               </span>
-            </Link>
+            </button>
 
             {/* Desktop Menu - Spaced Letters */}
             <div className="hidden md:flex items-center space-x-4 lg:space-x-8">
               {navItems.map(({ path, label, spaced }) => (
-                path.includes('#') ? (
-                  <button
-                    key={path}
-                    onClick={() => handleNavClick(path)}
-                    className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-all duration-300"
-                  >
-                    {spaced ? <SpacedText text={label} /> : label}
-                  </button>
-                ) : (
-                  <Link
-                    key={path}
-                    to={path}
-                    className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-all duration-300"
-                  >
-                    {spaced ? <SpacedText text={label} /> : label}
-                  </Link>
-                )
+                <button
+                  key={path}
+                  onClick={() => handleNavClick(path)}
+                  className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-all duration-300"
+                >
+                  {spaced ? <SpacedText text={label} /> : label}
+                </button>
               ))}
 
               <div className="flex items-center space-x-3">
@@ -173,23 +181,13 @@ const Portfolio = () => {
         >
           <div className="px-4 pt-2 pb-6 space-y-2">
             {navItems.map(({ path, label }) => (
-              path.includes('#') ? (
-                <button
-                  key={path}
-                  onClick={() => handleNavClick(path)}
-                  className="flex items-center w-full px-4 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800"
-                >
-                  {label}
-                </button>
-              ) : (
-                <Link
-                  key={path}
-                  to={path}
-                  className="flex items-center w-full px-4 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800"
-                >
-                  {label}
-                </Link>
-              )
+              <button
+                key={path}
+                onClick={() => handleNavClick(path)}
+                className="flex items-center w-full px-4 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800"
+              >
+                {label}
+              </button>
             ))}
             <div className="pt-4 border-t border-gray-200 dark:border-gray-800 mt-4">
               <div className="flex justify-center">
