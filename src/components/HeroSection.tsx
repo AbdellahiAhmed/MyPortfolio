@@ -1,15 +1,22 @@
-import { ArrowRight, Download, Github, Linkedin, Mail, MapPin } from 'lucide-react';
+import { ArrowRight, Download, Github, Linkedin, Mail, MapPin, Sparkles } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 
 const HeroSection = () => {
   const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
-  const resumeHref = '/cv.pdf?v=2026-05-18-latest';
+  const resumeHref = '/cv.pdf?v=2026-05-28';
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  const proofPoints = [
+    t('hero.proof_appstore'),
+    t('hero.proof_modules'),
+    t('hero.proof_ccna'),
+    t('hero.proof_stack'),
+  ];
 
   return (
     <section
@@ -27,12 +34,25 @@ const HeroSection = () => {
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
             }`}
           >
-            <p className="text-sm font-semibold uppercase tracking-[0.26em] text-slate-500 dark:text-slate-400">
-              {t('hero.greeting')}
-            </p>
+            <div className="flex flex-wrap items-center gap-3">
+              <span className="inline-flex items-center gap-2 rounded-full border border-emerald-200/80 bg-emerald-50 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-700 dark:border-emerald-500/30 dark:bg-emerald-500/10 dark:text-emerald-300">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+                </span>
+                {t('hero.availability_pill')}
+              </span>
+              <span className="text-xs font-semibold uppercase tracking-[0.26em] text-slate-500 dark:text-slate-400">
+                {t('hero.greeting')} Abdellahi Ahmed
+              </span>
+            </div>
 
-            <h1 className="mt-5 max-w-4xl font-display text-5xl font-extrabold leading-[0.94] tracking-[-0.05em] text-slate-950 dark:text-white sm:text-6xl md:text-7xl lg:text-[5.25rem]">
-              {t('hero.name')}
+            <h1 className="mt-6 max-w-5xl font-display text-4xl font-extrabold leading-[0.98] tracking-[-0.04em] text-slate-950 dark:text-white sm:text-5xl md:text-6xl lg:text-7xl">
+              {t('hero.headline_lead')}
+              <span className="text-slate-400 dark:text-slate-500"> — </span>
+              <span className="bg-gradient-to-r from-blue-600 via-cyan-600 to-emerald-500 bg-clip-text text-transparent dark:from-blue-400 dark:via-cyan-400 dark:to-emerald-400">
+                {t('hero.headline_highlight')}
+              </span>
             </h1>
           </div>
 
@@ -42,7 +62,7 @@ const HeroSection = () => {
             }`}
           >
             <p className="text-base font-semibold uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400 sm:text-lg">
-              {t('hero.subtitle1')} / {t('hero.subtitle2')}
+              {t('hero.subtitle1')} <span className="mx-3 text-slate-300 dark:text-slate-600">/</span> {t('hero.subtitle2')}
             </p>
           </div>
 
@@ -54,6 +74,25 @@ const HeroSection = () => {
             <p className="text-lg leading-8 text-slate-600 dark:text-slate-300 md:text-xl">
               {t('hero.description')}
             </p>
+          </div>
+
+          {/* Proof strip — what makes this candidate concrete */}
+          <div
+            className={`mt-8 transition-all duration-700 ease-out delay-300 ${
+              isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+            }`}
+          >
+            <div className="flex flex-wrap items-center gap-2">
+              {proofPoints.map((point) => (
+                <span
+                  key={point}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white/70 px-3 py-1.5 text-xs font-semibold text-slate-700 backdrop-blur dark:border-slate-700/70 dark:bg-slate-900/60 dark:text-slate-200"
+                >
+                  <Sparkles className="h-3 w-3 text-blue-500 dark:text-blue-400" />
+                  {point}
+                </span>
+              ))}
+            </div>
           </div>
 
           <div

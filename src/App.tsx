@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Sun, Moon } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
 
 import LoadingScreen from './components/LoadingScreen';
 import CursorTrail from './components/CursorTrail';
@@ -14,7 +13,6 @@ import SpacedText from './components/utils/SpacedText';
 import './i18n/i18n';
 
 const Portfolio = () => {
-  const { t } = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -54,7 +52,9 @@ const Portfolio = () => {
   const navItems = [
     { path: '/', label: 'Home', spaced: true },
     { path: '/#about', label: 'About', spaced: true },
+    { path: '/#projects', label: 'Projects', spaced: true },
     { path: '/works', label: 'Works', spaced: true },
+    { path: '/#resume', label: 'Resume', spaced: true },
     { path: '/#contact', label: 'Contact', spaced: true },
   ];
 

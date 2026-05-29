@@ -81,29 +81,49 @@ const AboutSection = () => {
               isVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'
             }`}
           >
-            <div className="grid gap-4 md:grid-cols-3">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               <div className="rounded-3xl border border-slate-200/80 bg-white/80 p-6 shadow-lg shadow-slate-200/40 backdrop-blur dark:border-slate-800 dark:bg-slate-900/70 dark:shadow-slate-950/30">
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-400 dark:text-slate-500">
-                  {t('about.years_experience')}
+                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-400 dark:text-slate-500">
+                  {t('about.metric_modules_label')}
                 </p>
                 <div className="mt-4 text-4xl font-display font-extrabold text-slate-950 dark:text-white">
-                  <AnimatedCounter end={2} suffix="+" />
+                  <AnimatedCounter end={6} />
                 </div>
-              </div>
-              <div className="rounded-3xl border border-slate-200/80 bg-white/80 p-6 shadow-lg shadow-slate-200/40 backdrop-blur dark:border-slate-800 dark:bg-slate-900/70 dark:shadow-slate-950/30">
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-400 dark:text-slate-500">
-                  {t('about.projects_completed')}
+                <p className="mt-2 text-xs text-slate-500 dark:text-slate-400">
+                  {t('about.metric_modules_sub')}
                 </p>
-                <div className="mt-4 text-4xl font-display font-extrabold text-slate-950 dark:text-white">
-                  <AnimatedCounter end={15} suffix="+" />
+              </div>
+              <div className="rounded-3xl border border-emerald-200/70 bg-gradient-to-br from-emerald-50 via-white to-teal-50 p-6 shadow-lg shadow-emerald-100/40 backdrop-blur dark:border-emerald-500/20 dark:bg-gradient-to-br dark:from-emerald-950/25 dark:via-slate-900/70 dark:to-teal-950/20">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-emerald-700 dark:text-emerald-300">
+                  {t('about.metric_appstore_label')}
+                </p>
+                <div className="mt-4 text-2xl font-display font-extrabold text-slate-950 dark:text-white">
+                  Traiteurs
                 </div>
-              </div>
-              <div className="rounded-3xl border border-blue-200/70 bg-gradient-to-br from-blue-50 via-white to-cyan-50 p-6 shadow-lg shadow-blue-100/50 backdrop-blur dark:border-blue-500/20 dark:bg-gradient-to-br dark:from-blue-950/30 dark:via-slate-900/70 dark:to-cyan-950/20 dark:shadow-blue-950/20">
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-blue-700 dark:text-blue-300">
-                  {t('hero.metric_role')}
+                <p className="mt-2 text-xs text-slate-600 dark:text-slate-300">
+                  {t('about.metric_appstore_sub')}
                 </p>
-                <p className="mt-4 text-sm font-semibold leading-6 text-slate-700 dark:text-slate-200">
-                  {t('hero.metric_role_value')}
+              </div>
+              <div className="rounded-3xl border border-blue-200/70 bg-gradient-to-br from-blue-50 via-white to-cyan-50 p-6 shadow-lg shadow-blue-100/50 backdrop-blur dark:border-blue-500/20 dark:bg-gradient-to-br dark:from-blue-950/30 dark:via-slate-900/70 dark:to-cyan-950/20">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-blue-700 dark:text-blue-300">
+                  {t('about.metric_ccna_label')}
+                </p>
+                <div className="mt-4 text-2xl font-display font-extrabold text-slate-950 dark:text-white">
+                  CCNA · 2024
+                </div>
+                <p className="mt-2 text-xs text-slate-600 dark:text-slate-300">
+                  {t('about.metric_ccna_sub')}
+                </p>
+              </div>
+              <div className="rounded-3xl border border-amber-200/70 bg-gradient-to-br from-amber-50 via-white to-orange-50 p-6 shadow-lg shadow-amber-100/40 backdrop-blur dark:border-amber-500/20 dark:bg-gradient-to-br dark:from-amber-950/25 dark:via-slate-900/70 dark:to-orange-950/20">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-amber-700 dark:text-amber-300">
+                  {t('about.metric_languages_label')}
+                </p>
+                <div className="mt-4 text-base font-display font-extrabold text-slate-950 dark:text-white leading-tight">
+                  {t('about.metric_languages_value')}
+                </div>
+                <p className="mt-2 text-xs text-slate-600 dark:text-slate-300">
+                  {t('about.metric_languages_sub')}
                 </p>
               </div>
             </div>

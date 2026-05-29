@@ -20,14 +20,11 @@ const HomePage = () => {
   return (
     <main className="relative z-10">
       <HeroSection />
-      <WaveAnimation />
       <MarqueeSection />
       <AboutSection />
-      <WaveAnimation />
       <Suspense fallback={<SectionLoader />}>
         <ExperienceSection />
         <SkillsSection />
-        <WaveAnimation />
         <MarqueeSection variant="secondary" />
         <ProjectsSection />
         <WaveAnimation />

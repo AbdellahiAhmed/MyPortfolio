@@ -66,9 +66,12 @@ const ProjectsSection = () => {
     };
   }, []);
 
-  // Auto-scroll logic
+  // Auto-scroll logic — disabled if user prefers reduced motion or is interacting
   useEffect(() => {
     if (!scrollContainerRef.current || isHovering || filteredProjects.length <= 1) return;
+
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reducedMotion) return;
 
     const interval = setInterval(() => {
       const container = scrollContainerRef.current;
@@ -80,9 +83,9 @@ const ProjectsSection = () => {
       const scrollPos = container.scrollLeft;
       const cardWidth = cards[0].clientWidth + 24; // width + gap
       const currentIndex = Math.round(scrollPos / cardWidth);
-      
+
       const nextIndex = (currentIndex + 1) % cards.length;
-      
+
       const targetCard = cards[nextIndex] as HTMLElement;
       const targetScrollPos = targetCard.offsetLeft - (container.clientWidth - targetCard.clientWidth) / 2;
 
@@ -90,7 +93,7 @@ const ProjectsSection = () => {
         left: targetScrollPos,
         behavior: 'smooth'
       });
-    }, 2500); // Scroll every 2.5 seconds
+    }, 6000); // Slow cadence — reader-friendly
 
     return () => clearInterval(interval);
   }, [isHovering, filteredProjects]);

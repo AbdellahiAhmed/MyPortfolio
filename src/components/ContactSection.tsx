@@ -8,9 +8,13 @@ const ContactSection = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    if (window.location.href.includes('#contact')) {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('success') === '1') {
       setShowSuccess(true);
       setTimeout(() => setShowSuccess(false), 5000);
+      // Clean the URL so a refresh doesn't re-trigger the toast
+      const cleanUrl = window.location.pathname + window.location.hash;
+      window.history.replaceState({}, '', cleanUrl);
     }
   }, []);
 
@@ -35,7 +39,7 @@ const ContactSection = () => {
       icon: FaWhatsapp,
       title: "WhatsApp",
       subtitle: t("contact.cards.whatsapp"),
-      link: "https://wa.me/+22243638670",
+      link: "https://wa.me/22243638670",
       gradient: "from-green-500 to-green-600",
       hoverColor: "hover:shadow-green-500/30"
     },
@@ -91,7 +95,7 @@ const ContactSection = () => {
           <div className="text-center">
             <FaWhatsapp className="h-8 w-8 mx-auto mb-4 text-gray-900 dark:text-white" />
             <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">{t("contact.whatsapp_label")}</h3>
-            <a href="https://wa.me/+22243638670" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+            <a href="https://wa.me/22243638670" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
               +222 43 63 86 70
             </a>
           </div>
@@ -105,7 +109,7 @@ const ContactSection = () => {
             className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-4 sm:p-6 md:p-8 shadow-xl space-y-4 md:space-y-6"
           >
             <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_next" value="https://abdellahiahmed.vercel.app/#contact" />
+            <input type="hidden" name="_next" value="https://abdellahiahmed.vercel.app/?success=1#contact" />
 
             {/* Honeypot field for spam protection */}
             <div style={{ display: 'none' }} aria-hidden="true">

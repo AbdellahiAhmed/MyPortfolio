@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 const ResumeSection = () => {
   const { t } = useTranslation();
-  const resumeHref = '/cv.pdf?v=2026-05-18-latest';
+  const resumeHref = '/cv.pdf?v=2026-05-28';
 
   return (
     <section id="resume" className="relative overflow-hidden py-16 md:py-20">
