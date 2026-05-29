@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 const HeroSection = () => {
   const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
-  const resumeHref = '/cv.pdf?v=2026-05-28';
+  const resumeHref = '/cv.pdf?v=2026-05-29-netmiko';
 
   useEffect(() => {
     setIsVisible(true);
