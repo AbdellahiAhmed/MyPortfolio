@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
-import AnimatedCounter from './utils/AnimatedCounter';
 
 const AboutSection = () => {
   const { t } = useTranslation();
@@ -66,68 +65,18 @@ const AboutSection = () => {
           </div>
 
           <div
-            className={`space-y-8 transition-all duration-700 ease-out delay-300 ${
-              isVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'
+            className={`space-y-6 max-w-xl transition-all duration-700 ease-out delay-300 ${
+              isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
             }`}
           >
-            <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 lg:grid-cols-4 dark:border-slate-800 dark:bg-slate-800">
-              <div className="flex flex-col gap-3 bg-white p-6 dark:bg-slate-950">
-                <dt className="font-mono text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">
-                  {t('about.metric_modules_label')}
-                </dt>
-                <dd className="font-serif text-5xl leading-none text-slate-950 dark:text-white">
-                  <AnimatedCounter end={6} />
-                </dd>
-                <p className="text-xs leading-5 text-slate-500 dark:text-slate-400">
-                  {t('about.metric_modules_sub')}
-                </p>
-              </div>
-              <div className="flex flex-col gap-3 bg-white p-6 dark:bg-slate-950">
-                <dt className="font-mono text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">
-                  {t('about.metric_appstore_label')}
-                </dt>
-                <dd className="font-serif text-3xl italic leading-tight text-slate-950 dark:text-white">
-                  Traiteurs
-                </dd>
-                <p className="text-xs leading-5 text-slate-500 dark:text-slate-400">
-                  {t('about.metric_appstore_sub')}
-                </p>
-              </div>
-              <div className="flex flex-col gap-3 bg-white p-6 dark:bg-slate-950">
-                <dt className="font-mono text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">
-                  {t('about.metric_ccna_label')}
-                </dt>
-                <dd className="font-serif text-3xl leading-tight text-slate-950 dark:text-white">
-                  CCNA
-                  <span className="font-mono text-base text-slate-400 dark:text-slate-500"> / 2024</span>
-                </dd>
-                <p className="text-xs leading-5 text-slate-500 dark:text-slate-400">
-                  {t('about.metric_ccna_sub')}
-                </p>
-              </div>
-              <div className="flex flex-col gap-3 bg-white p-6 dark:bg-slate-950">
-                <dt className="font-mono text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">
-                  {t('about.metric_languages_label')}
-                </dt>
-                <dd className="font-mono text-xl text-slate-950 dark:text-white">
-                  {t('about.metric_languages_value')}
-                </dd>
-                <p className="text-xs leading-5 text-slate-500 dark:text-slate-400">
-                  {t('about.metric_languages_sub')}
-                </p>
-              </div>
-            </dl>
-
-            <div className="space-y-6 max-w-xl">
-              {[t('about.story1'), t('about.story2'), t('about.story3')].map((paragraph) => (
-                <p
-                  key={paragraph}
-                  className="text-base leading-[1.75] text-slate-600 dark:text-slate-300"
-                >
-                  {paragraph}
-                </p>
-              ))}
-            </div>
+            {[t('about.story1'), t('about.story2'), t('about.story3')].map((paragraph) => (
+              <p
+                key={paragraph}
+                className="text-base leading-[1.75] text-slate-600 dark:text-slate-300"
+              >
+                {paragraph}
+              </p>
+            ))}
           </div>
         </div>
       </div>
