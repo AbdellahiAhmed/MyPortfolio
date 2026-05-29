@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect, useRef } from 'react';
-import SpacedText from './utils/SpacedText';
 
 const SkillsSection = () => {
   const { t } = useTranslation();
@@ -80,27 +79,21 @@ const SkillsSection = () => {
     subtitle.split(/[,\/]/).map((s) => s.trim()).filter(Boolean);
 
   return (
-    <section id="skills" className="py-16 md:py-24 lg:py-32 relative overflow-hidden bg-white dark:bg-gray-900">
-      {/* Subtle background texture */}
-      <div
-        className="absolute inset-0 opacity-[0.015] dark:opacity-[0.03]"
-        style={{
-          backgroundImage: 'radial-gradient(circle, currentColor 1px, transparent 1px)',
-          backgroundSize: '32px 32px',
-        }}
-      />
+    <section id="skills" className="py-20 md:py-28 relative bg-white dark:bg-slate-950">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-10 relative z-10">
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-
-        {/* Section Header */}
-        <div className={`mb-6 md:mb-12 transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <p className="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-500 mb-4">
-            {t('skills.section')}
-          </p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gray-900 dark:text-white mb-6 max-w-4xl">
+        {/* Section Header — editorial */}
+        <div className={`mb-16 max-w-3xl transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+          <div className="flex items-center gap-4">
+            <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
+              04 — {t('skills.section')}
+            </span>
+            <span className="h-px flex-1 max-w-[120px] bg-slate-300 dark:bg-slate-700" />
+          </div>
+          <h2 className="mt-6 font-serif text-4xl leading-tight text-slate-950 dark:text-white sm:text-5xl md:text-6xl">
             {t('skills.title')}
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl">
+          <p className="mt-5 text-base leading-7 text-slate-500 dark:text-slate-400">
             {t('skills.subtitle')}
           </p>
         </div>
@@ -126,84 +119,59 @@ const SkillsSection = () => {
                 <div className="h-px bg-gray-200 dark:bg-gray-800 mx-0" />
               )}
 
-              <div className="py-8 md:py-12 lg:py-16 relative">
-                {/* Animated left accent border */}
+              <div className="py-10 md:py-14 relative">
+                {/* Left accent — calm, slate */}
                 <div
-                  className="absolute left-0 top-0 w-0.5 bg-gradient-to-b from-accent via-accent to-accent/30 transition-all duration-1000 ease-out"
+                  className="absolute left-0 top-0 w-px bg-slate-900 dark:bg-white transition-all duration-1000 ease-out"
                   style={{
                     height: pillarBorders[index] ? '100%' : '0%',
-                    transitionDelay: `${index * 300}ms`,
+                    transitionDelay: `${index * 250}ms`,
                   }}
                 />
 
-                <div className="grid md:grid-cols-12 gap-4 md:gap-8 items-start pl-3 md:pl-6 lg:pl-8">
+                <div className="grid md:grid-cols-12 gap-4 md:gap-8 items-start pl-4 md:pl-8">
 
-                  {/* Left Column - Number */}
+                  {/* Number — serif, restrained */}
                   <div className="md:col-span-2">
-                    <div className="sticky top-32">
-                      <div
-                        className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-display font-bold select-none leading-none transition-all duration-500 opacity-10 group-hover:opacity-100"
-                        style={{
-                          background: 'linear-gradient(135deg, #3b82f6, #2563eb, #60a5fa)',
-                          WebkitBackgroundClip: 'text',
-                          WebkitTextFillColor: 'transparent',
-                          backgroundClip: 'text',
-                        }}
-                      >
-                        {pillar.number}
-                      </div>
+                    <div className="sticky top-32 font-serif italic text-5xl md:text-6xl leading-none text-slate-300 dark:text-slate-700 select-none">
+                      {pillar.number}
                     </div>
                   </div>
 
-                  {/* Right Column - Pillar Details */}
-                  <div className="md:col-span-10 space-y-6">
+                  {/* Pillar Details */}
+                  <div className="md:col-span-10 space-y-5">
                     <div>
-                      <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gray-900 dark:text-white mb-4 group-hover:text-accent dark:group-hover:text-accent transition-colors duration-300">
+                      <h3 className="font-serif text-3xl md:text-4xl leading-tight text-slate-950 dark:text-white mb-4">
                         {pillar.title}
                       </h3>
 
-                      {/* Subtitle as pills/tags */}
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {splitSubtitle(pillar.subtitle).map((tool, i) => (
-                          <span
-                            key={i}
-                            className="px-3 py-1 text-xs font-medium rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 border border-gray-200 dark:border-gray-700 group-hover:border-accent/30 group-hover:bg-accent/5 dark:group-hover:bg-accent/10 transition-all duration-300"
-                          >
-                            {tool}
-                          </span>
-                        ))}
-                      </div>
+                      {/* Subtitle as plain text — no chips */}
+                      <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400 mb-3">
+                        {splitSubtitle(pillar.subtitle).join(' · ')}
+                      </p>
 
                       {/* Metrics row */}
                       {pillar.metrics && pillar.metrics.length > 0 && (
-                        <div className="flex flex-wrap gap-4 mb-2">
-                          {pillar.metrics.map((metric, i) => (
-                            <span
-                              key={i}
-                              className="text-xs font-medium uppercase tracking-wider text-accent"
-                            >
-                              {metric}
-                            </span>
-                          ))}
-                        </div>
+                        <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-slate-900 dark:text-slate-200">
+                          {pillar.metrics.join(' / ')}
+                        </p>
                       )}
                     </div>
 
-                    {/* Key Points with animated dots */}
+                    {/* Key Points — numbered, clean */}
                     {pillar.points && pillar.points.length > 0 && (
-                      <div className="space-y-4 pt-2">
+                      <ul className="space-y-3 pt-2 max-w-2xl">
                         {pillar.points.map((point, i) => (
-                          <div key={i} className="flex items-start gap-4 group/item">
-                            <div className="relative mt-2">
-                              <div className="w-2 h-2 rounded-full bg-accent group-hover/item:scale-150 transition-transform duration-300" />
-                              <div className="absolute inset-0 w-2 h-2 rounded-full bg-accent opacity-0 group-hover/item:opacity-40 group-hover/item:animate-ping" />
-                            </div>
-                            <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed flex-1 group-hover/item:text-gray-900 dark:group-hover/item:text-gray-200 transition-colors duration-300">
+                          <li key={i} className="grid grid-cols-[auto_1fr] gap-x-4 items-baseline">
+                            <span className="font-mono text-[10px] text-slate-400 dark:text-slate-600">
+                              {String(i + 1).padStart(2, '0')}
+                            </span>
+                            <p className="text-sm leading-7 text-slate-600 dark:text-slate-300">
                               {point}
                             </p>
-                          </div>
+                          </li>
                         ))}
-                      </div>
+                      </ul>
                     )}
                   </div>
                 </div>
@@ -212,22 +180,18 @@ const SkillsSection = () => {
           ))}
         </div>
 
-        {/* CTA */}
-        <div className={`text-center mt-16 md:mt-24 lg:mt-32 transition-all duration-700 ease-out delay-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="inline-block">
-            <a
-              href="#contact"
-              className="group/cta inline-flex flex-col items-center"
-            >
-              <span className="text-sm mb-2 text-gray-500 dark:text-gray-500">
-                {t('skills.cta_subtitle')}
-              </span>
-              <span className="text-2xl md:text-3xl font-display font-bold text-gray-900 dark:text-white group-hover/cta:text-accent transition-colors duration-300">
-                <SpacedText text={t('skills.cta_text')} />
-              </span>
-              <div className="h-px bg-gray-900 dark:bg-white mt-2 w-0 group-hover/cta:w-full transition-all duration-500 ease-out" />
-            </a>
-          </div>
+        {/* CTA — editorial inline link */}
+        <div className={`mt-20 md:mt-28 max-w-3xl transition-all duration-700 ease-out delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+          <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400 mb-3">
+            {t('skills.cta_subtitle')}
+          </p>
+          <a
+            href="#contact"
+            className="group inline-flex items-baseline gap-3 font-serif text-3xl md:text-4xl italic text-slate-950 dark:text-white border-b border-slate-950 dark:border-white pb-1 transition-colors hover:text-amber-700 dark:hover:text-amber-400 hover:border-amber-700 dark:hover:border-amber-400"
+          >
+            {t('skills.cta_text')}
+            <span className="text-2xl" aria-hidden="true">→</span>
+          </a>
         </div>
       </div>
     </section>

@@ -3,23 +3,22 @@ interface MarqueeSectionProps {
 }
 
 const PRIMARY_TOKENS = [
-  'NEXT.JS',
-  'REACT',
-  'FLUTTER',
-  'SUPABASE',
-  'DOLIBARR ERP',
-  'PHP · MYSQL',
+  'Next.js',
+  'React',
+  'Flutter',
+  'Supabase',
+  'Dolibarr',
+  'PHP',
+  'MySQL',
   'CCNA',
-  'PYTHON · NMAP',
-  'APP STORE SHIPPED',
+  'Python',
 ];
 
 const SECONDARY_TOKENS = [
-  'FULL-STACK DEVELOPER',
-  'ERP MODULES · DOLIBARR',
-  'NETWORK AUTOMATION',
+  'Full-stack developer',
+  'Dolibarr ERP modules',
   'CCNA · EVE-NG · GNS3',
-  'NOUAKCHOTT · MAURITANIA',
+  'Nouakchott, Mauritania',
 ];
 
 const MarqueeSection = ({ variant = 'primary' }: MarqueeSectionProps) => {
@@ -29,20 +28,23 @@ const MarqueeSection = ({ variant = 'primary' }: MarqueeSectionProps) => {
   const MarqueeContent = () => (
     <>
       {tokens.map((token) => (
-        <span key={token} className="flex items-center">
+        <span key={token} className="flex items-center shrink-0">
           <span
-            className={`text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-display font-bold ${
-              isPrimary ? 'text-white dark:text-gray-900' : 'text-gray-900 dark:text-white'
-            } inline-block px-4 sm:px-6 md:px-8`}
+            className={`font-serif text-3xl italic md:text-4xl lg:text-5xl px-6 md:px-10 ${
+              isPrimary
+                ? 'text-slate-950 dark:text-white'
+                : 'text-slate-500 dark:text-slate-400'
+            }`}
           >
             {token}
           </span>
           <span
-            className={`${
-              isPrimary ? 'text-white/60 dark:text-gray-900/60' : 'text-gray-900/60 dark:text-white/60'
-            } text-xl sm:text-2xl md:text-3xl inline-block`}
+            className={`text-base ${
+              isPrimary ? 'text-slate-400 dark:text-slate-600' : 'text-slate-300 dark:text-slate-700'
+            }`}
+            aria-hidden="true"
           >
-            •
+            ✦
           </span>
         </span>
       ))}
@@ -50,19 +52,23 @@ const MarqueeSection = ({ variant = 'primary' }: MarqueeSectionProps) => {
   );
 
   return (
-    <section className={`py-12 overflow-hidden ${isPrimary ? 'bg-gray-900 dark:bg-white' : 'bg-white dark:bg-gray-900'}`}>
+    <section
+      className={`border-y py-10 overflow-hidden ${
+        isPrimary
+          ? 'border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-950'
+          : 'border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-900'
+      }`}
+    >
       <div className="relative flex">
-        {/* First scrolling group */}
         <div className="flex animate-marquee whitespace-nowrap items-center min-w-full shrink-0">
           <MarqueeContent />
           <MarqueeContent />
           <MarqueeContent />
-          <MarqueeContent />
         </div>
-
-        {/* Duplicate group for seamless loop - starts right after first group */}
-        <div className="flex animate-marquee whitespace-nowrap items-center min-w-full shrink-0" aria-hidden="true">
-          <MarqueeContent />
+        <div
+          className="flex animate-marquee whitespace-nowrap items-center min-w-full shrink-0"
+          aria-hidden="true"
+        >
           <MarqueeContent />
           <MarqueeContent />
           <MarqueeContent />

@@ -1,4 +1,4 @@
-import { Network, Code, Server, ExternalLink, Star, Calendar, MapPin, Briefcase } from 'lucide-react';
+import { Network, Code, Server, ExternalLink } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 interface Experience {
@@ -26,33 +26,28 @@ const ExperienceSection = () => {
   };
 
   return (
-    <section id="experience" className="py-12 md:py-16 lg:py-20 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-48 h-48 md:w-72 md:h-72 bg-blue-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-48 h-48 md:w-72 md:h-72 bg-cyan-500/5 rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
-        <div className="text-center mb-8 md:mb-16 animate-slide-up-fade">
-          <span className="px-4 py-2 bg-blue-500/10 text-blue-600 dark:text-blue-400 rounded-full text-sm font-medium border border-blue-500/20 inline-block">
-            {t('experience.section')}
-          </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-4 md:mt-6 mb-4 md:mb-6">
-            <span className="bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-blue-400 dark:to-cyan-400 bg-clip-text text-transparent">
-              {t('experience.title')}
+    <section id="experience" className="bg-white dark:bg-slate-950 py-20 md:py-28 relative">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-10 relative z-10">
+        {/* Section Header — editorial */}
+        <div className="mb-16 max-w-3xl">
+          <div className="flex items-center gap-4">
+            <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
+              03 — {t('experience.section')}
             </span>
+            <span className="h-px flex-1 max-w-[120px] bg-slate-300 dark:bg-slate-700" />
+          </div>
+          <h2 className="mt-6 font-serif text-4xl leading-tight text-slate-950 dark:text-white sm:text-5xl md:text-6xl">
+            {t('experience.title')}
           </h2>
-          <p className="text-base md:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+          <p className="mt-5 text-base leading-7 text-slate-500 dark:text-slate-400 max-w-2xl">
             {t('experience.description')}
           </p>
         </div>
 
         {/* Timeline */}
         <div className="relative">
-          {/* Timeline Line */}
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-blue-500 via-cyan-500 to-slate-500 rounded-full opacity-30"></div>
+          {/* Timeline Line — restrained, slate */}
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-px h-full bg-slate-200 dark:bg-slate-800"></div>
 
           <div className="space-y-6 md:space-y-12">
             {experiences.map((job, index) => {
@@ -65,26 +60,33 @@ const ExperienceSection = () => {
                   className={`relative flex items-center ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} animate-slide-up-fade`}
                   style={{ animationDelay: `${index * 150}ms` }}
                 >
-                  {/* Timeline Dot */}
-                  <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-white dark:bg-slate-900 rounded-full items-center justify-center border-4 border-blue-100 dark:border-slate-800 shadow-lg z-10">
-                    <div className="w-4 h-4 bg-blue-600 rounded-full animate-pulse"></div>
+                  {/* Timeline Dot — small, calm, slate */}
+                  <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-3 h-3 bg-white dark:bg-slate-950 rounded-full items-center justify-center border border-slate-300 dark:border-slate-600 z-10">
+                    <div className="w-1.5 h-1.5 bg-slate-900 dark:bg-white rounded-full"></div>
                   </div>
 
-                  {/* Content Card */}
-                  <div className={`w-full md:w-5/12 ${isEven ? 'md:pr-12' : 'md:pl-12'}`}>
-                    <div className="glass-card p-4 md:p-6 rounded-2xl hover:border-blue-500/30 transition-all duration-300 group">
-                      {/* Company Header */}
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="flex items-center space-x-3">
-                          <div className="md:hidden w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center">
-                            <Icon className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+                  {/* Content — editorial, no card, no glow */}
+                  <div className={`w-full md:w-5/12 ${isEven ? 'md:pr-16' : 'md:pl-16'}`}>
+                    <div className="group">
+                      {/* Period — mono, eyebrow */}
+                      <div className="flex items-center gap-3 mb-3">
+                        <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">
+                          {job.period}
+                        </span>
+                        <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-slate-400 dark:text-slate-600">
+                          · {job.type}
+                        </span>
+                      </div>
+
+                      {/* Company + Role */}
+                      <div className="flex items-start justify-between gap-3 mb-3">
+                        <div className="flex items-baseline gap-3">
+                          <div className="md:hidden text-slate-400 dark:text-slate-500">
+                            <Icon className="h-4 w-4" strokeWidth={1.5} />
                           </div>
-                          <div>
-                            <h3 className="text-xl font-bold text-slate-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                              {job.company}
-                            </h3>
-                            <p className="text-blue-600 dark:text-blue-400 font-semibold">{job.role}</p>
-                          </div>
+                          <h3 className="font-serif text-2xl leading-tight text-slate-950 dark:text-white">
+                            {job.company}
+                          </h3>
                         </div>
 
                         {job.link && (
@@ -92,41 +94,36 @@ const ExperienceSection = () => {
                             href={job.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                            title="View more"
+                            className="text-slate-400 transition-colors hover:text-slate-950 dark:hover:text-white"
+                            aria-label={`Visit ${job.company}`}
                           >
-                            <ExternalLink className="h-5 w-5" />
+                            <ExternalLink className="h-4 w-4" strokeWidth={1.5} />
                           </a>
                         )}
                       </div>
 
-                      {/* Period and Type */}
-                      <div className="flex items-center space-x-3 mb-4">
-                        <div className="flex items-center space-x-2 text-sm text-slate-500 dark:text-slate-400">
-                          <Calendar className="h-4 w-4" />
-                          <span>{job.period}</span>
-                        </div>
-                        <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded-full text-xs font-medium border border-slate-200 dark:border-slate-700">
-                          {job.type}
-                        </span>
-                      </div>
+                      <p className="text-sm font-medium text-slate-500 dark:text-slate-400 mb-4">
+                        {job.role}
+                      </p>
 
                       {/* Description */}
-                      <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                      <p className="text-sm leading-7 text-slate-600 dark:text-slate-300 mb-5">
                         {job.description}
                       </p>
 
                       {/* Achievements */}
-                      <div className="space-y-2">
+                      <ul className="space-y-2">
                         {job.achievements.map((achievement, i) => (
-                          <div key={i} className="flex items-start space-x-2">
-                            <Star className="h-4 w-4 text-amber-500 mt-0.5 flex-shrink-0" />
-                            <span className="text-sm text-slate-600 dark:text-slate-300 leading-snug">
+                          <li key={i} className="grid grid-cols-[auto_1fr] gap-x-3 items-baseline">
+                            <span className="font-mono text-[10px] text-slate-400 dark:text-slate-600">
+                              {String(i + 1).padStart(2, '0')}
+                            </span>
+                            <span className="text-sm leading-6 text-slate-600 dark:text-slate-300">
                               {achievement}
                             </span>
-                          </div>
+                          </li>
                         ))}
-                      </div>
+                      </ul>
                     </div>
                   </div>
                 </div>

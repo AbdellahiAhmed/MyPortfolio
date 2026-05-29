@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
-import SpacedText from './utils/SpacedText';
 
 const EducationSection = () => {
   const { t } = useTranslation();
@@ -34,18 +33,21 @@ const EducationSection = () => {
   }, []);
 
   return (
-    <section id="education" className="py-16 md:py-24 lg:py-32 relative overflow-hidden bg-white dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="education" className="py-20 md:py-28 relative bg-white dark:bg-slate-950">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-10 relative z-10">
 
-        {/* Section Header - Editorial Style */}
-        <div className={`mb-10 md:mb-16 lg:mb-20 transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <p className="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-500 mb-4">
-            {t('education.label')}
-          </p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gray-900 dark:text-white mb-6 max-w-4xl">
+        {/* Section Header — editorial */}
+        <div className={`mb-16 max-w-3xl transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+          <div className="flex items-center gap-4">
+            <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
+              06 — {t('education.label')}
+            </span>
+            <span className="h-px flex-1 max-w-[120px] bg-slate-300 dark:bg-slate-700" />
+          </div>
+          <h2 className="mt-6 font-serif text-4xl leading-tight text-slate-950 dark:text-white sm:text-5xl md:text-6xl">
             {t('education.heading')}
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl">
+          <p className="mt-5 text-base leading-7 text-slate-500 dark:text-slate-400">
             {t('education.subtitle')}
           </p>
         </div>
@@ -63,94 +65,68 @@ const EducationSection = () => {
               {/* Timeline Structure */}
               <div className="grid md:grid-cols-12 gap-4 md:gap-8 items-start">
 
-                {/* Left Column - Period & Number */}
+                {/* Left — Period + tiny index */}
                 <div className="md:col-span-3">
-                  <div className="sticky top-32">
-                    <p className="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-500 mb-2">
+                  <div className="sticky top-32 space-y-2">
+                    <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">
                       {edu.period}
                     </p>
-                    {/* Large Index Number - Editorial Style */}
-                    <div className="text-5xl sm:text-6xl md:text-7xl font-display font-bold text-gray-900/10 dark:text-white/10 select-none">
+                    <div className="font-serif italic text-3xl text-slate-300 dark:text-slate-700 select-none leading-none">
                       0{index + 1}
                     </div>
                   </div>
                 </div>
 
-                {/* Right Column - Institution Details */}
-                <div className="md:col-span-9 space-y-6">
-                  {/* Institution Name */}
+                {/* Right — Institution */}
+                <div className="md:col-span-9 space-y-5">
                   <div>
-                    <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gray-900 dark:text-white mb-3 group-hover:text-accent dark:group-hover:text-accent transition-colors duration-300">
+                    <h3 className="font-serif text-2xl md:text-3xl lg:text-4xl leading-tight text-slate-950 dark:text-white mb-3">
                       {edu.institution}
                     </h3>
-                    <p className="text-lg md:text-xl lg:text-2xl text-gray-700 dark:text-gray-300 font-medium">
+                    <p className="text-base text-slate-500 dark:text-slate-400 font-medium">
                       {edu.degree}
                     </p>
                   </div>
 
-                  {/* Description */}
-                  <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-3xl">
+                  <p className="text-sm leading-7 text-slate-600 dark:text-slate-300 max-w-2xl">
                     {edu.description}
                   </p>
 
-                  {/* External Link - Spaced Style */}
                   {edu.link && (
                     <a
                       href={edu.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block text-sm text-gray-900 dark:text-white hover:text-accent dark:hover:text-accent transition-colors duration-300 group/link"
+                      className="group/link inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.22em] text-slate-900 dark:text-white border-b border-slate-900 dark:border-white pb-0.5 hover:text-amber-700 dark:hover:text-amber-400 hover:border-amber-700 dark:hover:border-amber-400 transition-colors"
                     >
-                      <SpacedText text={t('education.view_certificate')} className="font-medium" />
-                      <div className="h-px bg-gray-900 dark:bg-white mt-1 w-0 group-hover/link:w-full transition-all duration-500 ease-out"></div>
+                      {t('education.view_certificate')}
+                      <span aria-hidden="true">↗</span>
                     </a>
                   )}
-
-                  {/* Divider Line */}
-                  <div className="pt-8 mt-8 border-t border-gray-200 dark:border-gray-800">
-                    <p className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-500">
-                      {t('education.formal')}
-                    </p>
-                  </div>
                 </div>
               </div>
             </article>
           ))}
         </div>
 
-        {/* Continuous Learning Section */}
-        <div className={`mt-16 md:mt-24 lg:mt-32 transition-all duration-700 ease-out delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="border-t border-gray-200 dark:border-gray-800 pt-10 md:pt-16 lg:pt-20">
-            <div className="grid md:grid-cols-12 gap-4 md:gap-8">
-
-              {/* Left - Label */}
-              <div className="md:col-span-3">
-                <p className="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-500">
-                  {t('education.continuous_growth')}
-                </p>
-              </div>
-
-              {/* Right - Content */}
-              <div className="md:col-span-9">
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white mb-4 md:mb-6">
-                  {t('education.lifelong')}
-                </h3>
-                <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-3xl mb-8">
-                  {t('education.lifelong_description')}
-                </p>
-
-                {/* Learning Areas - Clean Pills */}
-                <div className="flex flex-wrap gap-3">
-                  {(t('education.learning_areas', { returnObjects: true }) as string[]).map((area, i) => (
-                    <span
-                      key={i}
-                      className="px-4 py-2 text-sm bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
-                    >
-                      {area}
-                    </span>
-                  ))}
-                </div>
-              </div>
+        {/* Continuous learning — short, inline, no pill cloud */}
+        <div className={`mt-20 md:mt-28 transition-all duration-700 ease-out delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+          <div className="border-t border-slate-200 dark:border-slate-800 pt-12 grid md:grid-cols-12 gap-4 md:gap-8">
+            <div className="md:col-span-3">
+              <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">
+                {t('education.continuous_growth')}
+              </p>
+            </div>
+            <div className="md:col-span-9 space-y-4 max-w-2xl">
+              <h3 className="font-serif text-2xl md:text-3xl leading-tight text-slate-950 dark:text-white">
+                {t('education.lifelong')}
+              </h3>
+              <p className="text-sm leading-7 text-slate-600 dark:text-slate-300">
+                {t('education.lifelong_description')}
+              </p>
+              <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
+                {(t('education.learning_areas', { returnObjects: true }) as string[]).join(' · ')}
+              </p>
             </div>
           </div>
         </div>

@@ -40,6 +40,8 @@ export default {
         display: ["'Manrope'", 'system-ui', 'sans-serif'],
         decorative: ["'Manrope'", 'system-ui', 'sans-serif'],
         sans: ["'Manrope'", 'system-ui', 'sans-serif'],
+        serif: ["'Instrument Serif'", 'ui-serif', 'Georgia', 'serif'],
+        mono: ["'JetBrains Mono'", 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       fontSize: {
         'hero': ['6rem', { lineHeight: '1.1' }],

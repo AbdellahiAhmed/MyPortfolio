@@ -3,13 +3,11 @@ import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 
 import LoadingScreen from './components/LoadingScreen';
-import CursorTrail from './components/CursorTrail';
 import Footer from './components/Footer';
 import LanguageSwitcher from './components/LanguageSwitcher';
 import HomePage from './pages/HomePage';
 import WorksPage from './pages/WorksPage';
 import ProjectDetailPage from './pages/ProjectDetailPage';
-import SpacedText from './components/utils/SpacedText';
 import './i18n/i18n';
 
 const Portfolio = () => {
@@ -98,11 +96,6 @@ const Portfolio = () => {
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white relative overflow-x-hidden">
-      {/* Custom Cursor */}
-      <div className="hidden md:block">
-        <CursorTrail />
-      </div>
-
       {/* Scroll Progress Bar */}
       <div className="fixed top-0 left-0 w-full h-1 z-[60] bg-transparent">
         <div
@@ -119,23 +112,27 @@ const Portfolio = () => {
             <button
               type="button"
               onClick={() => handleNavClick('/')}
-              className="flex items-center space-x-3 group"
+              className="flex items-baseline gap-2 group"
               aria-label="Home"
             >
-              <span className="text-lg md:text-xl font-display font-bold text-gray-900 dark:text-white leading-none transition-colors">
-                Abdellahi Ahmed
+              <span className="font-serif text-2xl italic leading-none text-slate-950 dark:text-white">
+                Abdellahi
+              </span>
+              <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-slate-400 dark:text-slate-500 hidden sm:inline">
+                Ahmed
               </span>
             </button>
 
-            {/* Desktop Menu - Spaced Letters */}
-            <div className="hidden md:flex items-center space-x-4 lg:space-x-8">
-              {navItems.map(({ path, label, spaced }) => (
+            {/* Desktop Menu */}
+            <div className="hidden md:flex items-center gap-8">
+              {navItems.map(({ path, label }, idx) => (
                 <button
                   key={path}
                   onClick={() => handleNavClick(path)}
-                  className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-all duration-300"
+                  className="font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500 hover:text-slate-950 dark:text-slate-400 dark:hover:text-white transition-colors duration-200"
                 >
-                  {spaced ? <SpacedText text={label} /> : label}
+                  <span className="text-slate-300 dark:text-slate-600 mr-2">0{idx + 1}</span>
+                  {label}
                 </button>
               ))}
 

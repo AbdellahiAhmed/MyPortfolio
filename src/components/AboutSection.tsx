@@ -1,4 +1,3 @@
-import { ArrowUpRight, User } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
 import AnimatedCounter from './utils/AnimatedCounter';
@@ -36,44 +35,41 @@ const AboutSection = () => {
   return (
     <section
       id="about"
-      className="relative overflow-hidden bg-[linear-gradient(180deg,_#ffffff_0%,_#f8fafc_100%)] py-16 dark:bg-[linear-gradient(180deg,_#0f172a_0%,_#020617_100%)] md:py-20 lg:py-24"
+      className="relative overflow-hidden bg-white py-20 dark:bg-slate-950 md:py-28"
     >
-      <div className="absolute inset-0 opacity-50 dark:opacity-20" aria-hidden="true">
-        <div className="absolute left-0 top-20 h-72 w-72 rounded-full bg-blue-100 blur-3xl dark:bg-blue-900/30" />
-        <div className="absolute right-0 top-1/3 h-80 w-80 rounded-full bg-cyan-100 blur-3xl dark:bg-cyan-900/20" />
-      </div>
-
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto max-w-6xl px-6 sm:px-8 lg:px-10">
         <div
-          className={`mx-auto mb-10 max-w-3xl text-center transition-all duration-700 ease-out md:mb-16 ${
-            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+          className={`mb-16 transition-all duration-700 ease-out ${
+            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
           }`}
         >
-          <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-sm font-semibold text-slate-600 shadow-sm backdrop-blur dark:border-slate-800 dark:bg-slate-900/70 dark:text-slate-300">
-            <User className="h-4 w-4" />
-            <span>{t('about.section')}</span>
-          </span>
-          <h2 className="mt-5 text-4xl font-display font-extrabold tracking-[-0.04em] text-slate-950 dark:text-white sm:text-5xl md:text-6xl">
+          <div className="flex items-center gap-4">
+            <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
+              02 — {t('about.section')}
+            </span>
+            <span className="h-px flex-1 max-w-[120px] bg-slate-300 dark:bg-slate-700" />
+          </div>
+          <h2 className="mt-6 font-serif text-4xl leading-tight text-slate-950 dark:text-white sm:text-5xl md:text-6xl">
             {t('about.my_short_story')}
           </h2>
-          <p className="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
-            {t('about.subtitle')}
-          </p>
         </div>
 
-        <div className="grid items-start gap-8 lg:grid-cols-[minmax(320px,0.9fr)_minmax(0,1.1fr)] lg:gap-14">
+        <div className="grid items-start gap-12 lg:grid-cols-[minmax(300px,0.85fr)_minmax(0,1.15fr)] lg:gap-16">
           <div
             className={`transition-all duration-700 ease-out delay-150 ${
-              isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'
+              isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
             }`}
           >
-            <div className="relative overflow-hidden rounded-[2rem] border border-white/70 bg-white/80 p-4 shadow-[0_25px_70px_-30px_rgba(15,23,42,0.4)] backdrop-blur dark:border-white/10 dark:bg-slate-900/70 dark:shadow-[0_25px_70px_-30px_rgba(2,6,23,0.85)]">
+            <figure className="relative">
               <img
                 src={profileImageSrc}
                 alt="Abdellahi Ahmed"
-                className="block aspect-[4/5] w-full rounded-[1.5rem] object-cover"
+                className="block aspect-[4/5] w-full object-cover border border-slate-200 dark:border-slate-800"
               />
-            </div>
+              <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">
+                Abdellahi Ahmed Ahmed Baba — Nouakchott, MR
+              </figcaption>
+            </figure>
           </div>
 
           <div
@@ -81,87 +77,85 @@ const AboutSection = () => {
               isVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'
             }`}
           >
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              <div className="rounded-3xl border border-slate-200/80 bg-white/80 p-6 shadow-lg shadow-slate-200/40 backdrop-blur dark:border-slate-800 dark:bg-slate-900/70 dark:shadow-slate-950/30">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-400 dark:text-slate-500">
+            <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 lg:grid-cols-4 dark:border-slate-800 dark:bg-slate-800">
+              <div className="flex flex-col gap-3 bg-white p-6 dark:bg-slate-950">
+                <dt className="font-mono text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">
                   {t('about.metric_modules_label')}
-                </p>
-                <div className="mt-4 text-4xl font-display font-extrabold text-slate-950 dark:text-white">
+                </dt>
+                <dd className="font-serif text-5xl leading-none text-slate-950 dark:text-white">
                   <AnimatedCounter end={6} />
-                </div>
-                <p className="mt-2 text-xs text-slate-500 dark:text-slate-400">
+                </dd>
+                <p className="text-xs leading-5 text-slate-500 dark:text-slate-400">
                   {t('about.metric_modules_sub')}
                 </p>
               </div>
-              <div className="rounded-3xl border border-emerald-200/70 bg-gradient-to-br from-emerald-50 via-white to-teal-50 p-6 shadow-lg shadow-emerald-100/40 backdrop-blur dark:border-emerald-500/20 dark:bg-gradient-to-br dark:from-emerald-950/25 dark:via-slate-900/70 dark:to-teal-950/20">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-emerald-700 dark:text-emerald-300">
+              <div className="flex flex-col gap-3 bg-white p-6 dark:bg-slate-950">
+                <dt className="font-mono text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">
                   {t('about.metric_appstore_label')}
-                </p>
-                <div className="mt-4 text-2xl font-display font-extrabold text-slate-950 dark:text-white">
+                </dt>
+                <dd className="font-serif text-3xl italic leading-tight text-slate-950 dark:text-white">
                   Traiteurs
-                </div>
-                <p className="mt-2 text-xs text-slate-600 dark:text-slate-300">
+                </dd>
+                <p className="text-xs leading-5 text-slate-500 dark:text-slate-400">
                   {t('about.metric_appstore_sub')}
                 </p>
               </div>
-              <div className="rounded-3xl border border-blue-200/70 bg-gradient-to-br from-blue-50 via-white to-cyan-50 p-6 shadow-lg shadow-blue-100/50 backdrop-blur dark:border-blue-500/20 dark:bg-gradient-to-br dark:from-blue-950/30 dark:via-slate-900/70 dark:to-cyan-950/20">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-blue-700 dark:text-blue-300">
+              <div className="flex flex-col gap-3 bg-white p-6 dark:bg-slate-950">
+                <dt className="font-mono text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">
                   {t('about.metric_ccna_label')}
-                </p>
-                <div className="mt-4 text-2xl font-display font-extrabold text-slate-950 dark:text-white">
-                  CCNA · 2024
-                </div>
-                <p className="mt-2 text-xs text-slate-600 dark:text-slate-300">
+                </dt>
+                <dd className="font-serif text-3xl leading-tight text-slate-950 dark:text-white">
+                  CCNA
+                  <span className="font-mono text-base text-slate-400 dark:text-slate-500"> / 2024</span>
+                </dd>
+                <p className="text-xs leading-5 text-slate-500 dark:text-slate-400">
                   {t('about.metric_ccna_sub')}
                 </p>
               </div>
-              <div className="rounded-3xl border border-amber-200/70 bg-gradient-to-br from-amber-50 via-white to-orange-50 p-6 shadow-lg shadow-amber-100/40 backdrop-blur dark:border-amber-500/20 dark:bg-gradient-to-br dark:from-amber-950/25 dark:via-slate-900/70 dark:to-orange-950/20">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-amber-700 dark:text-amber-300">
+              <div className="flex flex-col gap-3 bg-white p-6 dark:bg-slate-950">
+                <dt className="font-mono text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">
                   {t('about.metric_languages_label')}
-                </p>
-                <div className="mt-4 text-base font-display font-extrabold text-slate-950 dark:text-white leading-tight">
+                </dt>
+                <dd className="font-mono text-xl text-slate-950 dark:text-white">
                   {t('about.metric_languages_value')}
-                </div>
-                <p className="mt-2 text-xs text-slate-600 dark:text-slate-300">
+                </dd>
+                <p className="text-xs leading-5 text-slate-500 dark:text-slate-400">
                   {t('about.metric_languages_sub')}
                 </p>
               </div>
-            </div>
+            </dl>
 
-            <div className="grid gap-4">
+            <div className="space-y-6 max-w-xl">
               {[t('about.story1'), t('about.story2'), t('about.story3')].map((paragraph) => (
-                <div
+                <p
                   key={paragraph}
-                  className="rounded-3xl border border-slate-200/80 bg-white/75 p-6 shadow-lg shadow-slate-200/30 backdrop-blur dark:border-slate-800 dark:bg-slate-900/65 dark:shadow-slate-950/30"
+                  className="text-base leading-[1.75] text-slate-600 dark:text-slate-300"
                 >
-                  <p className="text-base leading-8 text-slate-600 dark:text-slate-300">{paragraph}</p>
-                </div>
+                  {paragraph}
+                </p>
               ))}
             </div>
 
-            <div className="rounded-[2rem] border border-slate-200/80 bg-slate-950 p-6 text-white shadow-[0_25px_70px_-35px_rgba(15,23,42,0.8)] dark:border-white/10">
-              <div className="mb-6 flex items-center justify-between gap-4">
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-400">
-                    {t('about.strengths')}
-                  </p>
-                  <h3 className="mt-3 text-2xl font-display font-bold">{t('about.title')}</h3>
-                </div>
-                <ArrowUpRight className="h-5 w-5 text-slate-400" />
-              </div>
-
-              <div className="grid gap-4 md:grid-cols-2">
-                {strengths.map((strength) => (
-                  <div
-                    key={strength.title}
-                    className="rounded-2xl border border-white/10 bg-white/5 p-5"
-                  >
-                    <h4 className="text-lg font-semibold text-white">{strength.title}</h4>
-                    <p className="mt-2 text-sm leading-6 text-slate-300">{strength.description}</p>
+            <ul className="space-y-px border-t border-slate-200 dark:border-slate-800">
+              {strengths.map((strength, idx) => (
+                <li
+                  key={strength.title}
+                  className="grid grid-cols-[auto_1fr] items-baseline gap-x-6 border-b border-slate-200 py-5 dark:border-slate-800"
+                >
+                  <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-slate-400 dark:text-slate-500">
+                    0{idx + 1}
+                  </span>
+                  <div>
+                    <h4 className="font-serif text-xl text-slate-950 dark:text-white">
+                      {strength.title}
+                    </h4>
+                    <p className="mt-1.5 text-sm leading-6 text-slate-500 dark:text-slate-400">
+                      {strength.description}
+                    </p>
                   </div>
-                ))}
-              </div>
-            </div>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
