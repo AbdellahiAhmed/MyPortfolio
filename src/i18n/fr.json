@@ -5,9 +5,9 @@
   "hero.eyebrow_location": "Nouakchott · MR",
   "hero.headline_line1": "Je construis des logiciels",
   "hero.headline_line2": "de l'écran au câble.",
-  "hero.description": "Développeur full-stack qui livre du produit et de l'infrastructure. Next.js, React, Flutter, Supabase et TypeScript côté produit. PHP, MySQL et Dolibarr quand l'ERP d'entreprise rentre en jeu. Certifié CCNA, avec Python et Nmap quand la couche réseau demande qu'on y réfléchisse. Peu de devs couvrent à la fois le produit et l'infrastructure dessous — c'est exactement le point.",
+  "hero.description": "Développeur full-stack qui livre du produit et de l'infrastructure. Next.js, React, Flutter, Supabase et TypeScript côté produit. PHP, MySQL et Dolibarr quand l'ERP d'entreprise rentre en jeu. Certifié CCNA, avec de l'automatisation réseau Python sur labos EVE-NG (Netmiko, Flask, Nmap) quand la couche réseau demande qu'on y réfléchisse. Peu de devs couvrent à la fois le produit et l'infrastructure dessous — c'est exactement le point.",
   "hero.currently_label": "En ce moment",
-  "hero.currently_text": "Chez MCS Consulting — livraison de modules Dolibarr ERP et d'applications web en production. En parallèle : AutoNetConfig, une boîte à outils Python + Nmap pour la découverte et l'auto-configuration réseau. Disponible pour des postes full-stack et d'ingénieur logiciel à partir de l'été 2026.",
+  "hero.currently_text": "Chez MCS Consulting — livraison de modules Dolibarr ERP et d'applications web en production. En parallèle : AutoNetConfig, une boîte à outils Python + Netmiko + Flask pour l'automatisation SSH d'équipements et la cartographie de topologie en direct sur EVE-NG. Disponible pour des postes full-stack et d'ingénieur logiciel à partir de l'été 2026.",
   "hero.subtitle1": "Développeur Full-Stack",
   "hero.subtitle2": "Ingénieur Réseau (CCNA)",
   "hero.cta": "Projets sélectionnés",
@@ -20,8 +20,8 @@
   "about.title": "Mon Parcours",
   "about.subtitle": "Développeur Full-Stack livrant des applications web, mobiles, ERP et métiers en production — adossées à une base CCNA en réseaux et à de l'automatisation réseau en Python.",
   "about.my_short_story": "Mon Histoire",
-  "about.story1": "Je suis Développeur Full-Stack basé à Nouakchott, Mauritanie. Je livre du logiciel sur toute la stack — une application mobile publiée sur l'App Store et Google Play, une plateforme crypto Next.js avec KYC et wallets, un CMS de presse Arabic-first RTL, six modules Dolibarr ERP sur mesure en production, et une boîte à outils Python + Nmap pour l'automatisation réseau. Next.js, React, Flutter, Supabase, TypeScript côté produit ; PHP, MySQL et Dolibarr quand l'ERP d'entreprise rentre en jeu ; CCNA en réseaux quand le câble compte.",
-  "about.story2": "Sur mon temps libre, j'ai publié Traiteurs sur l'App Store et Google Play — une plateforme de traiteurs Flutter + Supabase avec les rails mobile-money Bankily, Masrivi et Sedad — et co-construit AutoNetConfig, une boîte à outils Python + Nmap pour la découverte et l'auto-configuration réseau. Chez MCS Consulting (Déc 2025 – Avr 2026), je livre des modules Dolibarr ERP sur mesure en PHP/MySQL aux côtés d'applications web en production : un système de gestion documentaire au niveau audit, un site médical bilingue RTL, et une plateforme de point de vente interne en cours de développement.",
+  "about.story1": "Je suis Développeur Full-Stack basé à Nouakchott, Mauritanie. Je livre du logiciel sur toute la stack — une application mobile publiée sur l'App Store et Google Play, une plateforme crypto Next.js avec KYC et wallets, un CMS de presse Arabic-first RTL, six modules Dolibarr ERP sur mesure en production, et AutoNetConfig — une boîte à outils Python + Netmiko + Flask pour l'automatisation réseau pilotée en SSH. Next.js, React, Flutter, Supabase, TypeScript côté produit ; PHP, MySQL et Dolibarr quand l'ERP d'entreprise rentre en jeu ; CCNA en réseaux sur EVE-NG quand le câble compte.",
+  "about.story2": "Sur mon temps libre, j'ai publié Traiteurs sur l'App Store et Google Play — une plateforme de traiteurs Flutter + Supabase avec les rails mobile-money Bankily, Masrivi et Sedad — et co-construit AutoNetConfig, une boîte à outils Python + Netmiko + Flask qui configure les équipements réseau en SSH, scanne les hôtes et les ports avec Nmap, et affiche les topologies en direct — conçue et validée sur des labos EVE-NG. Chez MCS Consulting (Déc 2025 – Avr 2026), je livre des modules Dolibarr ERP sur mesure en PHP/MySQL aux côtés d'applications web en production : un système de gestion documentaire au niveau audit, un site médical bilingue RTL, et une plateforme de point de vente interne en cours de développement.",
   "about.story3": "REST API, PostgreSQL, MySQL, Row-Level Security, Docker, Linux, Git — ce sont les fondamentaux. La différence se fait sur la largeur : de vrais produits livrés, une vraie expérience ERP en production, et une compréhension CCNA du réseau dessous. Je recherche activement des postes full-stack et d'ingénieur logiciel où il faut tenir toute la stack — de l'écran au câble.",
   "skills.section": "Compétences Techniques",
   "skills.title": "Mon Expertise",
@@ -48,16 +48,16 @@
   "skills.pillars": {
     "network": {
       "title": "Ingénierie & Automatisation Réseau",
-      "subtitle": "Cisco CCNA, Python, Nmap, EVE-NG, GNS3, Packet Tracer",
+      "subtitle": "Cisco CCNA, Python, Netmiko, Flask, Nmap, EVE-NG, GNS3",
       "metrics": [
         "Certifié CCNA",
-        "Toolkit Python + Nmap",
-        "Labos multi-routeurs / multi-switches"
+        "Toolkit Netmiko + Flask",
+        "Validation labo EVE-NG"
       ],
       "points": [
-        "Conception et validation de topologies multi-routeurs / multi-switches dans EVE-NG, GNS3 et Packet Tracer avant mise en production.",
-        "Co-construction d'AutoNetConfig — une boîte à outils Python + Nmap qui scanne, visualise et auto-configure l'infrastructure réseau.",
-        "Analyse, monitoring et troubleshooting en direct sur des environnements de type production."
+        "Conception et validation de topologies multi-routeurs / multi-switches sur EVE-NG (lab principal) aux côtés de GNS3 et Packet Tracer avant mise en production.",
+        "Co-construction d'AutoNetConfig — une boîte à outils Python + Netmiko + Flask qui configure les équipements réseau en SSH, découvre les hôtes et les ports avec Nmap, et restitue des visualisations de topologie en direct.",
+        "Analyse, monitoring et troubleshooting en direct sur des environnements de type production construits sur EVE-NG."
       ]
     },
     "automation": {
@@ -176,10 +176,10 @@
       "period": "Juin 2025 – Août 2025",
       "type": "Stage",
       "logo": "Network",
-      "description": "Conception et validation de topologies multi-routeurs / multi-switches dans EVE-NG, GNS3 et Packet Tracer avant mise en production, et co-construction d'AutoNetConfig — une boîte à outils Python + Nmap pour la découverte, la visualisation et l'auto-configuration de l'infrastructure réseau.",
+      "description": "Conception et validation de topologies multi-routeurs / multi-switches sur EVE-NG (aux côtés de GNS3 et Packet Tracer) avant mise en production, et co-construction d'AutoNetConfig — une boîte à outils Python + Netmiko + Flask qui automatise la configuration SSH des équipements, scanne les topologies avec Nmap et restitue des vues d'infrastructure en direct.",
       "achievements": [
-        "Co-construction d'AutoNetConfig — une boîte à outils Python + Nmap qui scanne, visualise et auto-configure l'infrastructure réseau (découverte hôtes/ports, cartographie de topologie).",
-        "Analyse, monitoring et troubleshooting en direct sur des topologies de type production construites dans EVE-NG, GNS3 et Packet Tracer."
+        "Co-construction d'AutoNetConfig — une boîte à outils Python + Netmiko + Flask qui configure en SSH des équipements de classe Cisco, scanne hôtes et ports avec Nmap, et sert une couche de visualisation de topologie en temps réel.",
+        "Analyse, monitoring et troubleshooting en direct sur des topologies de type production construites principalement sur EVE-NG (avec GNS3 et Packet Tracer en labos secondaires)."
       ]
     },
     {
@@ -357,12 +357,13 @@
     },
     {
       "title": "AutoNetConfig",
-      "description": "Boîte à outils Python + Nmap co-construite pendant le stage à Moov Mauritel pour scanner, visualiser et auto-configurer l'infrastructure réseau. Découverte Nmap d'hôtes, de ports ouverts et cartographie de topologie, avec une couche de visualisation temps réel hybride sous Flask qui restitue les topologies découvertes et les relations entre équipements.",
+      "description": "Boîte à outils Python + Netmiko + Flask co-construite pendant le stage à Moov Mauritel. Automatise la configuration SSH des équipements de classe Cisco via Netmiko, scanne hôtes/ports et cartographie la topologie avec Nmap, et sert une couche de visualisation temps réel sous Flask. Conçue, construite et validée sur des labos EVE-NG (avec GNS3 et Packet Tracer en complément).",
       "tags": [
         "Python",
-        "Nmap",
+        "Netmiko",
         "Flask",
-        "EVE-NG / GNS3",
+        "Nmap",
+        "EVE-NG",
         "Automatisation Réseau"
       ],
       "category": "Réseau",
