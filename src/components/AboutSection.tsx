@@ -25,13 +25,6 @@ const AboutSection = () => {
     };
   }, []);
 
-  const strengths = [
-    { title: t('about.card1.title'), description: t('about.card1.desc') },
-    { title: t('about.card2.title'), description: t('about.card2.desc') },
-    { title: t('about.card3.title'), description: t('about.card3.desc') },
-    { title: t('about.card4.title'), description: t('about.card4.desc') },
-  ];
-
   return (
     <section
       id="about"
@@ -135,27 +128,6 @@ const AboutSection = () => {
                 </p>
               ))}
             </div>
-
-            <ul className="space-y-px border-t border-slate-200 dark:border-slate-800">
-              {strengths.map((strength, idx) => (
-                <li
-                  key={strength.title}
-                  className="grid grid-cols-[auto_1fr] items-baseline gap-x-6 border-b border-slate-200 py-5 dark:border-slate-800"
-                >
-                  <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-slate-400 dark:text-slate-500">
-                    0{idx + 1}
-                  </span>
-                  <div>
-                    <h4 className="font-serif text-xl text-slate-950 dark:text-white">
-                      {strength.title}
-                    </h4>
-                    <p className="mt-1.5 text-sm leading-6 text-slate-500 dark:text-slate-400">
-                      {strength.description}
-                    </p>
-                  </div>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
       </div>

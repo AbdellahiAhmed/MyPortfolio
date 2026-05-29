@@ -48,12 +48,11 @@ const Portfolio = () => {
   }, [location]);
 
   const navItems = [
-    { path: '/', label: 'Home', spaced: true },
-    { path: '/#about', label: 'About', spaced: true },
-    { path: '/#projects', label: 'Projects', spaced: true },
-    { path: '/works', label: 'Works', spaced: true },
-    { path: '/#resume', label: 'Resume', spaced: true },
-    { path: '/#contact', label: 'Contact', spaced: true },
+    { path: '/', label: 'Home' },
+    { path: '/#about', label: 'About' },
+    { path: '/works', label: 'Works' },
+    { path: '/#resume', label: 'Resume' },
+    { path: '/#contact', label: 'Contact' },
   ];
 
   const scrollToSection = (sectionId: string) => {

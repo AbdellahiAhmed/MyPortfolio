@@ -1,188 +1,217 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Github, ExternalLink, ArrowLeft } from 'lucide-react';
-import SpacedText from '../components/utils/SpacedText';
+import { ArrowLeft, ArrowUpRight } from 'lucide-react';
+
+interface Project {
+  title: string;
+  description: string;
+  tags: string[];
+  category?: string;
+  image?: string;
+  github?: string;
+  demo?: string;
+  type?: 'mobile' | 'web';
+}
 
 const ProjectDetailPage = () => {
   const { slug } = useParams();
   const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
-  const projects = t('projects.items', { returnObjects: true }) as any[];
+  const projects = t('projects.items', { returnObjects: true }) as Project[];
 
-  // Find project by slug
-  const project = projects.find(
-    (p) => p.title.toLowerCase().replace(/\s+/g, '-') === slug
-  ) || projects[0];
+  const project =
+    projects.find(
+      (p) => p.title.toLowerCase().replace(/\s+/g, '-') === slug
+    ) || projects[0];
 
   useEffect(() => {
     setIsVisible(true);
     window.scrollTo(0, 0);
   }, [slug]);
 
+  const otherProjects = projects
+    .filter((p) => p.title !== project.title)
+    .slice(0, 3);
+
   return (
-    <main className="min-h-screen bg-white dark:bg-gray-900">
-      {/* Back Navigation */}
-      <div className="fixed top-24 left-8 z-50">
+    <main className="min-h-screen bg-white dark:bg-slate-950 pt-32 pb-24 md:pt-40">
+      <div className="mx-auto max-w-6xl px-6 sm:px-8 lg:px-10">
+
+        {/* Back link */}
         <Link
           to="/works"
-          className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+          className="group inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.22em] text-slate-500 hover:text-slate-950 dark:text-slate-400 dark:hover:text-white transition-colors"
         >
-          <ArrowLeft className="h-5 w-5" />
-          <span className="text-sm uppercase tracking-wide">{t('projects.back_to_works')}</span>
+          <ArrowLeft className="h-3 w-3 transition-transform group-hover:-translate-x-0.5" strokeWidth={1.75} />
+          {t('projects.back_to_works')}
         </Link>
-      </div>
 
-      {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center relative pt-20 pb-20">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-gray-900 dark:text-white mb-6">
-              {project.title}
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-4">
-              {project.description}
-            </p>
-            <p className="text-sm uppercase tracking-widest text-gray-500 dark:text-gray-500 mb-8">
-              {t('projects.scroll_to_explore')}
-            </p>
+        {/* Header */}
+        <div
+          className={`mt-10 mb-16 max-w-4xl transition-all duration-700 ease-out ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+          }`}
+        >
+          <div className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">
+            <span>{project.category}</span>
+            <span className="text-slate-300 dark:text-slate-600">·</span>
+            <span>
+              {project.type === 'mobile'
+                ? t('projects.mobile_platform')
+                : t('projects.web_platform')}
+            </span>
           </div>
-        </div>
+          <h1 className="mt-5 font-serif text-5xl leading-tight text-slate-950 dark:text-white sm:text-6xl md:text-7xl">
+            {project.title}
+          </h1>
+          <p className="mt-6 text-base leading-7 text-slate-600 dark:text-slate-300 md:text-lg max-w-3xl">
+            {project.description}
+          </p>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="h-8 w-px bg-gray-300 dark:bg-gray-700"></div>
-        </div>
-      </section>
-
-      {/* Project Image */}
-      <section className="py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl overflow-hidden bg-gray-100 dark:bg-gray-800 aspect-video">
-            {project.image ? (
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-full object-cover"
-              />
-            ) : (
-              <div className="w-full h-full bg-gradient-to-br from-accent/20 to-accent/5"></div>
+          {/* Links */}
+          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+            {project.demo && (
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-2 border-b border-slate-950 pb-0.5 font-serif text-xl italic text-slate-950 transition-colors hover:text-amber-700 hover:border-amber-700 dark:border-white dark:text-white dark:hover:text-amber-400 dark:hover:border-amber-400"
+              >
+                {project.type === 'mobile' ? t('projects.app_store') : t('projects.view_demo')}
+                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" strokeWidth={1.75} />
+              </a>
             )}
-          </div>
-        </div>
-      </section>
-
-      {/* Project Description */}
-      <section className="py-20 bg-surface-light dark:bg-surface-dark">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-8">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white mb-6">
-                {t('projects.about_project')}
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                {project.description}
-              </p>
-            </div>
-
-            {/* Live Website Link */}
             {project.github && (
               <a
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full hover:scale-105 transition-transform duration-300"
+                className="group inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.22em] text-slate-500 hover:text-slate-950 dark:text-slate-400 dark:hover:text-white transition-colors"
               >
-                <Github className="h-5 w-5" />
-                <SpacedText text={t('projects.view_repository')} className="text-sm font-medium" />
+                {t('projects.view_repository')}
+                <ArrowUpRight className="h-3 w-3" strokeWidth={1.75} />
               </a>
             )}
           </div>
         </div>
-      </section>
 
-      {/* Tech Stack */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white mb-8">
+        {/* Project image — full, contained */}
+        <div
+          className={`relative overflow-hidden border border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-900 ${
+            project.type === 'mobile' ? 'aspect-[4/5] max-w-md mx-auto' : 'aspect-[16/10]'
+          } transition-all duration-700 ease-out delay-150 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}
+        >
+          {project.image ? (
+            <img
+              src={project.image}
+              alt={project.title}
+              className={`h-full w-full ${
+                project.type === 'mobile' ? 'object-contain p-8' : 'object-contain p-4'
+              }`}
+            />
+          ) : (
+            <div className="flex h-full w-full items-center justify-center">
+              <span className="font-serif text-8xl italic text-slate-300 dark:text-slate-700 select-none">
+                {project.title.charAt(0)}
+              </span>
+            </div>
+          )}
+        </div>
+
+        {/* Tech stack */}
+        <section className="mt-24 grid gap-8 md:grid-cols-[200px_1fr] md:gap-16">
+          <h2 className="font-mono text-[11px] uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
             {t('projects.tech_stack')}
           </h2>
-          <div className="flex flex-wrap gap-3">
-            {project.tags.map((tag: string, index: number) => (
-              <span
-                key={index}
-                className="px-6 py-3 text-base bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white rounded-full font-medium"
+          <ul className="space-y-px border-t border-slate-200 dark:border-slate-800">
+            {project.tags.map((tag, i) => (
+              <li
+                key={tag}
+                className="grid grid-cols-[auto_1fr] gap-x-6 items-baseline border-b border-slate-200 py-4 dark:border-slate-800"
               >
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* My Role */}
-      <section className="py-20 bg-surface-light dark:bg-surface-dark">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white mb-8">
-            {t('projects.my_role')}
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-            {t('projects.role_description')}
-          </p>
-
-          <h3 className="text-2xl font-display font-bold text-gray-900 dark:text-white mb-4">
-            {t('projects.key_responsibilities')}
-          </h3>
-          <ul className="space-y-3 text-lg text-gray-600 dark:text-gray-400">
-            {(t('projects.responsibilities', { returnObjects: true }) as string[]).map((resp, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <span className="text-accent">•</span>
-                <span>{resp}</span>
+                <span className="font-mono text-[10px] tabular-nums text-slate-400 dark:text-slate-600">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <span className="font-serif text-xl text-slate-950 dark:text-white">
+                  {tag}
+                </span>
               </li>
             ))}
           </ul>
-        </div>
-      </section>
+        </section>
 
-      {/* Other Projects */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white">
-              {t('projects.other_projects')}
-            </h2>
+        {/* My role */}
+        <section className="mt-24 grid gap-8 md:grid-cols-[200px_1fr] md:gap-16">
+          <h2 className="font-mono text-[11px] uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
+            {t('projects.my_role')}
+          </h2>
+          <div>
+            <p className="font-serif text-2xl italic leading-snug text-slate-950 dark:text-white">
+              {t('projects.role_description')}
+            </p>
+            <ul className="mt-8 space-y-3">
+              {(t('projects.responsibilities', { returnObjects: true }) as string[]).map(
+                (resp, i) => (
+                  <li key={i} className="grid grid-cols-[auto_1fr] gap-x-4 items-baseline">
+                    <span className="font-mono text-[10px] text-slate-400 dark:text-slate-600">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                    <p className="text-sm leading-7 text-slate-600 dark:text-slate-300">
+                      {resp}
+                    </p>
+                  </li>
+                )
+              )}
+            </ul>
           </div>
+        </section>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects
-              .filter((otherProject) => otherProject.title !== project.title)
-              .slice(0, 3)
-              .map((otherProject, index) => (
-              <Link
-                key={index}
-                to={`/project/${otherProject.title.toLowerCase().replace(/\s+/g, '-')}`}
-                className="group"
-              >
-                <div className="relative overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800 aspect-[4/3] mb-4">
-                  {otherProject.image ? (
-                    <img
-                      src={otherProject.image}
-                      alt={otherProject.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  ) : (
-                    <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/5"></div>
-                  )}
-                  <div className="absolute inset-0 bg-gray-900/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-                <h3 className="text-xl font-display font-bold text-gray-900 dark:text-white group-hover:text-accent transition-colors">
-                  {otherProject.title}
-                </h3>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+        {/* Other projects */}
+        {otherProjects.length > 0 && (
+          <section className="mt-24 border-t border-slate-200 dark:border-slate-800 pt-16">
+            <div className="flex items-center gap-4 mb-12">
+              <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
+                {t('projects.other_projects')}
+              </span>
+              <span className="h-px flex-1 max-w-[120px] bg-slate-300 dark:bg-slate-700" />
+            </div>
+
+            <ul className="grid gap-x-10 gap-y-12 md:grid-cols-3">
+              {otherProjects.map((other) => (
+                <li key={other.title}>
+                  <Link
+                    to={`/project/${other.title.toLowerCase().replace(/\s+/g, '-')}`}
+                    className="group block"
+                  >
+                    <div
+                      className={`relative overflow-hidden border border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-900 ${
+                        other.type === 'mobile' ? 'aspect-[4/5]' : 'aspect-[16/10]'
+                      }`}
+                    >
+                      {other.image && (
+                        <img
+                          src={other.image}
+                          alt={other.title}
+                          className={`h-full w-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${
+                            other.type === 'mobile' ? 'object-contain p-4' : 'object-contain p-2'
+                          }`}
+                          loading="lazy"
+                        />
+                      )}
+                    </div>
+                    <h3 className="mt-4 font-serif text-lg leading-snug text-slate-950 dark:text-white group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors">
+                      {other.title}
+                    </h3>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+      </div>
     </main>
   );
 };

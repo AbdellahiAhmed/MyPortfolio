@@ -28,6 +28,13 @@ const HeroSection = () => {
       />
 
       <div className="relative z-10 mx-auto flex min-h-[calc(100vh-6rem)] max-w-6xl flex-col justify-center px-6 py-20 sm:px-8 lg:px-10">
+        {/* Vertical marginalia — section index, hidden on mobile */}
+        <div className="pointer-events-none absolute left-0 top-1/2 hidden -translate-y-1/2 lg:block">
+          <div className="flex flex-col items-center gap-3 [writing-mode:vertical-rl] rotate-180 font-mono text-[10px] uppercase tracking-[0.4em] text-slate-300 dark:text-slate-700">
+            <span>§ 01 / 08</span>
+          </div>
+        </div>
+
         {/* Eyebrow */}
         <div
           className={`flex items-center gap-4 transition-all duration-700 ease-out ${

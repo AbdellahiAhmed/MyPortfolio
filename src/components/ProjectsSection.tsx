@@ -110,13 +110,21 @@ const ProjectsSection = () => {
               }`}
               style={{ transitionDelay: `${100 + index * 80}ms` }}
             >
-              {/* Thumbnail — single subtle frame, no chrome */}
-              <div className="relative overflow-hidden bg-slate-100 dark:bg-slate-900 aspect-[4/3] border border-slate-200 dark:border-slate-800">
+              {/* Thumbnail — full image shown, aspect adapted to project type */}
+              <div
+                className={`relative overflow-hidden border border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-900 ${
+                  project.type === 'mobile' ? 'aspect-[4/5]' : 'aspect-[16/10]'
+                }`}
+              >
                 {project.image ? (
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                    className={`h-full w-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${
+                      project.type === 'mobile'
+                        ? 'object-contain p-6'
+                        : 'object-contain p-2 sm:p-3'
+                    }`}
                     loading="lazy"
                   />
                 ) : (
