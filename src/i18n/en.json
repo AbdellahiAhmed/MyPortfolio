@@ -4,10 +4,10 @@
   "hero.eyebrow_role": "Currently shipping",
   "hero.eyebrow_location": "Nouakchott · MR",
   "hero.headline_line1": "I build software",
-  "hero.headline_line2": "for the web, mobile, and the office.",
-  "hero.description": "Full-stack developer working across Next.js, React, Flutter and Supabase for the web and mobile side — and PHP, MySQL and Dolibarr for the ERP and business side. Anchored by a CCNA foundation in networks, with side work in Python and Nmap automation.",
+  "hero.headline_line2": "from the screen to the wire.",
+  "hero.description": "Full-stack developer shipping across product and infrastructure. Next.js, React, Flutter, Supabase and TypeScript on the product side. PHP, MySQL and Dolibarr when enterprise ERP comes into play. CCNA-certified, with Python and Nmap when the network layer needs reasoning about. Few developers cover both the product and the infrastructure beneath it — that's the point.",
   "hero.currently_label": "Currently",
-  "hero.currently_text": "Building Dolibarr ERP modules at MCS Consulting and AutoNetConfig — a Python + Nmap toolkit for network discovery. Open to Summer 2026 roles.",
+  "hero.currently_text": "At MCS Consulting — delivering Dolibarr ERP modules and production web apps. Side work: AutoNetConfig, a Python + Nmap toolkit for network discovery and auto-configuration. Open to Summer 2026 full-stack and software engineering roles.",
   "hero.subtitle1": "Full-Stack Developer",
   "hero.subtitle2": "Network Engineer (CCNA)",
   "hero.cta": "Selected work",
@@ -20,12 +20,12 @@
   "about.title": "My Journey",
   "about.subtitle": "Full-Stack Developer shipping production web, mobile, ERP and business applications — backed by a CCNA networking foundation and hands-on Python network automation.",
   "about.my_short_story": "My Short Story",
-  "about.story1": "I'm a Full-Stack Developer based in Nouakchott, Mauritania, building production web, mobile, ERP and business applications. My stack spans Next.js, React, Flutter and Supabase as well as enterprise systems like Dolibarr ERP and PHP/MySQL — anchored by a strong CCNA networking foundation.",
-  "about.story2": "At MCS Consulting (Dec 2025 – Apr 2026) I delivered custom Dolibarr ERP modules in PHP/MySQL and contributed to production web applications including a document management system, a bilingual medical website and an internal point-of-sale app. On the side I shipped Traiteurs to mobile (App Store and Google Play) with Bankily, Masrivi and Sedad mobile-money rails on a Supabase backend, and co-built AutoNetConfig — a Python + Nmap toolkit for network discovery, visualisation and auto-configuration.",
-  "about.story3": "I'm comfortable across REST APIs, SQL (PostgreSQL, MySQL), Git/GitHub, Docker and Linux, and I care about clean architecture, secure data handling and reliable delivery. I'm actively looking for full-stack and software engineering roles where this mix can ship real business value from day one.",
+  "about.story1": "I'm a Full-Stack Developer based in Nouakchott, Mauritania. I ship software across the whole stack — a published mobile app on the App Store and Google Play, a Next.js crypto trading platform with KYC and wallets, an Arabic-first RTL news CMS, six custom Dolibarr ERP modules in production, and a Python + Nmap toolkit for network automation. Next.js, React, Flutter, Supabase, TypeScript on the product side; PHP, MySQL and Dolibarr when enterprise ERP comes into play; CCNA networking when the wire matters.",
+  "about.story2": "On my own time I shipped Traiteurs to the App Store and Google Play — a Flutter + Supabase catering platform with Bankily, Masrivi and Sedad mobile-money rails — and co-built AutoNetConfig, a Python + Nmap toolkit for network discovery and auto-configuration. At MCS Consulting (Dec 2025 – Apr 2026) I deliver custom Dolibarr ERP modules in PHP/MySQL alongside production web work: a document management system with audit-level data handling, a bilingual RTL medical website, and an internal point-of-sale platform under active development.",
+  "about.story3": "REST APIs, PostgreSQL, MySQL, Row-Level Security, Docker, Linux, Git — those are the basics. The differentiator is the breadth: real shipped products, real enterprise ERP delivery, and CCNA-grade reasoning about the network beneath. I'm actively looking for full-stack and software engineering roles where the whole stack — screen to wire — needs someone who can hold it together.",
   "skills.section": "Technical Skills",
   "skills.title": "My Expertise",
-  "skills.subtitle": "My technical toolkit across frontend, backend, and network engineering.",
+  "skills.subtitle": "Three pillars covering the whole stack — product engineering on the screen, backend and enterprise systems beneath, network automation on the wire.",
   "skills.categories.frontend": "Frontend Development",
   "skills.categories.backend": "Backend Development",
   "skills.categories.network": "Network & Cloud",
@@ -61,8 +61,8 @@
       ]
     },
     "automation": {
-      "title": "Enterprise ERP & Business Applications",
-      "subtitle": "Dolibarr, PHP, MySQL, Custom Modules, Business Workflows",
+      "title": "Backend & Enterprise Systems",
+      "subtitle": "PHP, MySQL, Dolibarr modules, REST APIs, business workflows",
       "metrics": [
         "Custom Dolibarr Modules",
         "Client → Payment Chain",
@@ -75,15 +75,15 @@
       ]
     },
     "frontend": {
-      "title": "Full-Stack Web & Mobile Engineering",
+      "title": "Product Engineering — Web & Mobile",
       "subtitle": "Next.js, React, Flutter, Supabase, Node.js, TypeScript",
       "metrics": [
-        "App Store Shipped",
+        "Mobile shipped (App Store + Google Play)",
         "Supabase + Row-Level Security",
         "End-to-End Delivery"
       ],
       "points": [
-        "Architect and ship full-stack web and mobile applications — including Traiteurs on the App Store and the OxCoreX crypto platform.",
+        "Architect and ship full-stack web and mobile products — Traiteurs (live on the App Store and Google Play), the OxCoreX crypto platform, and the Sadara Media Arabic-RTL news CMS.",
         "Build secure Supabase backends with Auth, Postgres, Storage, Realtime and Row-Level Security.",
         "Integrate REST APIs, mobile-money rails (Bankily, Masrivi, Sedad) and complex business logic across web and mobile."
       ]
@@ -144,7 +144,7 @@
   "skills.cta_text": "Get In Touch",
   "experience.section": "Work Experience",
   "experience.title": "Professional Journey",
-  "experience.description": "Professional journey and key achievements",
+  "experience.description": "Where I've shipped what, and what stack carried it.",
   "experience.jobs": [
     {
       "company": "Google DSC ISCAE",
@@ -234,7 +234,7 @@
   ],
   "resume.section": "Resume",
   "resume.title": "Want the full picture?",
-  "resume.description": "Download my recruiter-ready CV — Full-Stack Developer across Next.js, Supabase, Dolibarr ERP and CCNA-grade networking, with shipped App Store, ERP and web projects.",
+  "resume.description": "Download my recruiter-ready CV. Full-Stack Developer with shipped mobile, web and enterprise projects across Next.js, Flutter, Supabase, TypeScript, PHP and Dolibarr — plus CCNA-grade networking and Python automation.",
   "resume.cardTitle": "My Resume — ATS-friendly, recruiter-ready",
   "resume.lastUpdate": "Updated May 2026",
   "resume.button": "View CV",
@@ -453,7 +453,7 @@
   "footer.version": "VERSION",
   "footer.edition": "Edition",
   "footer.credit": "Designed & Built by Abdellahi Ahmed",
-  "footer.subtitle": "Full-Stack Developer · ERP · CCNA Networking",
+  "footer.subtitle": "Full-Stack Developer · From the screen to the wire",
   "navbar": {
     "home": "Home",
     "about": "About",

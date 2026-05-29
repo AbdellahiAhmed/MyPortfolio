@@ -4,10 +4,10 @@
   "hero.eyebrow_role": "En production",
   "hero.eyebrow_location": "Nouakchott · MR",
   "hero.headline_line1": "Je construis des logiciels",
-  "hero.headline_line2": "pour le web, le mobile et le bureau.",
-  "hero.description": "Développeur full-stack qui travaille avec Next.js, React, Flutter et Supabase côté web et mobile — et PHP, MySQL et Dolibarr côté ERP et métier. Adossé à une base CCNA en réseaux, avec du Python et du Nmap pour l'automatisation.",
+  "hero.headline_line2": "de l'écran au câble.",
+  "hero.description": "Développeur full-stack qui livre du produit et de l'infrastructure. Next.js, React, Flutter, Supabase et TypeScript côté produit. PHP, MySQL et Dolibarr quand l'ERP d'entreprise rentre en jeu. Certifié CCNA, avec Python et Nmap quand la couche réseau demande qu'on y réfléchisse. Peu de devs couvrent à la fois le produit et l'infrastructure dessous — c'est exactement le point.",
   "hero.currently_label": "En ce moment",
-  "hero.currently_text": "Modules Dolibarr ERP chez MCS Consulting et AutoNetConfig — une boîte à outils Python + Nmap pour la découverte réseau. Disponible pour des postes à partir de l'été 2026.",
+  "hero.currently_text": "Chez MCS Consulting — livraison de modules Dolibarr ERP et d'applications web en production. En parallèle : AutoNetConfig, une boîte à outils Python + Nmap pour la découverte et l'auto-configuration réseau. Disponible pour des postes full-stack et d'ingénieur logiciel à partir de l'été 2026.",
   "hero.subtitle1": "Développeur Full-Stack",
   "hero.subtitle2": "Ingénieur Réseau (CCNA)",
   "hero.cta": "Projets sélectionnés",
@@ -20,12 +20,12 @@
   "about.title": "Mon Parcours",
   "about.subtitle": "Développeur Full-Stack livrant des applications web, mobiles, ERP et métiers en production — adossées à une base CCNA en réseaux et à de l'automatisation réseau en Python.",
   "about.my_short_story": "Mon Histoire",
-  "about.story1": "Je suis Développeur Full-Stack basé à Nouakchott, Mauritanie, et je construis des applications web, mobiles, ERP et métiers en production. Ma stack couvre Next.js, React, Flutter et Supabase ainsi que des systèmes d'entreprise comme Dolibarr ERP et PHP/MySQL — ancrée par une solide base CCNA en réseaux.",
-  "about.story2": "Chez MCS Consulting (Déc 2025 – Avr 2026), j'ai livré des modules Dolibarr ERP sur mesure en PHP/MySQL et contribué à des applications web en production : un système de gestion documentaire, un site médical bilingue et un point de vente interne. En parallèle, j'ai publié Traiteurs sur mobile (App Store et Google Play) avec les rails de mobile-money Bankily, Masrivi et Sedad sur backend Supabase, et co-construit AutoNetConfig — une boîte à outils Python + Nmap pour la découverte, la visualisation et l'auto-configuration de réseaux.",
-  "about.story3": "Je suis à l'aise sur REST API, SQL (PostgreSQL, MySQL), Git/GitHub, Docker et Linux, et je tiens à une architecture propre, à un traitement sécurisé des données et à un delivery fiable. Je recherche activement des postes de full-stack et d'ingénieur logiciel où ce mix peut produire de la valeur métier dès le premier jour.",
+  "about.story1": "Je suis Développeur Full-Stack basé à Nouakchott, Mauritanie. Je livre du logiciel sur toute la stack — une application mobile publiée sur l'App Store et Google Play, une plateforme crypto Next.js avec KYC et wallets, un CMS de presse Arabic-first RTL, six modules Dolibarr ERP sur mesure en production, et une boîte à outils Python + Nmap pour l'automatisation réseau. Next.js, React, Flutter, Supabase, TypeScript côté produit ; PHP, MySQL et Dolibarr quand l'ERP d'entreprise rentre en jeu ; CCNA en réseaux quand le câble compte.",
+  "about.story2": "Sur mon temps libre, j'ai publié Traiteurs sur l'App Store et Google Play — une plateforme de traiteurs Flutter + Supabase avec les rails mobile-money Bankily, Masrivi et Sedad — et co-construit AutoNetConfig, une boîte à outils Python + Nmap pour la découverte et l'auto-configuration réseau. Chez MCS Consulting (Déc 2025 – Avr 2026), je livre des modules Dolibarr ERP sur mesure en PHP/MySQL aux côtés d'applications web en production : un système de gestion documentaire au niveau audit, un site médical bilingue RTL, et une plateforme de point de vente interne en cours de développement.",
+  "about.story3": "REST API, PostgreSQL, MySQL, Row-Level Security, Docker, Linux, Git — ce sont les fondamentaux. La différence se fait sur la largeur : de vrais produits livrés, une vraie expérience ERP en production, et une compréhension CCNA du réseau dessous. Je recherche activement des postes full-stack et d'ingénieur logiciel où il faut tenir toute la stack — de l'écran au câble.",
   "skills.section": "Compétences Techniques",
   "skills.title": "Mon Expertise",
-  "skills.subtitle": "Mon panel technique couvrant le développement frontend, backend et l'ingénierie réseau.",
+  "skills.subtitle": "Trois piliers qui couvrent toute la stack — ingénierie produit côté écran, backend et systèmes d'entreprise dessous, automatisation réseau côté câble.",
   "skills.categories.frontend": "Développement Frontend",
   "skills.categories.backend": "Développement Backend",
   "skills.categories.network": "Réseaux & Cloud",
@@ -61,8 +61,8 @@
       ]
     },
     "automation": {
-      "title": "ERP d'Entreprise & Applications Métiers",
-      "subtitle": "Dolibarr, PHP, MySQL, Modules sur mesure, Workflows",
+      "title": "Backend & Systèmes d'Entreprise",
+      "subtitle": "PHP, MySQL, modules Dolibarr, REST APIs, workflows métiers",
       "metrics": [
         "Modules Dolibarr sur mesure",
         "Chaîne client → paiement",
@@ -75,15 +75,15 @@
       ]
     },
     "frontend": {
-      "title": "Ingénierie Web & Mobile Full-Stack",
+      "title": "Ingénierie Produit — Web & Mobile",
       "subtitle": "Next.js, React, Flutter, Supabase, Node.js, TypeScript",
       "metrics": [
-        "Publié sur l'App Store",
+        "Mobile publié (App Store + Google Play)",
         "Supabase + Row-Level Security",
         "Delivery de bout-en-bout"
       ],
       "points": [
-        "Architecture et livraison d'applications web et mobiles full-stack — dont Traiteurs sur l'App Store et la plateforme crypto OxCoreX.",
+        "Architecture et livraison de produits web et mobiles full-stack — Traiteurs (live sur l'App Store et Google Play), la plateforme crypto OxCoreX, et le CMS de presse RTL Arabic-first Sadara Media.",
         "Construction de backends Supabase sécurisés avec Auth, Postgres, Storage, Realtime et Row-Level Security.",
         "Intégration de REST APIs, de rails de mobile-money (Bankily, Masrivi, Sedad) et de logiques métiers complexes côté web et mobile."
       ]
@@ -144,7 +144,7 @@
   "skills.cta_text": "Me contacter",
   "experience.section": "Expériences",
   "experience.title": "Parcours Professionnel",
-  "experience.description": "Parcours professionnel et réalisations clés",
+  "experience.description": "Où j'ai livré quoi, et avec quelle stack.",
   "experience.jobs": [
     {
       "company": "Google DSC ISCAE",
@@ -234,7 +234,7 @@
   ],
   "resume.section": "CV",
   "resume.title": "Envie de tout le détail ?",
-  "resume.description": "Téléchargez mon CV recruteur-ready — Développeur Full-Stack sur Next.js, Supabase, Dolibarr ERP et réseaux de niveau CCNA, avec des projets App Store, ERP et web déjà livrés.",
+  "resume.description": "Téléchargez mon CV prêt pour recruteurs. Développeur Full-Stack avec des projets mobile, web et entreprise déjà livrés sur Next.js, Flutter, Supabase, TypeScript, PHP et Dolibarr — plus du networking niveau CCNA et de l'automatisation Python.",
   "resume.cardTitle": "Mon CV — ATS-friendly, recruteur-ready",
   "resume.lastUpdate": "Mis à jour en Mai 2026",
   "resume.button": "Voir le CV",
@@ -453,7 +453,7 @@
   "footer.version": "VERSION",
   "footer.edition": "Édition",
   "footer.credit": "Conçu et développé par Abdellahi Ahmed",
-  "footer.subtitle": "Développeur Full-Stack · ERP · Réseaux CCNA",
+  "footer.subtitle": "Développeur Full-Stack · De l'écran au câble",
   "navbar": {
     "home": "Accueil",
     "about": "À propos",
