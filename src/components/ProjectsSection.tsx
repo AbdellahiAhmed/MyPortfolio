@@ -1,7 +1,6 @@
-import { ArrowUpRight } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useState, useEffect, useMemo } from 'react';
-import { Link } from 'react-router-dom';
+import { ArrowUpRight } from 'lucide-react';
 
 interface Project {
   title: string;
@@ -19,195 +18,308 @@ interface Project {
 
 const ProjectsSection = () => {
   const { t } = useTranslation();
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeCategory, setActiveCategory] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [contentVisible, setContentVisible] = useState(true);
+  const [reducedMotion, setReducedMotion] = useState(false);
+  const [sectionVisible, setSectionVisible] = useState(false);
+  const detailRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
 
   const projects = t('projects.items', { returnObjects: true }) as Project[];
-  const categories = t('projects.categories', { returnObjects: true }) as string[];
-
-  const categoryCounts = useMemo(() => {
-    const counts: number[] = [projects.length];
-    for (let i = 1; i < categories.length; i++) {
-      counts.push(projects.filter((p) => p.category === categories[i]).length);
-    }
-    return counts;
-  }, [projects, categories]);
-
-  const filteredProjects = useMemo(() => {
-    return activeCategory === 0
-      ? projects
-      : projects.filter((p) => p.category === categories[activeCategory]);
-  }, [activeCategory, projects, categories]);
+  const active = projects[activeIndex];
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) setIsVisible(true);
-      },
-      { threshold: 0.08 }
-    );
-    const section = document.getElementById('projects');
-    if (section) observer.observe(section);
-    return () => {
-      if (section) observer.unobserve(section);
-    };
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setReducedMotion(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setReducedMotion(e.matches);
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
   }, []);
 
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setSectionVisible(true); },
+      { threshold: 0.06 }
+    );
+    if (sectionRef.current) obs.observe(sectionRef.current);
+    return () => obs.disconnect();
+  }, []);
+
+  const handleSelect = (index: number) => {
+    if (index === activeIndex) return;
+
+    // On mobile, scroll to detail panel
+    if (window.innerWidth < 1024 && detailRef.current) {
+      detailRef.current.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'start' });
+    }
+
+    if (reducedMotion) {
+      setActiveIndex(index);
+      return;
+    }
+    setContentVisible(false);
+    setTimeout(() => {
+      setActiveIndex(index);
+      setContentVisible(true);
+    }, 180);
+  };
+
+  const pad = (i: number) => String(i + 1).padStart(2, '0');
+
   return (
-    <section id="projects" className="py-20 md:py-28 bg-white dark:bg-slate-950">
+    <section
+      ref={sectionRef}
+      id="projects"
+      className="bg-white dark:bg-slate-950 py-20 md:py-28 overflow-hidden"
+    >
       <div className="mx-auto max-w-6xl px-6 sm:px-8 lg:px-10">
 
-        {/* Section header — editorial */}
+        {/* ── Section header ─────────────────────────────────── */}
         <div
-          className={`mb-12 max-w-3xl transition-all duration-700 ease-out ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+          className={`flex items-center gap-4 mb-16 transition-all duration-700 ${
+            sectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}
         >
-          <div className="flex items-center gap-4">
-            <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
-              05 — {t('projects.section')}
-            </span>
-            <span className="h-px flex-1 max-w-[120px] bg-slate-300 dark:bg-slate-700" />
-            <span className="font-mono text-[11px] tabular-nums text-slate-400 dark:text-slate-500">
-              {String(projects.length).padStart(2, '0')} {t('projects.projects_count')}
-            </span>
+          <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
+            05 — {t('projects.section')}
+          </span>
+          <span className="h-px flex-1 max-w-[120px] bg-slate-300 dark:bg-slate-700" />
+          <span className="font-mono text-[11px] tabular-nums text-slate-400 dark:text-slate-500">
+            {String(projects.length).padStart(2, '0')} {t('projects.projects_count')}
+          </span>
+        </div>
+
+        {/* ── Split layout ────────────────────────────────────── */}
+        <div className="flex flex-col lg:flex-row lg:gap-0">
+
+          {/* LEFT ─ directory index */}
+          <div
+            className={`lg:w-[38%] lg:pr-10 lg:border-r border-slate-100 dark:border-slate-800/70 transition-all duration-700 delay-100 ${
+              sectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+            }`}
+          >
+            {/* Column label */}
+            <p className="font-mono text-[10px] uppercase tracking-[0.35em] text-slate-300 dark:text-slate-700 mb-4 pb-3 border-b border-slate-100 dark:border-slate-800/60">
+              Index
+            </p>
+
+            <ul>
+              {projects.map((project, i) => {
+                const isActive = activeIndex === i;
+                return (
+                  <li key={project.title}>
+                    <button
+                      onClick={() => handleSelect(i)}
+                      className={`
+                        w-full text-left group flex items-center gap-4 py-3.5
+                        border-b border-slate-50 dark:border-slate-800/40
+                        transition-all duration-200 cursor-pointer
+                        relative overflow-hidden
+                      `}
+                      aria-pressed={isActive}
+                    >
+                      {/* Active amber left bar */}
+                      <span
+                        className={`absolute left-0 top-0 h-full w-0.5 bg-amber-500 transition-all duration-300 ${
+                          isActive ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0'
+                        }`}
+                        style={{ transformOrigin: 'top' }}
+                      />
+
+                      {/* Index number */}
+                      <span
+                        className={`font-mono text-[11px] tabular-nums flex-shrink-0 w-7 pl-3 transition-colors duration-200 ${
+                          isActive
+                            ? 'text-amber-500'
+                            : 'text-slate-300 dark:text-slate-700 group-hover:text-slate-400 dark:group-hover:text-slate-500'
+                        }`}
+                      >
+                        {pad(i)}
+                      </span>
+
+                      {/* Project name */}
+                      <span
+                        className={`flex-1 text-sm leading-snug transition-all duration-200 ${
+                          isActive
+                            ? 'font-semibold text-slate-950 dark:text-white'
+                            : 'font-normal text-slate-500 dark:text-slate-400 group-hover:text-slate-700 dark:group-hover:text-slate-300'
+                        }`}
+                      >
+                        {project.title}
+                      </span>
+
+                      {/* Category pill — desktop only */}
+                      <span
+                        className={`hidden sm:block font-mono text-[9px] uppercase tracking-wider flex-shrink-0 transition-colors duration-200 ${
+                          isActive
+                            ? 'text-slate-400 dark:text-slate-500'
+                            : 'text-slate-200 dark:text-slate-800'
+                        }`}
+                      >
+                        {project.category}
+                      </span>
+
+                      {/* Arrow — appears on active */}
+                      <ArrowUpRight
+                        className={`w-3 h-3 flex-shrink-0 transition-all duration-200 ${
+                          isActive
+                            ? 'opacity-100 text-amber-500 translate-x-0'
+                            : 'opacity-0 -translate-x-1'
+                        }`}
+                      />
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+
+            {/* Bottom note */}
+            <p className="font-mono text-[9px] uppercase tracking-[0.3em] text-slate-200 dark:text-slate-800 mt-6">
+              — select to explore
+            </p>
           </div>
-          <h2 className="mt-6 font-serif text-4xl leading-tight text-slate-950 dark:text-white sm:text-5xl md:text-6xl">
-            {t('projects.title')}
-          </h2>
-          <p className="mt-5 text-base leading-7 text-slate-500 dark:text-slate-400">
-            {t('projects.subtitle')}
-          </p>
-        </div>
 
-        {/* Filter — plain text, no animated underline */}
-        <div className="mb-12 flex flex-wrap items-center gap-x-6 gap-y-2 border-y border-slate-200 dark:border-slate-800 py-4">
-          {categories.map((cat, index) => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(index)}
-              className={`font-mono text-[11px] uppercase tracking-[0.2em] transition-colors ${
-                activeCategory === index
-                  ? 'text-slate-950 dark:text-white'
-                  : 'text-slate-400 hover:text-slate-700 dark:text-slate-500 dark:hover:text-slate-300'
-              }`}
+          {/* RIGHT ─ project detail */}
+          <div
+            ref={detailRef}
+            className={`
+              lg:w-[62%] lg:pl-14 mt-10 lg:mt-0
+              relative min-h-[440px]
+              transition-all duration-700 delay-200
+              ${sectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}
+            `}
+          >
+            {/* ── Ghost index — signature element ── */}
+            <div
+              aria-hidden="true"
+              className="absolute top-[-1rem] right-0 font-serif leading-none select-none pointer-events-none text-slate-950 dark:text-white"
+              style={{
+                fontSize: 'clamp(7rem, 16vw, 13rem)',
+                opacity: 0.04,
+                lineHeight: 1,
+                transition: reducedMotion ? 'none' : 'opacity 0.2s',
+              }}
             >
-              {cat}
-              <span className="ml-1.5 tabular-nums text-slate-300 dark:text-slate-600">
-                {String(categoryCounts[index]).padStart(2, '0')}
-              </span>
-            </button>
-          ))}
-        </div>
+              {pad(activeIndex)}
+            </div>
 
-        {/* Project grid — two columns, generous whitespace */}
-        <ul className="grid gap-x-10 gap-y-20 md:grid-cols-2">
-          {filteredProjects.map((project, index) => (
-            <li
-              key={project.title}
-              className={`group transition-all duration-700 ease-out ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-              }`}
-              style={{ transitionDelay: `${100 + index * 80}ms` }}
+            {/* ── Animated content panel ── */}
+            <div
+              className="relative"
+              style={{
+                opacity: contentVisible ? 1 : 0,
+                transform: contentVisible ? 'translateY(0)' : 'translateY(10px)',
+                transition: reducedMotion ? 'none' : 'opacity 0.22s ease-out, transform 0.22s ease-out',
+              }}
             >
-              {/* Thumbnail — full image shown, aspect adapted to project type */}
-              <div
-                className={`relative overflow-hidden border border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-900 ${
-                  project.type === 'mobile' ? 'aspect-[4/5]' : 'aspect-[16/10]'
-                }`}
-              >
-                {project.image ? (
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className={`h-full w-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${
-                      project.type === 'mobile'
-                        ? 'object-contain p-6'
-                        : 'object-contain p-2 sm:p-3'
-                    }`}
-                    loading="lazy"
-                  />
-                ) : (
-                  <div className="flex h-full w-full items-center justify-center">
-                    <span className="font-serif text-7xl italic text-slate-300 dark:text-slate-700 select-none">
-                      {project.title.charAt(0)}
-                    </span>
-                  </div>
+              {/* Category · Type header */}
+              <div className="flex items-center gap-3 mb-5">
+                <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-amber-500">
+                  {active?.category}
+                </span>
+                <span className="h-px w-6 bg-amber-400/50" />
+                <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-slate-400 dark:text-slate-500">
+                  {active?.type === 'mobile'
+                    ? t('projects.mobile_platform')
+                    : t('projects.web_platform')}
+                </span>
+              </div>
+
+              {/* Title */}
+              <h2 className="font-serif text-4xl sm:text-[2.8rem] leading-tight text-slate-950 dark:text-white mb-5">
+                {active?.title}
+              </h2>
+
+              {/* Thin rule */}
+              <div className="w-10 h-px bg-slate-200 dark:bg-slate-700 mb-6" />
+
+              {/* Description */}
+              <p className="text-sm leading-[1.85] text-slate-600 dark:text-slate-300 max-w-[520px] mb-7">
+                {active?.description}
+              </p>
+
+              {/* Stack tags */}
+              <div className="flex flex-wrap gap-2 mb-9">
+                {active?.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="font-mono text-[9.5px] uppercase tracking-wider px-2.5 py-1 border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-500 hover:border-amber-300 dark:hover:border-amber-800 hover:text-amber-600 dark:hover:text-amber-400 transition-colors duration-150"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              {/* Links */}
+              <div className="flex flex-wrap items-center gap-7">
+                {active?.demo && (
+                  <a
+                    href={active.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group/link inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.22em] text-slate-950 dark:text-white border-b border-slate-950 dark:border-white pb-0.5 hover:text-amber-600 hover:border-amber-500 dark:hover:text-amber-400 dark:hover:border-amber-400 transition-colors duration-150"
+                  >
+                    {active.type === 'mobile' ? t('projects.app_store') : t('projects.view_demo')}
+                    <ArrowUpRight className="w-3 h-3 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform duration-150" strokeWidth={1.75} />
+                  </a>
+                )}
+                {active?.github && (
+                  <a
+                    href={active.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group/link inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.22em] text-slate-400 dark:text-slate-500 hover:text-slate-950 dark:hover:text-white transition-colors duration-150"
+                  >
+                    {t('projects.view_repo')}
+                    <ArrowUpRight className="w-3 h-3 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform duration-150" strokeWidth={1.75} />
+                  </a>
+                )}
+                {active?.displayUrl && !active.demo && !active.hideUrl && (
+                  <span className="font-mono text-[11px] text-slate-300 dark:text-slate-700 tracking-wide">
+                    {active.displayUrl}
+                  </span>
                 )}
               </div>
 
-              {/* Metadata */}
-              <div className="mt-6">
-                <div className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">
-                  <span>{project.category}</span>
-                  <span className="text-slate-300 dark:text-slate-600">·</span>
-                  <span>
-                    {project.type === 'mobile'
-                      ? t('projects.mobile_platform')
-                      : t('projects.web_platform')}
-                  </span>
-                </div>
-
-                <h3 className="mt-3 font-serif text-2xl leading-tight text-slate-950 dark:text-white md:text-3xl">
-                  {project.title}
-                </h3>
-
-                <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300 max-w-prose">
-                  {project.description}
-                </p>
-
-                {/* Stack — plain inline text */}
-                <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.16em] text-slate-500 dark:text-slate-400">
-                  {project.tags.slice(0, 5).join(' · ')}
-                  {project.tags.length > 5 && (
-                    <span className="text-slate-300 dark:text-slate-600"> +{project.tags.length - 5}</span>
-                  )}
-                </p>
-
-                {/* Links */}
-                <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2">
-                  {project.demo && (
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group/link inline-flex items-center gap-1.5 border-b border-slate-950 pb-0.5 font-mono text-[11px] uppercase tracking-[0.2em] text-slate-950 transition-colors hover:text-amber-700 hover:border-amber-700 dark:border-white dark:text-white dark:hover:text-amber-400 dark:hover:border-amber-400"
-                    >
-                      {project.type === 'mobile' ? t('projects.app_store') : t('projects.view_demo')}
-                      <ArrowUpRight className="h-3 w-3" strokeWidth={1.75} />
-                    </a>
-                  )}
-                  {project.github && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group/link inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.2em] text-slate-500 transition-colors hover:text-slate-950 dark:text-slate-400 dark:hover:text-white"
-                    >
-                      {t('projects.view_repo')}
-                      <ArrowUpRight className="h-3 w-3" strokeWidth={1.75} />
-                    </a>
-                  )}
-                </div>
+              {/* Progress dots — which project out of total */}
+              <div className="flex items-center gap-1.5 mt-12">
+                {projects.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => handleSelect(i)}
+                    aria-label={`Project ${pad(i)}`}
+                    className={`transition-all duration-200 rounded-full cursor-pointer ${
+                      i === activeIndex
+                        ? 'w-5 h-1.5 bg-amber-500'
+                        : 'w-1.5 h-1.5 bg-slate-200 dark:bg-slate-700 hover:bg-slate-400 dark:hover:bg-slate-500'
+                    }`}
+                  />
+                ))}
+                <span className="font-mono text-[10px] text-slate-300 dark:text-slate-700 ml-3 tabular-nums">
+                  {pad(activeIndex)} / {String(projects.length).padStart(2, '0')}
+                </span>
               </div>
-            </li>
-          ))}
-        </ul>
+            </div>
+          </div>
+        </div>
 
-        {/* CTA — inline editorial link */}
+        {/* ── Bottom CTA ─────────────────────────────────────── */}
         <div
-          className={`mt-24 transition-all duration-700 ease-out delay-300 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+          className={`mt-20 pt-10 border-t border-slate-100 dark:border-slate-800/60 transition-all duration-700 delay-300 ${
+            sectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}
         >
-          <Link
-            to="/works"
-            className="group inline-flex items-baseline gap-3 border-b border-slate-950 pb-1 font-serif text-2xl italic text-slate-950 dark:border-white dark:text-white transition-colors hover:text-amber-700 hover:border-amber-700 dark:hover:text-amber-400 dark:hover:border-amber-400 md:text-3xl"
+          <a
+            href="https://github.com/AbdellahiAhmed"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-baseline gap-3 border-b border-slate-950 pb-1 font-serif text-2xl italic text-slate-950 dark:border-white dark:text-white hover:text-amber-700 hover:border-amber-700 dark:hover:text-amber-400 dark:hover:border-amber-400 transition-colors duration-200 md:text-3xl"
           >
             {t('projects.all_projects_text')}
-            <span className="text-xl" aria-hidden="true">→</span>
-          </Link>
+            <span className="text-xl group-hover:translate-x-1 transition-transform duration-200" aria-hidden="true">→</span>
+          </a>
         </div>
+
       </div>
     </section>
   );
