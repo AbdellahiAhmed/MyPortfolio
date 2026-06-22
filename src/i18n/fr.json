@@ -21,7 +21,7 @@
   "about.subtitle": "Développeur Full-Stack livrant des applications web, mobiles, ERP et métiers en production — adossées à une base CCNA en réseaux et à de l'automatisation réseau en Python.",
   "about.my_short_story": "Mon Histoire",
   "about.story1": "Je suis Développeur Full-Stack basé à Nouakchott, Mauritanie. Je livre du logiciel sur toute la stack — une application mobile publiée sur l'App Store et Google Play, une plateforme crypto Next.js avec KYC et wallets, un CMS de presse Arabic-first RTL, six modules Dolibarr ERP sur mesure en production, et AutoNetConfig — une boîte à outils Python + Netmiko + Flask pour l'automatisation réseau pilotée en SSH. Next.js, React, Flutter, Supabase, TypeScript côté produit ; PHP, MySQL et Dolibarr quand l'ERP d'entreprise rentre en jeu ; CCNA en réseaux sur EVE-NG quand le câble compte.",
-  "about.story2": "Sur mon temps libre, j'ai publié Traiteurs sur l'App Store et Google Play — une plateforme de traiteurs Flutter + Supabase avec les rails mobile-money Bankily, Masrivi et Sedad — et co-construit AutoNetConfig, une boîte à outils Python + Netmiko + Flask qui configure les équipements réseau en SSH, scanne les hôtes et les ports avec Nmap, et affiche les topologies en direct — conçue et validée sur des labos EVE-NG. Chez MCS Consulting (Déc 2025 – Avr 2026), je livre des modules Dolibarr ERP sur mesure en PHP/MySQL aux côtés d'applications web en production : un système de gestion documentaire au niveau audit, un site médical bilingue RTL, et une plateforme de point de vente interne en cours de développement.",
+  "about.story2": "Sur mon temps libre, j'ai publié Traiteurs sur l'App Store et Google Play — une plateforme de traiteurs Flutter + Supabase avec les rails mobile-money Bankily, Masrivi et Sedad — et co-construit AutoNetConfig, une boîte à outils Python + Netmiko + Flask qui configure les équipements réseau en SSH, scanne les hôtes et les ports avec Nmap, et affiche les topologies en direct — conçue et validée sur des labos EVE-NG. Chez MCS Consulting (Déc 2025 – Avr 2026), j'ai livré des modules Dolibarr ERP sur mesure en PHP/MySQL et des projets web en production : APOSB — système complet de point de vente et gestion commerciale (ventes, achats, stock, factures, paiements partiels, rôles et reporting MRU) sur Laravel + React/Vite + MySQL + Docker pour boutiques, supermarchés et commerces ; et OMDHD — site institutionnel trilingue (AR/FR/EN, RTL complet) pour une ONG mauritanienne.",
   "about.story3": "REST API, PostgreSQL, MySQL, Row-Level Security, Docker, Linux, Git — ce sont les fondamentaux. La différence se fait sur la largeur : de vrais produits livrés, une vraie expérience ERP en production, et une compréhension CCNA du réseau dessous. Je recherche activement des postes full-stack et d'ingénieur logiciel où il faut tenir toute la stack — de l'écran au câble.",
   "skills.section": "Compétences Techniques",
   "skills.title": "Mon Expertise",
@@ -191,7 +191,7 @@
       "description": "Développeur Full-Stack chez MCS Consulting — cabinet spécialisé en conseil financier, solutions ERP et transformation digitale. Livraison de modules Dolibarr ERP sur mesure en PHP/MySQL, en parallèle d'applications web en production, de sites clients et d'un point de vente interne en cours de développement.",
       "achievements": [
         "Livraison de 6 modules Dolibarr ERP sur mesure en PHP/MySQL couvrant la chaîne client → fournisseur → commande → facture → paiement.",
-        "Développement et maintenance de projets web en production — Gestion Archivage & Courrier et Clinique El Ihsan — et contribution à un point de vente web interne en cours de développement.",
+        "Construction d'APOSB — système complet de point de vente et gestion commerciale pour boutiques, supermarchés et commerces (ventes, stock, factures, paiements partiels, reporting MRU) sur Laravel + React/Vite + MySQL + Docker — et OMDHD, site institutionnel trilingue (AR/FR/EN, RTL) pour une ONG mauritanienne.",
         "Intégration de REST APIs, amélioration des composants UI et support sur l'architecture backend, le debugging et le tuning MySQL, sous Git/GitHub et environnement Linux."
       ]
     }
@@ -234,9 +234,9 @@
   ],
   "resume.section": "CV",
   "resume.title": "Envie de tout le détail ?",
-  "resume.description": "Téléchargez mon CV prêt pour recruteurs. Développeur Full-Stack avec des projets mobile, web et entreprise déjà livrés sur Next.js, Flutter, Supabase, TypeScript, PHP et Dolibarr — plus du networking niveau CCNA et de l'automatisation Python.",
+  "resume.description": "Téléchargez mon CV prêt pour recruteurs. Développeur Full-Stack avec des projets mobile, web et entreprise déjà livrés sur Next.js, Laravel, Flutter, Supabase, TypeScript, PHP et Dolibarr — incluant APOSB (POS et gestion commerciale) et OMDHD (site institutionnel trilingue) — plus du networking niveau CCNA et de l'automatisation Python.",
   "resume.cardTitle": "Mon CV — ATS-friendly, recruteur-ready",
-  "resume.lastUpdate": "Mis à jour en Mai 2026",
+  "resume.lastUpdate": "Mis à jour en Juin 2026",
   "resume.button": "Voir le CV",
   "resume.contactButton": "Lancer la discussion",
   "contact.email_label": "E-mail",
@@ -325,6 +325,23 @@
       "featured": true
     },
     {
+      "title": "APOSB",
+      "description": "Système professionnel de point de vente et de gestion commerciale pour boutiques, supermarchés et petites entreprises. Couvre ventes, achats, gestion du stock, factures, paiements partiels, rôles et permissions utilisateurs, et tableaux de bord de reporting MRU (ventes journalières, créances clients, performances produits, inventaire et activité caissier). Interface premium avec données de démonstration mauritaniennes réalistes et déploiement Docker complet.",
+      "tags": [
+        "Laravel",
+        "React",
+        "Vite",
+        "MySQL",
+        "Docker",
+        "POS",
+        "Reporting"
+      ],
+      "category": "Web",
+      "image": "/projects/aposb-dashboard.png",
+      "github": "https://github.com/AbdellahiAhmed/APOSB",
+      "featured": true
+    },
+    {
       "title": "OxCoreX",
       "description": "Plateforme de trading crypto full-stack développée avec Next.js, TypeScript, Supabase et Tailwind CSS. Portefeuille USDT, parcours KYC, système de parrainage, notifications et panel d'administration complet — backend Supabase avec Auth, Postgres, Row-Level Security et accès basé sur les rôles.",
       "tags": [
@@ -404,33 +421,21 @@
       "featured": true
     },
     {
-      "title": "Clinique El Ihsane",
-      "description": "Site web médical bilingue français/arabe (support RTL complet) livré chez MCS Consulting. Construit avec React 18, Vite, Tailwind CSS, Framer Motion et GSAP, avec prise de rendez-vous en ligne, CMS headless Strapi v5, médias Cloudinary, système de contact Nodemailer, 30+ composants réutilisables sur 7 pages, accessibilité WCAG AA et optimisations (lazy loading, code splitting) pour appareils bas de gamme et connexions lentes.",
+      "title": "OMDHD",
+      "description": "Site web officiel d'une ONG mauritanienne dédiée aux droits de l'homme et au développement social. 15+ pages couvrant actualités, rapports, domaines d'intervention, donation, bénévolat et contact. Expérience trilingue native arabe/français/anglais avec support RTL complet, animations Framer Motion, mise en page responsive et architecture de contenu prête pour CMS.",
       "tags": [
-        "React",
+        "Next.js 15",
+        "TypeScript",
         "Tailwind CSS",
         "Framer Motion",
-        "Strapi",
-        "Cloudinary"
+        "Radix UI",
+        "next-intl",
+        "RTL"
       ],
       "category": "Web",
-      "image": "/projects_images/clinique-elihsan.png",
-      "displayUrl": "clinique-elihsan.vercel.app",
-      "featured": true
-    },
-    {
-      "title": "Gestion Archivage & Courrier",
-      "description": "Système de gestion documentaire et de courrier livré chez MCS Consulting pour des équipes administratives, avec données structurées, accès basé sur les rôles (RBAC) et champs documentaires de type audit. Dashboard temps réel avec KPIs, CRUD documentaire complet avec versioning automatique, suivi courrier entrant/sortant avec indicateurs d'échéance, messagerie interne, import CSV en masse, scanner par glisser-déposer et bilingue FR/AR avec support RTL. Déployée en SPA et app desktop Electron sur un backend Supabase.",
-      "tags": [
-        "JavaScript",
-        "Supabase",
-        "Electron",
-        "Vite",
-        "PostgreSQL"
-      ],
-      "category": "Desktop",
-      "image": "/projects_images/gestion_archivage.png",
-      "hideUrl": true,
+      "image": "/projects/omdhd-preview.png",
+      "demo": "https://omdhd.vercel.app",
+      "displayUrl": "omdhd.vercel.app",
       "featured": true
     }
   ],
