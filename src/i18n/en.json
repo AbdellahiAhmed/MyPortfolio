@@ -185,7 +185,7 @@
     {
       "company": "MCS Consulting",
       "role": "Full-Stack Developer — ERP & Business Applications",
-      "period": "Dec 2025 – Apr 2026",
+      "period": "Dec 2025 – May 2026",
       "type": "Professional Experience",
       "logo": "Web",
       "description": "Full-Stack Developer at MCS Consulting — a firm specialised in financial consulting, ERP solutions and digital transformation. Delivered custom Dolibarr ERP modules in PHP/MySQL while contributing to production web applications, client-facing websites and an internal point-of-sale app currently under development.",
@@ -193,6 +193,19 @@
         "Delivered 6 custom Dolibarr ERP modules in PHP/MySQL covering the client → supplier → order → invoice → payment chain.",
         "Built APOSB — a complete POS and commerce management system for boutiques, supermarkets and businesses (sales, stock, invoices, partial payments, MRU reporting) on Laravel + React/Vite + MySQL + Docker — and OMDHD, the official trilingual institutional website (AR/FR/EN, full RTL) for a Mauritanian NGO.",
         "Integrated REST APIs, improved UI components and supported backend architecture, debugging and MySQL performance tuning using Git/GitHub on a Linux development environment."
+      ]
+    },
+    {
+      "company": "A2 Holding",
+      "role": "Full-Stack Developer & Network Engineer — Intern",
+      "period": "Jul 2026 – Present",
+      "type": "Internship",
+      "logo": "Server",
+      "description": "Full-Stack Developer & Network Engineer Intern at A2 Holding — a Mauritanian group operating both a software development unit and an ISP / network infrastructure business. Currently onboarding into a role spanning web platforms, APIs, PostgreSQL and Linux environments, alongside automation and ISP-related network infrastructure.",
+      "achievements": [
+        "Contributing to production-oriented web platforms and APIs built on PostgreSQL and Linux-based infrastructure.",
+        "Working across ISP-related network infrastructure and automation, bridging application-level and network-level systems.",
+        "Building end-to-end engineering judgment — from code and data to deployment, infrastructure and network reliability — inside a company that runs both software and ISP operations."
       ]
     }
   ],

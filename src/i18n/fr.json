@@ -185,7 +185,7 @@
     {
       "company": "MCS Consulting",
       "role": "Développeur Full-Stack — ERP & Applications Métiers",
-      "period": "Déc 2025 – Avr 2026",
+      "period": "Déc 2025 – Mai 2026",
       "type": "Expérience professionnelle",
       "logo": "Web",
       "description": "Développeur Full-Stack chez MCS Consulting — cabinet spécialisé en conseil financier, solutions ERP et transformation digitale. Livraison de modules Dolibarr ERP sur mesure en PHP/MySQL, en parallèle d'applications web en production, de sites clients et d'un point de vente interne en cours de développement.",
@@ -193,6 +193,19 @@
         "Livraison de 6 modules Dolibarr ERP sur mesure en PHP/MySQL couvrant la chaîne client → fournisseur → commande → facture → paiement.",
         "Construction d'APOSB — système complet de point de vente et gestion commerciale pour boutiques, supermarchés et commerces (ventes, stock, factures, paiements partiels, reporting MRU) sur Laravel + React/Vite + MySQL + Docker — et OMDHD, site institutionnel trilingue (AR/FR/EN, RTL) pour une ONG mauritanienne.",
         "Intégration de REST APIs, amélioration des composants UI et support sur l'architecture backend, le debugging et le tuning MySQL, sous Git/GitHub et environnement Linux."
+      ]
+    },
+    {
+      "company": "A2 Holding",
+      "role": "Développeur Full-Stack & Ingénieur Réseau — Stagiaire",
+      "period": "Juil 2026 – Présent",
+      "type": "Stage",
+      "logo": "Server",
+      "description": "Stagiaire Développeur Full-Stack & Ingénieur Réseau chez A2 Holding — un groupe mauritanien opérant à la fois une unité de développement logiciel et une activité FAI / infrastructure réseau. Actuellement en cours d'intégration dans un rôle couvrant plateformes web, APIs, PostgreSQL et environnements Linux, ainsi que l'automatisation et l'infrastructure réseau liée au FAI.",
+      "achievements": [
+        "Contribution à des plateformes web et APIs orientées production, construites sur PostgreSQL et une infrastructure Linux.",
+        "Intervention sur l'infrastructure réseau liée au FAI et l'automatisation, à l'interface entre le niveau applicatif et le niveau réseau.",
+        "Développement d'une vision de bout en bout — du code et des données au déploiement, à l'infrastructure et à la fiabilité réseau — au sein d'une entreprise qui opère à la fois le logiciel et les activités FAI."
       ]
     }
   ],
