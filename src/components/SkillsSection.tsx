@@ -76,7 +76,7 @@ const SkillsSection = () => {
 
   // Split subtitle into pills (comma or slash separated)
   const splitSubtitle = (subtitle: string) =>
-    subtitle.split(/[,\/]/).map((s) => s.trim()).filter(Boolean);
+    subtitle.split(/[,/]/).map((s) => s.trim()).filter(Boolean);
 
   return (
     <section id="skills" className="py-20 md:py-28 relative bg-white dark:bg-slate-950">

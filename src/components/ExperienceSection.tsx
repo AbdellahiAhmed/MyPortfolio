@@ -1,4 +1,4 @@
-import { Network, Code, Server, ExternalLink } from 'lucide-react';
+import { Network, Code, Server, Globe, ExternalLink } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 interface Experience {
@@ -23,6 +23,7 @@ const ExperienceSection = () => {
     Network,
     Server,
     Code,
+    Web: Globe,
   };
 
   return (

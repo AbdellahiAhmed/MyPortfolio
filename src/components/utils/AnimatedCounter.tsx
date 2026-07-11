@@ -50,13 +50,14 @@ const AnimatedCounter = ({
       { threshold: 0.5 }
     );
 
-    if (counterRef.current) {
-      observer.observe(counterRef.current);
+    const node = counterRef.current;
+    if (node) {
+      observer.observe(node);
     }
 
     return () => {
-      if (counterRef.current) {
-        observer.unobserve(counterRef.current);
+      if (node) {
+        observer.unobserve(node);
       }
     };
   }, [end, duration, hasAnimated]);

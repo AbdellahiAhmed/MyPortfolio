@@ -7,7 +7,7 @@
   "hero.headline_line2": "from the screen to the wire.",
   "hero.description": "Full-stack developer shipping across product and infrastructure. Next.js, React, Flutter, Supabase and TypeScript on the product side. PHP, MySQL and Dolibarr when enterprise ERP comes into play. CCNA-certified, with Python network automation built on EVE-NG labs (Netmiko, Flask, Nmap) when the network layer needs reasoning about. Few developers cover both the product and the infrastructure beneath it — that's the point.",
   "hero.currently_label": "Currently",
-  "hero.currently_text": "At MCS Consulting — delivering Dolibarr ERP modules and production web apps. Side work: AutoNetConfig, a Python + Netmiko + Flask toolkit for SSH device automation and live topology mapping on EVE-NG. Open to Summer 2026 full-stack and software engineering roles.",
+  "hero.currently_text": "At A2 Holding — working at the intersection of software development and ISP network infrastructure: web platforms, APIs, PostgreSQL, Linux and network operations. Previously at MCS Consulting, delivering Dolibarr ERP modules and production web apps including APOSB and OMDHD. Open to full-stack, backend and network-automation opportunities.",
   "hero.subtitle1": "Full-Stack Developer",
   "hero.subtitle2": "Network Engineer (CCNA)",
   "hero.cta": "Selected work",
@@ -22,7 +22,7 @@
   "about.my_short_story": "My Short Story",
   "about.story1": "I'm a Full-Stack Developer based in Nouakchott, Mauritania. I ship software across the whole stack — a published mobile app on the App Store and Google Play, a Next.js crypto trading platform with KYC and wallets, an Arabic-first RTL news CMS, six custom Dolibarr ERP modules in production, and AutoNetConfig — a Python + Netmiko + Flask toolkit for SSH-driven network automation. Next.js, React, Flutter, Supabase, TypeScript on the product side; PHP, MySQL and Dolibarr when enterprise ERP comes into play; CCNA networking on EVE-NG when the wire matters.",
   "about.story2": "On my own time I shipped Traiteurs to the App Store and Google Play — a Flutter + Supabase catering platform with Bankily, Masrivi and Sedad mobile-money rails — and co-built AutoNetConfig, a Python + Netmiko + Flask toolkit that SSH-configures network devices, scans hosts and ports with Nmap, and renders live topology views — built and validated on EVE-NG labs. At MCS Consulting (Dec 2025 – Apr 2026) I delivered custom Dolibarr ERP modules in PHP/MySQL alongside production web work: APOSB — a complete POS and commerce management system (sales, purchases, stock, invoices, partial payments, user roles and MRU-based reporting) on Laravel + React/Vite + MySQL + Docker for boutiques, supermarkets and businesses; and OMDHD — the official trilingual (AR/FR/EN, full RTL) institutional website for a Mauritanian NGO.",
-  "about.story3": "REST APIs, PostgreSQL, MySQL, Row-Level Security, Docker, Linux, Git — those are the basics. The differentiator is the breadth: real shipped products, real enterprise ERP delivery, and CCNA-grade reasoning about the network beneath. I'm actively looking for full-stack and software engineering roles where the whole stack — screen to wire — needs someone who can hold it together.",
+  "about.story3": "REST APIs, PostgreSQL, MySQL, Row-Level Security, Docker, Linux, Git — those are the basics. The differentiator is the breadth: real shipped products, real enterprise ERP delivery, and CCNA-grade reasoning about the network beneath. I'm now building on that range at A2 Holding, where software development and ISP network infrastructure meet — and I stay open to full-stack, backend and network-automation opportunities where the whole stack, screen to wire, needs someone who can hold it together.",
   "skills.section": "Technical Skills",
   "skills.title": "My Expertise",
   "skills.subtitle": "Three pillars covering the whole stack — product engineering on the screen, backend and enterprise systems beneath, network automation on the wire.",
@@ -355,19 +355,37 @@
       "featured": true
     },
     {
-      "title": "OxCoreX",
-      "description": "Full-stack crypto trading platform built with Next.js, TypeScript, Supabase and Tailwind CSS. Includes USDT wallet, KYC flow, referral system, notifications and a complete admin dashboard — backed by Supabase Auth, Postgres, Row-Level Security and role-based access.",
+      "title": "AutoNetConfig",
+      "description": "Python + Netmiko + Flask toolkit co-built during the Moov Mauritel internship. Automates SSH device configuration across Cisco-class equipment with Netmiko, scans hosts/ports and maps topologies with Nmap, and serves a real-time visualisation layer over Flask. Designed, built and validated on EVE-NG labs alongside GNS3 and Packet Tracer.",
       "tags": [
-        "Next.js",
+        "Python",
+        "Netmiko",
+        "Flask",
+        "Nmap",
+        "EVE-NG",
+        "Network Automation"
+      ],
+      "category": "Network",
+      "image": "/autonetconfig/dashboard.png",
+      "github": "https://github.com/AbdellahiAhmed/AutoNetConfig",
+      "featured": true
+    },
+    {
+      "title": "OMDHD",
+      "description": "Official website for a Mauritanian NGO focused on human rights and social development. Built 15+ pages covering news, reports, intervention areas, donation, volunteer and contact flows. Implemented a native trilingual experience in Arabic, French and English with full RTL support, Framer Motion animations, responsive layouts and a content architecture ready for CMS integration.",
+      "tags": [
+        "Next.js 15",
         "TypeScript",
-        "Supabase",
-        "PostgreSQL",
-        "Row-Level Security",
-        "Admin Dashboard"
+        "Tailwind CSS",
+        "Framer Motion",
+        "Radix UI",
+        "next-intl",
+        "RTL"
       ],
       "category": "Web",
-      "image": "/projects_images/oxcorex_project.png",
-      "type": "mobile",
+      "image": "/projects/omdhd-preview.png",
+      "demo": "https://omdhd.vercel.app",
+      "displayUrl": "omdhd.vercel.app",
       "featured": true
     },
     {
@@ -386,19 +404,19 @@
       "featured": true
     },
     {
-      "title": "AutoNetConfig",
-      "description": "Python + Netmiko + Flask toolkit co-built during the Moov Mauritel internship. Automates SSH device configuration across Cisco-class equipment with Netmiko, scans hosts/ports and maps topologies with Nmap, and serves a real-time visualisation layer over Flask. Designed, built and validated on EVE-NG labs alongside GNS3 and Packet Tracer.",
+      "title": "OxCoreX",
+      "description": "Full-stack crypto trading platform built with Next.js, TypeScript, Supabase and Tailwind CSS. Includes USDT wallet, KYC flow, referral system, notifications and a complete admin dashboard — backed by Supabase Auth, Postgres, Row-Level Security and role-based access.",
       "tags": [
-        "Python",
-        "Netmiko",
-        "Flask",
-        "Nmap",
-        "EVE-NG",
-        "Network Automation"
+        "Next.js",
+        "TypeScript",
+        "Supabase",
+        "PostgreSQL",
+        "Row-Level Security",
+        "Admin Dashboard"
       ],
-      "category": "Network",
-      "image": "/autonetconfig/dashboard.png",
-      "github": "https://github.com/AbdellahiAhmed/AutoNetConfig",
+      "category": "Web",
+      "image": "/projects_images/oxcorex_project.png",
+      "type": "mobile",
       "featured": true
     },
     {
@@ -432,24 +450,6 @@
       "image": "/projects_images/module_gestionparc.png",
       "displayUrl": "Gestion Parc Auto-Mobile",
       "featured": true
-    },
-    {
-      "title": "OMDHD",
-      "description": "Official website for a Mauritanian NGO focused on human rights and social development. Built 15+ pages covering news, reports, intervention areas, donation, volunteer and contact flows. Implemented a native trilingual experience in Arabic, French and English with full RTL support, Framer Motion animations, responsive layouts and a content architecture ready for CMS integration.",
-      "tags": [
-        "Next.js 15",
-        "TypeScript",
-        "Tailwind CSS",
-        "Framer Motion",
-        "Radix UI",
-        "next-intl",
-        "RTL"
-      ],
-      "category": "Web",
-      "image": "/projects/omdhd-preview.png",
-      "demo": "https://omdhd.vercel.app",
-      "displayUrl": "omdhd.vercel.app",
-      "featured": true
     }
   ],
   "form.name": "Name",
@@ -481,7 +481,6 @@
     "projects": "Projects",
     "education": "Education",
     "resume": "Resume",
-    "blog": "Blog",
     "contact": "Contact"
   }
 }

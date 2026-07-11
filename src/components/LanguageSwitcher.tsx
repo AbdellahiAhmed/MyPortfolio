@@ -1,5 +1,4 @@
 // src/components/LanguageSwitcher.tsx
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 const LanguageSwitcher = () => {
