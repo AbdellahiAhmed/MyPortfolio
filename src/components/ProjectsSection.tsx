@@ -99,7 +99,7 @@ const ProjectsSection = () => {
             }`}
           >
             {/* Column label */}
-            <p className="font-mono text-[10px] uppercase tracking-[0.35em] text-slate-300 dark:text-slate-700 mb-4 pb-3 border-b border-slate-100 dark:border-slate-800/60">
+            <p className="font-mono text-[10px] uppercase tracking-[0.35em] text-slate-400 dark:text-slate-700 mb-4 pb-3 border-b border-slate-100 dark:border-slate-800/60">
               Index
             </p>
 
@@ -130,8 +130,8 @@ const ProjectsSection = () => {
                       <span
                         className={`font-mono text-[11px] tabular-nums flex-shrink-0 w-7 pl-3 transition-colors duration-200 ${
                           isActive
-                            ? 'text-amber-500'
-                            : 'text-slate-300 dark:text-slate-700 group-hover:text-slate-400 dark:group-hover:text-slate-500'
+                            ? 'text-amber-600 dark:text-amber-500'
+                            : 'text-slate-400 dark:text-slate-700 group-hover:text-slate-600 dark:group-hover:text-slate-500'
                         }`}
                       >
                         {pad(i)}
@@ -142,7 +142,7 @@ const ProjectsSection = () => {
                         className={`flex-1 text-sm leading-snug transition-all duration-200 ${
                           isActive
                             ? 'font-semibold text-slate-950 dark:text-white'
-                            : 'font-normal text-slate-500 dark:text-slate-400 group-hover:text-slate-700 dark:group-hover:text-slate-300'
+                            : 'font-normal text-slate-600 dark:text-slate-400 group-hover:text-slate-950 dark:group-hover:text-slate-300'
                         }`}
                       >
                         {project.title}
@@ -152,8 +152,8 @@ const ProjectsSection = () => {
                       <span
                         className={`hidden sm:block font-mono text-[9px] uppercase tracking-wider flex-shrink-0 transition-colors duration-200 ${
                           isActive
-                            ? 'text-slate-400 dark:text-slate-500'
-                            : 'text-slate-200 dark:text-slate-800'
+                            ? 'text-slate-500 dark:text-slate-500'
+                            : 'text-slate-400 dark:text-slate-800'
                         }`}
                       >
                         {project.category}
@@ -163,7 +163,7 @@ const ProjectsSection = () => {
                       <ArrowUpRight
                         className={`w-3 h-3 flex-shrink-0 transition-all duration-200 ${
                           isActive
-                            ? 'opacity-100 text-amber-500 translate-x-0'
+                            ? 'opacity-100 text-amber-600 dark:text-amber-500 translate-x-0'
                             : 'opacity-0 -translate-x-1'
                         }`}
                       />
@@ -174,7 +174,7 @@ const ProjectsSection = () => {
             </ul>
 
             {/* Bottom note */}
-            <p className="font-mono text-[9px] uppercase tracking-[0.3em] text-slate-200 dark:text-slate-800 mt-6">
+            <p className="font-mono text-[9px] uppercase tracking-[0.3em] text-slate-400 dark:text-slate-800 mt-6">
               — select to explore
             </p>
           </div>
@@ -214,11 +214,11 @@ const ProjectsSection = () => {
             >
               {/* Category · Type header */}
               <div className="flex items-center gap-3 mb-5">
-                <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-amber-500">
+                <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-amber-700 dark:text-amber-500">
                   {active?.category}
                 </span>
                 <span className="h-px w-6 bg-amber-400/50" />
-                <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-slate-400 dark:text-slate-500">
+                <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-slate-500 dark:text-slate-500">
                   {active?.type === 'mobile'
                     ? t('projects.mobile_platform')
                     : t('projects.web_platform')}
@@ -234,7 +234,7 @@ const ProjectsSection = () => {
               <div className="w-10 h-px bg-slate-200 dark:bg-slate-700 mb-6" />
 
               {/* Description */}
-              <p className="text-sm leading-[1.85] text-slate-600 dark:text-slate-300 max-w-[520px] mb-7">
+              <p className="text-[15px] leading-[1.8] text-slate-700 dark:text-slate-300 max-w-[540px] mb-7">
                 {active?.description}
               </p>
 
@@ -243,7 +243,7 @@ const ProjectsSection = () => {
                 {active?.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="font-mono text-[9.5px] uppercase tracking-wider px-2.5 py-1 border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-500 hover:border-amber-300 dark:hover:border-amber-800 hover:text-amber-600 dark:hover:text-amber-400 transition-colors duration-150"
+                    className="font-mono text-[10px] uppercase tracking-wider px-2.5 py-1 border border-slate-300 dark:border-slate-800 text-slate-600 dark:text-slate-500 hover:border-amber-300 dark:hover:border-amber-800 hover:text-amber-600 dark:hover:text-amber-400 transition-colors duration-150"
                   >
                     {tag}
                   </span>
@@ -268,14 +268,14 @@ const ProjectsSection = () => {
                     href={active.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group/link inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.22em] text-slate-400 dark:text-slate-500 hover:text-slate-950 dark:hover:text-white transition-colors duration-150"
+                    className="group/link inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-500 hover:text-slate-950 dark:hover:text-white transition-colors duration-150"
                   >
                     {t('projects.view_repo')}
                     <ArrowUpRight className="w-3 h-3 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform duration-150" strokeWidth={1.75} />
                   </a>
                 )}
                 {active?.displayUrl && !active.demo && !active.hideUrl && (
-                  <span className="font-mono text-[11px] text-slate-300 dark:text-slate-700 tracking-wide">
+                  <span className="font-mono text-[11px] text-slate-500 dark:text-slate-700 tracking-wide">
                     {active.displayUrl}
                   </span>
                 )}
@@ -295,7 +295,7 @@ const ProjectsSection = () => {
                     }`}
                   />
                 ))}
-                <span className="font-mono text-[10px] text-slate-300 dark:text-slate-700 ml-3 tabular-nums">
+                <span className="font-mono text-[10px] text-slate-400 dark:text-slate-700 ml-3 tabular-nums">
                   {pad(activeIndex)} / {String(projects.length).padStart(2, '0')}
                 </span>
               </div>

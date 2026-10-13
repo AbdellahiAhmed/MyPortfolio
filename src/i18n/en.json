@@ -7,7 +7,7 @@
   "hero.headline_line2": "from the screen to the wire.",
   "hero.description": "Full-stack developer shipping across product and infrastructure. Laravel, React, Next.js, Flutter, Supabase and TypeScript for products; PHP, MySQL and Dolibarr when enterprise ERP comes into play. CCNA-certified, with Python network automation built on EVE-NG labs (Netmiko, Flask, Nmap) when the network layer needs reasoning about. Few developers cover both the product and the infrastructure beneath it — that's the point.",
   "hero.currently_label": "Currently",
-  "hero.currently_text": "At MCS Consulting — building production business systems: SOMAP RH, the HR and payroll platform live at somap-grh.com, a land-portfolio management platform, and custom Dolibarr ERP modules for clients such as CAMEC. Completed a full-stack and network engineering internship at A2 Holding (Jul – Aug 2026). Open to full-stack, backend and network-automation opportunities.",
+  "hero.currently_text": "At MCS Consulting — building the business systems clients run on every day: SOMAP RH, the HR and payroll system used across SOMAP's fuel stations, a land-portfolio management platform, and custom ERP modules for organisations such as CAMEC. Recently completed a full-stack and network engineering internship at A2 Holding (Jul – Aug 2026). Open to full-stack, backend and network-automation opportunities.",
   "hero.subtitle1": "Full-Stack Developer",
   "hero.subtitle2": "Network Engineer (CCNA)",
   "hero.cta": "Selected work",
@@ -20,9 +20,9 @@
   "about.title": "My Journey",
   "about.subtitle": "Full-Stack Developer shipping production web, mobile, ERP and business applications — backed by a CCNA networking foundation and hands-on Python network automation.",
   "about.my_short_story": "My Short Story",
-  "about.story1": "I'm a Full-Stack Developer based in Nouakchott, Mauritania. I ship software across the whole stack — SOMAP RH, an HR and payroll platform in production for a national fuel-station network; a land-portfolio management platform backed by 641 automated tests; a mobile app published on the App Store and Google Play; six custom Dolibarr ERP modules in production; and AutoNetConfig — a Python + Netmiko + Flask toolkit for SSH-driven network automation. Laravel, React, Next.js, Flutter, Supabase and TypeScript for products; PHP, MySQL and Dolibarr for enterprise ERP; CCNA networking on EVE-NG when the wire matters.",
-  "about.story2": "At MCS Consulting (since Dec 2025) I design and deliver client systems end to end. SOMAP RH takes station staff from a GPS-verified clock-in at the pump to the payslip and the company account it is paid from — Laravel 13 + React/TypeScript, money handled in locked, idempotent transactions, 425 automated tests in CI. For CAMEC, the national medical procurement agency, I built a Dolibarr module that replaces their Excel tracking of international imports with a 15-step workflow, Incoterms, document checklists and KPIs. Alongside: a production and manufacturing ERP module, APOSB (POS and commerce management) and OMDHD, a trilingual AR/FR/EN institutional website. On my own time I led the development of Traiteurs, a Flutter + Supabase catering platform with Bankily, Masrivi and Sedad mobile-money rails, and co-built AutoNetConfig during my Moov Mauritel internship.",
-  "about.story3": "REST APIs, PostgreSQL, MySQL, Row-Level Security, Docker, Linux, Git — those are the basics. The differentiator is the breadth: real systems in production, real enterprise ERP delivery, and CCNA-grade reasoning about the network beneath — sharpened by my internship at A2 Holding, where software development and ISP network infrastructure meet. I'm open to full-stack, backend and network-automation opportunities where the whole stack, screen to wire, needs someone who can hold it together.",
+  "about.story1": "I'm a Full-Stack Developer based in Nouakchott, Mauritania. I build software people rely on at work — SOMAP RH, the HR and payroll system used every day by a national fuel-station network; a land-portfolio management platform; a mobile app published on the App Store and Google Play; six custom Dolibarr ERP modules in production; and AutoNetConfig, a toolkit that automates the configuration of network equipment. Laravel, React, Next.js and Flutter for products; PHP, MySQL and Dolibarr for enterprise ERP; CCNA networking when the wire matters.",
+  "about.story2": "At MCS Consulting (since Dec 2025) I take business systems from the first meeting with the client to daily use. SOMAP RH follows station staff from their clock-in at the pump to their payslip, with payroll and payments the company can trust. For CAMEC, the national medical procurement agency, I replaced the Excel follow-up of international orders with a clear step-by-step workflow, document checklists and indicators. Alongside: a manufacturing ERP module, APOSB (point of sale and commerce management) and OMDHD, a trilingual Arabic, French and English institutional website. On my own time I led the development of Traiteurs, a catering app with Bankily, Masrivi and Sedad mobile payments, and co-built AutoNetConfig during my Moov Mauritel internship.",
+  "about.story3": "The basics — APIs, databases, Docker, Linux, Git — are a given. What I bring is range: systems running in real businesses, hands-on ERP delivery, and a networking background that lets me understand what happens beneath the application — strengthened by my internship at A2 Holding, where software and ISP infrastructure meet. I'm open to full-stack, backend and network-automation roles where someone needs to hold the whole stack together, from the screen to the wire.",
   "skills.section": "Technical Skills",
   "skills.title": "My Expertise",
   "skills.subtitle": "Three pillars covering the whole stack — product engineering on the screen, backend and enterprise systems beneath, network automation on the wire.",
@@ -64,14 +64,14 @@
       "title": "Backend & Enterprise Systems",
       "subtitle": "Laravel, PHP, MySQL, Dolibarr modules, REST APIs, business workflows",
       "metrics": [
-        "Platforms in Production",
+        "Systems in Daily Use",
         "6 Custom Dolibarr Modules",
-        "1,000+ Automated Tests"
+        "Tested Before Every Release"
       ],
       "points": [
-        "Ship Laravel + React/Inertia business platforms with a policy on every route, money handled in locked, idempotent transactions, and feature-test suites in CI (SOMAP RH: 425 tests; land-portfolio platform: 641).",
-        "Deliver custom Dolibarr ERP modules in PHP/MySQL — import tracking, manufacturing, trade and financial reporting, fleet and fuel, mail management — on top of Dolibarr's native objects.",
-        "Translate operational requirements into structured data models, role-based access, audit trails and immutable financial history."
+        "Build business platforms with Laravel and React that handle money safely, control who can do what, and are checked by automated tests before every release.",
+        "Deliver custom Dolibarr ERP modules — international order tracking, manufacturing, trade and financial reporting, fleet and fuel, mail management.",
+        "Turn how a business really works into clear screens, the right permissions for each role and a complete history of every change."
       ]
     },
     "frontend": {
@@ -201,12 +201,12 @@
       "period": "Dec 2025 – Present",
       "type": "Professional Experience",
       "logo": "Web",
-      "description": "Full-Stack Developer at MCS Consulting — a Nouakchott firm specialised in financial consulting, ERP solutions and digital transformation. I design and ship client systems end to end: Laravel + React business platforms in production, custom Dolibarr ERP modules and institutional websites — from requirements and data model to deployment on client hosting.",
+      "description": "Full-Stack Developer at MCS Consulting — a Nouakchott firm specialised in financial consulting, ERP solutions and digital transformation. I design and deliver business systems for clients end to end, from understanding the need to putting the system into daily use.",
       "achievements": [
-        "Built SOMAP RH — the HR and payroll platform in production at somap-grh.com for a national fuel-station network: GPS-geofenced attendance, leave, advances, payroll and company accounts, with 425 automated tests and CI.",
-        "Built a land-portfolio management platform (acquisitions, projects, mortgages, sales, 8 report families) on Laravel 12 + React 19 with 5-role access control, a full audit trail and 641 automated tests.",
-        "Delivered 6 custom Dolibarr ERP modules in PHP/MySQL — including CAMEC international import tracking (15-step workflow, Incoterms 2020, KPIs), manufacturing with weighted average cost, trade and financial reporting, fleet and fuel management, and mail management.",
-        "Built APOSB (POS and commerce management on Laravel + React + MySQL + Docker) and OMDHD, the trilingual AR/FR/EN institutional website for a Mauritanian NGO."
+        "Built SOMAP RH, the HR and payroll system SOMAP uses daily across its fuel stations, gas depots and agencies: mobile clock-in, leave, salary advances, payroll and company accounts.",
+        "Built a land-portfolio management platform covering purchases, projects, mortgages and sales, with role-based access and a full history of every change.",
+        "Delivered 6 custom Dolibarr ERP modules, including international order tracking for CAMEC, manufacturing, trade and financial reporting, and fleet and fuel management.",
+        "Built APOSB (point of sale and commerce management) and OMDHD, the trilingual Arabic, French and English institutional website for a Mauritanian NGO."
       ]
     }
   ],
@@ -248,7 +248,7 @@
   ],
   "resume.section": "Resume",
   "resume.title": "Want the full picture?",
-  "resume.description": "Download my recruiter-ready CV. Full-Stack Developer with production systems across Laravel, React, Next.js, Flutter, Supabase, PHP and Dolibarr — including SOMAP RH (HR and payroll, live), a land-portfolio management platform and CAMEC import tracking — plus CCNA-grade networking and Python automation.",
+  "resume.description": "Download my recruiter-ready CV. Full-Stack Developer with business systems in daily use — including SOMAP RH (HR and payroll), a land-portfolio management platform and CAMEC order tracking — built with Laravel, React, Next.js, Flutter and Dolibarr, plus CCNA networking and Python automation.",
   "resume.cardTitle": "My Resume — ATS-friendly, recruiter-ready",
   "resume.lastUpdate": "Updated October 2026",
   "resume.button": "View CV",
@@ -323,55 +323,49 @@
   "projects.items": [
     {
       "title": "SOMAP RH",
-      "description": "HR and payroll platform in production for SOMAP, a Mauritanian network of fuel stations, gas depots and agencies. GPS-geofenced clock-in decided on the server (Haversine), automatic absence detection, leave and salary-advance approval circuits, monthly payroll with itemised deductions, company cash and bank accounts with an immutable ledger, and a report explorer with Excel export plus a daily presence report sent on WhatsApp. Money is handled as decimals inside locked, idempotent transactions, with a policy on every route — 425 automated tests and Playwright journeys run in CI.",
+      "description": "The HR and payroll system SOMAP uses every day across its fuel stations, gas depots and agencies. Staff clock in from their phone at their workplace, with the location checked automatically. HR manages leave, salary advances and absences in one place, and payroll is calculated each month with every deduction explained on the payslip. Management follows attendance and payments on clear dashboards, and a daily presence report arrives on WhatsApp. Built to be reliable with money: no double payments, a full history of every change, and hundreds of automated tests before each release.",
       "tags": [
-        "Laravel 13",
+        "Laravel",
         "React",
         "TypeScript",
-        "Inertia.js",
         "MySQL",
-        "Playwright",
-        "GitHub Actions"
+        "HR & Payroll"
       ],
       "category": "Web",
       "image": "/projects/somap-dashboard.jpg",
-      "demo": "https://somap-grh.com",
-      "displayUrl": "somap-grh.com",
+      "displayUrl": "In daily use at SOMAP",
       "featured": true
     },
     {
       "title": "Patrimoine Foncier",
-      "description": "Land-portfolio management platform covering parcels, acquisitions with instalment payments, multi-parcel investment projects, expenses, mortgages and guarantees, and sales through to the realised financial result. Executive dashboard with 12-month trends and alerts, and 8 filterable report families exported to Excel and PDF. Domain-driven Laravel architecture (actions, policies and presenters per domain), 5-role access control, a full audit trail and no financial or legal record ever hard-deleted — covered by 641 automated tests in CI.",
+      "description": "A platform that gives a property owner a complete view of their land portfolio: every parcel, how it was bought and paid for, the projects built on it, expenses, mortgages, and sales with the final profit. Executives see the overall picture and trends on one dashboard and export reports to Excel or PDF in one click. Each user only sees what their role allows, every action is recorded, and financial records are never deleted — so the numbers can always be trusted.",
       "tags": [
-        "Laravel 12",
-        "React 19",
+        "Laravel",
+        "React",
         "TypeScript",
-        "Inertia.js",
-        "shadcn/ui",
         "MySQL",
-        "PHPUnit"
+        "Reporting"
       ],
       "category": "Web",
       "featured": true
     },
     {
       "title": "CAMEC Import Tracking",
-      "description": "Dolibarr module for CAMEC, Mauritania's central purchasing agency for medicines and medical equipment, replacing its Excel tracking of international supplier orders. Each purchase order becomes a dossier with one or more shipments moving through 15 configurable steps — computed status and delays, an immutable history of date revisions, Incoterms 2020 obligations, ISO 6346 container validation, a document checklist per shipment, supplier and forwarder follow-ups, and the agency's 6 KPIs on an action-oriented dashboard. Delivered with a security review, performance measured on 5,000 dossiers, user and admin guides and an acceptance-test kit.",
+      "description": "Built for CAMEC, Mauritania's central purchasing agency for medicines and medical equipment, to replace the Excel files used to follow international orders. Each order is tracked step by step from the purchase order to final delivery, with automatic delay alerts, the documents required for each shipment, and reminders to suppliers and forwarders. A dashboard shows the agency's key indicators and what needs attention today. Delivered with user and administrator guides and a full acceptance test with the client.",
       "tags": [
+        "Dolibarr",
         "PHP",
         "MySQL",
-        "Dolibarr",
-        "Incoterms 2020",
-        "KPI Dashboard",
+        "Supply Chain",
         "ERP"
       ],
       "category": "ERP",
-      "displayUrl": "Supply-chain tracking",
+      "displayUrl": "Delivered to CAMEC",
       "featured": true
     },
     {
       "title": "Traiteurs App",
-      "description": "Flutter + Supabase catering platform live on the App Store and Google Play, connecting clients, caterers and delivery drivers in real time. Lead developer in a small team (about 60% of 1,500 commits): wallet and credit codes with QR scanning, GPS driver tracking, delivery broadcast to nearby drivers, Mauritanian mobile-money rails (Bankily, Masrivi, Sedad), scheduled jobs on GitHub Actions, and a React + TypeScript operations console with a live driver map, commissions and OTP lookup. Backend on Supabase Auth, Postgres (PL/pgSQL), Storage, Realtime and Row-Level Security.",
+      "description": "A mobile app on the App Store and Google Play that connects customers with caterers and delivery drivers. Customers order and pay with Mauritanian mobile money (Bankily, Masrivi, Sedad), caterers manage their orders, and drivers are followed live on the map until delivery. I led the development in a small team and also built the admin console the operations team uses to follow orders, drivers and commissions.",
       "tags": [
         "Flutter",
         "Dart",
@@ -404,13 +398,12 @@
     },
     {
       "title": "Fabrication ERP",
-      "description": "Production and manufacturing module for Dolibarr: raw-material and packaging purchases, production cycles with weighted average cost per warehouse, reception and delivery notes, direct, credit and raw-material sales, purchase and sales situations exported to PDF and CSV, an expenses journal and payroll with employee debts. Arabic PDF documents, MRU currency, dated SQL migrations, and server-side guards against double submission and stock/invoice inconsistencies.",
+      "description": "An ERP module that runs a manufacturing business end to end: buying raw materials and packaging, recording each production run, receiving and delivering goods, and selling in cash, on credit or as raw material. The owner sees the real cost of each product, stock levels, purchases and sales at any time, with Arabic documents ready to print and expenses and salaries tracked in the same place.",
       "tags": [
+        "Dolibarr",
         "PHP",
         "MySQL",
-        "Dolibarr",
-        "Weighted Average Cost",
-        "Arabic PDF",
+        "Manufacturing",
         "ERP"
       ],
       "category": "ERP",
@@ -434,7 +427,7 @@
     },
     {
       "title": "OxCoreX",
-      "description": "Mobile-first crypto trading and investment platform on Next.js 16 (App Router, Server Actions), Supabase and Tailwind CSS v4 — an Arabic RTL user app and an English desktop admin panel. TRC20 USDT deposits, withdrawals protected by a transaction password, KYC verification, a referral system with signup and deposit rewards, and notifications, all on Supabase Auth, Postgres, Row-Level Security and role-based access.",
+      "description": "A mobile-first crypto investment platform with an Arabic interface for users and an English admin panel. Users deposit and withdraw USDT, verify their identity and invite friends through a referral program, while the team reviews and approves operations from the admin panel. Sensitive actions are protected by a separate transaction password.",
       "tags": [
         "Next.js",
         "TypeScript",
@@ -486,7 +479,7 @@
     },
     {
       "title": "GestionParc",
-      "description": "Fleet management module for Dolibarr covering vehicles, equipment and bases, maintenance with attachments, fuel tracking with searchable selectors and PDF reports, ambulance (SAMU) refuelling with intervention counts, and an internal fuel-station module linked to the fuel records. CSRF-protected actions, with deployment and user guides.",
+      "description": "A fleet management module for vehicles, equipment, maintenance and fuel — including ambulance refuelling and an internal fuel station. Managers know which vehicle used what, when and how much, and get ready-to-print PDF reports.",
       "tags": [
         "PHP",
         "MySQL",
