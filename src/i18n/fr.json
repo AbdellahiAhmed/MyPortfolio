@@ -5,9 +5,9 @@
   "hero.eyebrow_location": "Nouakchott · MR",
   "hero.headline_line1": "Je construis des logiciels",
   "hero.headline_line2": "de l'écran au câble.",
-  "hero.description": "Développeur full-stack qui livre du produit et de l'infrastructure. Next.js, React, Flutter, Supabase et TypeScript côté produit. PHP, MySQL et Dolibarr quand l'ERP d'entreprise rentre en jeu. Certifié CCNA, avec de l'automatisation réseau Python sur labos EVE-NG (Netmiko, Flask, Nmap) quand la couche réseau demande qu'on y réfléchisse. Peu de devs couvrent à la fois le produit et l'infrastructure dessous — c'est exactement le point.",
+  "hero.description": "Développeur full-stack qui livre du produit et de l'infrastructure. Laravel, React, Next.js, Flutter, Supabase et TypeScript côté produit ; PHP, MySQL et Dolibarr quand l'ERP d'entreprise rentre en jeu. Certifié CCNA, avec de l'automatisation réseau Python sur labos EVE-NG (Netmiko, Flask, Nmap) quand la couche réseau demande qu'on y réfléchisse. Peu de devs couvrent à la fois le produit et l'infrastructure dessous — c'est exactement le point.",
   "hero.currently_label": "En ce moment",
-  "hero.currently_text": "Chez A2 Holding — à l'intersection du développement logiciel et de l'infrastructure réseau FAI : plateformes web, APIs, PostgreSQL, Linux et opérations réseau. Précédemment chez MCS Consulting, livraison de modules Dolibarr ERP et d'applications web en production dont APOSB et OMDHD. Disponible pour des postes full-stack, backend et d'automatisation réseau.",
+  "hero.currently_text": "Chez MCS Consulting — je construis des systèmes métiers en production : SOMAP RH, la plateforme RH et paie en ligne sur somap-grh.com, une plateforme de gestion du patrimoine foncier, et des modules Dolibarr ERP sur mesure pour des clients comme la CAMEC. Stage full-stack et ingénierie réseau terminé chez A2 Holding (juil. – août 2026). Disponible pour des postes full-stack, backend et d'automatisation réseau.",
   "hero.subtitle1": "Développeur Full-Stack",
   "hero.subtitle2": "Ingénieur Réseau (CCNA)",
   "hero.cta": "Projets sélectionnés",
@@ -20,9 +20,9 @@
   "about.title": "Mon Parcours",
   "about.subtitle": "Développeur Full-Stack livrant des applications web, mobiles, ERP et métiers en production — adossées à une base CCNA en réseaux et à de l'automatisation réseau en Python.",
   "about.my_short_story": "Mon Histoire",
-  "about.story1": "Je suis Développeur Full-Stack basé à Nouakchott, Mauritanie. Je livre du logiciel sur toute la stack — une application mobile publiée sur l'App Store et Google Play, une plateforme crypto Next.js avec KYC et wallets, un CMS de presse Arabic-first RTL, six modules Dolibarr ERP sur mesure en production, et AutoNetConfig — une boîte à outils Python + Netmiko + Flask pour l'automatisation réseau pilotée en SSH. Next.js, React, Flutter, Supabase, TypeScript côté produit ; PHP, MySQL et Dolibarr quand l'ERP d'entreprise rentre en jeu ; CCNA en réseaux sur EVE-NG quand le câble compte.",
-  "about.story2": "Sur mon temps libre, j'ai publié Traiteurs sur l'App Store et Google Play — une plateforme de traiteurs Flutter + Supabase avec les rails mobile-money Bankily, Masrivi et Sedad — et co-construit AutoNetConfig, une boîte à outils Python + Netmiko + Flask qui configure les équipements réseau en SSH, scanne les hôtes et les ports avec Nmap, et affiche les topologies en direct — conçue et validée sur des labos EVE-NG. Chez MCS Consulting (Déc 2025 – Avr 2026), j'ai livré des modules Dolibarr ERP sur mesure en PHP/MySQL et des projets web en production : APOSB — système complet de point de vente et gestion commerciale (ventes, achats, stock, factures, paiements partiels, rôles et reporting MRU) sur Laravel + React/Vite + MySQL + Docker pour boutiques, supermarchés et commerces ; et OMDHD — site institutionnel trilingue (AR/FR/EN, RTL complet) pour une ONG mauritanienne.",
-  "about.story3": "REST API, PostgreSQL, MySQL, Row-Level Security, Docker, Linux, Git — ce sont les fondamentaux. La différence se fait sur la largeur : de vrais produits livrés, une vraie expérience ERP en production, et une compréhension CCNA du réseau dessous. Je continue de construire sur cette largeur chez A2 Holding, où le développement logiciel rencontre l'infrastructure réseau FAI — et je reste ouvert à des postes full-stack, backend et d'automatisation réseau où il faut tenir toute la stack, de l'écran au câble.",
+  "about.story1": "Je suis Développeur Full-Stack basé à Nouakchott, Mauritanie. Je livre du logiciel sur toute la stack — SOMAP RH, une plateforme RH et paie en production pour un réseau national de stations-service ; une plateforme de gestion du patrimoine foncier couverte par 641 tests automatisés ; une application mobile publiée sur l'App Store et Google Play ; six modules Dolibarr ERP sur mesure en production ; et AutoNetConfig — une boîte à outils Python + Netmiko + Flask pour l'automatisation réseau pilotée en SSH. Laravel, React, Next.js, Flutter, Supabase et TypeScript côté produit ; PHP, MySQL et Dolibarr pour l'ERP d'entreprise ; CCNA en réseaux sur EVE-NG quand le câble compte.",
+  "about.story2": "Chez MCS Consulting (depuis déc. 2025), je conçois et livre des systèmes clients de bout en bout. SOMAP RH accompagne le personnel des stations du pointage vérifié par GPS à la pompe jusqu'au bulletin de paie et au compte de l'entreprise qui le règle — Laravel 13 + React/TypeScript, montants traités dans des transactions verrouillées et idempotentes, 425 tests automatisés en CI. Pour la CAMEC, centrale d'achat nationale des médicaments, j'ai construit un module Dolibarr qui remplace leur suivi Excel des importations internationales par un workflow en 15 étapes, les Incoterms, des check-lists documentaires et des KPI. En parallèle : un module ERP de production et fabrication, APOSB (point de vente et gestion commerciale) et OMDHD, un site institutionnel trilingue AR/FR/EN. Sur mon temps libre, j'ai dirigé le développement de Traiteurs, une plateforme de traiteurs Flutter + Supabase avec les rails mobile-money Bankily, Masrivi et Sedad, et co-construit AutoNetConfig pendant mon stage chez Moov Mauritel.",
+  "about.story3": "REST API, PostgreSQL, MySQL, Row-Level Security, Docker, Linux, Git — ce sont les fondamentaux. La différence se fait sur la largeur : de vrais systèmes en production, une vraie expérience ERP, et une compréhension CCNA du réseau dessous — renforcée par mon stage chez A2 Holding, où le développement logiciel rencontre l'infrastructure réseau FAI. Je suis ouvert à des postes full-stack, backend et d'automatisation réseau où il faut tenir toute la stack, de l'écran au câble.",
   "skills.section": "Compétences Techniques",
   "skills.title": "Mon Expertise",
   "skills.subtitle": "Trois piliers qui couvrent toute la stack — ingénierie produit côté écran, backend et systèmes d'entreprise dessous, automatisation réseau côté câble.",
@@ -62,16 +62,16 @@
     },
     "automation": {
       "title": "Backend & Systèmes d'Entreprise",
-      "subtitle": "PHP, MySQL, modules Dolibarr, REST APIs, workflows métiers",
+      "subtitle": "Laravel, PHP, MySQL, modules Dolibarr, REST APIs, workflows métiers",
       "metrics": [
-        "Modules Dolibarr sur mesure",
-        "Chaîne client → paiement",
-        "Outils métiers internes"
+        "Plateformes en production",
+        "6 modules Dolibarr sur mesure",
+        "1 000+ tests automatisés"
       ],
       "points": [
-        "Livraison de modules Dolibarr ERP sur mesure en PHP/MySQL couvrant les workflows client, fournisseur, commande, facture et paiement.",
-        "Construction et maintenance d'applications métiers internes — gestion documentaire, point de vente et sites clients — au-delà de la seule couche ERP.",
-        "Traduction des besoins opérationnels en modèles de données structurés, contrôle d'accès basé sur les rôles et champs documentaires prêts pour audit."
+        "Livrer des plateformes métiers Laravel + React/Inertia avec une policy sur chaque route, des montants traités dans des transactions verrouillées et idempotentes, et des suites de tests en CI (SOMAP RH : 425 tests ; patrimoine foncier : 641).",
+        "Livrer des modules Dolibarr ERP sur mesure en PHP/MySQL — suivi des importations, fabrication, commerce et reporting financier, parc et carburant, gestion du courrier — au-dessus des objets natifs de Dolibarr.",
+        "Traduire les besoins opérationnels en modèles de données structurés, droits par rôle, pistes d'audit et historique financier inaltérable."
       ]
     },
     "frontend": {
@@ -95,6 +95,7 @@
     "title": "Backend & APIs",
     "subtitle": "Logique serveur, données et intégrations",
     "tags": [
+      "Laravel",
       "Node.js (via Next.js)",
       "Python (Flask)",
       "PHP / MySQL",
@@ -183,29 +184,29 @@
       ]
     },
     {
-      "company": "MCS Consulting",
-      "role": "Développeur Full-Stack — ERP & Applications Métiers",
-      "period": "Déc 2025 – Mai 2026",
-      "type": "Expérience professionnelle",
-      "logo": "Web",
-      "description": "Développeur Full-Stack chez MCS Consulting — cabinet spécialisé en conseil financier, solutions ERP et transformation digitale. Livraison de modules Dolibarr ERP sur mesure en PHP/MySQL, en parallèle d'applications web en production, de sites clients et d'un point de vente interne en cours de développement.",
+      "company": "A2 Holding",
+      "role": "Développeur Full-Stack & Ingénieur Réseau — Stagiaire",
+      "period": "Juil 2026 – Août 2026",
+      "type": "Stage",
+      "logo": "Server",
+      "description": "Stagiaire Développeur Full-Stack & Ingénieur Réseau chez A2 Holding — un groupe mauritanien opérant à la fois une unité de développement logiciel et une activité FAI / infrastructure réseau. Travail sur des plateformes web, APIs, PostgreSQL et environnements Linux, ainsi que sur l'infrastructure réseau du FAI et son automatisation.",
       "achievements": [
-        "Livraison de 6 modules Dolibarr ERP sur mesure en PHP/MySQL couvrant la chaîne client → fournisseur → commande → facture → paiement.",
-        "Construction d'APOSB — système complet de point de vente et gestion commerciale pour boutiques, supermarchés et commerces (ventes, stock, factures, paiements partiels, reporting MRU) sur Laravel + React/Vite + MySQL + Docker — et OMDHD, site institutionnel trilingue (AR/FR/EN, RTL) pour une ONG mauritanienne.",
-        "Intégration de REST APIs, amélioration des composants UI et support sur l'architecture backend, le debugging et le tuning MySQL, sous Git/GitHub et environnement Linux."
+        "Contribution à des plateformes web et APIs orientées production, construites sur PostgreSQL et une infrastructure Linux.",
+        "Intervention sur l'infrastructure réseau liée au FAI et son automatisation, à l'interface entre le niveau applicatif et le niveau réseau."
       ]
     },
     {
-      "company": "A2 Holding",
-      "role": "Développeur Full-Stack & Ingénieur Réseau — Stagiaire",
-      "period": "Juil 2026 – Présent",
-      "type": "Stage",
-      "logo": "Server",
-      "description": "Stagiaire Développeur Full-Stack & Ingénieur Réseau chez A2 Holding — un groupe mauritanien opérant à la fois une unité de développement logiciel et une activité FAI / infrastructure réseau. Actuellement en cours d'intégration dans un rôle couvrant plateformes web, APIs, PostgreSQL et environnements Linux, ainsi que l'automatisation et l'infrastructure réseau liée au FAI.",
+      "company": "MCS Consulting",
+      "role": "Développeur Full-Stack — ERP & Applications Métiers",
+      "period": "Déc 2025 – Présent",
+      "type": "Expérience professionnelle",
+      "logo": "Web",
+      "description": "Développeur Full-Stack chez MCS Consulting — cabinet nouakchottois spécialisé en conseil financier, solutions ERP et transformation digitale. Je conçois et livre des systèmes clients de bout en bout : plateformes métiers Laravel + React en production, modules Dolibarr ERP sur mesure et sites institutionnels — du besoin et du modèle de données jusqu'au déploiement chez le client.",
       "achievements": [
-        "Contribution à des plateformes web et APIs orientées production, construites sur PostgreSQL et une infrastructure Linux.",
-        "Intervention sur l'infrastructure réseau liée au FAI et l'automatisation, à l'interface entre le niveau applicatif et le niveau réseau.",
-        "Développement d'une vision de bout en bout — du code et des données au déploiement, à l'infrastructure et à la fiabilité réseau — au sein d'une entreprise qui opère à la fois le logiciel et les activités FAI."
+        "Construction de SOMAP RH — la plateforme RH et paie en production sur somap-grh.com pour un réseau national de stations-service : pointage GPS géolocalisé, congés, avances, paie et comptes de l'entreprise, avec 425 tests automatisés et CI.",
+        "Construction d'une plateforme de gestion du patrimoine foncier (acquisitions, projets, hypothèques, ventes, 8 familles de rapports) sur Laravel 12 + React 19, avec RBAC à 5 rôles, piste d'audit complète et 641 tests automatisés.",
+        "Livraison de 6 modules Dolibarr ERP sur mesure en PHP/MySQL — dont le suivi des importations internationales de la CAMEC (workflow en 15 étapes, Incoterms 2020, KPI), la fabrication avec PMP, le commerce et le reporting financier, la gestion de parc et carburant, et la gestion du courrier.",
+        "Construction d'APOSB (point de vente et gestion commerciale sur Laravel + React + MySQL + Docker) et d'OMDHD, site institutionnel trilingue AR/FR/EN pour une ONG mauritanienne."
       ]
     }
   ],
@@ -247,9 +248,9 @@
   ],
   "resume.section": "CV",
   "resume.title": "Envie de tout le détail ?",
-  "resume.description": "Téléchargez mon CV prêt pour recruteurs. Développeur Full-Stack avec des projets mobile, web et entreprise déjà livrés sur Next.js, Laravel, Flutter, Supabase, TypeScript, PHP et Dolibarr — incluant APOSB (POS et gestion commerciale) et OMDHD (site institutionnel trilingue) — plus du networking niveau CCNA et de l'automatisation Python.",
+  "resume.description": "Téléchargez mon CV prêt pour recruteurs. Développeur Full-Stack avec des systèmes en production sur Laravel, React, Next.js, Flutter, Supabase, PHP et Dolibarr — dont SOMAP RH (RH et paie, en ligne), une plateforme de gestion du patrimoine foncier et le suivi des importations de la CAMEC — plus du networking niveau CCNA et de l'automatisation Python.",
   "resume.cardTitle": "Mon CV — ATS-friendly, recruteur-ready",
-  "resume.lastUpdate": "Mis à jour en Juin 2026",
+  "resume.lastUpdate": "Mis à jour en octobre 2026",
   "resume.button": "Voir le CV",
   "resume.contactButton": "Lancer la discussion",
   "contact.email_label": "E-mail",
@@ -321,8 +322,56 @@
   ],
   "projects.items": [
     {
+      "title": "SOMAP RH",
+      "description": "Plateforme RH et paie en production pour SOMAP, réseau mauritanien de stations-service, dépôts de gaz et agences. Pointage géolocalisé décidé côté serveur (Haversine), détection automatique des absences, circuits de validation des congés et avances, paie mensuelle avec retenues détaillées, comptes caisse et banque de l'entreprise avec un journal inaltérable, et un explorateur de rapports avec export Excel plus un rapport de présence quotidien envoyé sur WhatsApp. Les montants sont traités en décimal dans des transactions verrouillées et idempotentes, avec une policy sur chaque route — 425 tests automatisés et des parcours Playwright en CI.",
+      "tags": [
+        "Laravel 13",
+        "React",
+        "TypeScript",
+        "Inertia.js",
+        "MySQL",
+        "Playwright",
+        "GitHub Actions"
+      ],
+      "category": "Web",
+      "image": "/projects/somap-dashboard.jpg",
+      "demo": "https://somap-grh.com",
+      "displayUrl": "somap-grh.com",
+      "featured": true
+    },
+    {
+      "title": "Patrimoine Foncier",
+      "description": "Plateforme de gestion du patrimoine foncier : terrains, acquisitions avec paiements échelonnés, projets d'investissement multi-terrains, dépenses, hypothèques et garanties, et ventes jusqu'au résultat financier. Tableau de bord exécutif avec tendances sur 12 mois et alertes, et 8 familles de rapports filtrables exportées en Excel et PDF. Architecture Laravel orientée domaine (actions, policies et presenters par domaine), RBAC à 5 rôles, piste d'audit complète et aucune donnée financière ou légale supprimée physiquement — couverte par 641 tests automatisés en CI.",
+      "tags": [
+        "Laravel 12",
+        "React 19",
+        "TypeScript",
+        "Inertia.js",
+        "shadcn/ui",
+        "MySQL",
+        "PHPUnit"
+      ],
+      "category": "Web",
+      "featured": true
+    },
+    {
+      "title": "CAMEC Import Tracking",
+      "description": "Module Dolibarr pour la CAMEC, centrale d'achat mauritanienne des médicaments et équipements médicaux, qui remplace son suivi Excel des commandes fournisseurs internationales. Chaque bon de commande devient un dossier avec un ou plusieurs envois suivant 15 étapes configurables — statut et retards calculés, historique inaltérable des révisions de dates, obligations Incoterms 2020, validation des conteneurs ISO 6346, check-list documentaire par envoi, relances fournisseurs et transitaires, et les 6 KPI de la CAMEC sur un tableau de bord orienté action. Livré avec une revue de sécurité, des performances mesurées sur 5 000 dossiers, des guides utilisateur et administrateur et un kit de recette.",
+      "tags": [
+        "PHP",
+        "MySQL",
+        "Dolibarr",
+        "Incoterms 2020",
+        "KPI Dashboard",
+        "ERP"
+      ],
+      "category": "ERP",
+      "displayUrl": "Supply-chain tracking",
+      "featured": true
+    },
+    {
       "title": "Traiteurs App",
-      "description": "Plateforme de traiteur Flutter + Supabase publiée sur l'App Store. Connecte clients, traiteurs et livreurs en temps réel, avec intégration des rails de mobile-money mauritaniens (Bankily, Masrivi, Sedad). Backend Supabase avec Auth, Postgres, Storage, Realtime et Row-Level Security.",
+      "description": "Plateforme de traiteurs Flutter + Supabase disponible sur l'App Store et Google Play, qui connecte clients, traiteurs et livreurs en temps réel. Développeur principal dans une petite équipe (environ 60 % des 1 500 commits) : wallet et codes crédit avec scan QR, suivi GPS des livreurs, diffusion des livraisons aux livreurs proches, rails mobile-money mauritaniens (Bankily, Masrivi, Sedad), tâches planifiées sur GitHub Actions, et une console d'exploitation React + TypeScript avec carte des livreurs en direct, commissions et recherche OTP. Backend sur Supabase Auth, Postgres (PL/pgSQL), Storage, Realtime et Row-Level Security.",
       "tags": [
         "Flutter",
         "Dart",
@@ -351,7 +400,21 @@
       ],
       "category": "Web",
       "image": "/projects/aposb-dashboard.png",
-      "github": "https://github.com/AbdellahiAhmed/APOSB",
+      "featured": true
+    },
+    {
+      "title": "Fabrication ERP",
+      "description": "Module de production et fabrication pour Dolibarr : achats de matières premières et d'emballages, cycles de production avec PMP par entrepôt, bons de réception et de livraison, ventes directes, à terme et de matières premières, situations des achats et des ventes exportées en PDF et CSV, journal des dépenses et paie avec dettes des employés. Documents PDF en arabe, devise MRU, migrations SQL datées, et garde-fous côté serveur contre les doubles envois et les incohérences stock/factures.",
+      "tags": [
+        "PHP",
+        "MySQL",
+        "Dolibarr",
+        "Weighted Average Cost",
+        "Arabic PDF",
+        "ERP"
+      ],
+      "category": "ERP",
+      "displayUrl": "Manufacturing ERP",
       "featured": true
     },
     {
@@ -367,8 +430,25 @@
       ],
       "category": "Réseau",
       "image": "/autonetconfig/dashboard.png",
-      "github": "https://github.com/AbdellahiAhmed/AutoNetConfig",
       "featured": true
+    },
+    {
+      "title": "OxCoreX",
+      "description": "Plateforme mobile-first de trading et d'investissement crypto sur Next.js 16 (App Router, Server Actions), Supabase et Tailwind CSS v4 — une app utilisateur en arabe RTL et un panneau admin desktop en anglais. Dépôts USDT TRC20, retraits protégés par mot de passe de transaction, vérification KYC, parrainage avec récompenses à l'inscription et au dépôt, et notifications, le tout sur Supabase Auth, Postgres, Row-Level Security et accès par rôle.",
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "Supabase",
+        "PostgreSQL",
+        "Row-Level Security",
+        "Admin Dashboard"
+      ],
+      "category": "Web",
+      "image": "/projects_images/oxcorex_project.png",
+      "type": "mobile",
+      "featured": true,
+      "demo": "https://oxcorex.com",
+      "displayUrl": "oxcorex.com"
     },
     {
       "title": "OMDHD",
@@ -401,22 +481,23 @@
       "category": "Web",
       "image": "/projects_images/sadaramedia.png",
       "displayUrl": "sadaramedia.com",
-      "featured": true
+      "featured": true,
+      "demo": "https://sadaramedia.com"
     },
     {
-      "title": "OxCoreX",
-      "description": "Plateforme de trading crypto full-stack développée avec Next.js, TypeScript, Supabase et Tailwind CSS. Portefeuille USDT, parcours KYC, système de parrainage, notifications et panel d'administration complet — backend Supabase avec Auth, Postgres, Row-Level Security et accès basé sur les rôles.",
+      "title": "GestionParc",
+      "description": "Module de gestion de parc pour Dolibarr : véhicules, matériel et bases, maintenance avec pièces jointes, suivi du carburant avec sélecteurs de recherche et rapports PDF, ravitaillement des ambulances (SAMU) avec nombre d'interventions, et un module de station carburant interne relié aux fiches carburant. Actions protégées contre le CSRF, avec guides de déploiement et d'utilisation.",
       "tags": [
-        "Next.js",
-        "TypeScript",
-        "Supabase",
-        "PostgreSQL",
-        "Row-Level Security",
-        "Admin Dashboard"
+        "PHP",
+        "MySQL",
+        "JavaScript",
+        "Dolibarr",
+        "Docker",
+        "ERP"
       ],
-      "category": "Web",
-      "image": "/projects_images/oxcorex_project.png",
-      "type": "mobile",
+      "category": "ERP",
+      "image": "/projects_images/module_gestionparc.png",
+      "displayUrl": "Fleet & fuel management",
       "featured": true
     },
     {
@@ -433,22 +514,6 @@
       "image": "/projects_images/mcs_consulting.png",
       "displayUrl": "mcsconsulting.vercel.app",
       "demo": "https://mcsconsulting.mr",
-      "featured": true
-    },
-    {
-      "title": "GestionParc",
-      "description": "Module ERP complet de gestion de flotte pour Dolibarr. Couvre le cycle de vie complet des véhicules : suivi en temps réel, maintenance et gestion du carburant. A numérisé l'ensemble du flux de gestion de flotte, réduisant considérablement le temps de suivi manuel et fournissant des données opérationnelles en direct pour plus de 50 véhicules.",
-      "tags": [
-        "PHP",
-        "MySQL",
-        "JavaScript",
-        "Dolibarr",
-        "Docker",
-        "ERP"
-      ],
-      "category": "ERP",
-      "image": "/projects_images/module_gestionparc.png",
-      "displayUrl": "Gestion Parc Auto-Mobile",
       "featured": true
     }
   ],
