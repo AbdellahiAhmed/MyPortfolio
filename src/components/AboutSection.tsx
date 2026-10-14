@@ -59,7 +59,7 @@ const AboutSection = () => {
                 className="block aspect-[4/5] w-full object-cover border border-slate-200 dark:border-slate-800"
               />
               <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">
-                Abdellahi Ahmed Ahmed Baba — Nouakchott, MR
+                Abdellahi Ahmed Ahmed Baba — Tunis, TN
               </figcaption>
             </figure>
           </div>

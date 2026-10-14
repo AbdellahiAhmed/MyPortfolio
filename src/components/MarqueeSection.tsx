@@ -18,7 +18,7 @@ const SECONDARY_TOKENS = [
   'Full-stack developer',
   'Dolibarr ERP modules',
   'CCNA · EVE-NG · GNS3',
-  'Nouakchott, Mauritania',
+  'Tunis · Nouakchott',
 ];
 
 const MarqueeSection = ({ variant = 'primary' }: MarqueeSectionProps) => {

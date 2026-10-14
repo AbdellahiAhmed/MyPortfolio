@@ -172,7 +172,7 @@ const ContactSection = () => {
                 Location
               </p>
               <p className="font-serif text-lg italic text-slate-700 dark:text-slate-300">
-                Nouakchott, Mauritania
+                Tunis, Tunisia · Remote
               </p>
             </div>
           </aside>

@@ -24,7 +24,7 @@ const Footer = () => {
               {t('footer.local_time')} · {t('footer.location')}
             </p>
             <div className="font-mono text-xl text-slate-950 dark:text-white tabular-nums">
-              <LiveClock timezone="Africa/Nouakchott" format="24h" />
+              <LiveClock timezone="Africa/Tunis" format="24h" />
             </div>
           </div>
         </div>

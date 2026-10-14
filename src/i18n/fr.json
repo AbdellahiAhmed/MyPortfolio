@@ -2,10 +2,10 @@
   "hero.greeting": "Abdellahi Ahmed",
   "hero.name": "Abdellahi Ahmed",
   "hero.eyebrow_role": "En production",
-  "hero.eyebrow_location": "Nouakchott · MR",
+  "hero.eyebrow_location": "Tunis · TN",
   "hero.headline_line1": "Je construis des logiciels",
   "hero.headline_line2": "de l'écran au câble.",
-  "hero.description": "Développeur full-stack qui livre du produit et de l'infrastructure. Laravel, React, Next.js, Flutter, Supabase et TypeScript côté produit ; PHP, MySQL et Dolibarr quand l'ERP d'entreprise rentre en jeu. Certifié CCNA, avec de l'automatisation réseau Python sur labos EVE-NG (Netmiko, Flask, Nmap) quand la couche réseau demande qu'on y réfléchisse. Peu de devs couvrent à la fois le produit et l'infrastructure dessous — c'est exactement le point.",
+  "hero.description": "Développeur full-stack qui livre du produit et de l'infrastructure. Laravel, React, Next.js, Flutter, Supabase et TypeScript côté produit ; PHP, MySQL et Dolibarr quand l'ERP d'entreprise rentre en jeu. Formé au CCNA, avec de l'automatisation réseau Python sur labos EVE-NG (Netmiko, Flask, Nmap) quand la couche réseau demande qu'on y réfléchisse. Peu de devs couvrent à la fois le produit et l'infrastructure dessous — c'est exactement le point.",
   "hero.currently_label": "En ce moment",
   "hero.currently_text": "Chez MCS Consulting — je construis les systèmes que les clients utilisent au quotidien : SOMAP RH, le système RH et paie utilisé dans les stations-service de SOMAP, une plateforme de gestion du patrimoine foncier, et des modules ERP sur mesure pour des organisations comme la CAMEC. Stage full-stack et ingénierie réseau terminé chez A2 Holding (juil. – août 2026). Disponible pour des postes full-stack, backend et d'automatisation réseau.",
   "hero.subtitle1": "Développeur Full-Stack",
@@ -15,12 +15,12 @@
   "hero.cta_contact": "Me contacter",
   "hero.scroll": "Défiler pour explorer",
   "hero.scroll_down": "défiler",
-  "hero.metric_location_value": "Nouakchott, Mauritanie",
+  "hero.metric_location_value": "Tunis, Tunisie",
   "about.section": "À propos de moi",
   "about.title": "Mon Parcours",
   "about.subtitle": "Développeur Full-Stack livrant des applications web, mobiles, ERP et métiers en production — adossées à une base CCNA en réseaux et à de l'automatisation réseau en Python.",
   "about.my_short_story": "Mon Histoire",
-  "about.story1": "Je suis Développeur Full-Stack basé à Nouakchott, Mauritanie. Je construis des logiciels sur lesquels les gens comptent au travail — SOMAP RH, le système RH et paie utilisé chaque jour par un réseau national de stations-service ; une plateforme de gestion du patrimoine foncier ; une application mobile publiée sur l'App Store et Google Play ; six modules Dolibarr ERP sur mesure en production ; et AutoNetConfig, un outil qui automatise la configuration des équipements réseau. Laravel, React, Next.js et Flutter côté produit ; PHP, MySQL et Dolibarr pour l'ERP d'entreprise ; CCNA en réseaux quand le câble compte.",
+  "about.story1": "Je suis Développeur Full-Stack mauritanien, aujourd'hui basé à Tunis pour mon Master en Sécurité des Systèmes d'Information. Je construis des logiciels sur lesquels les gens comptent au travail — SOMAP RH, le système RH et paie utilisé chaque jour par un réseau national de stations-service ; une plateforme de gestion du patrimoine foncier ; une application mobile publiée sur l'App Store et Google Play ; six modules Dolibarr ERP sur mesure en production ; et AutoNetConfig, un outil qui automatise la configuration des équipements réseau. Laravel, React, Next.js et Flutter côté produit ; PHP, MySQL et Dolibarr pour l'ERP d'entreprise ; CCNA en réseaux quand le câble compte.",
   "about.story2": "Chez MCS Consulting (depuis déc. 2025), j'accompagne les systèmes métiers de la première réunion avec le client jusqu'à leur utilisation quotidienne. SOMAP RH suit le personnel des stations du pointage à la pompe jusqu'au bulletin de paie, avec une paie et des paiements fiables pour l'entreprise. Pour la CAMEC, centrale d'achat nationale des médicaments, j'ai remplacé le suivi Excel des commandes internationales par un parcours clair étape par étape, des check-lists de documents et des indicateurs. En parallèle : un module ERP de fabrication, APOSB (point de vente et gestion commerciale) et OMDHD, un site institutionnel trilingue arabe, français et anglais. Sur mon temps libre, j'ai dirigé le développement de Traiteurs, une application de traiteurs avec les paiements mobiles Bankily, Masrivi et Sedad, et co-construit AutoNetConfig pendant mon stage chez Moov Mauritel.",
   "about.story3": "Les bases — APIs, bases de données, Docker, Linux, Git — vont de soi. Ce que j'apporte, c'est la largeur : des systèmes qui tournent dans de vraies entreprises, une vraie expérience ERP, et une formation réseau qui me permet de comprendre ce qui se passe sous l'application — renforcée par mon stage chez A2 Holding, où le logiciel rencontre l'infrastructure d'un FAI. Je suis ouvert à des postes full-stack, backend et d'automatisation réseau où il faut tenir toute la stack, de l'écran au câble.",
   "skills.section": "Compétences Techniques",
@@ -31,7 +31,7 @@
   "skills.categories.network": "Réseaux & Cloud",
   "skills.categories.tools": "DevOps & Outils",
   "skills.networking.title": "Réseaux & Infrastructure",
-  "skills.networking.ccna": "Certification CCNA",
+  "skills.networking.ccna": "Formation CCNA",
   "skills.networking.gns3": "GNS3 & EVE-NG",
   "skills.networking.automation": "Automatisation Réseau",
   "skills.networking.linux": "Systèmes Linux",
@@ -50,7 +50,7 @@
       "title": "Ingénierie & Automatisation Réseau",
       "subtitle": "Cisco CCNA, Python, Netmiko, Flask, Nmap, EVE-NG, GNS3",
       "metrics": [
-        "Certifié CCNA",
+        "Formation CCNA (2024)",
         "Toolkit Netmiko + Flask",
         "Validation labo EVE-NG"
       ],
@@ -140,7 +140,7 @@
       "Responsive Design"
     ]
   },
-  "skills.badge": "CCNA (2024) • EVE-NG (2025) • Python — Udemy (2025) • Topologies multi-routeurs / multi-switches",
+  "skills.badge": "Formation CCNA (2024) • EVE-NG (2025) • Python — Udemy (2025) • Master en Sécurité des SI (ISI Tunis)",
   "skills.cta_subtitle": "Travaillons ensemble",
   "skills.cta_text": "Me contacter",
   "experience.section": "Expériences",
@@ -173,7 +173,7 @@
     },
     {
       "company": "Moov Mauritel",
-      "role": "Stagiaire Réseaux & Systèmes",
+      "role": "Stagiaire Administration & Automatisation Réseau",
       "period": "Juin 2025 – Août 2025",
       "type": "Stage",
       "logo": "Network",
@@ -230,6 +230,14 @@
     "Documentation"
   ],
   "education.schools": [
+    {
+      "institution": "ISI — Institut Supérieur d'Informatique, Tunis",
+      "degree": "Master en Sécurité des Systèmes d'Information et des Infrastructures (SSII)",
+      "period": "2026 – Présent",
+      "description": "Master axé sur la sécurisation des systèmes d'information et des infrastructures : sécurité des réseaux et des systèmes, architectures sécurisées et protection des données et des services — la couche sécurité au-dessus de mon parcours en développement et en réseaux. Suivi à Tunis en parallèle de mon travail à distance avec MCS Consulting.",
+      "logo": "GraduationCap",
+      "link": "https://isi.rnu.tn"
+    },
     {
       "institution": "Institut Supérieur de Comptabilité et d'Administration des Entreprises de Mauritanie (ISCAE)",
       "degree": "Licence en Réseaux Informatiques et Télécommunications",
@@ -527,7 +535,7 @@
   "footer.whatsapp": "WhatsApp",
   "footer.github": "GitHub",
   "footer.local_time": "HEURE LOCALE",
-  "footer.location": "Nouakchott, Mauritanie",
+  "footer.location": "Tunis, Tunisie",
   "footer.version": "VERSION",
   "footer.edition": "Édition",
   "footer.credit": "Conçu et développé par Abdellahi Ahmed",
