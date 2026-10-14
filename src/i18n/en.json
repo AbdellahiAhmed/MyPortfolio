@@ -189,10 +189,11 @@
       "period": "Jul 2026 – Aug 2026",
       "type": "Internship",
       "logo": "Server",
-      "description": "Full-Stack Developer & Network Engineer Intern at A2 Holding — a Mauritanian group running both a software development unit and an ISP / network infrastructure business. Worked across web platforms, APIs, PostgreSQL and Linux environments alongside ISP network infrastructure and automation.",
+      "description": "Full-Stack Developer & Network Engineer Intern at A2 Holding — a Mauritanian group running both a software development unit and an ISP / network infrastructure business. In two months I was responsible for the company's complete payment system and contributed to in-house products across software and network infrastructure.",
       "achievements": [
-        "Contributed to production-oriented web platforms and APIs built on PostgreSQL and Linux-based infrastructure.",
-        "Worked on ISP-related network infrastructure and automation, bridging application-level and network-level systems."
+        "Responsible for the company's complete payment system, end to end.",
+        "Contributed to the design of a mobile application built in-house.",
+        "Worked across web platforms, APIs, PostgreSQL and Linux, alongside the company's ISP network infrastructure."
       ]
     },
     {

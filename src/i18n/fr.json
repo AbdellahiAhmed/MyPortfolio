@@ -189,10 +189,11 @@
       "period": "Juil 2026 – Août 2026",
       "type": "Stage",
       "logo": "Server",
-      "description": "Stagiaire Développeur Full-Stack & Ingénieur Réseau chez A2 Holding — un groupe mauritanien opérant à la fois une unité de développement logiciel et une activité FAI / infrastructure réseau. Travail sur des plateformes web, APIs, PostgreSQL et environnements Linux, ainsi que sur l'infrastructure réseau du FAI et son automatisation.",
+      "description": "Stagiaire Développeur Full-Stack & Ingénieur Réseau chez A2 Holding — un groupe mauritanien qui opère à la fois une unité de développement logiciel et une activité FAI / infrastructure réseau. En deux mois, j'ai été responsable du système de paiement complet de l'entreprise et j'ai contribué à des produits internes, entre logiciel et infrastructure réseau.",
       "achievements": [
-        "Contribution à des plateformes web et APIs orientées production, construites sur PostgreSQL et une infrastructure Linux.",
-        "Intervention sur l'infrastructure réseau liée au FAI et son automatisation, à l'interface entre le niveau applicatif et le niveau réseau."
+        "Responsable du système de paiement complet de l'entreprise, de bout en bout.",
+        "Contribution au design d'une application mobile développée en interne.",
+        "Travail sur des plateformes web, APIs, PostgreSQL et Linux, en lien avec l'infrastructure réseau FAI de l'entreprise."
       ]
     },
     {
