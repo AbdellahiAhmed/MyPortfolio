@@ -7,7 +7,7 @@
   "hero.headline_line2": "de l'écran au câble.",
   "hero.description": "Ingénieur logiciel, réseau et sécurité. Je construis les systèmes métiers que les entreprises utilisent chaque jour, j'automatise les réseaux qui les portent, et je me spécialise aujourd'hui dans leur sécurisation avec un Master en Sécurité des Systèmes d'Information. Laravel, React, Next.js, PostgreSQL et Flutter côté produit ; Dolibarr pour l'ERP d'entreprise ; Python et réseaux niveau Cisco côté infrastructure. Peu d'ingénieurs couvrent le produit, le réseau et sa sécurité — c'est exactement le point.",
   "hero.currently_label": "En ce moment",
-  "hero.currently_text": "Chez MCS Consulting — je construis les systèmes que les clients utilisent au quotidien : SOMAP RH, le système RH et paie utilisé dans les stations-service de SOMAP, une plateforme de gestion du patrimoine foncier, et des modules ERP sur mesure pour des organisations comme la CAMEC. Stage full-stack et ingénierie réseau terminé chez A2 Holding (juil. – août 2026). Disponible pour des postes full-stack, backend et d'automatisation réseau.",
+  "hero.currently_text": "Chez MCS Consulting — je construis les systèmes que les clients utilisent au quotidien : SOMAP RH, le système RH et paie utilisé dans les stations-service de SOMAP, OpticOS, la plateforme des boutiques d'optique sur abonnement, une plateforme de gestion du patrimoine foncier, et des modules ERP sur mesure pour des organisations comme la CAMEC. Stage full-stack et ingénierie réseau terminé chez A2 Holding (juil. – août 2026). Disponible pour des postes full-stack, backend et d'automatisation réseau.",
   "hero.subtitle1": "Ingénieur Logiciel, Réseau & Sécurité",
   "hero.subtitle2": "Master en Sécurité des Systèmes d'Information",
   "hero.cta": "Projets sélectionnés",
@@ -21,8 +21,8 @@
   "about.subtitle": "Ingénieur logiciel, réseau et sécurité — je construis des systèmes métiers en production, j'automatise les réseaux qui les portent et je sécurise l'ensemble.",
   "about.my_short_story": "Mon Histoire",
   "about.story1": "Je suis Développeur Full-Stack mauritanien, aujourd'hui basé à Tunis pour mon Master en Sécurité des Systèmes d'Information. Je construis des logiciels sur lesquels les gens comptent au travail — SOMAP RH, le système RH et paie utilisé chaque jour par un réseau national de stations-service ; une plateforme de gestion du patrimoine foncier ; une application mobile publiée sur l'App Store et Google Play ; six modules Dolibarr ERP sur mesure en production ; et AutoNetConfig, un outil qui automatise la configuration des équipements réseau. Laravel, React, Next.js et Flutter côté produit ; PHP, MySQL et Dolibarr pour l'ERP d'entreprise ; CCNA en réseaux quand le câble compte.",
-  "about.story2": "Chez MCS Consulting (depuis déc. 2025), j'accompagne les systèmes métiers de la première réunion avec le client jusqu'à leur utilisation quotidienne. SOMAP RH suit le personnel des stations du pointage à la pompe jusqu'au bulletin de paie, avec une paie et des paiements fiables pour l'entreprise. Pour la CAMEC, centrale d'achat nationale des médicaments, j'ai remplacé le suivi Excel des commandes internationales par un parcours clair étape par étape, des check-lists de documents et des indicateurs. En parallèle : un module ERP de fabrication, APOSB (point de vente et gestion commerciale) et OMDHD, un site institutionnel trilingue arabe, français et anglais. Sur mon temps libre, j'ai dirigé le développement de Traiteurs, une application de traiteurs avec les paiements mobiles Bankily, Masrivi et Sedad, et co-construit AutoNetConfig pendant mon stage chez Moov Mauritel.",
-  "about.story3": "Les bases — APIs, bases de données, Docker, Linux, Git — vont de soi. Ce que j'apporte, c'est la largeur : des systèmes qui tournent dans de vraies entreprises, une vraie expérience ERP, et une formation réseau qui me permet de comprendre ce qui se passe sous l'application — renforcée par mon stage chez A2 Holding, où le logiciel rencontre l'infrastructure d'un FAI. Je suis ouvert à des postes full-stack, backend et d'automatisation réseau où il faut tenir toute la stack, de l'écran au câble.",
+  "about.story2": "Chez MCS Consulting (depuis déc. 2025), j'accompagne les systèmes métiers de la première réunion avec le client jusqu'à leur utilisation quotidienne. SOMAP RH suit le personnel des stations du pointage à la pompe jusqu'au bulletin de paie, avec une paie et des paiements fiables pour l'entreprise. Pour la CAMEC, centrale d'achat nationale des médicaments, j'ai remplacé le suivi Excel des commandes internationales par un parcours clair étape par étape, des check-lists de documents et des indicateurs. J'ai aussi conçu, développé et lancé OpticOS, la plateforme sur abonnement des boutiques d'optique, du cahier des charges à la mise en production en une semaine, en français et en arabe, et j'en assure l'exploitation. En parallèle : un module ERP de fabrication, APOSB (point de vente et gestion commerciale) et OMDHD, un site institutionnel trilingue arabe, français et anglais. Sur mon temps libre, j'ai dirigé le développement de Traiteurs, une application de traiteurs avec les paiements mobiles Bankily, Masrivi et Sedad, et co-construit AutoNetConfig pendant mon stage chez Moov Mauritel.",
+  "about.story3": "Les outils changent, et avec l'IA ils changent plus vite que jamais. Mes fondations, elles, restent : des données toujours justes, de l'argent compté une seule fois, des accès exactement comme il faut, et des mises en ligne testées avant de partir. Sur ces fondations, ce que j'apporte, c'est la largeur : des systèmes qui tournent dans de vraies entreprises, une vraie expérience ERP, et une formation réseau qui me permet de comprendre ce qui se passe sous l'application — renforcée par mon stage chez A2 Holding, où le logiciel rencontre l'infrastructure d'un FAI. Je suis ouvert à des postes full-stack, backend et d'automatisation réseau où il faut tenir toute la stack, de l'écran au câble.",
   "skills.section": "Compétences Techniques",
   "skills.title": "Mon Expertise",
   "skills.subtitle": "Trois piliers qui couvrent toute la stack — l'ingénierie produit à l'écran, le backend et les systèmes d'entreprise dessous, les réseaux et leur sécurité sur le câble.",
@@ -205,6 +205,7 @@
       "description": "Développeur Full-Stack chez MCS Consulting — cabinet nouakchottois spécialisé en conseil financier, solutions ERP et transformation digitale. Je conçois et livre des systèmes métiers pour les clients de bout en bout, de la compréhension du besoin jusqu'à l'utilisation quotidienne.",
       "achievements": [
         "Construction de SOMAP RH, le système RH et paie utilisé chaque jour par SOMAP dans ses stations-service, dépôts de gaz et agences : pointage mobile, congés, avances sur salaire, paie et comptes de l'entreprise.",
+        "Conception et développement d'OpticOS, le logiciel sur abonnement des boutiques d'optique, du cahier des charges à la mise en production en une semaine : comptoir, ordonnances et commandes de lunettes, stock, caisse et rapports, en français et en arabe.",
         "Construction d'une plateforme de gestion du patrimoine foncier couvrant achats, projets, hypothèques et ventes, avec des accès par rôle et un historique complet de chaque modification.",
         "Livraison de 6 modules Dolibarr ERP sur mesure, dont le suivi des commandes internationales de la CAMEC, la fabrication, le commerce et le reporting financier, et la gestion de parc et carburant.",
         "Construction d'APOSB (point de vente et gestion commerciale) et d'OMDHD, site institutionnel trilingue arabe, français et anglais pour une ONG mauritanienne."
@@ -257,9 +258,9 @@
   ],
   "resume.section": "CV",
   "resume.title": "Envie de tout le détail ?",
-  "resume.description": "Téléchargez mon CV prêt pour recruteurs. Développeur Full-Stack avec des systèmes métiers utilisés au quotidien — dont SOMAP RH (RH et paie), une plateforme de gestion du patrimoine foncier et le suivi des commandes de la CAMEC — construits avec Laravel, React, Next.js, Flutter et Dolibarr, plus du réseau niveau CCNA et de l'automatisation Python.",
+  "resume.description": "Téléchargez mon CV prêt pour recruteurs. Développeur Full-Stack avec des systèmes métiers utilisés au quotidien — dont SOMAP RH (RH et paie), OpticOS (logiciel des boutiques d'optique), une plateforme de gestion du patrimoine foncier et le suivi des commandes de la CAMEC — construits avec Laravel, React, Next.js, Flutter et Dolibarr, plus du réseau niveau CCNA et de l'automatisation Python.",
   "resume.cardTitle": "Mon CV — ATS-friendly, recruteur-ready",
-  "resume.lastUpdate": "Mis à jour en octobre 2026",
+  "resume.lastUpdate": "Mis à jour en novembre 2026",
   "resume.button": "Voir le CV",
   "resume.contactButton": "Lancer la discussion",
   "contact.email_label": "E-mail",
@@ -343,6 +344,21 @@
       "category": "Web",
       "image": "/projects/somap-dashboard.jpg",
       "displayUrl": "Utilisé au quotidien par SOMAP",
+      "featured": true
+    },
+    {
+      "title": "OpticOS",
+      "description": "Le logiciel sur abonnement des boutiques d'optique, construit pour MCS Consulting et en ligne depuis novembre 2026. Une seule application pour toute la boutique : ventes au comptoir avec lecture des codes-barres, ordonnances et commandes de lunettes avec la date promise au client, stock et fournisseurs, caisse du jour, et un tableau de bord qui montre ce que doivent les clients, ce qui est dû aux fournisseurs et le bénéfice du mois. Chaque boutique abonnée a ses données séparées des autres, chaque employé (gérant, vendeur, opticien, caissier) ne voit que ce que son rôle permet, et les ordonnances sont protégées comme des données de santé. En français et en arabe, de droite à gauche, et installable sur le téléphone comme une application. Chaque vente, paiement et mouvement de stock est enregistré, les sauvegardes sont chiffrées chaque jour, et plus de 530 tests automatiques passent avant chaque mise en ligne.",
+      "tags": [
+        "Logiciel sur abonnement",
+        "Point de vente",
+        "Stock et caisse",
+        "Français et arabe"
+      ],
+      "category": "Web",
+      "image": "/projects/opticos-dashboard.jpg",
+      "demo": "https://opticos-mr.com",
+      "displayUrl": "opticos-mr.com",
       "featured": true
     },
     {

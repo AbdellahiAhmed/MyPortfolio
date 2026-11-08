@@ -7,7 +7,7 @@
   "hero.headline_line2": "from the screen to the wire.",
   "hero.description": "Software, network and security engineer. I build the business systems companies run on every day, automate the networks beneath them, and I'm now specialising in securing both through a Master's in Information Systems Security. Laravel, React, Next.js, PostgreSQL and Flutter for products; Dolibarr for enterprise ERP; Python and Cisco-grade networking for infrastructure. Few engineers cover the product, the network and its security — that's the point.",
   "hero.currently_label": "Currently",
-  "hero.currently_text": "At MCS Consulting — building the business systems clients run on every day: SOMAP RH, the HR and payroll system used across SOMAP's fuel stations, a land-portfolio management platform, and custom ERP modules for organisations such as CAMEC. Recently completed a full-stack and network engineering internship at A2 Holding (Jul – Aug 2026). Open to full-stack, backend and network-automation opportunities.",
+  "hero.currently_text": "At MCS Consulting — building the business systems clients run on every day: SOMAP RH, the HR and payroll system used across SOMAP's fuel stations, OpticOS, a subscription platform for optical shops, a land-portfolio management platform, and custom ERP modules for organisations such as CAMEC. Recently completed a full-stack and network engineering internship at A2 Holding (Jul – Aug 2026). Open to full-stack, backend and network-automation opportunities.",
   "hero.subtitle1": "Software, Network & Security Engineer",
   "hero.subtitle2": "Master's in Information Systems Security",
   "hero.cta": "Selected work",
@@ -21,8 +21,8 @@
   "about.subtitle": "Software, network and security engineer — building production business systems, automating the networks beneath them, and securing both.",
   "about.my_short_story": "My Short Story",
   "about.story1": "I'm a Mauritanian Full-Stack Developer, now based in Tunis for my Master's in Information Systems Security. I build software people rely on at work — SOMAP RH, the HR and payroll system used every day by a national fuel-station network; a land-portfolio management platform; a mobile app published on the App Store and Google Play; six custom Dolibarr ERP modules in production; and AutoNetConfig, a toolkit that automates the configuration of network equipment. Laravel, React, Next.js and Flutter for products; PHP, MySQL and Dolibarr for enterprise ERP; CCNA networking when the wire matters.",
-  "about.story2": "At MCS Consulting (since Dec 2025) I take business systems from the first meeting with the client to daily use. SOMAP RH follows station staff from their clock-in at the pump to their payslip, with payroll and payments the company can trust. For CAMEC, the national medical procurement agency, I replaced the Excel follow-up of international orders with a clear step-by-step workflow, document checklists and indicators. Alongside: a manufacturing ERP module, APOSB (point of sale and commerce management) and OMDHD, a trilingual Arabic, French and English institutional website. On my own time I led the development of Traiteurs, a catering app with Bankily, Masrivi and Sedad mobile payments, and co-built AutoNetConfig during my Moov Mauritel internship.",
-  "about.story3": "The basics — APIs, databases, Docker, Linux, Git — are a given. What I bring is range: systems running in real businesses, hands-on ERP delivery, and a networking background that lets me understand what happens beneath the application — strengthened by my internship at A2 Holding, where software and ISP infrastructure meet. I'm open to full-stack, backend and network-automation roles where someone needs to hold the whole stack together, from the screen to the wire.",
+  "about.story2": "At MCS Consulting (since Dec 2025) I take business systems from the first meeting with the client to daily use. SOMAP RH follows station staff from their clock-in at the pump to their payslip, with payroll and payments the company can trust. For CAMEC, the national medical procurement agency, I replaced the Excel follow-up of international orders with a clear step-by-step workflow, document checklists and indicators. I also designed, built and launched OpticOS, the company's subscription platform for optical shops, from specification to production in one week, in French and Arabic, and I run its production. Alongside: a manufacturing ERP module, APOSB (point of sale and commerce management) and OMDHD, a trilingual Arabic, French and English institutional website. On my own time I led the development of Traiteurs, a catering app with Bankily, Masrivi and Sedad mobile payments, and co-built AutoNetConfig during my Moov Mauritel internship.",
+  "about.story3": "Tools change, and with AI they change faster than ever. My foundation doesn't: data that stays correct, money counted exactly once, access that is exactly right, and releases tested before they go live. On top of that foundation, what I bring is range: systems running in real businesses, hands-on ERP delivery, and a networking background that lets me understand what happens beneath the application — strengthened by my internship at A2 Holding, where software and ISP infrastructure meet. I'm open to full-stack, backend and network-automation roles where someone needs to hold the whole stack together, from the screen to the wire.",
   "skills.section": "Technical Skills",
   "skills.title": "My Expertise",
   "skills.subtitle": "Three pillars covering the whole stack — product engineering on the screen, backend and enterprise systems beneath, networks and their security on the wire.",
@@ -205,6 +205,7 @@
       "description": "Full-Stack Developer at MCS Consulting — a Nouakchott firm specialised in financial consulting, ERP solutions and digital transformation. I design and deliver business systems for clients end to end, from understanding the need to putting the system into daily use.",
       "achievements": [
         "Built SOMAP RH, the HR and payroll system SOMAP uses daily across its fuel stations, gas depots and agencies: mobile clock-in, leave, salary advances, payroll and company accounts.",
+        "Designed and built OpticOS, the company's subscription software for optical shops, taken from specification to production in one week: counter sales, prescriptions and glasses orders, stock, cash register and reports, in French and Arabic.",
         "Built a land-portfolio management platform covering purchases, projects, mortgages and sales, with role-based access and a full history of every change.",
         "Delivered 6 custom Dolibarr ERP modules, including international order tracking for CAMEC, manufacturing, trade and financial reporting, and fleet and fuel management.",
         "Built APOSB (point of sale and commerce management) and OMDHD, the trilingual Arabic, French and English institutional website for a Mauritanian NGO."
@@ -257,9 +258,9 @@
   ],
   "resume.section": "Resume",
   "resume.title": "Want the full picture?",
-  "resume.description": "Download my recruiter-ready CV. Full-Stack Developer with business systems in daily use — including SOMAP RH (HR and payroll), a land-portfolio management platform and CAMEC order tracking — built with Laravel, React, Next.js, Flutter and Dolibarr, plus CCNA networking and Python automation.",
+  "resume.description": "Download my recruiter-ready CV. Full-Stack Developer with business systems in daily use — including SOMAP RH (HR and payroll), OpticOS (software for optical shops), a land-portfolio management platform and CAMEC order tracking — built with Laravel, React, Next.js, Flutter and Dolibarr, plus CCNA networking and Python automation.",
   "resume.cardTitle": "My Resume — ATS-friendly, recruiter-ready",
-  "resume.lastUpdate": "Updated October 2026",
+  "resume.lastUpdate": "Updated November 2026",
   "resume.button": "View CV",
   "resume.contactButton": "Start a Conversation",
   "contact.email_label": "Email",
@@ -343,6 +344,21 @@
       "category": "Web",
       "image": "/projects/somap-dashboard.jpg",
       "displayUrl": "In daily use at SOMAP",
+      "featured": true
+    },
+    {
+      "title": "OpticOS",
+      "description": "Subscription software for optical shops, built for MCS Consulting and live since November 2026. One app runs the whole shop: counter sales with barcode scanning, eye prescriptions and glasses orders with the date promised to the customer, stock and suppliers, the daily cash register, and a dashboard showing what customers owe, what is owed to suppliers and the month's profit. Every subscribed shop has its data kept apart, each staff member (manager, seller, optician, cashier) sees only what their role allows, and eye prescriptions are treated as health data. Works in French and Arabic with full right-to-left layout and installs on a phone like an app. Every sale, payment and stock movement is recorded, backups are encrypted daily, and more than 530 automated tests run before each release.",
+      "tags": [
+        "Subscription software",
+        "Point of sale",
+        "Stock & cash",
+        "French & Arabic"
+      ],
+      "category": "Web",
+      "image": "/projects/opticos-dashboard.jpg",
+      "demo": "https://opticos-mr.com",
+      "displayUrl": "opticos-mr.com",
       "featured": true
     },
     {
