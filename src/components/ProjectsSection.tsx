@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ArrowUpRight } from 'lucide-react';
+import ProjectStage from './ProjectStage';
 
 interface Project {
   title: string;
@@ -8,6 +9,7 @@ interface Project {
   tags: string[];
   category?: string;
   image?: string;
+  mobileImage?: string;
   github?: string;
   demo?: string;
   featured?: boolean;
@@ -65,6 +67,10 @@ const ProjectsSection = () => {
   };
 
   const pad = (i: number) => String(i + 1).padStart(2, '0');
+  const addressOf = (p?: Project) => {
+    if (p?.demo) return new URL(p.demo).hostname.replace(/^www\./, '');
+    return p?.displayUrl?.includes('.') ? p.displayUrl : undefined;
+  };
 
   return (
     <section
@@ -224,6 +230,18 @@ const ProjectsSection = () => {
                     : t('projects.web_platform')}
                 </span>
               </div>
+
+              {active?.image && (
+                <ProjectStage
+                  key={active.title}
+                  title={active.title}
+                  image={active.image}
+                  mobileImage={active.mobileImage}
+                  type={active.type}
+                  address={addressOf(active)}
+                  animate={!reducedMotion}
+                />
+              )}
 
               {/* Title */}
               <h2 className="font-serif text-4xl sm:text-[2.8rem] leading-tight text-slate-950 dark:text-white mb-5">

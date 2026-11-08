@@ -333,7 +333,7 @@
   "projects.items": [
     {
       "title": "SOMAP RH",
-      "description": "Le système RH et paie utilisé chaque jour par SOMAP dans ses stations-service, dépôts de gaz et agences. Les employés pointent depuis leur téléphone sur leur lieu de travail, avec une vérification automatique de la position. Les RH gèrent congés, avances sur salaire et absences au même endroit, et la paie est calculée chaque mois avec chaque retenue expliquée sur le bulletin. La direction suit présences et paiements sur des tableaux de bord clairs, et un rapport de présence quotidien arrive sur WhatsApp. Conçu pour être fiable avec l'argent : aucun double paiement, un historique complet de chaque modification et des centaines de tests automatiques avant chaque mise en ligne.",
+      "description": "Le système RH et paie utilisé chaque jour par SOMAP dans ses stations-service, dépôts de gaz et agences. Les employés pointent depuis leur téléphone sur leur lieu de travail, avec une vérification automatique de la position. Les RH gèrent congés, avances sur salaire et absences au même endroit, et la paie est calculée chaque mois avec chaque retenue expliquée sur le bulletin. La direction suit présences et paiements sur des tableaux de bord clairs, et un rapport de présence quotidien arrive sur WhatsApp. Conçu pour être fiable avec l'argent : aucun double paiement et un historique complet de chaque modification.",
       "tags": [
         "Laravel",
         "React",
@@ -348,7 +348,7 @@
     },
     {
       "title": "OpticOS",
-      "description": "Le logiciel sur abonnement des boutiques d'optique, construit pour MCS Consulting et en ligne depuis novembre 2026. Une seule application pour toute la boutique : ventes au comptoir avec lecture des codes-barres, ordonnances et commandes de lunettes avec la date promise au client, stock et fournisseurs, caisse du jour, et un tableau de bord qui montre ce que doivent les clients, ce qui est dû aux fournisseurs et le bénéfice du mois. Chaque boutique abonnée a ses données séparées des autres, chaque employé (gérant, vendeur, opticien, caissier) ne voit que ce que son rôle permet, et les ordonnances sont protégées comme des données de santé. En français et en arabe, de droite à gauche, et installable sur le téléphone comme une application. Chaque vente, paiement et mouvement de stock est enregistré, les sauvegardes sont chiffrées chaque jour, et plus de 530 tests automatiques passent avant chaque mise en ligne.",
+      "description": "Le logiciel sur abonnement des boutiques d'optique, construit pour MCS Consulting et en ligne depuis novembre 2026. Une seule application pour toute la boutique : ventes au comptoir avec lecture des codes-barres, ordonnances et commandes de lunettes avec la date promise au client, stock et fournisseurs, caisse du jour, et un tableau de bord qui montre ce que doivent les clients, ce qui est dû aux fournisseurs et le bénéfice du mois. Chaque boutique abonnée a ses données séparées des autres, chaque employé (gérant, vendeur, opticien, caissier) ne voit que ce que son rôle permet, et les ordonnances sont protégées comme des données de santé. En français et en arabe, de droite à gauche, et installable sur le téléphone comme une application. Chaque vente, paiement et mouvement de stock est enregistré, et les données de chaque boutique sont sauvegardées chaque jour.",
       "tags": [
         "Logiciel sur abonnement",
         "Point de vente",
@@ -357,6 +357,7 @@
       ],
       "category": "Web",
       "image": "/projects/opticos-dashboard.jpg",
+      "mobileImage": "/projects/opticos-mobile-ar.jpg",
       "demo": "https://opticos-mr.com",
       "displayUrl": "opticos-mr.com",
       "featured": true
@@ -400,7 +401,7 @@
         "App Store"
       ],
       "category": "Mobile",
-      "image": "/projects_images/home_screen_client.png",
+      "image": "/projects_images/home_screen_client.jpg",
       "type": "mobile",
       "demo": "https://apps.apple.com/mr/app/traiteurs/id6759182605?l=fr-FR",
       "featured": true
@@ -418,7 +419,7 @@
         "Reporting"
       ],
       "category": "Web",
-      "image": "/projects/aposb-dashboard.png",
+      "image": "/projects/aposb-dashboard.jpg",
       "featured": true
     },
     {
@@ -462,7 +463,7 @@
         "Admin Dashboard"
       ],
       "category": "Web",
-      "image": "/projects_images/oxcorex_project.png",
+      "image": "/projects_images/oxcorex_project.jpg",
       "type": "mobile",
       "featured": true,
       "demo": "https://oxcorex.com",
@@ -481,7 +482,7 @@
         "RTL"
       ],
       "category": "Web",
-      "image": "/projects/omdhd-preview.png",
+      "image": "/projects/omdhd-preview.jpg",
       "demo": "https://omdhd.com",
       "displayUrl": "omdhd.com",
       "featured": true
@@ -497,7 +498,7 @@
         "RTL"
       ],
       "category": "Web",
-      "image": "/projects_images/sadaramedia.png",
+      "image": "/projects_images/sadaramedia.jpg",
       "displayUrl": "sadaramedia.com",
       "featured": true,
       "demo": "https://sadaramedia.com"
@@ -514,7 +515,7 @@
         "ERP"
       ],
       "category": "ERP",
-      "image": "/projects_images/module_gestionparc.png",
+      "image": "/projects_images/module_gestionparc.jpg",
       "displayUrl": "Fleet & fuel management",
       "featured": true
     },
@@ -529,7 +530,7 @@
         "Corporate"
       ],
       "category": "Web",
-      "image": "/projects_images/mcs_consulting.png",
+      "image": "/projects_images/mcs_consulting.jpg",
       "displayUrl": "mcsconsulting.vercel.app",
       "demo": "https://mcsconsulting.mr",
       "featured": true

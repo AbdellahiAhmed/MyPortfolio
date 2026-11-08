@@ -768,3 +768,38 @@ html {
   background: #000;
   color: #fff;
 }
+
+/* Experience timeline (react-vertical-timeline-component), themed to the site's slate palette */
+.experience-timeline.vertical-timeline { width: 100%; max-width: 100%; padding: 0; }
+.experience-timeline.vertical-timeline::before { background: #e2e8f0; width: 2px; }
+.dark .experience-timeline.vertical-timeline::before { background: #1e293b; }
+.experience-timeline .vertical-timeline-element-icon {
+  background: #fff;
+  box-shadow: 0 0 0 3px #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dark .experience-timeline .vertical-timeline-element-icon { box-shadow: 0 0 0 3px #1e293b; }
+.experience-timeline .vertical-timeline-element-content {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: none;
+  padding: 1.5rem 1.75rem;
+}
+.dark .experience-timeline .vertical-timeline-element-content { background: #0f172a; border-color: #1e293b; }
+.experience-timeline .vertical-timeline-element-content-arrow { border-right-color: #e2e8f0; }
+.dark .experience-timeline .vertical-timeline-element-content-arrow { border-right-color: #1e293b; }
+.experience-timeline .vertical-timeline-element-date {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 11px !important;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #64748b;
+  opacity: 1 !important;
+}
+@media only screen and (min-width: 1170px) {
+  .experience-timeline .vertical-timeline-element:nth-child(even) .vertical-timeline-element-content-arrow { border-left-color: #e2e8f0; border-right-color: transparent; }
+  .dark .experience-timeline .vertical-timeline-element:nth-child(even) .vertical-timeline-element-content-arrow { border-left-color: #1e293b; }
+}

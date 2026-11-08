@@ -68,8 +68,13 @@ export default {
         'fade-in': 'fadeIn 0.6s ease-out forwards',
         'slide-up': 'slideUp 0.6s ease-out forwards',
         'scale-in': 'scaleIn 0.3s ease-out forwards',
+        'screen-pan': 'screenPan 18s ease-in-out infinite alternate',
       },
       keyframes: {
+        screenPan: {
+          '0%, 12%': { objectPosition: '50% 0%' },
+          '88%, 100%': { objectPosition: '50% 100%' },
+        },
         marquee: {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' },
