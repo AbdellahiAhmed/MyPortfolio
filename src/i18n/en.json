@@ -160,18 +160,6 @@
       ]
     },
     {
-      "company": "III-Networking",
-      "role": "Network Engineering Intern (Self-Project)",
-      "period": "June 2024 – June 2025",
-      "type": "Internship",
-      "logo": "Server",
-      "description": "Built advanced virtual labs using Cisco Packet Tracer and GNS3. Completed CCNA through hands-on labs. Developed automated network workflows with Python.",
-      "achievements": [
-        "Architected and simulated advanced enterprise network topologies using Cisco Packet Tracer and GNS3.",
-        "Engineered automated network discovery and configuration workflows using Python scripting."
-      ]
-    },
-    {
       "company": "Moov Mauritel",
       "role": "Network Administration & Automation Intern",
       "period": "June 2025 – August 2025",

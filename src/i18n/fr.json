@@ -160,18 +160,6 @@
       ]
     },
     {
-      "company": "III-Networking",
-      "role": "Stagiaire autonome en ingénierie réseau (projet personnel)",
-      "period": "June 2024 – June 2025",
-      "type": "Stage",
-      "logo": "Server",
-      "description": "Laboratoires avancés sur Cisco Packet Tracer et GNS3. Certification CCNA en pratique. Automatisation réseau par scripts Python.",
-      "achievements": [
-        "Architecture et simulation de topologies réseaux d'entreprise avancées via Cisco Packet Tracer et GNS3.",
-        "Ingénierie de flux de travail automatisés pour la découverte et la configuration de réseaux avec Python."
-      ]
-    },
-    {
       "company": "Moov Mauritel",
       "role": "Stagiaire Administration & Automatisation Réseau",
       "period": "Juin 2025 – Août 2025",

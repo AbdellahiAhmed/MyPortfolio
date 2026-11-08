@@ -782,7 +782,7 @@ html {
 }
 .dark .experience-timeline .vertical-timeline-element-icon { box-shadow: 0 0 0 3px #1e293b; }
 .experience-timeline .vertical-timeline-element-content {
-  background: #f8fafc;
+  background: #fff;
   border: 1px solid #e2e8f0;
   border-radius: 14px;
   box-shadow: none;

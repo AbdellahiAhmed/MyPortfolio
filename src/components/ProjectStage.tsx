@@ -40,7 +40,7 @@ const ProjectStage = ({ title, image, mobileImage, type, address, animate }: Pro
             <span className="h-2 w-2 rounded-full bg-slate-300 dark:bg-slate-700" />
             <span className="h-2 w-2 rounded-full bg-slate-300 dark:bg-slate-700" />
           </span>
-          <span className="flex-1 truncate rounded bg-white dark:bg-slate-950 px-2.5 py-0.5 font-mono text-[10px] text-slate-500 dark:text-slate-400">
+          <span className="flex-1 truncate rounded bg-white dark:bg-slate-950 px-2.5 py-0.5 font-mono text-[11.5px] text-slate-600 dark:text-slate-400">
             {address ?? title}
           </span>
         </div>

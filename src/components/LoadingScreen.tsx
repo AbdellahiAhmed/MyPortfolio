@@ -21,7 +21,7 @@ const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
     const pct = Math.round(Math.min(progress, 100));
 
     return (
-        <div className="fixed inset-0 z-[100] bg-white dark:bg-slate-950 flex flex-col items-center justify-center px-6 transition-opacity duration-500">
+        <div className="fixed inset-0 z-[100] bg-slate-50 dark:bg-slate-950 flex flex-col items-center justify-center px-6 transition-opacity duration-500">
             <div className="w-full max-w-sm">
                 <div className="font-serif italic text-2xl text-slate-950 dark:text-white mb-6">
                     Abdellahi Ahmed
@@ -32,7 +32,7 @@ const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
                         style={{ width: `${pct}%` }}
                     />
                 </div>
-                <div className="mt-3 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">
+                <div className="mt-3 flex items-center justify-between font-mono text-[11.5px] uppercase tracking-[0.22em] text-slate-600 dark:text-slate-400">
                     <span>Loading</span>
                     <span>{String(pct).padStart(3, '0')} / 100</span>
                 </div>

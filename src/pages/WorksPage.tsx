@@ -45,13 +45,13 @@ const WorksPage = () => {
   }, []);
 
   return (
-    <main className="bg-white dark:bg-slate-950 pt-32 pb-24 md:pt-40">
+    <main className="bg-slate-50 dark:bg-slate-950 pt-32 pb-24 md:pt-40">
       <div className="mx-auto max-w-6xl px-6 sm:px-8 lg:px-10">
 
         {/* Back link */}
         <Link
           to="/"
-          className="group inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.22em] text-slate-500 hover:text-slate-950 dark:text-slate-400 dark:hover:text-white transition-colors"
+          className="group inline-flex items-center gap-2 font-mono text-[12.5px] uppercase tracking-[0.22em] text-slate-600 hover:text-slate-950 dark:text-slate-400 dark:hover:text-white transition-colors"
         >
           <ArrowLeft className="h-3 w-3 transition-transform group-hover:-translate-x-0.5" strokeWidth={1.75} />
           {t('projects.back_to_works')}
@@ -64,18 +64,18 @@ const WorksPage = () => {
           }`}
         >
           <div className="flex items-center gap-4">
-            <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
+            <span className="font-mono text-[12.5px] uppercase tracking-[0.3em] text-slate-600 dark:text-slate-400">
               Index — {t('projects.section')}
             </span>
             <span className="h-px flex-1 max-w-[120px] bg-slate-300 dark:bg-slate-700" />
-            <span className="font-mono text-[11px] tabular-nums text-slate-400 dark:text-slate-500">
+            <span className="font-mono text-[12.5px] tabular-nums text-slate-500 dark:text-slate-500">
               {String(projects.length).padStart(2, '0')} {t('projects.projects_count')}
             </span>
           </div>
           <h1 className="mt-6 font-serif text-5xl leading-tight text-slate-950 dark:text-white sm:text-6xl md:text-7xl">
             {t('projects.all_projects_text')}
           </h1>
-          <p className="mt-5 text-base leading-7 text-slate-500 dark:text-slate-400 max-w-2xl">
+          <p className="mt-5 text-base leading-7 text-slate-600 dark:text-slate-400 max-w-2xl">
             {t('projects.subtitle')}
           </p>
         </div>
@@ -86,14 +86,14 @@ const WorksPage = () => {
             <button
               key={cat}
               onClick={() => setActiveCategory(index)}
-              className={`font-mono text-[11px] uppercase tracking-[0.2em] transition-colors ${
+              className={`font-mono text-[12.5px] uppercase tracking-[0.2em] transition-colors ${
                 activeCategory === index
                   ? 'text-slate-950 dark:text-white'
-                  : 'text-slate-400 hover:text-slate-700 dark:text-slate-500 dark:hover:text-slate-300'
+                  : 'text-slate-500 hover:text-slate-700 dark:text-slate-500 dark:hover:text-slate-300'
               }`}
             >
               {cat}
-              <span className="ml-1.5 tabular-nums text-slate-300 dark:text-slate-600">
+              <span className="ml-1.5 tabular-nums text-slate-400 dark:text-slate-600">
                 {String(categoryCounts[index]).padStart(2, '0')}
               </span>
             </button>
@@ -112,7 +112,7 @@ const WorksPage = () => {
             >
               {/* Tiny corner index */}
               <div className="mb-3 flex items-baseline gap-3">
-                <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-slate-400 dark:text-slate-500">
+                <span className="font-mono text-[11.5px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-500">
                   / {String(index + 1).padStart(2, '0')}
                 </span>
                 <span className="h-px flex-1 bg-slate-200 dark:bg-slate-800" />
@@ -137,7 +137,7 @@ const WorksPage = () => {
                   />
                 ) : (
                   <div className="flex h-full w-full items-center justify-center">
-                    <span className="font-serif text-7xl italic text-slate-300 dark:text-slate-700 select-none">
+                    <span className="font-serif text-7xl italic text-slate-400 dark:text-slate-700 select-none">
                       {project.title.charAt(0)}
                     </span>
                   </div>
@@ -146,9 +146,9 @@ const WorksPage = () => {
 
               {/* Metadata */}
               <div className="mt-6">
-                <div className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">
+                <div className="flex items-center gap-2 font-mono text-[11.5px] uppercase tracking-[0.22em] text-slate-600 dark:text-slate-400">
                   <span>{project.category}</span>
-                  <span className="text-slate-300 dark:text-slate-600">·</span>
+                  <span className="text-slate-400 dark:text-slate-600">·</span>
                   <span>
                     {project.type === 'mobile'
                       ? t('projects.mobile_platform')
@@ -160,14 +160,14 @@ const WorksPage = () => {
                   {project.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300 max-w-prose">
+                <p className="mt-3 text-sm leading-7 text-slate-700 dark:text-slate-300 max-w-prose">
                   {project.description}
                 </p>
 
-                <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.16em] text-slate-500 dark:text-slate-400">
+                <p className="mt-4 font-mono text-[12.5px] uppercase tracking-[0.16em] text-slate-600 dark:text-slate-400">
                   {project.tags.slice(0, 5).join(' · ')}
                   {project.tags.length > 5 && (
-                    <span className="text-slate-300 dark:text-slate-600"> +{project.tags.length - 5}</span>
+                    <span className="text-slate-400 dark:text-slate-600"> +{project.tags.length - 5}</span>
                   )}
                 </p>
 
@@ -178,7 +178,7 @@ const WorksPage = () => {
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 border-b border-slate-950 pb-0.5 font-mono text-[11px] uppercase tracking-[0.2em] text-slate-950 transition-colors hover:text-amber-700 hover:border-amber-700 dark:border-white dark:text-white dark:hover:text-amber-400 dark:hover:border-amber-400"
+                      className="inline-flex items-center gap-1.5 border-b border-slate-950 pb-0.5 font-mono text-[12.5px] uppercase tracking-[0.2em] text-slate-950 transition-colors hover:text-amber-700 hover:border-amber-700 dark:border-white dark:text-white dark:hover:text-amber-400 dark:hover:border-amber-400"
                     >
                       {project.type === 'mobile' ? t('projects.app_store') : t('projects.view_demo')}
                       <ArrowUpRight className="h-3 w-3" strokeWidth={1.75} />
@@ -189,7 +189,7 @@ const WorksPage = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.2em] text-slate-500 transition-colors hover:text-slate-950 dark:text-slate-400 dark:hover:text-white"
+                      className="inline-flex items-center gap-1.5 font-mono text-[12.5px] uppercase tracking-[0.2em] text-slate-600 transition-colors hover:text-slate-950 dark:text-slate-400 dark:hover:text-white"
                     >
                       {t('projects.view_repo')}
                       <ArrowUpRight className="h-3 w-3" strokeWidth={1.75} />

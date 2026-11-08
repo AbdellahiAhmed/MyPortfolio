@@ -18,13 +18,13 @@ const ContactSection = () => {
   }, []);
 
   return (
-    <section id="contact" className="py-20 md:py-28 relative bg-white dark:bg-slate-950">
+    <section id="contact" className="py-20 md:py-28 relative bg-slate-50 dark:bg-slate-950">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-10 relative z-10">
 
         {/* Section header — editorial */}
         <div className="mb-16">
           <div className="flex items-center gap-4">
-            <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
+            <span className="font-mono text-[12.5px] uppercase tracking-[0.3em] text-slate-600 dark:text-slate-400">
               08 — {t('contact.section')}
             </span>
             <span className="h-px flex-1 max-w-[120px] bg-slate-300 dark:bg-slate-700" />
@@ -32,7 +32,7 @@ const ContactSection = () => {
           <h2 className="mt-6 font-serif text-4xl leading-tight text-slate-950 dark:text-white sm:text-5xl md:text-6xl">
             {t('contact.title')}
           </h2>
-          <p className="mt-5 max-w-2xl text-base leading-7 text-slate-500 dark:text-slate-400">
+          <p className="mt-5 max-w-2xl text-base leading-7 text-slate-600 dark:text-slate-400">
             {t('contact.description')}
           </p>
         </div>
@@ -64,7 +64,7 @@ const ContactSection = () => {
             {/* Name + Email */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block font-mono text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400 mb-2" htmlFor="name">
+                <label className="block font-mono text-[11.5px] uppercase tracking-[0.22em] text-slate-600 dark:text-slate-400 mb-2" htmlFor="name">
                   {t('contact.form.name')}
                 </label>
                 <input
@@ -77,7 +77,7 @@ const ContactSection = () => {
                 />
               </div>
               <div>
-                <label className="block font-mono text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400 mb-2" htmlFor="email">
+                <label className="block font-mono text-[11.5px] uppercase tracking-[0.22em] text-slate-600 dark:text-slate-400 mb-2" htmlFor="email">
                   {t('contact.form.email')}
                 </label>
                 <input
@@ -92,7 +92,7 @@ const ContactSection = () => {
             </div>
 
             <div>
-              <label className="block font-mono text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400 mb-2" htmlFor="subject">
+              <label className="block font-mono text-[11.5px] uppercase tracking-[0.22em] text-slate-600 dark:text-slate-400 mb-2" htmlFor="subject">
                 {t('contact.form.subject')}
               </label>
               <input
@@ -106,7 +106,7 @@ const ContactSection = () => {
             </div>
 
             <div>
-              <label className="block font-mono text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400 mb-2" htmlFor="message">
+              <label className="block font-mono text-[11.5px] uppercase tracking-[0.22em] text-slate-600 dark:text-slate-400 mb-2" htmlFor="message">
                 {t('contact.form.message')}
               </label>
               <textarea
@@ -131,7 +131,7 @@ const ContactSection = () => {
           {/* Direct contacts column — calm, single-color */}
           <aside className="space-y-8 lg:pt-3">
             <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400 mb-2">
+              <p className="font-mono text-[11.5px] uppercase tracking-[0.22em] text-slate-600 dark:text-slate-400 mb-2">
                 {t('contact.email_label')}
               </p>
               <a
@@ -142,7 +142,7 @@ const ContactSection = () => {
               </a>
             </div>
             <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400 mb-2">
+              <p className="font-mono text-[11.5px] uppercase tracking-[0.22em] text-slate-600 dark:text-slate-400 mb-2">
                 {t('contact.linkedin_label')}
               </p>
               <a
@@ -155,7 +155,7 @@ const ContactSection = () => {
               </a>
             </div>
             <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400 mb-2">
+              <p className="font-mono text-[11.5px] uppercase tracking-[0.22em] text-slate-600 dark:text-slate-400 mb-2">
                 {t('contact.whatsapp_label')}
               </p>
               <a
@@ -168,7 +168,7 @@ const ContactSection = () => {
               </a>
             </div>
             <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400 mb-2">
+              <p className="font-mono text-[11.5px] uppercase tracking-[0.22em] text-slate-600 dark:text-slate-400 mb-2">
                 Location
               </p>
               <p className="font-serif text-lg italic text-slate-700 dark:text-slate-300">

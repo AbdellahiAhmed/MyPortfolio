@@ -79,13 +79,13 @@ const SkillsSection = () => {
     subtitle.split(/[,/]/).map((s) => s.trim()).filter(Boolean);
 
   return (
-    <section id="skills" className="py-20 md:py-28 relative bg-white dark:bg-slate-950">
+    <section id="skills" className="py-20 md:py-28 relative bg-slate-50 dark:bg-slate-950">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-10 relative z-10">
 
         {/* Section Header — editorial */}
         <div className={`mb-16 max-w-3xl transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
           <div className="flex items-center gap-4">
-            <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
+            <span className="font-mono text-[12.5px] uppercase tracking-[0.3em] text-slate-600 dark:text-slate-400">
               04 — {t('skills.section')}
             </span>
             <span className="h-px flex-1 max-w-[120px] bg-slate-300 dark:bg-slate-700" />
@@ -93,7 +93,7 @@ const SkillsSection = () => {
           <h2 className="mt-6 font-serif text-4xl leading-tight text-slate-950 dark:text-white sm:text-5xl md:text-6xl">
             {t('skills.title')}
           </h2>
-          <p className="mt-5 text-base leading-7 text-slate-500 dark:text-slate-400">
+          <p className="mt-5 text-base leading-7 text-slate-600 dark:text-slate-400">
             {t('skills.subtitle')}
           </p>
         </div>
@@ -133,7 +133,7 @@ const SkillsSection = () => {
 
                   {/* Number — serif, restrained */}
                   <div className="md:col-span-2">
-                    <div className="sticky top-32 font-serif italic text-5xl md:text-6xl leading-none text-slate-300 dark:text-slate-700 select-none">
+                    <div className="sticky top-32 font-serif italic text-5xl md:text-6xl leading-none text-slate-400 dark:text-slate-700 select-none">
                       {pillar.number}
                     </div>
                   </div>
@@ -146,13 +146,13 @@ const SkillsSection = () => {
                       </h3>
 
                       {/* Subtitle as plain text — no chips */}
-                      <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400 mb-3">
+                      <p className="font-mono text-[12.5px] uppercase tracking-[0.18em] text-slate-600 dark:text-slate-400 mb-3">
                         {splitSubtitle(pillar.subtitle).join(' · ')}
                       </p>
 
                       {/* Metrics row */}
                       {pillar.metrics && pillar.metrics.length > 0 && (
-                        <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-slate-900 dark:text-slate-200">
+                        <p className="font-mono text-[12.5px] uppercase tracking-[0.18em] text-slate-900 dark:text-slate-200">
                           {pillar.metrics.join(' / ')}
                         </p>
                       )}
@@ -163,10 +163,10 @@ const SkillsSection = () => {
                       <ul className="space-y-3 pt-2 max-w-2xl">
                         {pillar.points.map((point, i) => (
                           <li key={i} className="grid grid-cols-[auto_1fr] gap-x-4 items-baseline">
-                            <span className="font-mono text-[10px] text-slate-400 dark:text-slate-600">
+                            <span className="font-mono text-[11.5px] text-slate-500 dark:text-slate-600">
                               {String(i + 1).padStart(2, '0')}
                             </span>
-                            <p className="text-sm leading-7 text-slate-600 dark:text-slate-300">
+                            <p className="text-sm leading-7 text-slate-700 dark:text-slate-300">
                               {point}
                             </p>
                           </li>
@@ -182,7 +182,7 @@ const SkillsSection = () => {
 
         {/* CTA — editorial inline link */}
         <div className={`mt-20 md:mt-28 max-w-3xl transition-all duration-700 ease-out delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-          <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400 mb-3">
+          <p className="font-mono text-[12.5px] uppercase tracking-[0.22em] text-slate-600 dark:text-slate-400 mb-3">
             {t('skills.cta_subtitle')}
           </p>
           <a

@@ -33,14 +33,14 @@ const MarqueeSection = ({ variant = 'primary' }: MarqueeSectionProps) => {
             className={`font-serif text-3xl italic md:text-4xl lg:text-5xl px-6 md:px-10 ${
               isPrimary
                 ? 'text-slate-950 dark:text-white'
-                : 'text-slate-500 dark:text-slate-400'
+                : 'text-slate-600 dark:text-slate-400'
             }`}
           >
             {token}
           </span>
           <span
             className={`text-base ${
-              isPrimary ? 'text-slate-400 dark:text-slate-600' : 'text-slate-300 dark:text-slate-700'
+              isPrimary ? 'text-slate-500 dark:text-slate-600' : 'text-slate-400 dark:text-slate-700'
             }`}
             aria-hidden="true"
           >

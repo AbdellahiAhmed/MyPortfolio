@@ -36,7 +36,7 @@ const AboutSection = () => {
           }`}
         >
           <div className="flex items-center gap-4">
-            <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
+            <span className="font-mono text-[12.5px] uppercase tracking-[0.3em] text-slate-600 dark:text-slate-400">
               02 — {t('about.section')}
             </span>
             <span className="h-px flex-1 max-w-[120px] bg-slate-300 dark:bg-slate-700" />
@@ -58,7 +58,7 @@ const AboutSection = () => {
                 alt="Abdellahi Ahmed"
                 className="block aspect-[4/5] w-full object-cover border border-slate-200 dark:border-slate-800"
               />
-              <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">
+              <figcaption className="mt-3 font-mono text-[11.5px] uppercase tracking-[0.22em] text-slate-600 dark:text-slate-400">
                 Abdellahi Ahmed Ahmed Baba — Tunis, TN
               </figcaption>
             </figure>
@@ -72,7 +72,7 @@ const AboutSection = () => {
             {[t('about.story1'), t('about.story2'), t('about.story3')].map((paragraph) => (
               <p
                 key={paragraph}
-                className="text-base leading-[1.75] text-slate-600 dark:text-slate-300"
+                className="text-base leading-[1.75] text-slate-700 dark:text-slate-300"
               >
                 {paragraph}
               </p>

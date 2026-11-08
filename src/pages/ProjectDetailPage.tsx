@@ -35,13 +35,13 @@ const ProjectDetailPage = () => {
     .slice(0, 3);
 
   return (
-    <main className="min-h-screen bg-white dark:bg-slate-950 pt-32 pb-24 md:pt-40">
+    <main className="min-h-screen bg-slate-50 dark:bg-slate-950 pt-32 pb-24 md:pt-40">
       <div className="mx-auto max-w-6xl px-6 sm:px-8 lg:px-10">
 
         {/* Back link */}
         <Link
           to="/works"
-          className="group inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.22em] text-slate-500 hover:text-slate-950 dark:text-slate-400 dark:hover:text-white transition-colors"
+          className="group inline-flex items-center gap-2 font-mono text-[12.5px] uppercase tracking-[0.22em] text-slate-600 hover:text-slate-950 dark:text-slate-400 dark:hover:text-white transition-colors"
         >
           <ArrowLeft className="h-3 w-3 transition-transform group-hover:-translate-x-0.5" strokeWidth={1.75} />
           {t('projects.back_to_works')}
@@ -53,9 +53,9 @@ const ProjectDetailPage = () => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >
-          <div className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">
+          <div className="flex items-center gap-3 font-mono text-[12.5px] uppercase tracking-[0.22em] text-slate-600 dark:text-slate-400">
             <span>{project.category}</span>
-            <span className="text-slate-300 dark:text-slate-600">·</span>
+            <span className="text-slate-400 dark:text-slate-600">·</span>
             <span>
               {project.type === 'mobile'
                 ? t('projects.mobile_platform')
@@ -65,7 +65,7 @@ const ProjectDetailPage = () => {
           <h1 className="mt-5 font-serif text-5xl leading-tight text-slate-950 dark:text-white sm:text-6xl md:text-7xl">
             {project.title}
           </h1>
-          <p className="mt-6 text-base leading-7 text-slate-600 dark:text-slate-300 md:text-lg max-w-3xl">
+          <p className="mt-6 text-base leading-7 text-slate-700 dark:text-slate-300 md:text-lg max-w-3xl">
             {project.description}
           </p>
 
@@ -87,7 +87,7 @@ const ProjectDetailPage = () => {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.22em] text-slate-500 hover:text-slate-950 dark:text-slate-400 dark:hover:text-white transition-colors"
+                className="group inline-flex items-center gap-2 font-mono text-[12.5px] uppercase tracking-[0.22em] text-slate-600 hover:text-slate-950 dark:text-slate-400 dark:hover:text-white transition-colors"
               >
                 {t('projects.view_repository')}
                 <ArrowUpRight className="h-3 w-3" strokeWidth={1.75} />
@@ -114,7 +114,7 @@ const ProjectDetailPage = () => {
             />
           ) : (
             <div className="flex h-full w-full items-center justify-center">
-              <span className="font-serif text-8xl italic text-slate-300 dark:text-slate-700 select-none">
+              <span className="font-serif text-8xl italic text-slate-400 dark:text-slate-700 select-none">
                 {project.title.charAt(0)}
               </span>
             </div>
@@ -123,7 +123,7 @@ const ProjectDetailPage = () => {
 
         {/* Tech stack */}
         <section className="mt-24 grid gap-8 md:grid-cols-[200px_1fr] md:gap-16">
-          <h2 className="font-mono text-[11px] uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
+          <h2 className="font-mono text-[12.5px] uppercase tracking-[0.3em] text-slate-600 dark:text-slate-400">
             {t('projects.tech_stack')}
           </h2>
           <ul className="space-y-px border-t border-slate-200 dark:border-slate-800">
@@ -132,7 +132,7 @@ const ProjectDetailPage = () => {
                 key={tag}
                 className="grid grid-cols-[auto_1fr] gap-x-6 items-baseline border-b border-slate-200 py-4 dark:border-slate-800"
               >
-                <span className="font-mono text-[10px] tabular-nums text-slate-400 dark:text-slate-600">
+                <span className="font-mono text-[11.5px] tabular-nums text-slate-500 dark:text-slate-600">
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 <span className="font-serif text-xl text-slate-950 dark:text-white">
@@ -145,7 +145,7 @@ const ProjectDetailPage = () => {
 
         {/* My role */}
         <section className="mt-24 grid gap-8 md:grid-cols-[200px_1fr] md:gap-16">
-          <h2 className="font-mono text-[11px] uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
+          <h2 className="font-mono text-[12.5px] uppercase tracking-[0.3em] text-slate-600 dark:text-slate-400">
             {t('projects.my_role')}
           </h2>
           <div>
@@ -156,10 +156,10 @@ const ProjectDetailPage = () => {
               {(t('projects.responsibilities', { returnObjects: true }) as string[]).map(
                 (resp, i) => (
                   <li key={i} className="grid grid-cols-[auto_1fr] gap-x-4 items-baseline">
-                    <span className="font-mono text-[10px] text-slate-400 dark:text-slate-600">
+                    <span className="font-mono text-[11.5px] text-slate-500 dark:text-slate-600">
                       {String(i + 1).padStart(2, '0')}
                     </span>
-                    <p className="text-sm leading-7 text-slate-600 dark:text-slate-300">
+                    <p className="text-sm leading-7 text-slate-700 dark:text-slate-300">
                       {resp}
                     </p>
                   </li>
@@ -173,7 +173,7 @@ const ProjectDetailPage = () => {
         {otherProjects.length > 0 && (
           <section className="mt-24 border-t border-slate-200 dark:border-slate-800 pt-16">
             <div className="flex items-center gap-4 mb-12">
-              <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
+              <span className="font-mono text-[12.5px] uppercase tracking-[0.3em] text-slate-600 dark:text-slate-400">
                 {t('projects.other_projects')}
               </span>
               <span className="h-px flex-1 max-w-[120px] bg-slate-300 dark:bg-slate-700" />

@@ -94,7 +94,7 @@ const Portfolio = () => {
   }
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white relative overflow-x-hidden">
+    <div className="min-h-screen bg-slate-50 dark:bg-gray-900 text-gray-900 dark:text-white relative overflow-x-hidden">
       {/* Scroll Progress Bar */}
       <div className="fixed top-0 left-0 w-full h-1 z-[60] bg-transparent">
         <div
@@ -104,7 +104,7 @@ const Portfolio = () => {
       </div>
 
       {/* Navbar - Azizkhaldi.com Style */}
-      <nav className="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-800/50 z-50 transition-all duration-300">
+      <nav className="fixed top-0 w-full bg-slate-50/85 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-800/50 z-50 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 md:h-20">
             {/* Logo */}
@@ -117,7 +117,7 @@ const Portfolio = () => {
               <span className="font-serif text-2xl italic leading-none text-slate-950 dark:text-white">
                 Abdellahi
               </span>
-              <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-slate-400 dark:text-slate-500 hidden sm:inline">
+              <span className="font-mono text-[11.5px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-500 hidden sm:inline">
                 Ahmed
               </span>
             </button>
@@ -128,9 +128,9 @@ const Portfolio = () => {
                 <button
                   key={path}
                   onClick={() => handleNavClick(path)}
-                  className="font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500 hover:text-slate-950 dark:text-slate-400 dark:hover:text-white transition-colors duration-200"
+                  className="font-mono text-[12.5px] uppercase tracking-[0.18em] text-slate-600 hover:text-slate-950 dark:text-slate-400 dark:hover:text-white transition-colors duration-200"
                 >
-                  <span className="text-slate-300 dark:text-slate-600 mr-2">0{idx + 1}</span>
+                  <span className="text-slate-400 dark:text-slate-600 mr-2">0{idx + 1}</span>
                   {label}
                 </button>
               ))}

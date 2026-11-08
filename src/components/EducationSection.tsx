@@ -33,13 +33,13 @@ const EducationSection = () => {
   }, []);
 
   return (
-    <section id="education" className="py-20 md:py-28 relative bg-white dark:bg-slate-950">
+    <section id="education" className="py-20 md:py-28 relative bg-slate-50 dark:bg-slate-950">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-10 relative z-10">
 
         {/* Section Header — editorial */}
         <div className={`mb-16 max-w-3xl transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
           <div className="flex items-center gap-4">
-            <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
+            <span className="font-mono text-[12.5px] uppercase tracking-[0.3em] text-slate-600 dark:text-slate-400">
               06 — {t('education.label')}
             </span>
             <span className="h-px flex-1 max-w-[120px] bg-slate-300 dark:bg-slate-700" />
@@ -47,7 +47,7 @@ const EducationSection = () => {
           <h2 className="mt-6 font-serif text-4xl leading-tight text-slate-950 dark:text-white sm:text-5xl md:text-6xl">
             {t('education.heading')}
           </h2>
-          <p className="mt-5 text-base leading-7 text-slate-500 dark:text-slate-400">
+          <p className="mt-5 text-base leading-7 text-slate-600 dark:text-slate-400">
             {t('education.subtitle')}
           </p>
         </div>
@@ -68,10 +68,10 @@ const EducationSection = () => {
                 {/* Left — Period + tiny index */}
                 <div className="md:col-span-3">
                   <div className="sticky top-32 space-y-2">
-                    <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">
+                    <p className="font-mono text-[12.5px] uppercase tracking-[0.22em] text-slate-600 dark:text-slate-400">
                       {edu.period}
                     </p>
-                    <div className="font-serif italic text-3xl text-slate-300 dark:text-slate-700 select-none leading-none">
+                    <div className="font-serif italic text-3xl text-slate-400 dark:text-slate-700 select-none leading-none">
                       0{index + 1}
                     </div>
                   </div>
@@ -83,12 +83,12 @@ const EducationSection = () => {
                     <h3 className="font-serif text-2xl md:text-3xl lg:text-4xl leading-tight text-slate-950 dark:text-white mb-3">
                       {edu.institution}
                     </h3>
-                    <p className="text-base text-slate-500 dark:text-slate-400 font-medium">
+                    <p className="text-base text-slate-600 dark:text-slate-400 font-medium">
                       {edu.degree}
                     </p>
                   </div>
 
-                  <p className="text-sm leading-7 text-slate-600 dark:text-slate-300 max-w-2xl">
+                  <p className="text-sm leading-7 text-slate-700 dark:text-slate-300 max-w-2xl">
                     {edu.description}
                   </p>
 
@@ -97,7 +97,7 @@ const EducationSection = () => {
                       href={edu.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group/link inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.22em] text-slate-900 dark:text-white border-b border-slate-900 dark:border-white pb-0.5 hover:text-amber-700 dark:hover:text-amber-400 hover:border-amber-700 dark:hover:border-amber-400 transition-colors"
+                      className="group/link inline-flex items-center gap-2 font-mono text-[12.5px] uppercase tracking-[0.22em] text-slate-900 dark:text-white border-b border-slate-900 dark:border-white pb-0.5 hover:text-amber-700 dark:hover:text-amber-400 hover:border-amber-700 dark:hover:border-amber-400 transition-colors"
                     >
                       {t('education.view_certificate')}
                       <span aria-hidden="true">↗</span>
@@ -113,7 +113,7 @@ const EducationSection = () => {
         <div className={`mt-20 md:mt-28 transition-all duration-700 ease-out delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
           <div className="border-t border-slate-200 dark:border-slate-800 pt-12 grid md:grid-cols-12 gap-4 md:gap-8">
             <div className="md:col-span-3">
-              <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">
+              <p className="font-mono text-[12.5px] uppercase tracking-[0.22em] text-slate-600 dark:text-slate-400">
                 {t('education.continuous_growth')}
               </p>
             </div>
@@ -121,10 +121,10 @@ const EducationSection = () => {
               <h3 className="font-serif text-2xl md:text-3xl leading-tight text-slate-950 dark:text-white">
                 {t('education.lifelong')}
               </h3>
-              <p className="text-sm leading-7 text-slate-600 dark:text-slate-300">
+              <p className="text-sm leading-7 text-slate-700 dark:text-slate-300">
                 {t('education.lifelong_description')}
               </p>
-              <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
+              <p className="font-mono text-[12.5px] uppercase tracking-[0.18em] text-slate-600 dark:text-slate-400">
                 {(t('education.learning_areas', { returnObjects: true }) as string[]).join(' · ')}
               </p>
             </div>
