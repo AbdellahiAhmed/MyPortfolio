@@ -72,8 +72,8 @@ export default {
       },
       keyframes: {
         screenPan: {
-          '0%, 12%': { objectPosition: '50% 0%' },
-          '88%, 100%': { objectPosition: '50% 100%' },
+          '0%, 12%': { transform: 'translateY(0)' },
+          '88%, 100%': { transform: 'translateY(var(--pan))' },
         },
         marquee: {
           '0%': { transform: 'translateX(0)' },

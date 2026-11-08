@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X, Sun, Moon } from 'lucide-react';
+import { Menu, X, Sun, Moon, ArrowDownToLine } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 import LoadingScreen from './components/LoadingScreen';
 import Footer from './components/Footer';
@@ -13,6 +14,9 @@ import './i18n/i18n';
 const Portfolio = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const { t } = useTranslation();
+  const [activeSection, setActiveSection] = useState('');
+  const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -36,6 +40,7 @@ const Portfolio = () => {
       const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scroll = `${totalScroll / windowHeight}`;
       setScrollProgress(Number(scroll));
+      setScrolled(totalScroll > 8);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -48,12 +53,31 @@ const Portfolio = () => {
   }, [location]);
 
   const navItems = [
-    { path: '/', label: 'Home' },
-    { path: '/#about', label: 'About' },
-    { path: '/works', label: 'Works' },
-    { path: '/#resume', label: 'Resume' },
-    { path: '/#contact', label: 'Contact' },
+    { path: '/#about', label: t('nav.about') },
+    { path: '/#experience', label: t('nav.experience') },
+    { path: '/#projects', label: t('nav.projects') },
+    { path: '/#resume', label: t('nav.resume') },
+    { path: '/#contact', label: t('nav.contact') },
   ];
+
+  // Highlight the section in view; the band in the middle of the screen decides.
+  useEffect(() => {
+    if (location.pathname !== '/' || isLoading) return;
+    const ids = ['about', 'experience', 'projects', 'resume', 'contact'];
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActiveSection(entry.target.id);
+        });
+      },
+      { rootMargin: '-45% 0px -50% 0px' }
+    );
+    ids.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, [location.pathname, isLoading]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -103,65 +127,84 @@ const Portfolio = () => {
         ></div>
       </div>
 
-      {/* Navbar - Azizkhaldi.com Style */}
-      <nav className="fixed top-0 w-full bg-slate-50/85 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-800/50 z-50 transition-all duration-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16 md:h-20">
-            {/* Logo */}
+      {/* Navbar */}
+      <nav
+        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+          scrolled
+            ? 'bg-slate-50/90 dark:bg-slate-950/85 backdrop-blur-xl border-b border-slate-200/80 dark:border-slate-800/80 shadow-[0_1px_12px_rgba(15,23,42,0.06)]'
+            : 'bg-transparent border-b border-transparent'
+        }`}
+      >
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-10">
+          <div className="flex justify-between items-center h-16 md:h-[72px]">
             <button
               type="button"
               onClick={() => handleNavClick('/')}
-              className="flex items-baseline gap-2 group"
+              className="flex items-center gap-3"
               aria-label="Home"
             >
-              <span className="font-serif text-2xl italic leading-none text-slate-950 dark:text-white">
-                Abdellahi
+              <span className="grid h-9 w-9 place-items-center rounded-full bg-slate-950 dark:bg-white font-serif text-[15px] italic text-white dark:text-slate-950">
+                A
               </span>
-              <span className="font-mono text-[11.5px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-500 hidden sm:inline">
-                Ahmed
+              <span className="text-left leading-tight">
+                <span className="block font-serif text-[19px] text-slate-950 dark:text-white">Abdellahi Ahmed</span>
+                <span className="hidden sm:block text-[12px] text-slate-600 dark:text-slate-400">Software · Network · Security</span>
               </span>
             </button>
 
-            {/* Desktop Menu */}
-            <div className="hidden md:flex items-center gap-8">
-              {navItems.map(({ path, label }, idx) => (
-                <button
-                  key={path}
-                  onClick={() => handleNavClick(path)}
-                  className="font-mono text-[12.5px] uppercase tracking-[0.18em] text-slate-600 hover:text-slate-950 dark:text-slate-400 dark:hover:text-white transition-colors duration-200"
-                >
-                  <span className="text-slate-400 dark:text-slate-600 mr-2">0{idx + 1}</span>
-                  {label}
-                </button>
-              ))}
-
-              <div className="flex items-center space-x-3">
-                {/* Theme Switch */}
-                <button
-                  onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                  className="p-2.5 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300 text-gray-600 dark:text-gray-400"
-                  aria-label="Toggle Theme"
-                >
-                  {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-                </button>
-
-                {/* Language Switcher */}
-                <LanguageSwitcher />
-              </div>
+            <div className="hidden md:flex items-center gap-1 rounded-full border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 p-1">
+              {navItems.map(({ path, label }) => {
+                const isActive = location.pathname === '/' && activeSection === path.split('#')[1];
+                return (
+                  <button
+                    key={path}
+                    onClick={() => handleNavClick(path)}
+                    aria-current={isActive ? 'true' : undefined}
+                    className={`rounded-full px-4 py-1.5 text-[14px] font-medium transition-colors duration-200 ${
+                      isActive
+                        ? 'bg-slate-950 text-white dark:bg-white dark:text-slate-950'
+                        : 'text-slate-700 hover:text-slate-950 hover:bg-slate-100 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-800'
+                    }`}
+                  >
+                    {label}
+                  </button>
+                );
+              })}
             </div>
 
-            {/* Mobile Menu Icons */}
-            <div className="md:hidden flex items-center space-x-2">
+            <div className="hidden md:flex items-center gap-2">
               <button
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                className="p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all"
+                className="grid h-9 w-9 place-items-center rounded-full text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                aria-label="Toggle Theme"
+              >
+                {theme === 'dark' ? <Sun className="h-[18px] w-[18px]" /> : <Moon className="h-[18px] w-[18px]" />}
+              </button>
+              <LanguageSwitcher />
+              <a
+                href="/cv.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-1 inline-flex items-center gap-1.5 rounded-full bg-amber-500 px-4 py-2 text-[14px] font-semibold text-slate-950 hover:bg-amber-400 transition-colors"
+              >
+                <ArrowDownToLine className="h-4 w-4" strokeWidth={2} />
+                {t('nav.cv')}
+              </a>
+            </div>
+
+            <div className="md:hidden flex items-center gap-1">
+              <button
+                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                className="grid h-10 w-10 place-items-center rounded-full text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
                 aria-label="Toggle Theme"
               >
                 {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
               </button>
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="p-2 rounded-lg text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-all"
+                className="grid h-10 w-10 place-items-center rounded-full text-slate-950 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                aria-label={t('nav.menu')}
+                aria-expanded={isMenuOpen}
               >
                 {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
@@ -169,26 +212,32 @@ const Portfolio = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
         <div
-          className={`md:hidden absolute top-16 md:top-20 left-0 w-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl border-b border-gray-200 dark:border-gray-800 transition-all duration-300 ease-in-out origin-top ${
+          className={`md:hidden absolute top-16 left-0 w-full bg-slate-50/97 dark:bg-slate-950/97 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 transition-all duration-300 ease-in-out origin-top ${
             isMenuOpen ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0 pointer-events-none'
           }`}
         >
-          <div className="px-4 pt-2 pb-6 space-y-2">
+          <div className="px-5 pt-3 pb-6 space-y-1">
             {navItems.map(({ path, label }) => (
               <button
                 key={path}
                 onClick={() => handleNavClick(path)}
-                className="flex items-center w-full px-4 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800"
+                className="flex items-center w-full px-4 py-3 rounded-xl text-[17px] font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-900"
               >
                 {label}
               </button>
             ))}
-            <div className="pt-4 border-t border-gray-200 dark:border-gray-800 mt-4">
-              <div className="flex justify-center">
-                <LanguageSwitcher />
-              </div>
+            <div className="flex items-center justify-between gap-3 pt-4 mt-3 border-t border-slate-200 dark:border-slate-800">
+              <LanguageSwitcher />
+              <a
+                href="/cv.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-full bg-amber-500 px-4 py-2 text-[15px] font-semibold text-slate-950"
+              >
+                <ArrowDownToLine className="h-4 w-4" strokeWidth={2} />
+                {t('nav.cv')}
+              </a>
             </div>
           </div>
         </div>

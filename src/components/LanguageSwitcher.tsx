@@ -1,27 +1,29 @@
-// src/components/LanguageSwitcher.tsx
 import { useTranslation } from 'react-i18next';
+
+const languages = ['en', 'fr'] as const;
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
 
-  const changeLanguage = (lang: string) => {
-    i18n.changeLanguage(lang);
-  };
-
   return (
-    <div className="flex space-x-2 ml-4">
-      <button
-        onClick={() => changeLanguage('en')}
-        className={`px-2 py-1 text-sm rounded transition-colors ${i18n.language === 'en' ? 'bg-blue-600 text-white' : 'text-blue-600 border border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20'}`}
-      >
-        EN
-      </button>
-      <button
-        onClick={() => changeLanguage('fr')}
-        className={`px-2 py-1 text-sm rounded transition-colors ${i18n.language === 'fr' ? 'bg-blue-600 text-white' : 'text-blue-600 border border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20'}`}
-      >
-        FR
-      </button>
+    <div className="flex items-center rounded-full border border-slate-200 dark:border-slate-800 p-0.5" role="group" aria-label="Language">
+      {languages.map((lang) => {
+        const isActive = i18n.language?.startsWith(lang);
+        return (
+          <button
+            key={lang}
+            onClick={() => i18n.changeLanguage(lang)}
+            aria-pressed={isActive}
+            className={`rounded-full px-2.5 py-1 text-[13px] font-semibold uppercase transition-colors ${
+              isActive
+                ? 'bg-slate-950 text-white dark:bg-white dark:text-slate-950'
+                : 'text-slate-600 hover:text-slate-950 dark:text-slate-400 dark:hover:text-white'
+            }`}
+          >
+            {lang}
+          </button>
+        );
+      })}
     </div>
   );
 };

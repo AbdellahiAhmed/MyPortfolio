@@ -1,4 +1,11 @@
 {
+  "nav.about": "About",
+  "nav.experience": "Experience",
+  "nav.projects": "Projects",
+  "nav.resume": "Resume",
+  "nav.contact": "Contact",
+  "nav.cv": "Download CV",
+  "nav.menu": "Menu",
   "hero.greeting": "Abdellahi Ahmed",
   "hero.name": "Abdellahi Ahmed",
   "hero.eyebrow_role": "Currently shipping",
@@ -389,7 +396,7 @@
         "App Store"
       ],
       "category": "Mobile",
-      "image": "/projects_images/home_screen_client.jpg",
+      "image": "/projects_images/home_screen_client-phone.png",
       "type": "mobile",
       "demo": "https://apps.apple.com/mr/app/traiteurs/id6759182605?l=fr-FR",
       "featured": true
@@ -436,7 +443,6 @@
         "Network Automation"
       ],
       "category": "Network",
-      "image": "/autonetconfig/dashboard.png",
       "featured": true
     },
     {
@@ -451,7 +457,7 @@
         "Admin Dashboard"
       ],
       "category": "Web",
-      "image": "/projects_images/oxcorex_project.jpg",
+      "image": "/projects_images/oxcorex_project-phone.png",
       "type": "mobile",
       "featured": true,
       "demo": "https://oxcorex.com",
@@ -505,22 +511,6 @@
       "category": "ERP",
       "image": "/projects_images/module_gestionparc.jpg",
       "displayUrl": "Fleet & fuel management",
-      "featured": true
-    },
-    {
-      "title": "MCS Consulting",
-      "description": "Official corporate website for MCS Consulting, a firm specialized in financial consulting and ERP solutions. Delivered a high-performance, responsive digital presence that strengthens the firm's brand identity and serves as a primary lead generation tool for enterprise clients.",
-      "tags": [
-        "React",
-        "TypeScript",
-        "Tailwind CSS",
-        "Responsive",
-        "Corporate"
-      ],
-      "category": "Web",
-      "image": "/projects_images/mcs_consulting.jpg",
-      "displayUrl": "mcsconsulting.vercel.app",
-      "demo": "https://mcsconsulting.mr",
       "featured": true
     }
   ],
