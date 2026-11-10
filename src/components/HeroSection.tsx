@@ -1,15 +1,13 @@
 import { ArrowUpRight, Github, Linkedin, Mail } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { useEffect, useState } from 'react';
+import type { CSSProperties } from 'react';
+
+// Entrance delay for the CSS classes in index.css (enter-rise, enter-line, enter-rule).
+const delay = (ms: number) => ({ '--d': `${ms}ms` }) as CSSProperties;
 
 const HeroSection = () => {
   const { t } = useTranslation();
-  const [isVisible, setIsVisible] = useState(false);
   const resumeHref = '/cv.pdf?v=2026-10-14-summary';
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
 
   return (
     <section
@@ -36,50 +34,37 @@ const HeroSection = () => {
         </div>
 
         {/* Eyebrow */}
-        <div
-          className={`flex items-center gap-4 transition-all duration-700 ease-out ${
-            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
-          }`}
-        >
-          <span className="font-mono text-[12.5px] uppercase tracking-[0.3em] text-slate-600 dark:text-slate-400">
+        <div className="flex items-center gap-4">
+          <span style={delay(100)} className="enter-rise font-mono text-[12.5px] uppercase tracking-[0.3em] text-slate-600 dark:text-slate-400">
             01 — {t('hero.eyebrow_role')}
           </span>
-          <span className="h-px flex-1 max-w-[120px] bg-slate-300 dark:bg-slate-700" />
-          <span className="font-mono text-[12.5px] uppercase tracking-[0.3em] text-slate-600 dark:text-slate-400">
+          <span style={delay(200)} className="enter-rule h-px flex-1 max-w-[120px] bg-slate-300 dark:bg-slate-700" />
+          <span style={delay(300)} className="enter-rise font-mono text-[12.5px] uppercase tracking-[0.3em] text-slate-600 dark:text-slate-400">
             {t('hero.eyebrow_location')}
           </span>
         </div>
 
         {/* Headline — single voice, no gradient */}
-        <h1
-          className={`mt-10 font-serif text-[clamp(2.5rem,6.2vw,5.5rem)] leading-[0.95] tracking-[-0.02em] text-slate-950 dark:text-white transition-all duration-700 ease-out delay-100 ${
-            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
-          }`}
-        >
-          {t('hero.headline_line1')}
-          <br />
-          <span className="italic text-slate-600 dark:text-slate-400">
-            {t('hero.headline_line2')}
+        <h1 className="mt-10 font-serif text-[clamp(2.5rem,6.2vw,5.5rem)] leading-[0.95] tracking-[-0.02em] text-slate-950 dark:text-white">
+          <span className="enter-line">
+            <span style={delay(180)}>{t('hero.headline_line1')}</span>
+          </span>
+          <span className="enter-line">
+            <span style={delay(290)} className="italic text-slate-600 dark:text-slate-400">
+              {t('hero.headline_line2')}
+            </span>
           </span>
         </h1>
 
         {/* Body paragraph — editorial, one column */}
-        <div
-          className={`mt-10 max-w-2xl transition-all duration-700 ease-out delay-200 ${
-            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
-          }`}
-        >
+        <div style={delay(460)} className="enter-rise mt-10 max-w-2xl">
           <p className="text-base leading-[1.7] text-slate-700 dark:text-slate-300 md:text-lg">
             {t('hero.description')}
           </p>
         </div>
 
         {/* CTAs — two links, restrained */}
-        <div
-          className={`mt-12 flex flex-wrap items-center gap-x-8 gap-y-4 transition-all duration-700 ease-out delay-300 ${
-            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
-          }`}
-        >
+        <div style={delay(560)} className="enter-rise mt-12 flex flex-wrap items-center gap-x-8 gap-y-4">
           <a
             href="#projects"
             className="group inline-flex items-center gap-2 border-b border-slate-950 pb-1 text-sm font-medium text-slate-950 transition-colors hover:text-amber-700 dark:border-white dark:text-white dark:hover:border-amber-400 dark:hover:text-amber-400"
@@ -107,11 +92,7 @@ const HeroSection = () => {
         </div>
 
         {/* Footer row: socials + currently */}
-        <div
-          className={`mt-24 grid gap-8 border-t border-slate-200 pt-8 transition-all duration-700 ease-out delay-500 dark:border-slate-800 md:grid-cols-[1fr_auto] md:items-start ${
-            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
-          }`}
-        >
+        <div style={delay(700)} className="enter-rise mt-24 grid gap-8 border-t border-slate-200 pt-8 dark:border-slate-800 md:grid-cols-[1fr_auto] md:items-start">
           <div className="space-y-2">
             <p className="font-mono text-[12.5px] uppercase tracking-[0.28em] text-slate-500 dark:text-slate-500">
               {t('hero.currently_label')}

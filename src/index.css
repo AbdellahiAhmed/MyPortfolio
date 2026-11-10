@@ -803,3 +803,50 @@ html {
   .experience-timeline .vertical-timeline-element:nth-child(even) .vertical-timeline-element-content-arrow { border-left-color: #e2e8f0; border-right-color: transparent; }
   .dark .experience-timeline .vertical-timeline-element:nth-child(even) .vertical-timeline-element-content-arrow { border-left-color: #1e293b; }
 }
+
+/* ── Page entrance ──────────────────────────────────────────────
+   Pure CSS so it starts on first paint, with no React state flash.
+   Each element sets its own delay with style={{ '--d': '120ms' }}. */
+@keyframes enter-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes enter-line {
+  from { transform: translateY(105%); }
+  to   { transform: none; }
+}
+@keyframes enter-rule {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+@keyframes enter-fade-down {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.enter-rise {
+  animation: enter-rise 700ms cubic-bezier(0.22, 1, 0.36, 1) var(--d, 0ms) both;
+}
+/* Masked line: the outer span clips, the inner span slides up into view.
+   The padding keeps italic serif descenders from being cut by the mask. */
+.enter-line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.1em;
+  margin-bottom: -0.1em;
+}
+.enter-line > span {
+  display: inline-block;
+  animation: enter-line 900ms cubic-bezier(0.16, 1, 0.3, 1) var(--d, 0ms) both;
+}
+.enter-rule {
+  transform-origin: left;
+  animation: enter-rule 800ms cubic-bezier(0.65, 0, 0.35, 1) var(--d, 0ms) both;
+}
+.enter-fade-down {
+  animation: enter-fade-down 600ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .enter-rise, .enter-line > span, .enter-rule, .enter-fade-down { animation: none; }
+}

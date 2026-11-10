@@ -3,7 +3,6 @@ import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Sun, Moon, ArrowDownToLine } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
-import LoadingScreen from './components/LoadingScreen';
 import Footer from './components/Footer';
 import LanguageSwitcher from './components/LanguageSwitcher';
 import HomePage from './pages/HomePage';
@@ -18,7 +17,6 @@ const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('');
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [theme, setTheme] = useState<'dark' | 'light'>(() => {
     return (localStorage.getItem('theme') as 'dark' | 'light') || 'dark';
@@ -62,7 +60,7 @@ const Portfolio = () => {
 
   // Highlight the section in view; the band in the middle of the screen decides.
   useEffect(() => {
-    if (location.pathname !== '/' || isLoading) return;
+    if (location.pathname !== '/') return;
     const ids = ['about', 'experience', 'projects', 'resume', 'contact'];
     const observer = new IntersectionObserver(
       (entries) => {
@@ -77,7 +75,7 @@ const Portfolio = () => {
       if (el) observer.observe(el);
     });
     return () => observer.disconnect();
-  }, [location.pathname, isLoading]);
+  }, [location.pathname]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -113,10 +111,6 @@ const Portfolio = () => {
     }
   }, [location]);
 
-  if (isLoading) {
-    return <LoadingScreen onComplete={() => setIsLoading(false)} />;
-  }
-
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-gray-900 text-gray-900 dark:text-white relative overflow-x-hidden">
       {/* Scroll Progress Bar */}
@@ -129,7 +123,7 @@ const Portfolio = () => {
 
       {/* Navbar */}
       <nav
-        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        className={`enter-fade-down fixed top-0 w-full z-50 transition-all duration-300 ${
           scrolled
             ? 'bg-slate-50/90 dark:bg-slate-950/85 backdrop-blur-xl border-b border-slate-200/80 dark:border-slate-800/80 shadow-[0_1px_12px_rgba(15,23,42,0.06)]'
             : 'bg-transparent border-b border-transparent'
