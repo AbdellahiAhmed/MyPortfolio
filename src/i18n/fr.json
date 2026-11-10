@@ -72,7 +72,7 @@
       "subtitle": "Laravel, PHP, MySQL, modules Dolibarr, REST APIs, workflows métiers",
       "metrics": [
         "Systèmes utilisés au quotidien",
-        "6 modules Dolibarr sur mesure",
+        "Modules Dolibarr ERP en production",
         "Testé avant chaque mise en ligne"
       ],
       "points": [
@@ -201,7 +201,7 @@
       "achievements": [
         "SOMAP RH : RH et paie utilisés chaque jour dans les stations, dépôts et agences de SOMAP.",
         "OpticOS : logiciel sur abonnement pour boutiques d'optique, du cahier des charges à la production.",
-        "6 modules Dolibarr ERP sur mesure, une plateforme de patrimoine foncier, APOSB et OMDHD."
+        "Des modules Dolibarr ERP sur mesure couvrant achats, fabrication, commerce, flotte et finance, ainsi qu'une plateforme de patrimoine foncier, APOSB et OMDHD."
       ]
     }
   ],

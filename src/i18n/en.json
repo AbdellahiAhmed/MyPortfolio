@@ -72,7 +72,7 @@
       "subtitle": "Laravel, PHP, MySQL, Dolibarr modules, REST APIs, business workflows",
       "metrics": [
         "Systems in Daily Use",
-        "6 Custom Dolibarr Modules",
+        "Dolibarr ERP Modules in Production",
         "Tested Before Every Release"
       ],
       "points": [
@@ -201,7 +201,7 @@
       "achievements": [
         "SOMAP RH: HR and payroll used every day across SOMAP's stations, gas depots and branches.",
         "OpticOS: subscription software for optical shops, from specification to production.",
-        "6 custom Dolibarr ERP modules, a land-asset platform, APOSB and OMDHD."
+        "Custom Dolibarr ERP modules covering procurement, manufacturing, trade, fleet and finance, plus a land-asset platform, APOSB and OMDHD."
       ]
     }
   ],
