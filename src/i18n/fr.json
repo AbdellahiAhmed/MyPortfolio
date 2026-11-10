@@ -501,6 +501,22 @@
       "demo": "https://sadaramedia.com"
     },
     {
+      "title": "Proger Technology",
+      "description": "Le site de mon studio, Proger Technology, qui présente sites web, applications mobiles, systèmes de gestion et réseau aux entreprises mauritaniennes. Trilingue français, arabe (RTL) et anglais, construit avec Angular 20 et ses signaux, pré-rendu côté serveur pour le référencement et déployé sur Vercel. Il intègre un espace de pilotage privé : connexion par fonctions serverless avec limite de tentatives par IP, et statistiques de visites lues depuis l'API Vercel Web Analytics, sans base de données. J'ai aussi dessiné l'identité visuelle : le mot proger et le monogramme pg.",
+      "tags": [
+        "Angular",
+        "TypeScript",
+        "SSR",
+        "Vercel Functions",
+        "RTL"
+      ],
+      "category": "Web",
+      "image": "/projects/progertechnology.jpg",
+      "displayUrl": "progertechnology.vercel.app",
+      "featured": true,
+      "demo": "https://progertechnology.vercel.app"
+    },
+    {
       "title": "GestionParc",
       "description": "Un module de gestion de parc pour les véhicules, le matériel, la maintenance et le carburant — y compris le ravitaillement des ambulances et une station carburant interne. Les responsables savent quel véhicule a consommé quoi, quand et combien, avec des rapports PDF prêts à imprimer.",
       "tags": [
