@@ -157,13 +157,13 @@
     {
       "company": "Google DSC ISCAE",
       "role": "Technical Assistant",
-      "period": "Nov 2023 – Juin 2024",
+      "period": "Nov 2023 – Jun 2024",
       "type": "Part-time",
       "logo": "Code",
-      "description": "Developed technical, communication, and project management skills through club projects. Python, Java, OOP, Git, GitHub.",
+      "description": "I ran the club's technical workshops and coordinated its team projects.",
       "achievements": [
-        "Led technical workshops and managed cross-functional club projects.",
-        "Developed strong communication and technical leadership skills in Python and Java environments."
+        "Workshops on Python, Java, OOP, Git and GitHub.",
+        "Coordinated projects across students with different backgrounds."
       ]
     },
     {
@@ -172,10 +172,10 @@
       "period": "June 2025 – August 2025",
       "type": "Internship",
       "logo": "Network",
-      "description": "Designed and validated multi-router / multi-switch topologies on EVE-NG (alongside GNS3 and Packet Tracer) before production cutover, while co-building AutoNetConfig — a Python + Netmiko + Flask toolkit that SSH-automates network device configuration, scans topologies with Nmap and renders live infrastructure views.",
+      "description": "I designed and validated network topologies before production, then automated their configuration.",
       "achievements": [
-        "Co-built AutoNetConfig — a Python + Netmiko + Flask toolkit that SSH-configures Cisco-class equipment, scans hosts and ports with Nmap, and serves a real-time topology visualisation layer.",
-        "Ran live network analysis, monitoring and troubleshooting on production-like topologies built primarily on EVE-NG (with GNS3 and Packet Tracer as secondary labs)."
+        "Co-built AutoNetConfig (Python, Netmiko, Flask): automated SSH configuration, Nmap scanning and a live topology map.",
+        "Monitoring and troubleshooting on production-style topologies (EVE-NG, GNS3, Packet Tracer)."
       ]
     },
     {
@@ -184,11 +184,11 @@
       "period": "Jul 2026 – Aug 2026",
       "type": "Internship",
       "logo": "Server",
-      "description": "Full-Stack Developer & Network Engineer Intern at A2 Holding — a Mauritanian group running both a software development unit and an ISP / network infrastructure business. In two months I was responsible for the company's complete payment system and contributed to in-house products across software and network infrastructure.",
+      "description": "In a group that is both a software house and an ISP, I owned the company's payment system, between code and network.",
       "achievements": [
-        "Responsible for the company's complete payment system, end to end.",
-        "Contributed to the design of a mobile application built in-house.",
-        "Worked across web platforms, APIs, PostgreSQL and Linux, alongside the company's ISP network infrastructure."
+        "Owned the complete payment system, end to end.",
+        "Contributed to the design of an in-house mobile app.",
+        "Web platforms, APIs, PostgreSQL and Linux, tied to the ISP infrastructure."
       ]
     },
     {
@@ -197,13 +197,11 @@
       "period": "Dec 2025 – Present",
       "type": "Professional Experience",
       "logo": "Web",
-      "description": "Full-Stack Developer at MCS Consulting — a Nouakchott firm specialised in financial consulting, ERP solutions and digital transformation. I design and deliver business systems for clients end to end, from understanding the need to putting the system into daily use.",
+      "description": "I design and deliver business systems for the firm's clients, from understanding the need to daily use.",
       "achievements": [
-        "Built SOMAP RH, the HR and payroll system SOMAP uses daily across its fuel stations, gas depots and agencies: mobile clock-in, leave, salary advances, payroll and company accounts.",
-        "Designed and built OpticOS, the company's subscription software for optical shops, from specification to production: counter sales, prescriptions and glasses orders, stock, cash register and reports, in French and Arabic.",
-        "Built a land-portfolio management platform covering purchases, projects, mortgages and sales, with role-based access and a full history of every change.",
-        "Delivered 6 custom Dolibarr ERP modules, including international order tracking for CAMEC, manufacturing, trade and financial reporting, and fleet and fuel management.",
-        "Built APOSB (point of sale and commerce management) and OMDHD, the trilingual Arabic, French and English institutional website for a Mauritanian NGO."
+        "SOMAP RH: HR and payroll used every day across SOMAP's stations, gas depots and branches.",
+        "OpticOS: subscription software for optical shops, from specification to production.",
+        "6 custom Dolibarr ERP modules, a land-asset platform, APOSB and OMDHD."
       ]
     }
   ],

@@ -160,10 +160,10 @@
       "period": "Nov 2023 – Juin 2024",
       "type": "Temps partiel",
       "logo": "Code",
-      "description": "Développement de compétences techniques, communication et gestion projets via des projets clubs. Python, Java, OOP, Git, GitHub.",
+      "description": "J'animais les ateliers techniques du club et coordonnais ses projets d'équipe.",
       "achievements": [
-        "Animation d'ateliers techniques et gestion de projets de club interfonctionnels.",
-        "Développement de solides compétences en communication et leadership technique sur Python et Java."
+        "Ateliers Python, Java, POO, Git et GitHub.",
+        "Coordination de projets entre étudiants aux profils différents."
       ]
     },
     {
@@ -172,10 +172,10 @@
       "period": "Juin 2025 – Août 2025",
       "type": "Stage",
       "logo": "Network",
-      "description": "Conception et validation de topologies multi-routeurs / multi-switches sur EVE-NG (aux côtés de GNS3 et Packet Tracer) avant mise en production, et co-construction d'AutoNetConfig — une boîte à outils Python + Netmiko + Flask qui automatise la configuration SSH des équipements, scanne les topologies avec Nmap et restitue des vues d'infrastructure en direct.",
+      "description": "J'ai conçu et validé des topologies réseau avant leur mise en production, puis automatisé leur configuration.",
       "achievements": [
-        "Co-construction d'AutoNetConfig — une boîte à outils Python + Netmiko + Flask qui configure en SSH des équipements de classe Cisco, scanne hôtes et ports avec Nmap, et sert une couche de visualisation de topologie en temps réel.",
-        "Analyse, monitoring et troubleshooting en direct sur des topologies de type production construites principalement sur EVE-NG (avec GNS3 et Packet Tracer en labos secondaires)."
+        "Co-construction d'AutoNetConfig (Python, Netmiko, Flask) : configuration SSH automatisée, scan Nmap et carte de topologie en direct.",
+        "Monitoring et dépannage sur des topologies de type production (EVE-NG, GNS3, Packet Tracer)."
       ]
     },
     {
@@ -184,11 +184,11 @@
       "period": "Juil 2026 – Août 2026",
       "type": "Stage",
       "logo": "Server",
-      "description": "Stagiaire Développeur Full-Stack & Ingénieur Réseau chez A2 Holding — un groupe mauritanien qui opère à la fois une unité de développement logiciel et une activité FAI / infrastructure réseau. En deux mois, j'ai été responsable du système de paiement complet de l'entreprise et j'ai contribué à des produits internes, entre logiciel et infrastructure réseau.",
+      "description": "Dans un groupe à la fois éditeur logiciel et fournisseur d'accès Internet, j'ai porté le système de paiement de l'entreprise, entre code et réseau.",
       "achievements": [
-        "Responsable du système de paiement complet de l'entreprise, de bout en bout.",
-        "Contribution au design d'une application mobile développée en interne.",
-        "Travail sur des plateformes web, APIs, PostgreSQL et Linux, en lien avec l'infrastructure réseau FAI de l'entreprise."
+        "Responsable du système de paiement complet, de bout en bout.",
+        "Contribution au design d'une application mobile interne.",
+        "Plateformes web, APIs, PostgreSQL et Linux, reliées à l'infrastructure FAI."
       ]
     },
     {
@@ -197,13 +197,11 @@
       "period": "Déc 2025 – Présent",
       "type": "Expérience professionnelle",
       "logo": "Web",
-      "description": "Développeur Full-Stack chez MCS Consulting — cabinet nouakchottois spécialisé en conseil financier, solutions ERP et transformation digitale. Je conçois et livre des systèmes métiers pour les clients de bout en bout, de la compréhension du besoin jusqu'à l'utilisation quotidienne.",
+      "description": "Je conçois et livre les systèmes métiers des clients du cabinet, de la compréhension du besoin jusqu'à l'usage quotidien.",
       "achievements": [
-        "Construction de SOMAP RH, le système RH et paie utilisé chaque jour par SOMAP dans ses stations-service, dépôts de gaz et agences : pointage mobile, congés, avances sur salaire, paie et comptes de l'entreprise.",
-        "Conception et développement d'OpticOS, le logiciel sur abonnement des boutiques d'optique, du cahier des charges à la mise en production : comptoir, ordonnances et commandes de lunettes, stock, caisse et rapports, en français et en arabe.",
-        "Construction d'une plateforme de gestion du patrimoine foncier couvrant achats, projets, hypothèques et ventes, avec des accès par rôle et un historique complet de chaque modification.",
-        "Livraison de 6 modules Dolibarr ERP sur mesure, dont le suivi des commandes internationales de la CAMEC, la fabrication, le commerce et le reporting financier, et la gestion de parc et carburant.",
-        "Construction d'APOSB (point de vente et gestion commerciale) et d'OMDHD, site institutionnel trilingue arabe, français et anglais pour une ONG mauritanienne."
+        "SOMAP RH : RH et paie utilisés chaque jour dans les stations, dépôts et agences de SOMAP.",
+        "OpticOS : logiciel sur abonnement pour boutiques d'optique, du cahier des charges à la production.",
+        "6 modules Dolibarr ERP sur mesure, une plateforme de patrimoine foncier, APOSB et OMDHD."
       ]
     }
   ],
