@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 const AboutSection = () => {
   const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
-  const profileImageSrc = '/me.jpg?v=2026-04-26-profile';
+  const profileImageSrc = '/me.jpg?v=2026-11-11-bw';
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -56,6 +56,10 @@ const AboutSection = () => {
               <img
                 src={profileImageSrc}
                 alt="Abdellahi Ahmed"
+                width={1200}
+                height={1500}
+                loading="lazy"
+                decoding="async"
                 className="block aspect-[4/5] w-full object-cover border border-slate-200 dark:border-slate-800"
               />
               <figcaption className="mt-3 font-mono text-[11.5px] uppercase tracking-[0.22em] text-slate-600 dark:text-slate-400">
