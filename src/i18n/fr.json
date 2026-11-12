@@ -325,6 +325,23 @@
   ],
   "projects.items": [
     {
+      "title": "Traiteurs App",
+      "description": "Une application mobile sur l'App Store et Google Play qui met en relation clients, traiteurs et livreurs. Les clients commandent et paient avec le mobile money mauritanien (Bankily, Masrivi, Sedad), les traiteurs gèrent leurs commandes, et les livreurs sont suivis en direct sur la carte jusqu'à la livraison. J'ai dirigé le développement dans une petite équipe et construit aussi la console d'administration que l'équipe d'exploitation utilise pour suivre commandes, livreurs et commissions.",
+      "tags": [
+        "Flutter",
+        "Dart",
+        "Supabase",
+        "Bankily / Masrivi / Sedad",
+        "Row-Level Security",
+        "App Store"
+      ],
+      "category": "Mobile",
+      "image": "/projects_images/home_screen_client-phone.png",
+      "type": "mobile",
+      "demo": "https://apps.apple.com/mr/app/traiteurs/id6759182605?l=fr-FR",
+      "featured": true
+    },
+    {
       "title": "SOMAP RH",
       "description": "Le système RH et paie utilisé chaque jour par SOMAP dans ses stations-service, dépôts de gaz et agences. Les employés pointent depuis leur téléphone sur leur lieu de travail, avec une vérification automatique de la position. Les RH gèrent congés, avances sur salaire et absences au même endroit, et la paie est calculée chaque mois avec chaque retenue expliquée sur le bulletin. La direction suit présences et paiements sur des tableaux de bord clairs, et un rapport de présence quotidien arrive sur WhatsApp. Conçu pour être fiable avec l'argent : aucun double paiement et un historique complet de chaque modification.",
       "tags": [
@@ -356,6 +373,23 @@
       "featured": true
     },
     {
+      "title": "Gestiona ERP",
+      "description": "Le système de gestion complet que MCS Consulting propose à ses clients, en ligne sur gestionaerp.com. Une seule plateforme, basée sur Dolibarr 21, réunit ventes, achats, stock, facturation et projets pour des entreprises mauritaniennes, avec une interface en français et en arabe. J'y développe des modules de gestion sur mesure selon les besoins de chaque client, et j'accompagne les clients qui l'utilisent au quotidien : prise en main, demandes d'évolution et résolution des problèmes.",
+      "tags": [
+        "Dolibarr 21",
+        "PHP",
+        "MySQL",
+        "Modules sur mesure",
+        "ERP",
+        "Français et arabe"
+      ],
+      "category": "ERP",
+      "image": "/projects/gestiona-login.jpg",
+      "demo": "https://gestionaerp.com",
+      "displayUrl": "gestionaerp.com",
+      "featured": true
+    },
+    {
       "title": "Patrimoine Foncier",
       "description": "Une plateforme qui donne à un propriétaire une vue complète de son patrimoine foncier : chaque terrain, comment il a été acheté et payé, les projets réalisés dessus, les dépenses, les hypothèques, et les ventes avec le bénéfice final. La direction voit la situation globale et les tendances sur un seul tableau de bord et exporte ses rapports en Excel ou PDF en un clic. Chaque utilisateur ne voit que ce que son rôle permet, chaque action est enregistrée, et aucune donnée financière n'est jamais supprimée — les chiffres sont toujours fiables.",
       "tags": [
@@ -367,38 +401,6 @@
       ],
       "category": "Web",
       "image": "/projects/patrimoine-dashboard.jpg",
-      "featured": true
-    },
-    {
-      "title": "CAMEC Import Tracking",
-      "description": "Réalisé pour la CAMEC, centrale d'achat mauritanienne des médicaments et équipements médicaux, pour remplacer les fichiers Excel utilisés pour suivre les commandes internationales. Chaque commande est suivie étape par étape, du bon de commande jusqu'à la livraison finale, avec des alertes de retard automatiques, les documents requis pour chaque envoi et des relances aux fournisseurs et transitaires. Un tableau de bord affiche les indicateurs clés et ce qui demande une action aujourd'hui. Livré avec des guides utilisateur et administrateur et une recette complète avec le client.",
-      "tags": [
-        "Dolibarr",
-        "PHP",
-        "MySQL",
-        "Supply Chain",
-        "ERP"
-      ],
-      "category": "ERP",
-      "image": "/projects/camec-login.jpg",
-      "displayUrl": "Livré à la CAMEC",
-      "featured": true
-    },
-    {
-      "title": "Traiteurs App",
-      "description": "Une application mobile sur l'App Store et Google Play qui met en relation clients, traiteurs et livreurs. Les clients commandent et paient avec le mobile money mauritanien (Bankily, Masrivi, Sedad), les traiteurs gèrent leurs commandes, et les livreurs sont suivis en direct sur la carte jusqu'à la livraison. J'ai dirigé le développement dans une petite équipe et construit aussi la console d'administration que l'équipe d'exploitation utilise pour suivre commandes, livreurs et commissions.",
-      "tags": [
-        "Flutter",
-        "Dart",
-        "Supabase",
-        "Bankily / Masrivi / Sedad",
-        "Row-Level Security",
-        "App Store"
-      ],
-      "category": "Mobile",
-      "image": "/projects_images/home_screen_client-phone.png",
-      "type": "mobile",
-      "demo": "https://apps.apple.com/mr/app/traiteurs/id6759182605?l=fr-FR",
       "featured": true
     },
     {
@@ -418,6 +420,21 @@
       "featured": true
     },
     {
+      "title": "CAMEC Import Tracking",
+      "description": "Réalisé pour la CAMEC, centrale d'achat mauritanienne des médicaments et équipements médicaux, pour remplacer les fichiers Excel utilisés pour suivre les commandes internationales. Chaque commande est suivie étape par étape, du bon de commande jusqu'à la livraison finale, avec des alertes de retard automatiques, les documents requis pour chaque envoi et des relances aux fournisseurs et transitaires. Un tableau de bord affiche les indicateurs clés et ce qui demande une action aujourd'hui. Livré avec des guides utilisateur et administrateur et une recette complète avec le client.",
+      "tags": [
+        "Dolibarr",
+        "PHP",
+        "MySQL",
+        "Supply Chain",
+        "ERP"
+      ],
+      "category": "ERP",
+      "image": "/projects/camec-login.jpg",
+      "displayUrl": "Livré à la CAMEC",
+      "featured": true
+    },
+    {
       "title": "Fabrication ERP",
       "description": "Un module ERP qui gère une activité de fabrication de bout en bout : achat des matières premières et des emballages, enregistrement de chaque production, réception et livraison des marchandises, et ventes au comptant, à crédit ou en matière première. Le propriétaire connaît à tout moment le coût réel de chaque produit, les stocks, les achats et les ventes, avec des documents en arabe prêts à imprimer et les dépenses et salaires suivis au même endroit.",
       "tags": [
@@ -430,20 +447,6 @@
       "category": "ERP",
       "image": "/projects/fabrication-login.jpg",
       "displayUrl": "Manufacturing ERP",
-      "featured": true
-    },
-    {
-      "title": "AutoNetConfig",
-      "description": "Boîte à outils Python + Netmiko + Flask co-construite pendant le stage à Moov Mauritel. Automatise la configuration SSH des équipements de classe Cisco via Netmiko, scanne hôtes/ports et cartographie la topologie avec Nmap, et sert une couche de visualisation temps réel sous Flask. Conçue, construite et validée sur des labos EVE-NG (avec GNS3 et Packet Tracer en complément).",
-      "tags": [
-        "Python",
-        "Netmiko",
-        "Flask",
-        "Nmap",
-        "EVE-NG",
-        "Automatisation Réseau"
-      ],
-      "category": "Réseau",
       "featured": true
     },
     {
@@ -528,6 +531,20 @@
       "category": "ERP",
       "image": "/projects_images/module_gestionparc.jpg",
       "displayUrl": "Fleet & fuel management",
+      "featured": true
+    },
+    {
+      "title": "AutoNetConfig",
+      "description": "Boîte à outils Python + Netmiko + Flask co-construite pendant le stage à Moov Mauritel. Automatise la configuration SSH des équipements de classe Cisco via Netmiko, scanne hôtes/ports et cartographie la topologie avec Nmap, et sert une couche de visualisation temps réel sous Flask. Conçue, construite et validée sur des labos EVE-NG (avec GNS3 et Packet Tracer en complément).",
+      "tags": [
+        "Python",
+        "Netmiko",
+        "Flask",
+        "Nmap",
+        "EVE-NG",
+        "Automatisation Réseau"
+      ],
+      "category": "Réseau",
       "featured": true
     }
   ],

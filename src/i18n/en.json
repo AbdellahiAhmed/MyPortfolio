@@ -325,6 +325,23 @@
   ],
   "projects.items": [
     {
+      "title": "Traiteurs App",
+      "description": "A mobile app on the App Store and Google Play that connects customers with caterers and delivery drivers. Customers order and pay with Mauritanian mobile money (Bankily, Masrivi, Sedad), caterers manage their orders, and drivers are followed live on the map until delivery. I led the development in a small team and also built the admin console the operations team uses to follow orders, drivers and commissions.",
+      "tags": [
+        "Flutter",
+        "Dart",
+        "Supabase",
+        "Bankily / Masrivi / Sedad",
+        "Row-Level Security",
+        "App Store"
+      ],
+      "category": "Mobile",
+      "image": "/projects_images/home_screen_client-phone.png",
+      "type": "mobile",
+      "demo": "https://apps.apple.com/mr/app/traiteurs/id6759182605?l=fr-FR",
+      "featured": true
+    },
+    {
       "title": "SOMAP RH",
       "description": "The HR and payroll system SOMAP uses every day across its fuel stations, gas depots and agencies. Staff clock in from their phone at their workplace, with the location checked automatically. HR manages leave, salary advances and absences in one place, and payroll is calculated each month with every deduction explained on the payslip. Management follows attendance and payments on clear dashboards, and a daily presence report arrives on WhatsApp. Built to be reliable with money: no double payments and a full history of every change.",
       "tags": [
@@ -356,6 +373,23 @@
       "featured": true
     },
     {
+      "title": "Gestiona ERP",
+      "description": "The complete management system MCS Consulting provides to its clients, live at gestionaerp.com. One platform built on Dolibarr 21 brings together sales, purchasing, stock, invoicing and projects for Mauritanian businesses, in French and Arabic. I build custom management modules for each client's needs and support the clients who run on it every day: onboarding, change requests and problem solving.",
+      "tags": [
+        "Dolibarr 21",
+        "PHP",
+        "MySQL",
+        "Custom modules",
+        "ERP",
+        "French and Arabic"
+      ],
+      "category": "ERP",
+      "image": "/projects/gestiona-login.jpg",
+      "demo": "https://gestionaerp.com",
+      "displayUrl": "gestionaerp.com",
+      "featured": true
+    },
+    {
       "title": "Patrimoine Foncier",
       "description": "A platform that gives a property owner a complete view of their land portfolio: every parcel, how it was bought and paid for, the projects built on it, expenses, mortgages, and sales with the final profit. Executives see the overall picture and trends on one dashboard and export reports to Excel or PDF in one click. Each user only sees what their role allows, every action is recorded, and financial records are never deleted — so the numbers can always be trusted.",
       "tags": [
@@ -367,38 +401,6 @@
       ],
       "category": "Web",
       "image": "/projects/patrimoine-dashboard.jpg",
-      "featured": true
-    },
-    {
-      "title": "CAMEC Import Tracking",
-      "description": "Built for CAMEC, Mauritania's central purchasing agency for medicines and medical equipment, to replace the Excel files used to follow international orders. Each order is tracked step by step from the purchase order to final delivery, with automatic delay alerts, the documents required for each shipment, and reminders to suppliers and forwarders. A dashboard shows the agency's key indicators and what needs attention today. Delivered with user and administrator guides and a full acceptance test with the client.",
-      "tags": [
-        "Dolibarr",
-        "PHP",
-        "MySQL",
-        "Supply Chain",
-        "ERP"
-      ],
-      "category": "ERP",
-      "image": "/projects/camec-login.jpg",
-      "displayUrl": "Delivered to CAMEC",
-      "featured": true
-    },
-    {
-      "title": "Traiteurs App",
-      "description": "A mobile app on the App Store and Google Play that connects customers with caterers and delivery drivers. Customers order and pay with Mauritanian mobile money (Bankily, Masrivi, Sedad), caterers manage their orders, and drivers are followed live on the map until delivery. I led the development in a small team and also built the admin console the operations team uses to follow orders, drivers and commissions.",
-      "tags": [
-        "Flutter",
-        "Dart",
-        "Supabase",
-        "Bankily / Masrivi / Sedad",
-        "Row-Level Security",
-        "App Store"
-      ],
-      "category": "Mobile",
-      "image": "/projects_images/home_screen_client-phone.png",
-      "type": "mobile",
-      "demo": "https://apps.apple.com/mr/app/traiteurs/id6759182605?l=fr-FR",
       "featured": true
     },
     {
@@ -418,6 +420,21 @@
       "featured": true
     },
     {
+      "title": "CAMEC Import Tracking",
+      "description": "Built for CAMEC, Mauritania's central purchasing agency for medicines and medical equipment, to replace the Excel files used to follow international orders. Each order is tracked step by step from the purchase order to final delivery, with automatic delay alerts, the documents required for each shipment, and reminders to suppliers and forwarders. A dashboard shows the agency's key indicators and what needs attention today. Delivered with user and administrator guides and a full acceptance test with the client.",
+      "tags": [
+        "Dolibarr",
+        "PHP",
+        "MySQL",
+        "Supply Chain",
+        "ERP"
+      ],
+      "category": "ERP",
+      "image": "/projects/camec-login.jpg",
+      "displayUrl": "Delivered to CAMEC",
+      "featured": true
+    },
+    {
       "title": "Fabrication ERP",
       "description": "An ERP module that runs a manufacturing business end to end: buying raw materials and packaging, recording each production run, receiving and delivering goods, and selling in cash, on credit or as raw material. The owner sees the real cost of each product, stock levels, purchases and sales at any time, with Arabic documents ready to print and expenses and salaries tracked in the same place.",
       "tags": [
@@ -430,20 +447,6 @@
       "category": "ERP",
       "image": "/projects/fabrication-login.jpg",
       "displayUrl": "Manufacturing ERP",
-      "featured": true
-    },
-    {
-      "title": "AutoNetConfig",
-      "description": "Python + Netmiko + Flask toolkit co-built during the Moov Mauritel internship. Automates SSH device configuration across Cisco-class equipment with Netmiko, scans hosts/ports and maps topologies with Nmap, and serves a real-time visualisation layer over Flask. Designed, built and validated on EVE-NG labs alongside GNS3 and Packet Tracer.",
-      "tags": [
-        "Python",
-        "Netmiko",
-        "Flask",
-        "Nmap",
-        "EVE-NG",
-        "Network Automation"
-      ],
-      "category": "Network",
       "featured": true
     },
     {
@@ -528,6 +531,20 @@
       "category": "ERP",
       "image": "/projects_images/module_gestionparc.jpg",
       "displayUrl": "Fleet & fuel management",
+      "featured": true
+    },
+    {
+      "title": "AutoNetConfig",
+      "description": "Python + Netmiko + Flask toolkit co-built during the Moov Mauritel internship. Automates SSH device configuration across Cisco-class equipment with Netmiko, scans hosts/ports and maps topologies with Nmap, and serves a real-time visualisation layer over Flask. Designed, built and validated on EVE-NG labs alongside GNS3 and Packet Tracer.",
+      "tags": [
+        "Python",
+        "Netmiko",
+        "Flask",
+        "Nmap",
+        "EVE-NG",
+        "Network Automation"
+      ],
+      "category": "Network",
       "featured": true
     }
   ],
